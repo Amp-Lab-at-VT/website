@@ -1,0 +1,14 @@
+.projectBox {
+    background-color: antiquewhite;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 0.5rem;
+    text-decoration:none;
+    display: block;
+    box-shadow: 5px 5px 5px 5px gray;
+
+}
+
+.projectBox:hover {
+    background-color: rgb(208, 174, 129);
+}

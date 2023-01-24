@@ -15,11 +15,11 @@ class ProjectBox extends Component {
         // Simple div with a title and value
         if (this.props.image === undefined) {
             return (
-                <div class="imageDiv">
-                    <a href={this.props.href}>
+                <a href={this.props.href} class="projectBox">
+                    <text >
                     {this.props.name}
-                    </a>
-                </div>
+                    </text>
+                </a>
             )
         }
     }
