@@ -14,7 +14,6 @@ export default function Navigation({fileContents}) {
             </div>
             <div style={{display : "flex", alignItems: "center"}}>
             </div>
-            <text class = "navText">Amp Lab</text>
         </div>
     </div>
     );

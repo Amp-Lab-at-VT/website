@@ -8,6 +8,7 @@ export default function Home() {
     <div class="App">
       <header class="App-header">
         <Navigation></Navigation>
+        <text>Hello</text>
       </header>
     </div>
   );
