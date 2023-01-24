@@ -1,6 +1,5 @@
 //https://react-icons.github.io/react-icons/icons?name=bs
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect } from "react";
 import Navigation from "../../modules/Nav/Nav.jsx"
 import ReactMarkdown from "react-markdown";
 
@@ -9,7 +8,6 @@ import aboutMarkdown from "../../../assets/markdownDocs/about.md"
 import "./about.css"
 
 export default function About() {
-  const [showButton, setShowButton] = useState(false);
   const [text, setText] = React.useState();
 
   useEffect(() => {

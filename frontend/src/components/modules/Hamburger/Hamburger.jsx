@@ -13,7 +13,7 @@ export default function Hamburger() {
       </button>
       <div class="dropdown-content">
         <Link to="/">Home</Link>
-        <Link to="/projects">Projets</Link>
+        <Link to="/projects">Projects</Link>
         <Link to="/about">About</Link>
         <Link to="/usefulLinks">Useful Links</Link>
         {/* <Link to="/about">About</Link> */}
