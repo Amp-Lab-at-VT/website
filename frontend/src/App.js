@@ -6,7 +6,7 @@ import {
   Route,
 } from "react-router-dom";
 
-import {Home, Error, Projects} from "./components/pages"
+import {Home, Error, Projects, About} from "./components/pages"
 
 function App() {
   return (
@@ -16,6 +16,7 @@ function App() {
           <Route exact path="/AmpWebV2" element={<Home/>} />
           <Route exact path="/" element={<Home/>} />
           <Route exact path="/projects" element={<Projects/>} />
+          <Route exact path="/about" element={<About/>} />
           <Route exact path="*" element={<Error/>} />
         </Routes>
       </div>

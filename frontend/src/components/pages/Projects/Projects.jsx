@@ -10,19 +10,17 @@ import "./projects.css"
 export default function Projects() {
   const url =
     "https://raw.githubusercontent.com/Amp-Lab-at-VT/AmpWebV2/master/repos.yaml";
-  const [read, setRead] = useState(null);
-  const [importedYaml, setImportedYaml] = useState(null);
   const [projects, setProjects] = useState([]);
-
 
   useEffect(() => {
     axios.get(url).then((response) => {
-      setRead(response.data);
       var items = YAML.parseDocument(response.data).contents.items;
-      console.log(items)
-      for (var item in items){
-        console.log(item.key.value)
+      var projectsDict = {}
+      for (var i = 0; i < items.length; i++) {
+        projectsDict[items[i]["key"].value] = items[i]["value"].value
       }
+      console.log(projectsDict)
+      setProjects(projectsDict)
     });
   }, []);
 
@@ -32,7 +30,11 @@ export default function Projects() {
         <Navigation></Navigation>
         <text>Projects</text>
         <div className="App">
-          <ReactMarkdown>{YAML.stringify(importedYaml)}</ReactMarkdown>
+          {/* <text>{JSON.stringify(projects)}</text> */}
+          
+            {Object.entries(projects).map( ([key, value]) => 
+            <a href = {value}>{key}</a>)}
+
         </div>
       </header>
     </div>
