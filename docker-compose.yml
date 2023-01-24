@@ -1,0 +1,12 @@
+version: '3.3'
+
+services:
+    frontend:
+      build:     
+        context: ./  
+        dockerfile: Dockerfile
+      network_mode: host
+      volumes:
+      - ./frontend:/app/frontend
+      command: 
+        npm run start
