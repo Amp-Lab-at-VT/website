@@ -4,6 +4,7 @@ import ReactMarkdown from 'react-markdown'
 import YAML from 'yaml'
 
 import Navigation from "../../modules/Nav/Nav.jsx"
+import ProjectBox from "../../modules/ProjectBox/ProjectBox.jsx"
 
 import "./projects.css"
 
@@ -33,7 +34,7 @@ export default function Projects() {
           {/* <text>{JSON.stringify(projects)}</text> */}
           
             {Object.entries(projects).map( ([key, value]) => 
-            <a href = {value}>{key}</a>)}
+            <ProjectBox href = {value} name = {key}></ProjectBox>)}
 
         </div>
       </header>
