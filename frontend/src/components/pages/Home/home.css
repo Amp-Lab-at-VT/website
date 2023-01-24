@@ -1,0 +1,25 @@
+.icons {
+    padding: 10px;
+    margin : 0px;
+    display: flex;
+}
+
+.icons:hover {
+    padding: 10px;
+    margin : 0px;
+    display: flex;
+    fill: rgb(207, 51, 51);
+}
+
+.docButton {
+    font-size: 10px;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+}
+
+.docButton:hover {
+    background-color: rgb(242, 8, 8);
+    color: rgb(0, 0, 0);
+}
