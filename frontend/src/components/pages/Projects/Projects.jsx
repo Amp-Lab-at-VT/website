@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import ReactMarkdown from 'react-markdown'
 import YAML from 'yaml'
 
 import Navigation from "../../modules/Nav/Nav.jsx"
