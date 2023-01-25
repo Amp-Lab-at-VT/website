@@ -3,9 +3,9 @@ import React, { useEffect } from "react";
 import Navigation from "../../modules/Nav/Nav.jsx"
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
-import aboutMarkdown from "../../../assets/markdownDocs/about.md"
+import aboutMarkdown from "../../../assets/markdownDocs/people.md"
 
-import "./about.css"
+import "./leadership.css"
 
 export default function About() {
   const [text, setText] = React.useState();

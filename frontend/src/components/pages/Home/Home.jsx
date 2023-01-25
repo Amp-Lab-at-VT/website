@@ -29,8 +29,8 @@ export default function Home() {
             }}
             />
           </div>
-          {showButton && <Link to="/quickstart" class = "btn">Getting Started</Link> ||
-          !showButton && <div style = {{visibility: "hidden"} }class = "btn">Getting Started</div>}
+          {(showButton && <Link to="/quickstart" class = "btn">Getting Started</Link>) ||
+          (!showButton && <div style = {{visibility: "hidden"} }class = "btn">Getting Started</div>)}
 
         </div>
       </header>

@@ -1,16 +1,10 @@
----
-layout: page
-title: People
-show_sidebar: true
----
-
 ## Meet Our Team: Student Staff
 <hr>
 
 
 <em>Richard Gibbons: Head Mentor/Amp Lab Student Lead</em>
 
-![Richard](/web/img/Headshots/RichardGibbons3.jpeg){:class="img-responsive" style="width:30rem"}
+<img src={} alt="Richard Gibbons Image"></img>
 
 <em>Josh Sutton: Mentor/Amp Lab Student Leader</em>
 
