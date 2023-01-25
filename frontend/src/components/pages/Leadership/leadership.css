@@ -8,17 +8,3 @@
     padding: 0 20px;
     font-family: 'Georgia Bold'
 }
-
-.btn {
-    background-color: rgb(196, 178, 178);
-    padding: 20px;
-    border-radius: 0.5rem;
-    text-decoration: none;
-    margin: 1em;
-    color:black;
-    pointer-events: all;
-  }
-
-  .btn:hover {
-    background-color: rgba(244, 118, 118, 0.802);
-  }

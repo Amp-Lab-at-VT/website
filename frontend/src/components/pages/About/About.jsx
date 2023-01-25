@@ -1,9 +1,13 @@
 //https://react-icons.github.io/react-icons/icons?name=bs
 import React, { useEffect } from "react";
+
 import Navigation from "../../modules/Nav/Nav.jsx"
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
+// Faculty and Mentor Image Imports
+
 import aboutMarkdown from "../../../assets/markdownDocs/about.md"
+
 
 import "./about.css"
 

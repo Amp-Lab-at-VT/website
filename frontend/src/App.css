@@ -66,3 +66,24 @@ hr {
   border: none;
   background-color: #000000;
 }
+
+.btn {
+  background-color: rgb(196, 178, 178);
+  padding: 20px;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  color:black;
+  pointer-events: all;
+}
+
+.btn:hover {
+  background-color: rgba(244, 118, 118, 0.802);
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}

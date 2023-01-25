@@ -1,31 +1,38 @@
 //https://react-icons.github.io/react-icons/icons?name=bs
-import React, { useEffect } from "react";
+import React from "react";
 import Navigation from "../../modules/Nav/Nav.jsx"
-import ReactMarkdown from "react-markdown";
-import rehypeRaw from "rehype-raw";
-import aboutMarkdown from "../../../assets/markdownDocs/people.md"
+import LeadershipBox from "../../modules/LeadershipBox/LeadershipBox.jsx"
+
+import Baumann from "../../../assets/img/Headshots/Baumann.jpg"
+import Gibbons from "../../../assets/img/Headshots/Gibbons.jpg"
+import Forsyth from "../../../assets/img/Headshots/Forsyth.jpg"
+import Meadows from "../../../assets/img/Headshots/Meadows.jpg"
 
 import "./leadership.css"
 
 export default function Leadership() {
-  const [text, setText] = React.useState();
 
-  useEffect(() => {
-    fetch(aboutMarkdown)
-      .then((response) => response.text())
-      .then((text) => {
-        setText(text);
-      });
-  }, []);
 
   return (
-    <div class="App">
-      <header class="App-header">
-        <Navigation></Navigation>
-        <div class="App"></div>
-        <ReactMarkdown rehypePlugins={[rehypeRaw]}>{text}</ReactMarkdown>
-      </header>
-    </div>
+    <div>
+    <Navigation></Navigation>
+    <header class="App-standardPage">
+      <div class="App-pageHelper">
+        <h2>Meet Our Team: Student Staff</h2>
+        <hr></hr>
+        <div class = "flex-row">
+          <LeadershipBox name = "Riichard Gibbons" src={Gibbons} title = "Richard Gibbons: Student Team Lead"></LeadershipBox>
+          <LeadershipBox name = "Henry Forsyth" src={Forsyth} title = "Henry Forsyth: Student Mentor"></LeadershipBox>
+        </div>
+        <h2>Meet Our Team: Professors</h2>
+        <hr></hr>
+        <div class = "flex-row">
+          <LeadershipBox name = "William Baumann" src={Baumann} title = "Dr.William Baumann: Professor" email = "baumann@vt.edu"></LeadershipBox>
+          <LeadershipBox name = "Toby Meadows" src={Meadows} title = "Dr.Toby Meadows: Professor" email = "toby88@vt.edu"></LeadershipBox>
+        </div>
+      </div>
+    </header>
+  </div>
   );
 }
 
