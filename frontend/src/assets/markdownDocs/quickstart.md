@@ -1,9 +1,3 @@
----
-layout: page
-title: Quickstart
-show_sidebar: false
----
-
 ## For New Members (Mentees):
 
 Below is the recommended way of setting up your Github repositories. The bash script to automatically run the setup is still in beta, and is
@@ -28,9 +22,3 @@ When a project is first started, there are a few steps that you will need to fol
 <a class="button is-link" href="{{ site.baseurl }}/mentor-steps" >Mentor Steps</a>
 
 <hr>
-
-There is also a semi-automated helper that is in it's alpha version avalible to mentees and mentors here. It will ask you a series of questions and then provide the code that you need to run:
-
-
-
-<a class="button is-link" href="{{ site.baseurl }}/helper" >Helper</a>

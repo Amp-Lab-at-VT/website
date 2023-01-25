@@ -6,7 +6,7 @@ import {
   Route,
 } from "react-router-dom";
 
-import {Home, Error, Projects, About, Leadership} from "./components/pages"
+import {Home, Error, Projects, About, Leadership, GettingStarted} from "./components/pages"
 
 function App() {
   return (
@@ -18,6 +18,7 @@ function App() {
           <Route exact path="/projects" element={<Projects/>} />
           <Route exact path="/about" element={<About/>} />
           <Route exact path="/leadership" element={<Leadership/>} />
+          <Route exact path="/getting_started" element={<GettingStarted/>} />
           <Route exact path="*" element={<Error/>} />
         </Routes>
       </div>

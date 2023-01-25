@@ -12,8 +12,8 @@ export default function Home() {
 
   return (
     <div class="App">
+      <Navigation></Navigation>
       <header class="App-header">
-        <Navigation></Navigation>
         <div class="App">
           <div class = "homeText">
             <Typewriter
@@ -21,7 +21,7 @@ export default function Home() {
             typewriter.changeDelay("50")
             .pauseFor(250)
             .typeString("The Amp Lab at Virginia Tech")
-            .pauseFor(250)
+            .pauseFor(500)
             .callFunction(() => {
               setShowButton(true);
             })
@@ -29,9 +29,10 @@ export default function Home() {
             }}
             />
           </div>
-          {(showButton && <Link to="/quickstart" class = "btn">Getting Started</Link>) ||
-          (!showButton && <div style = {{visibility: "hidden"} }class = "btn">Getting Started</div>)}
-
+          <div style = {{padding: "50px"} }>
+          {(showButton && <Link to="/getting_started" class = "btn">Getting Started</Link>) ||
+          (!showButton && <Link to="/getting_started" style = {{visibility: "hidden"}} class = "btn">Getting Started</Link>)}
+          </div>
         </div>
       </header>
     </div>

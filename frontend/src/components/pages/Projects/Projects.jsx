@@ -26,8 +26,8 @@ export default function Projects() {
 
   return (
     <div class="App">
+      <Navigation></Navigation>
       <header class="App-header">
-        <Navigation></Navigation>
         <text>Projects</text>
         <div className="App">
           {/* <text>{JSON.stringify(projects)}</text> */}

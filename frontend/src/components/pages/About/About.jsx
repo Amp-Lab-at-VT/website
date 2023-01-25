@@ -19,11 +19,12 @@ export default function About() {
   }, []);
 
   return (
-    <div class="App">
-      <header class="App-header">
-        <Navigation></Navigation>
-        <div class="App"></div>
-        <ReactMarkdown rehypePlugins={[rehypeRaw]}>{text}</ReactMarkdown>
+    <div>
+      <Navigation></Navigation>
+      <header class="App-standardPage">
+        <div class = "App-pageHelper">
+        <ReactMarkdown class="App-standardPage" rehypePlugins={[rehypeRaw]}>{text}</ReactMarkdown>
+        </div>
       </header>
     </div>
   );

@@ -1,13 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap");
 
-html {
-  height: 100%;
-  width: 100%;
-  background: #204d71;
-  color: #00cc44;
-  font-family: "Major Mono Display", monospace;
-}
-
 .wrapper {
   margin-top: 5%;
   width: 100%;
