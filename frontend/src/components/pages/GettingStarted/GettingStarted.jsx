@@ -1,17 +1,13 @@
 //https://react-icons.github.io/react-icons/icons?name=bs
 import React, { useEffect } from "react";
-
 import Navigation from "../../modules/Nav/Nav.jsx"
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
-// Faculty and Mentor Image Imports
+import aboutMarkdown from "../../../assets/markdownDocs/quickstart.md"
 
-import aboutMarkdown from "../../../assets/markdownDocs/about.md"
+import "./styles.css"
 
-
-import "./about.css"
-
-export default function About() {
+export default function GettingStarted() {
   const [text, setText] = React.useState();
 
   useEffect(() => {
@@ -27,7 +23,7 @@ export default function About() {
       <Navigation></Navigation>
       <header class="App-standardPage">
         <div class = "App-pageHelper">
-        <ReactMarkdown class="App-standardPage" rehypePlugins={[rehypeRaw]}>{text}</ReactMarkdown>
+          <ReactMarkdown class="App-standardPage" rehypePlugins={[rehypeRaw]}>{text}</ReactMarkdown>
         </div>
       </header>
     </div>

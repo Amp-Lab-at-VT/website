@@ -1,0 +1,9 @@
+.leadershipBox {
+    margin: 20px;
+    padding: 10px;
+    box-shadow: 5px 5px 5px 5px gray;
+}
+
+.leadershipBox img {
+    height: 50vh;
+}
