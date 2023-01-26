@@ -1,10 +1,9 @@
-.tutorialText {
-    font-size: 100px;
+.tutorialText p{
+    font-size: 20px;
     font-weight: 300;
-    color: rgb(185, 18, 18);
-    text-align: center;
+    color: rgb(0, 0, 0);
+    text-align: left;
     margin: 0 auto;
-    max-width: 600px;
     padding: 0 20px;
     font-family: 'Georgia Bold'
 }

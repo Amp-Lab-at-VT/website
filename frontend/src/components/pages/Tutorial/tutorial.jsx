@@ -26,8 +26,8 @@ export default function Tutorial() {
     <div>
       <Navigation></Navigation>
       <header class="App-standardPage">
-        <div class = "App-pageHelper">
-        <ReactMarkdown class="App-standardPage" rehypePlugins={[rehypeRaw]}>{text}</ReactMarkdown>
+        <div class = "App-pageHelper tutorialText">
+        <ReactMarkdown rehypePlugins={[rehypeRaw]}>{text}</ReactMarkdown>
         </div>
       </header>
     </div>
