@@ -17,6 +17,7 @@
     "react-scripts": "5.0.1",
     "rehype-raw": "^6.1.1",
     "typewriter-effect": "^2.19.0",
+    "url-exist": "^3.0.1",
     "web-vitals": "^2.1.4",
     "yaml": "^2.2.1"
   },

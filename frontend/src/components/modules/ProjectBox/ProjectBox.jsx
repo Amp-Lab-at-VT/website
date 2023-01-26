@@ -49,35 +49,30 @@ class ProjectBox extends Component {
 
             var fullSummary = "https://raw.githubusercontent.com/" +
                 diff + "/" +
-                branch + "/SUMMARY.md"
+                branch + "/summary.md"
 
             axios.get(fullSummary).then((response) => {
-                this.setState({ summary: response.data })
-                this.setState({ summaryLoaded: true })
-                properBranchFound = true
+                if (response.status < 300 && response.status >= 200){
+                    this.setState({ summary: response.data })
+                    this.setState({ summaryLoaded: true })
+                    properBranchFound = true
+                }
             }).catch((response) => {
-                console.log("Error in loading summary for " + this.props.name + "- Response: " + response)
+                console.log(this.props.name + " is not avalibe at that address. Warning: " + response)
             });
 
             // find the path for the image, and choose whether to render it or not
-            var fullImagePath = "https://raw.githubusercontent.com/" +
-                diff + "/" +
-                branch + "/hero.png"
 
-            console.log(fullImagePath)
 
-            axios.get(fullImagePath).then((response) => {
-                this.setState({ imageExists: true })
-                this.setState({ imagePath: fullImagePath })
-                properBranchFound = true
-            }
-            ).catch((response) => {
-                console.log("Error in loading image for " + this.props.name + "- Response: " + response)
-            });
+            // check to see if the image exists at the url
+            
 
-            if (properBranchFound) {
-                break
-            }
+
+        
+
+            this.setState({imagePath: "https://raw.githubusercontent.com/" + diff + "/" + branch + "/hero.png", imageExists : true})
+
+
         }
     }
 
@@ -94,7 +89,7 @@ class ProjectBox extends Component {
                             {this.state.summaryLoaded && <ReactMarkdown>{this.state.summary}</ReactMarkdown>}
                         </div>
                     </div>
-                    {this.state.imageExists && <img class="projectBoxImage" alt={this.props.name} src={"https://raw.githubusercontent.com/" + this.state.base + "/main/hero.png"} ></img>}
+                    {this.state.imageExists && <img class="projectBoxImage" alt={this.props.name} src={this.state.imagePath} ></img>}
                 </a>
             )
         }

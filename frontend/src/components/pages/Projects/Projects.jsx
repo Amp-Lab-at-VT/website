@@ -27,12 +27,12 @@ export default function Projects() {
   return (
     <div class="App">
       <Navigation></Navigation>
-      <header class="App-header">
-        <text>Projects</text>
-        <div className="App">
-          <div>
-              {Object.entries(projects).map( ([key, value]) => 
-              <ProjectBox href = {value} name = {key}></ProjectBox>)}
+      <header class="App-standardPage">
+        <div class = "App-pageHelper">
+          <text>Projects</text>
+            <div class="flex-row-wrap">
+              {Object.entries(projects).map(([key, value]) =>
+                <ProjectBox href={value} name={key}></ProjectBox>)}
           </div>
         </div>
       </header>

@@ -87,3 +87,12 @@ hr {
   align-items: center;
   width: 100%;
 }
+
+.flex-row-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content:center;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
