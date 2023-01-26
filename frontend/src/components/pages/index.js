@@ -4,3 +4,7 @@ export { default as Projects } from "./Projects/Projects.jsx";
 export { default as About } from "./About/About.jsx";
 export { default as Leadership } from "./Leadership/Leadership.jsx";
 export { default as GettingStarted } from "./GettingStarted/GettingStarted.jsx";
+export { default as Soldering } from "./Soldering/soldering.jsx";
+export { default as BasicSoldering } from "./SolderingBasic/basic_soldering.jsx";
+export { default as AdvSoldering } from "./SolderingAdv/adv_soldering.jsx";
+export { default as UsefulLinks } from "./UsefulLinks/useful_links.jsx";
