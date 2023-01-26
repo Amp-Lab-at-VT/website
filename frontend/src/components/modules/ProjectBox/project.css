@@ -4,11 +4,46 @@
     margin: 20px;
     border-radius: 0.5rem;
     text-decoration:none;
-    display: block;
+    display: flex;
     box-shadow: 5px 5px 5px 5px gray;
-
+    justify-content: space-between;
+    height: 20vh;
 }
 
 .projectBox:hover {
     background-color: rgb(208, 174, 129);
+}
+
+.projectBoxTitle {
+    margin: 0;
+    padding: 0;
+    font-size: 30px;
+    text-align: left;
+}
+
+.tinyMarkdown {
+    overflow-y: scroll;
+}
+
+.tinyMarkdown::-webkit-scrollbar {
+    display: none;
+  }
+
+.tinyMarkdown p {
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    text-align: left;
+}
+
+.tinyMarkdown h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    text-align: left;
+}
+
+.projectBoxImage {
+    padding-left: 40px;
+    object-fit: contain;
 }

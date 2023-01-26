@@ -1,8 +1,20 @@
+PCB Engraver:
+  url : https://github.com/Amp-Lab-at-VT/PCB_Engraver
+  branch: "main"
+InspireFly Cubesat Power Supply:
+  url: "https://github.com/Amp-Lab-at-VT/inspireFly_Cubesat_Power_Supply"
+  branch: "main"
+Stepper Motor Symphony:
+  url: "https://github.com/Amp-Lab-at-VT/Stepper_Motor_Symphony"
+  branch: "main"
+ScratchBot:
+  url: "https://github.com/Amp-Lab-at-VT/Scratch-Bot"
+  branch: "main"
 8 Bit Computer: 
-  url : "https://github.com/Amp-Lab-at-VT/8-bit-Computer"
-  branch : "master"
+  url: "https://github.com/Amp-Lab-at-VT/8-bit-Computer"
+  branch: "master"
 Stylophone: 
-  url : "https://github.com/Amp-Lab-at-VT/Stylophone", 
+  url: "https://github.com/Amp-Lab-at-VT/Stylophone", 
   branch: "master"
 Sample: 
   url : "https://github.com/Amp-Lab-at-VT/SampleProject"

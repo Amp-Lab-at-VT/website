@@ -10,31 +10,35 @@ import "./projects.css"
 export default function Projects() {
   const url =
     "https://raw.githubusercontent.com/Amp-Lab-at-VT/AmpWebV2/master/repos.yaml";
-  const [projects, setProjects] = useState([]);
+
+  const [projects, setProjects] = useState();
 
   useEffect(() => {
+
     axios.get(url).then((response) => {
       var items = YAML.parseDocument(response.data).contents.items;
-      var projectsDict = {}
-      for (var i = 0; i < items.length; i++) {
-        projectsDict[items[i]["key"].value] = items[i]["value"].value
-      }
-      console.log(projectsDict)
-      setProjects(projectsDict)
+      var allProjects = []
+
+      Object.keys(items).forEach(function (key) {
+          var name = (items[key]["key"]["value"]) //Gives us the project name
+          var href = (items[key]['value']['items'][0]['value']['value']) //Gives us the project url
+          var branch = (items[key]['value']['items'][1]['value']['value']) //Gives us the branch name
+          allProjects.push(<ProjectBox branch = {branch} href={href} name={name}></ProjectBox>)
+      });
+
+      setProjects(allProjects)
     });
   }, []);
 
   return (
     <div class="App">
       <Navigation></Navigation>
-      <header class="App-header">
+      <header class="App-standardPage">
+        <div class="App-pageHelper">
         <text>Projects</text>
-        <div className="App">
-          {/* <text>{JSON.stringify(projects)}</text> */}
-          
-            {Object.entries(projects).map( ([key, value]) => 
-            <ProjectBox href = {value} name = {key}></ProjectBox>)}
-
+          <div class="flex-row-wrap">
+            {projects}
+          </div>
         </div>
       </header>
     </div>
