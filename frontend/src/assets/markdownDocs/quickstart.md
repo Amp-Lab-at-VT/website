@@ -1,3 +1,9 @@
+## Fill out this form FIRST if you are new to the Amp Lab
+
+
+[Sign up for the Amp Lab](https://forms.gle/XZtVwm5prgZkJmnF6)
+
+
 ## For New Members (Mentees):
 
 Below is the recommended way of setting up your Github repositories. The bash script to automatically run the setup is still in beta, and is
