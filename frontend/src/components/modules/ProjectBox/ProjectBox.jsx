@@ -39,59 +39,33 @@ class ProjectBox extends Component {
         var diff = this.getDifference("https://github.com/", this.props.href)
         this.setState({ base: diff })
 
+        var fullSummary = "https://raw.githubusercontent.com/" +
+            diff + "/" +
+            this.props.branch + "/summary.md"
 
-        // Get the summary
-        var possibleBranches = ['main', 'master']
+        axios.get(fullSummary)
+        .then((response) => {
+            if (response.status < 300 && response.status >= 200){
+                this.setState({ summary: response.data })
+                this.setState({ summaryLoaded: true })
+            }
+        }).catch((response) => {
+            console.log(this.props.name + " is not avalibe at that address. Warning: " + response)
+        });
 
-        for (var i = 0; i < possibleBranches.length; i++) {
-            var branch = possibleBranches[i]
+        var imgPath = "https://raw.githubusercontent.com/" + diff + "/" + this.props.branch + "/hero.png"
 
-            var fullSummary = "https://raw.githubusercontent.com/" +
-                diff + "/" +
-                branch + "/summary.md"
+        axios.get(imgPath)
+        .then((response) => {
+            if (response.status < 300 && response.status >= 200){
+                this.setState({ imageExists: true})
+            }
+        }).catch((response) => {
+            console.log(this.props.name + " is not avalibe at that address. Warning: " + response)
+        });
 
-            // axios.get(fullSummary)
-            // .then((response) => {
-            //     if (response.status < 300 && response.status >= 200){
-            //         this.setState({ summary: response.data })
-            //         this.setState({ summaryLoaded: true })
-            //     }
-            // }).catch((response) => {
-            //     console.log(this.props.name + " is not avalibe at that address. Warning: " + response)
-            // });
+        this.setState({ imagePath: imgPath })
 
-            // Make an API call to find the name of the summary and hero image files
-            // Then, use those names to find the files
-            var apiURL = "https://api.github.com/repos/" + diff + "/git/trees/master?recursive=1"
-
-            fetch(apiURL).then((response) => {
-                if (response.ok) {
-                    console.log(JSON.stringify(response.json()))
-                  return response.json();
-                }
-                throw new Error('Something went wrong');
-              })
-              .then((responseJson) => {
-                // Do something with the response
-              })
-              .catch((error) => {
-                // console.log(error)
-              });
-
-
-            // find the path for the image, and choose whether to render it or not
-
-
-            // check to see if the image exists at the url
-
-
-
-
-
-            this.setState({ imagePath: "https://raw.githubusercontent.com/" + diff + "/" + branch + "/hero.png", imageExists: true })
-
-
-        }
     }
 
     render() {
