@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-
+import axios from "axios";
+import ReactMarkdown from "react-markdown";
 import "./project.css"
 
 class ProjectBox extends Component {
@@ -11,14 +12,89 @@ class ProjectBox extends Component {
     Props needed: image, uid
     */
 
+    constructor(props) {
+        super(props);
+        this.getDifference = this.getDifference.bind(this);
+        this.state = {
+            summary: "",
+            summaryLoaded: false,
+            imageExists: false,
+            imagePath: "",
+            base: ""
+        };
+    }
+
+
+    getDifference(str1, str2) {
+        let diff = "";
+        str2.split('').forEach(function (val, i) {
+            if (val !== str1.charAt(i))
+                diff += val;
+        });
+        return diff;
+    }
+
+
+    componentDidMount() {
+        var diff = this.getDifference("https://github.com/", this.props.href)
+        this.setState({ base: diff })
+
+
+        // Get the summary
+        var possibleBranches = ['main', 'master']
+
+        for (var i = 0; i < possibleBranches.length; i++) {
+            var branch = possibleBranches[i]
+            var properBranchFound = false
+
+            var fullSummary = "https://raw.githubusercontent.com/" +
+                diff + "/" +
+                branch + "/SUMMARY.md"
+
+            axios.get(fullSummary).then((response) => {
+                this.setState({ summary: response.data })
+                this.setState({ summaryLoaded: true })
+                properBranchFound = true
+            }).catch((response) => {
+                console.log("Error in loading summary for " + this.props.name + "- Response: " + response)
+            });
+
+            // find the path for the image, and choose whether to render it or not
+            var fullImagePath = "https://raw.githubusercontent.com/" +
+                diff + "/" +
+                branch + "/hero.png"
+
+            console.log(fullImagePath)
+
+            axios.get(fullImagePath).then((response) => {
+                this.setState({ imageExists: true })
+                this.setState({ imagePath: fullImagePath })
+                properBranchFound = true
+            }
+            ).catch((response) => {
+                console.log("Error in loading image for " + this.props.name + "- Response: " + response)
+            });
+
+            if (properBranchFound) {
+                break
+            }
+        }
+    }
+
     render() {
         // Simple div with a title and value
         if (this.props.image === undefined) {
             return (
                 <a href={this.props.href} class="projectBox">
-                    <text >
-                    {this.props.name}
-                    </text>
+                    <div>
+                        <div class="projectBoxTitle">
+                            {this.props.name}
+                        </div>
+                        <div class="tinyMarkdown">
+                            {this.state.summaryLoaded && <ReactMarkdown>{this.state.summary}</ReactMarkdown>}
+                        </div>
+                    </div>
+                    {this.state.imageExists && <img class="projectBoxImage" alt={this.props.name} src={"https://raw.githubusercontent.com/" + this.state.base + "/main/hero.png"} ></img>}
                 </a>
             )
         }

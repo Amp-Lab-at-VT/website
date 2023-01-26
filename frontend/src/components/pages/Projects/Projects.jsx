@@ -30,11 +30,10 @@ export default function Projects() {
       <header class="App-header">
         <text>Projects</text>
         <div className="App">
-          {/* <text>{JSON.stringify(projects)}</text> */}
-          
-            {Object.entries(projects).map( ([key, value]) => 
-            <ProjectBox href = {value} name = {key}></ProjectBox>)}
-
+          <div>
+              {Object.entries(projects).map( ([key, value]) => 
+              <ProjectBox href = {value} name = {key}></ProjectBox>)}
+          </div>
         </div>
       </header>
     </div>
