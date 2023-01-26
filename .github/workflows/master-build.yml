@@ -1,9 +1,7 @@
-name: Docker Image CI
+name: MasterBuilder
 
 on:
   push:
-    branches: [ "master" ]
-  pull_request:
     branches: [ "master" ]
 
 jobs:
@@ -15,4 +13,5 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file ./CI/Dockerfile --tag my-image-name:$(date +%s)
+    - run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+    - run: npm run deploy
