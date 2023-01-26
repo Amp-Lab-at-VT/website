@@ -1,9 +1,3 @@
----
-layout: page
-title: Joining
-show_sidebar: false
-has-text-centered: true
----
 <div class="level-item has-text-centered">
     <div>
         <h1 id="joining-header">Please Fill Out the Form Below to Get Started!!</h1>

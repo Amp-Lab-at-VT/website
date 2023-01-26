@@ -1,9 +1,3 @@
----
-layout: page
-title: Mentor Steps
-show_sidebar: false
----
-
 ### Step 1: Making them a project repo
 
 Go to [our Github repository](https://github.com/Amp-Lab-at-VT).

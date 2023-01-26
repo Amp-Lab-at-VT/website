@@ -1,9 +1,3 @@
----
-layout: page
-title: People
-show_sidebar: true
----
-
 # Quick tips for Github and Useful Commands
 
 ```bash

@@ -1,8 +1,3 @@
----
-layout: page
-title: Tutorial
-show_sidebar: false
----
 <b>PSA: There is a "Frequenty Asked Questions" section at the bottom of this page if any of the concepts are unfamiliar<b>
 
 ## Overview

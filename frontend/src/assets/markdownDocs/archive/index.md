@@ -1,13 +1,3 @@
----
-layout: no-title
-title: ㅤ
-#callouts: home_callouts
-show_sidebar: false
-theme_color: red
-hero_height: is-medium
-hero_image: /web/img/AmpLogo.png
----
-
 # Have an idea for a ECE project and want to build it for free?
 
 The Autonomous Mastery Prototyping (AMP) Lab is a lab space that gives electrical and computer engineering students the opportunity to gain hands-on experience and apply what they've learned in class with fun, hands-on projects. 

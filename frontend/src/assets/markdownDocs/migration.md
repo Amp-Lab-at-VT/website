@@ -1,9 +1,3 @@
----
-layout: page
-title: Migration Steps for Existing Repos
-show_sidebar: false
----
-
 ## Step 1:
 
 Our website works by pulling a very specific markdown file (that's the .md file extension) from your repo. First and foremost, you will need to add this to your project. See step 3 from the standard steps for guidance, then return here.

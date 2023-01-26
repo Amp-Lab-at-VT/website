@@ -1,9 +1,3 @@
----
-layout: page
-title: Open House
-show_sidebar: false
----
-
 # Email amp-lab-leadership-team-g@vt.edu if you would like to join or ask questions about the AMP Lab.
 
 The AMP Lab hosts an open house every Tuesday from 5pm to 6pm.
