@@ -19,6 +19,6 @@ Some people joining the Amp Lab already have GitHub repos with their project det
 
 When a project is first started, there are a few steps that you will need to follow to make sure your mentees can publish their work on the site. Follow the steps below to get started
 
-<a class="btn" href="/mentor-steps" >Mentor Steps</a>
+<a class="btn" href="/mentor_steps" >Mentor Steps</a>
 
 <hr>

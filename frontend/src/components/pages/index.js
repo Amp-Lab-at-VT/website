@@ -8,3 +8,6 @@ export { default as Soldering } from "./Soldering/soldering.jsx";
 export { default as BasicSoldering } from "./SolderingBasic/basic_soldering.jsx";
 export { default as AdvSoldering } from "./SolderingAdv/adv_soldering.jsx";
 export { default as UsefulLinks } from "./UsefulLinks/useful_links.jsx";
+export { default as Tutorial } from "./Tutorial/tutorial.jsx";
+export { default as MentorSteps } from "./MentorSteps/mentor_steps.jsx";
+export { default as Migration } from "./Migration/migration.jsx";

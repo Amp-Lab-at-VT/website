@@ -15,7 +15,10 @@ import {Home,
   Soldering, 
   BasicSoldering, 
   AdvSoldering,
-  UsefulLinks} from "./components/pages"
+  UsefulLinks,
+  Tutorial,
+  MentorSteps,
+  Migration} from "./components/pages"
 
 function App() {
   return (
@@ -33,6 +36,9 @@ function App() {
           <Route exact path="*" element={<Error/>} />
           <Route exact path="/basic_soldering" element={<BasicSoldering/>} />
           <Route exact path="/adv_soldering" element={<AdvSoldering/>} />
+          <Route exact path="/tutorial" element={<Tutorial/>} />
+          <Route exact path="/mentor_steps" element={<MentorSteps/>} />
+          <Route exact path="/migration" element={<Migration/>} />
         </Routes>
       </div>
     </Router>

@@ -4,9 +4,9 @@ title: Mentor Steps
 show_sidebar: false
 ---
 
-## Step 1: Making them a project repo
+### Step 1: Making them a project repo
 
-Go here: https://github.com/Amp-Lab-at-VT
+Go to [our Github repository](https://github.com/Amp-Lab-at-VT).
 
 Select 'New" (If this is not visible, ask one of the admins for privalges to create new repos)
 
@@ -17,12 +17,12 @@ License MIT
 Create Repo
 
 
-## Step 2: Give them access to the repo
+### Step 2: Give them access to the repo
 
 Share access to it with your mentee
 
 
-## Step 3: Adding the submodule of their project to the website
+### Step 3: Adding the submodule of their project to the website
 
 
 Open git and follow the following steps:
@@ -54,7 +54,7 @@ git submodule add https://github.com/Amp-Lab-at-VT/SampleProject.git
 cd ..
 ```
 
-## Step 4: Submit a PR to Master
+### Step 4: Submit a PR to Master
 
 Commit the branch to master, from the originial working directory (web)
 
