@@ -15,7 +15,7 @@ export default function Hamburger() {
         <Link to="/">Home</Link>
         <Link to="/projects">Projects</Link>
         <Link to="/about">About</Link>
-        <Link to="/usefulLinks">Useful Links</Link>
+        <Link to="/useful_links">Useful Links</Link>
         <Link to="/soldering">Soldering</Link>
         {/* <Link to="/about">About</Link> */}
       </div>
