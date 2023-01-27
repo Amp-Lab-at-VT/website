@@ -1,7 +1,6 @@
 ## Fill out this form FIRST if you are new to the Amp Lab
 
-
-[Sign up for the Amp Lab](https://forms.gle/XZtVwm5prgZkJmnF6)
+<a class="btn" href="https://forms.gle/XZtVwm5prgZkJmnF6" >Sign up for the Amp Lab</a>
 
 
 ## For New Members (Mentees):

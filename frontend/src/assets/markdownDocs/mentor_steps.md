@@ -66,19 +66,13 @@ git push --set-upstream origin Sample_Project
 
 Wonderful! Now go in and make a pull request. Go here: <a href="https://github.com/Amp-Lab-at-VT/web" >Amp Lab Website Github Origin</a>
 
-![amp-map]({{ site.baseurl }}/img/TutorialPhotos/pullRequest1.png){:class="img-responsive"}
 
 Make sure you are merging from your branch to main before creating the pull request!
 
-![amp-map]({{ site.baseurl }}/img/TutorialPhotos/pullRequest2.png){:class="img-responsive"}
-
 Click on the "Pull Request" tab, and ask to merge **your branch** with **master**. This is shown below:
 
-![amp-map]({{ site.baseurl }}/img/TutorialPhotos/pullRequest3.png){:class="img-responsive"}
 
 Leave a comment for the mentors, and you're good to go! 
-
-![amp-map]({{ site.baseurl }}/img/TutorialPhotos/pullRequest4.png){:class="img-responsive"}
 
 
 When you are done with these steps, remember that you are on a branch that has been submitted to master through a PR. Once the PR is accepted, it is wise to just start fresh. Follow these steps to make sure you are always working on the latest code.
