@@ -11,5 +11,3 @@ Many of our members have received internship and full-time positions because of 
 ## Leadership Team
 
 Want to hear more about our leadership team? Click below to learn more!
-
-<a class="btn" href="/leadership" >Leadership Team</a>

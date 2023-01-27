@@ -1,9 +1,9 @@
 import './App.css';
 
 import {
-  BrowserRouter as Router,
   Routes,
   Route,
+  HashRouter,
 } from "react-router-dom";
 
 import {Home, 
@@ -22,8 +22,7 @@ import {Home,
 
 function App() {
   return (
-    <Router>
-      <div>
+    <HashRouter>
         <Routes>
           <Route exact path="/AmpWebV2" element={<Home/>} />
           <Route exact path="/" element={<Home/>} />
@@ -40,8 +39,7 @@ function App() {
           <Route exact path="/mentor_steps" element={<MentorSteps/>} />
           <Route exact path="/migration" element={<Migration/>} />
         </Routes>
-      </div>
-    </Router>
+    </HashRouter>
   );
 }
 
