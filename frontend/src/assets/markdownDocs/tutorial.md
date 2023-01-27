@@ -1,8 +1,3 @@
----
-layout: page
-title: Tutorial
-show_sidebar: false
----
 <b>PSA: There is a "Frequenty Asked Questions" section at the bottom of this page if any of the concepts are unfamiliar<b>
 
 ## Overview
@@ -11,6 +6,7 @@ Here at the Amp Lab, you are expected to update the website with the latest info
 
 
 <a class="button is-link" href="https://git-scm.com/download/win" >Install Git for Windows</a>
+
 <a class="button is-link" href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git" >Install Git for Linux/Apple</a>
 
 It is also recommended that you install Visual Code Studio, a common IDE used in industry:
@@ -36,15 +32,11 @@ Once you are added, you will have access to your own project repo: where you can
 
 Now that you have the link to your repo, let's go through a few things. First, let's clone that repo. 
 
-
-**Tilda is a linux thing, update it for windows**
-**Update the paste_your_repo_link_here to be more clear**
-
 ``` bash
 cd ~
 mkdir AmpLab
 cd AmpLab
-git clone paste_your_repo_link_here
+git clone [your_repo_link_here]
 cd your_repo_name
 ```
 
