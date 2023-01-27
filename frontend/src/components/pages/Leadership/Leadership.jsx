@@ -20,13 +20,13 @@ export default function Leadership() {
       <div class="App-pageHelper">
         <h2>Meet Our Team: Student Staff</h2>
         <hr></hr>
-        <div class = "flex-row">
-          <LeadershipBox name = "Riichard Gibbons" src={Gibbons} title = "Richard Gibbons: Team Lead"></LeadershipBox>
-          <LeadershipBox name = "Henry Forsyth" src={Forsyth} title = "Henry Forsyth: Mentor/Webdev"></LeadershipBox>
+        <div class = "flex-row-left">
+          <LeadershipBox name = "Richard Gibbons" src={Gibbons} title = "Richard Gibbons: Team Lead" email = "gricha1@vt.edu"></LeadershipBox>
+          <LeadershipBox name = "Henry Forsyth" src={Forsyth} title = "Henry Forsyth: Mentor/Webdev" email = "rhforsythjr@vt.edu"></LeadershipBox>
         </div>
         <h2>Meet Our Team: Professors</h2>
         <hr></hr>
-        <div class = "flex-row">
+        <div class = "flex-row-left">
           <LeadershipBox name = "William Baumann" src={Baumann} title = "Dr.William Baumann: Professor" email = "baumann@vt.edu"></LeadershipBox>
           <LeadershipBox name = "Toby Meadows" src={Meadows} title = "Dr.Toby Meadows: Professor" email = "toby88@vt.edu"></LeadershipBox>
         </div>

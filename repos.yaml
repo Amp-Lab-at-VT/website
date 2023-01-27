@@ -16,6 +16,6 @@ ScratchBot:
 Stylophone: 
   url: "https://github.com/Amp-Lab-at-VT/Stylophone", 
   branch: "master"
-Sample: 
-  url : "https://github.com/Amp-Lab-at-VT/SampleProject"
-  branch: "master"
+# Sample: 
+#   url : "https://github.com/Amp-Lab-at-VT/SampleProject"
+#   branch: "master"

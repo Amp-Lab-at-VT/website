@@ -18,7 +18,6 @@ class LeadershipBox extends Component {
                 <div class = "leadershipBox">
                     <p><img src={this.props.src} alt={this.props.name + "Image"}></img></p>
                     <p><em>{this.props.title}</em></p>
-                    <p><em>{this.props.email}</em></p>
                     <p><a href={"mailto:" + this.props.email}>{this.props.email}</a></p>
                 </div>
             )
