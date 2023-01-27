@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import ReactMarkdown from "react-markdown";
-import "./project.css"
+import "./projectBox.css"
 
 class ProjectBox extends Component {
     /*
@@ -73,7 +73,8 @@ class ProjectBox extends Component {
         if (this.props.image === undefined) {
             return (
                 <a href={this.props.href} class="projectBox">
-                    <div>
+
+                    <div class = "projectBoxText">
                         <div class="projectBoxTitle">
                             {this.props.name}
                         </div>
@@ -81,7 +82,10 @@ class ProjectBox extends Component {
                             {this.state.summaryLoaded && <ReactMarkdown>{this.state.summary}</ReactMarkdown>}
                         </div>
                     </div>
-                    {this.state.imageExists && <img class="projectBoxImage" alt={this.props.name} src={this.state.imagePath} ></img>}
+                    
+                    <div class="projectBoxImage">
+                    {this.state.imageExists && <img alt={this.props.name} src={this.state.imagePath} ></img>}
+                    </div>
                 </a>
             )
         }
