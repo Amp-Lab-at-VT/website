@@ -1,6 +1,6 @@
 ### The AMP Lab provides two levels of soldering training for students:
-<a class="btn" href="/basic_soldering">Basic Soldering Training</a>
-<a class="btn" href="/adv_soldering">Advanced Soldering Training</a>
+<a class="btn" href="https://amp-lab.org/#/basic_soldering">Basic Soldering Training</a>
+<a class="btn" href="https://amp-lab.org/#/adv_soldering">Advanced Soldering Training</a>
 
 Note, students must have a mastery level of basic soldering knowledge to participate in advanced soldering training
 
