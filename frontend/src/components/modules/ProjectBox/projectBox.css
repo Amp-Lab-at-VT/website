@@ -27,6 +27,7 @@
     text-align: left;
     text-decoration: none; /* no underline */
     color: black;
+    text-decoration: underline;
 }
 
 .tinyMarkdown {
