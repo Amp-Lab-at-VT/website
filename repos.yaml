@@ -19,6 +19,9 @@ Stylophone:
 3-Phase-AC-generator:
   url : "https://github.com/Jack4891/3-Phase-AC-generator"
   branch: "main"
+Modular Flight Controller Recovey System (MFCRS):
+  url : "https://github.com/devincress/MFCRS"
+  branch: "main"  
 # Sample:
 #   url : "https://github.com/Amp-Lab-at-VT/SampleProject"
 #   branch: "master"
