@@ -28,7 +28,6 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "autodeploy": "git push origin `git subtree split --prefix dist master`:gh-pages --force"
-
   },
   "eslintConfig": {
     "extends": [
