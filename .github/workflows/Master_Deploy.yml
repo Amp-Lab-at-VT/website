@@ -17,4 +17,13 @@ jobs:
 
     # Run our deployment command
     - name: Deploying the static website to gh-pages
-      run: cd frontend && npm install && npm run deploy
+      env:
+        MY_EMAIL: robert.h.forsyth@gmail.com
+        MY_NAME: Forsyth_Creations
+      run: |
+        git config --global user.email $MY_EMAIL
+        git config --global user.name $MY_NAME
+        git remote set-url origin https://$MY_NAME:${{ secrets.GH_SECRET }}@github.com/Amp-Lab-at-VT/AmpWebV2.git
+        cd frontend
+        npm install
+        npm run deploy
