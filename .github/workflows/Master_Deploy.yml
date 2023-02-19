@@ -17,4 +17,4 @@ jobs:
 
     # Run our deployment command
     - name: Deploying the static website to gh-pages
-      run: cd frontend && npm run deploy
+      run: cd frontend && npm install && npm run deploy
