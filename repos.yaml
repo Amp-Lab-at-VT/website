@@ -20,7 +20,7 @@ ScratchBot:
   url: "https://github.com/Amp-Lab-at-VT/8-bit-Computer"
   branch: "master"
 Stylophone:
-  url: "https://github.com/Amp-Lab-at-VT/Stylophone",
+  url: "https://github.com/Amp-Lab-at-VT/Stylophone"
   branch: "master"
 3-Phase-AC-generator:
   url : "https://github.com/Jack4891/3-Phase-AC-generator"
