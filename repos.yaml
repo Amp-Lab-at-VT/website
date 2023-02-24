@@ -2,7 +2,13 @@ PCB Engraver:
   url : https://github.com/Amp-Lab-at-VT/PCB_Engraver
   branch: "main"
 InspireFly Cubesat Power Supply:
-  url: "https://github.com/Amp-Lab-at-VT/inspireFly_Cubesat_Power_Supply"
+  url: "https://github.com/joeesser1842/eps"
+  branch: "main"
+InspireFly Cubesat On Board Computer:
+  url: "https://github.com/joeesser1842/obdh"
+  branch: "main"
+InspireFly Cubesat Telemetry Tracking and Control:
+  url: "https://github.com/joeesser1842/ttc"
   branch: "main"
 Stepper Motor Symphony:
   url: "https://github.com/Amp-Lab-at-VT/Stepper_Motor_Symphony"
