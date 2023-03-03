@@ -18,8 +18,17 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Use Node.js ${{ matrix.node-version }}
+        env:
+          MY_EMAIL: robert.h.forsyth@gmail.com
+          MY_NAME: Forsyth_Creations
+          REPO_LINK: github.com/Amp-Lab-at-VT/AmpWebV2.git
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
       - run: cd frontend && npm install 
-      - run: cd frontend && npm run deploy 
+      - run: |
+          cd frontend
+          git config --global user.email $MY_EMAIL
+          git config --global user.name $MY_NAME
+          git remote set-url origin https://$MY_NAME:${{ secrets.GH_SECRET }}@$REPO_LINK
+          npm run deploy2
