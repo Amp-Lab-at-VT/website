@@ -17,7 +17,7 @@ jobs:
           npm run build
 
       - name: Deploy 🚀
-        uses: gdcorp-action-public-forks/github-pages-deploy-action@v4
+        uses: gdcorp-action-public-forks/github-pages-deploy-action
         with:
           branch: gh-pages # The branch the action should deploy to.
           folder: frontend/build # The folder the action should deploy.
