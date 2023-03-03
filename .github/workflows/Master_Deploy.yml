@@ -1,29 +1,15 @@
-# This script deploys your website automatically
-name: CI
+name: Release
 
-# Only trigger this script when you push to the master branch
 on:
   push:
     branches: [ master ]
 
-# Specify the tasks to run when this script gets triggered
 jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    # Download our master branch
+  release:
+    runs-on: ubuntu-22.04
     steps:
-    - uses: actions/checkout@v2
-
-    # Run our deployment command
-    - name: Deploying the static website to gh-pages
-      env:
-        MY_EMAIL: robert.h.forsyth@gmail.com
-        MY_NAME: Forsyth_Creations
-      run: |
-        git config --global user.email $MY_EMAIL
-        git config --global user.name $MY_NAME
-        git remote set-url origin https://$MY_NAME:${{ secrets.GH_SECRET }}@github.com/Amp-Lab-at-VT/AmpWebV2.git
-        cd frontend
-        npm install
-        npm run deploy
+      - uses: actions/checkout@v3
+      # https://github.com/peaceiris/workflows/blob/main/create-release-npm/action.yml
+      - uses: peaceiris/workflows/create-release-npm@v0.19.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
