@@ -27,7 +27,6 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: cd frontend && npm install 
       - run: |
-          cd frontend
           git config --global user.email $MY_EMAIL
           git config --global user.name $MY_NAME
           git remote set-url origin https://$MY_NAME:${{ secrets.GH_SECRET }}@$REPO_LINK
