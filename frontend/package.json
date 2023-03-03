@@ -27,7 +27,7 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "deploy2": "gh-pages -d build -u 'github-actions-bot <support+actions@github.com>'",
+    "deploy2": "gh-pages -d build -u 'github-actions-bot <support+actions@github.com>'"
   },
   "eslintConfig": {
     "extends": [
