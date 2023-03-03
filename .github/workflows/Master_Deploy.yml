@@ -22,5 +22,6 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: cd frontend && npm install 
+      - run: cd frontend && npm deploy 
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
