@@ -1,15 +1,20 @@
-name: Release
-
-on:
-  push:
-    branches: [ master ]
-
-jobs:
-  release:
-    runs-on: ubuntu-22.04
-    steps:
-      - uses: actions/checkout@v3
-      # https://github.com/peaceiris/workflows/blob/main/create-release-npm/action.yml
-      - uses: peaceiris/workflows/create-release-npm@v0.19.1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+name: 'Create release for npm'
+description: 'Create release for npm'
+inputs:
+  draft:
+    description: 'Enable --draft flag'
+    default: '--draft'
+    required: false
+  prerelease:
+    description: 'Enable --prerelease flag'
+    default: '--prerelease'
+    required: false
+runs:
+  using: "composite"
+  steps:
+    - name: Create release
+      run: |
+        TAG_NAME="${GITHUB_REF##refs/tags/}"
+        echo "See [CHANGELOG.md](https://github.com/${GITHUB_REPOSITORY}/blob/${TAG_NAME}/CHANGELOG.md) for more details." > ./release_notes.md
+        gh release create "${TAG_NAME}" ${{ inputs.draft }} ${{ inputs.prerelease }}
+      shell: bash
