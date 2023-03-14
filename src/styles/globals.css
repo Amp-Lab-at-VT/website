@@ -60,6 +60,7 @@ body {
 .App-pageHelper{
   padding: 10px;
   margin: 10px;
+  display: block;
 }
 
 hr {
@@ -78,6 +79,8 @@ hr {
   text-decoration: none;
   color:black;
   pointer-events: all;
+  display: block;
+  margin: 2px;
 }
 
 .btn:hover {
