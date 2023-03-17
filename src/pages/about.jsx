@@ -5,6 +5,8 @@ import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 // Faculty and Mentor Image Imports
 
+import Link from 'next/link'
+
 import aboutMarkdown from "../../../assets/markdownDocs/about.md"
 
 

@@ -2,18 +2,20 @@
 import { useState } from "react";
 import Typewriter from "typewriter-effect";
 
+import Link from 'next/link'
+
 export default function Home() {
   const [showButton, setShowButton] = useState(false);
 
 
   return (
-    <div class="App">
-      <header class="App-header">
-        <div class="App">
-          <div class = "homeText">
+    <div className="App">
+      <header className="App-header">
+        <div className="App">
+          <div className = "homeText">
             <Typewriter
             onInit={(typewriter)=> {
-            typewriter.changeDelay("50")
+            typewriter.changeDelay(50)
             .pauseFor(250)
             .typeString("The AMP Lab at Virginia Tech")
             .pauseFor(500)
@@ -25,8 +27,8 @@ export default function Home() {
             />
           </div>
           <div style = {{padding: "50px"} }>
-          {(showButton && <a href="/getting_started" class = "btn">Getting Started</a>) ||
-          (!showButton && <a href="/getting_started" style = {{visibility: "hidden"}} class = "btn">Getting Started</a>)}
+          {(showButton && <Link href="/getting_started" className = "btn">Getting Started</Link>) ||
+          (!showButton && <Link href="/getting_started" style = {{visibility: "hidden"}} className = "btn">Getting Started</Link>)}
           </div>
         </div>
       </header>

@@ -2,6 +2,8 @@ import React, { Component } from "react";
 
 import "./leadership.css"
 
+import Image from 'next/image'
+
 class LeadershipBox extends Component {
     /*
     Expects an image prop, which is a string
@@ -16,7 +18,7 @@ class LeadershipBox extends Component {
         if (this.props.src !== undefined) {
             return (
                 <div class = "leadershipBox">
-                    <p><img src={this.props.src} alt={this.props.name + "Image"}></img></p>
+                    <p><Image src={this.props.src} alt={this.props.name + "Image"}></Image></p>
                     <p><em>{this.props.title}</em></p>
                     <p><a href={"mailto:" + this.props.email}>{this.props.email}</a></p>
                 </div>

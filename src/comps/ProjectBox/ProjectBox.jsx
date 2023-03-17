@@ -3,6 +3,8 @@ import axios from "axios";
 import ReactMarkdown from "react-markdown";
 import styles from "./projectBox.module.css"
 
+import Image from "next/image";
+
 class ProjectBox extends Component {
     /*
     Expects an image prop, which is a string
@@ -84,7 +86,7 @@ class ProjectBox extends Component {
                     </div>
                     
                     <div className={styles.projectBoxImage}>
-                    {this.state.imageExists && <img alt={this.props.name} src={this.state.imagePath} ></img>}
+                    {this.state.imageExists && <Image alt={this.props.name} src={this.state.imagePath} ></Image>}
                     </div>
                 </a>
             )

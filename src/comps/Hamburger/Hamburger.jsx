@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './burger.module.css'
+import Link from 'next/link'
 
 import {AiOutlineMenu} from 'react-icons/ai'
 
@@ -11,12 +12,12 @@ export default function Hamburger() {
         <AiOutlineMenu className = {styles.dropdownIcon}></AiOutlineMenu>
       </button>
       <div className = {styles.dropdownContent}>
-        <a href="/">Home</a>
-        <a href="/getting_started">Getting Started</a>
-        <a href="/projects">Projects</a>
-        <a href="/about">About</a>
-        <a href="/useful_as">Useful Links</a>
-        <a href="/soldering">Soldering</a>
+        <Link href="/">Home</Link>
+        <Link href="/getting_started">Getting Started</Link>
+        <Link href="/projects">Projects</Link>
+        <Link href="/about">About</Link>
+        <Link href="/useful_as">Useful Links</Link>
+        <Link href="/soldering">Soldering</Link>
         {/* <Link to="/about">About</Link> */}
       </div>
     </div>
