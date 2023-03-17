@@ -10,7 +10,6 @@ WORKDIR /app
 COPY package.json package-lock.json* pnpm-lock.yaml* ./
 RUN npm install
 
-
 # Rebuild the source code only when needed
 FROM base AS builder
 WORKDIR /app
