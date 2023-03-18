@@ -19,3 +19,16 @@ const nextConfig = {
 	reactStrictMode: true,
 };
 // export the config that contains the MDX plugin and any other Next.js config
+
+module.exports = {
+	images: {
+	  remotePatterns: [
+		{
+		  protocol: 'https',
+		  hostname: 'raw.githubusercontent.com',
+		  port: '',
+		  pathname: '/**',
+		},
+	  ],
+	},
+  }

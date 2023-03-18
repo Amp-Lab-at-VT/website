@@ -51,3 +51,10 @@
     font-size: 13px;
     text-align: left;
 }
+
+.center_cropped {
+    object-fit: scale-down; /* Do not scale the image */
+    object-position: center; /* Center the image within the element */
+    height: 50px;
+    width: 50px;
+  }
