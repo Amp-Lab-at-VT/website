@@ -1,7 +1,8 @@
 //https://react-icons.github.io/react-icons/icons?name=bs
-import React, { useEffect } from "react";
+import React from "react";
 
 export default function GettingStarted() {
+  return (<div>This Page needs to be moved to MD file instead of hardcode</div>)
 
   return (
     <div class = "App-pageHelper">

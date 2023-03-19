@@ -1,36 +1,24 @@
 //https://react-icons.github.io/react-icons/icons?name=bs
-import React, { useEffect } from "react";
-
-import Navigation from "../../modules/Nav/Nav.jsx"
+import { promises as fs } from 'fs'
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
-// Faculty and Mentor Image Imports
 
-import aboutMarkdown from "../../../assets/markdownDocs/soldering.md"
+import "@/pages/Soldering/soldering.module.css"
 
-
-import "./soldering.css"
-
-export default function Soldering() {
-  const [text, setText] = React.useState();
-
-  useEffect(() => {
-    fetch(aboutMarkdown)
-      .then((response) => response.text())
-      .then((text) => {
-        setText(text);
-      });
-  }, []);
-
+export default function Soldering({fileContents}) {
   return (
     <div>
-      <Navigation></Navigation>
       <header class="App-standardPage">
         <div class = "App-pageHelper">
-        <ReactMarkdown class="App-standardPage" rehypePlugins={[rehypeRaw]}>{text}</ReactMarkdown>
-        </div>
+        <ReactMarkdown class="App-standardPage" rehypePlugins={[rehypeRaw]}>{fileContents}</ReactMarkdown>
+        </div> 
       </header>
     </div>
   );
+}
+export async function getStaticProps() {
+  const file = 'soldering.md'
+  const fileContents = await fs.readFile( process.cwd() + '/markdowns/' + file, 'utf8')
+  return {props: {fileContents}}
 }
 

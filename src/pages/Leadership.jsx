@@ -1,13 +1,13 @@
 //https://react-icons.github.io/react-icons/icons?name=bs
 import React from "react";
-import LeadershipBox from "../comps/LeadershipBox/LeadershipBox.jsx"
+import LeadershipBox from "@/comps/LeadershipBox/LeadershipBox.jsx"
 
 // import Baumann from "../../../assets/img/Headshots/Baumann.jpg"
 // import Gibbons from "../../../assets/img/Headshots/Gibbons.jpg"
 // import Forsyth from "../../../assets/img/Headshots/Forsyth.jpg"
 // import Meadows from "../../../assets/img/Headshots/Meadows.jpg"
 
-import "./leadership.css"
+import "@/pages/Leadership/leadership.module.css"
 
 export default function Leadership() {
 

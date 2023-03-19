@@ -1,8 +1,6 @@
 import React from "react";
-import styles from './nav.module.css'
-
-
-import Hamburger from "../Hamburger/Hamburger.jsx"
+import styles from '@/comps/Nav/nav.module.css'
+import Hamburger from "@/comps/Hamburger/Hamburger.jsx"
 
 export default function Navigation() {
 
@@ -10,9 +8,7 @@ export default function Navigation() {
     <div className={styles.navbar}>
         <div className={styles.parentNav}>
             <div style={{display : "flex", alignItems: "center"}}>
-                <Hamburger></Hamburger>
-            </div>
-            <div style={{display : "flex", alignItems: "center"}}>
+                <Hamburger />
             </div>
         </div>
     </div>

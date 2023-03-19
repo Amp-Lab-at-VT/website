@@ -41,9 +41,7 @@ class ProjectBox extends Component {
         var diff = this.getDifference("https://github.com/", this.props.href)
         this.setState({ base: diff })
 
-        var fullSummary = "https://raw.githubusercontent.com/" +
-            diff + "/" +
-            this.props.branch + "/summary.md"
+        var fullSummary = "https://raw.githubusercontent.com/" + diff + "/" + this.props.branch + "/summary.md"
 
         axios.get(fullSummary)
         .then((response) => {

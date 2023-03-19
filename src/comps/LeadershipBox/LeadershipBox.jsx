@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import "./leadership.css"
+import "@/pages/Leadership/leadership.module.css"
 
 import Image from 'next/image'
 

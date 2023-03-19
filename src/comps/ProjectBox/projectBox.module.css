@@ -15,9 +15,9 @@
     display: flex;
     flex-direction: column;
     width: 20vw;
+    overflow: hidden;
     font-family: 'Roboto', sans-serif;
 }
-
 .projectBox:hover {
     background-color: rgb(208, 174, 129);
 }

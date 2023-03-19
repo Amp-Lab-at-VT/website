@@ -1,36 +1,26 @@
 //https://react-icons.github.io/react-icons/icons?name=bs
-import React, { useEffect } from "react";
-
-import Navigation from "../../modules/Nav/Nav.jsx"
+import React from "react";
 import ReactMarkdown from "react-markdown";
+import { promises as fs } from 'fs'
 import rehypeRaw from "rehype-raw";
-// Faculty and Mentor Image Imports
 
-import aboutMarkdown from "../../../assets/markdownDocs/mentor_steps.md"
+import "@/pages/MentorSteps/mentor_steps.module.css"
 
-
-import "./mentor_steps.css"
-
-export default function MentorSteps() {
-  const [text, setText] = React.useState();
-
-  useEffect(() => {
-    fetch(aboutMarkdown)
-      .then((response) => response.text())
-      .then((text) => {
-        setText(text);
-      });
-  }, []);
-
+export default function MentorSteps({fileContents}) {
   return (
     <div>
-      <Navigation></Navigation>
       <header class="App-standardPage">
         <div class = "App-pageHelper">
-        <ReactMarkdown class="App-standardPage" rehypePlugins={[rehypeRaw]}>{text}</ReactMarkdown>
+        <ReactMarkdown class="App-standardPage" rehypePlugins={[rehypeRaw]}>{fileContents}</ReactMarkdown>
         </div>
       </header>
     </div>
   );
+}
+
+export async function getStaticProps() {
+  const file = 'mentor_steps.md'
+  const fileContents = await fs.readFile( process.cwd() + '/markdowns/' + file, 'utf8')
+  return {props: {fileContents}}
 }
 

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import YAML from 'yaml'
-import ProjectBox from "../comps/ProjectBox/ProjectBox.jsx"
+import ProjectBox from "@/comps/ProjectBox/ProjectBox.jsx"
 
 export default function Projects() {
   const url =
