@@ -27,7 +27,10 @@ Stylophone:
   branch: "main"
 Modular Flight Controller Recovey System (MFCRS):
   url : "https://github.com/devincress/MFCRS"
-  branch: "main"  
+  branch: "main" 
+Temperature Controlled Fan:
+ url: "https://github.com/Amp-Lab-at-VT/Temperature-controlled-fan"
+ branch: "main"
 Split-Rail-DC-Power-Supply:
   url : "https://github.com/tylermwells/Split-Rail-DC-Power-Supply"
   branch: "main"
