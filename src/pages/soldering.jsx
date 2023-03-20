@@ -16,6 +16,7 @@ export default function Soldering({fileContents}) {
     </div>
   );
 }
+
 export async function getStaticProps() {
   const file = 'soldering.md'
   const fileContents = await fs.readFile( process.cwd() + '/markdowns/' + file, 'utf8')
