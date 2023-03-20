@@ -1,20 +1,20 @@
 //https://react-icons.github.io/react-icons/icons?name=bs
 import React from "react";
-import LeadershipBox from "../comps/LeadershipBox/LeadershipBox.jsx"
 
-// import Baumann from "../../../assets/img/Headshots/Baumann.jpg"
-// import Gibbons from "../../../assets/img/Headshots/Gibbons.jpg"
-// import Forsyth from "../../../assets/img/Headshots/Forsyth.jpg"
-// import Meadows from "../../../assets/img/Headshots/Meadows.jpg"
+import LeadershipBox from "@/comps/LeadershipBox/LeadershipBox.jsx"
+import "@/pages/Leadership/leadership.module.css"
 
-import "./leadership.css"
+import Baumann from "../../public/Headshots/Baumann.jpg"
+import Gibbons from "../../public/Headshots/Gibbons.jpg"
+import Forsyth from "../../public/Headshots/Forsyth2.jpg"
+import Meadows from "../../public/Headshots/Meadows.jpg"
 
 export default function Leadership() {
 
 
   return (
     <div>
-    {/* <header class="App-standardPage">
+    <header class="App-standardPage">
       <div class="App-pageHelper">
         <h2>Meet Our Team: Student Staff</h2>
         <hr></hr>
@@ -29,8 +29,9 @@ export default function Leadership() {
           <LeadershipBox name = "Toby Meadows" src={Meadows} title = "Dr.Toby Meadows: Professor" email = "toby88@vt.edu"></LeadershipBox>
         </div>
       </div>
-    </header> */}
+    </header>
   </div>
   );
 }
+
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './burger.module.css'
+import styles from '@/comps/Hamburger/burger.module.css'
 import Link from 'next/link'
 
 import {AiOutlineMenu} from 'react-icons/ai'
@@ -16,9 +16,8 @@ export default function Hamburger() {
         <Link href="/getting_started">Getting Started</Link>
         <Link href="/projects">Projects</Link>
         <Link href="/about">About</Link>
-        <Link href="/useful_as">Useful Links</Link>
+        <Link href="/useful_links">Useful Links</Link>
         <Link href="/soldering">Soldering</Link>
-        {/* <Link to="/about">About</Link> */}
       </div>
     </div>
   )

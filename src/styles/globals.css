@@ -126,3 +126,12 @@ hr {
   font-family: 'Georgia Bold'
 }
 
+code
+{
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.2em;
+  color: rgb(0, 0, 0);
+  padding: 0.2em;
+  border-radius: 0.5em;
+}
+

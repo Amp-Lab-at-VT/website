@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import "./leadership.css"
+import styles from '@/comps/LeadershipBox/leadership.module.css'
 
 import Image from 'next/image'
 
@@ -17,7 +17,7 @@ class LeadershipBox extends Component {
         // Simple div with a title and value
         if (this.props.src !== undefined) {
             return (
-                <div class = "leadershipBox">
+                <div class = {styles.leadershipBox}>
                     <p><Image src={this.props.src} alt={this.props.name + "Image"}></Image></p>
                     <p><em>{this.props.title}</em></p>
                     <p><a href={"mailto:" + this.props.email}>{this.props.email}</a></p>

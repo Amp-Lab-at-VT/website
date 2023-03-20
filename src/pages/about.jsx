@@ -1,38 +1,25 @@
 //https://react-icons.github.io/react-icons/icons?name=bs
-import React, { useEffect } from "react";
-import Navigation from "../../modules/Nav/Nav.jsx"
+import React from "react";
+import Link from 'next/link'
+import { promises as fs } from 'fs'
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
-// Faculty and Mentor Image Imports
+import "@/pages/About/about.module.css"
 
-import Link from 'next/link'
-
-import aboutMarkdown from "../../../assets/markdownDocs/about.md"
-
-
-import "./about.css"
-
-export default function About() {
-  const [text, setText] = React.useState();
-
-  useEffect(() => {
-    fetch(aboutMarkdown)
-      .then((response) => response.text())
-      .then((text) => {
-        setText(text);
-      });
-  }, []);
-
+export default function About({fileContents}) {  
   return (
-    <div>
-      <Navigation></Navigation>
-      <header class="App-standardPage">
-        <div class = "App-pageHelper">
-        <ReactMarkdown class="App-standardPage" rehypePlugins={[rehypeRaw]}>{text}</ReactMarkdown>
-        <Link class = "btn" to="/leadership">Leadership Team</Link>
+    <div className="App">
+      <header className="App-standardPage">
+       <div className="App-pageHelper">
+        <ReactMarkdown class="App-standardPage" rehypePlugins={[rehypeRaw]}>{fileContents}</ReactMarkdown>
+        <Link className= "btn" href="/Leadership">Leadership Team</Link>
         </div>
       </header>
     </div>
   );
 }
-
+export async function getStaticProps() {
+  const file = 'about.md'
+  const fileContents = await fs.readFile( process.cwd() + '/markdowns/' + file, 'utf8')
+  return {props: {fileContents}}
+}

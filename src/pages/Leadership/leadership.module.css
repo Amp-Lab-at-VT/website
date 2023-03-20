@@ -1,0 +1,10 @@
+.leadershipText {
+    font-size: 100px;
+    font-weight: 300;
+    color: rgb(185, 18, 18);
+    text-align: center;
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 0 20px;
+    font-family: 'Georgia Bold'
+}

@@ -41,9 +41,7 @@ class ProjectBox extends Component {
         var diff = this.getDifference("https://github.com/", this.props.href)
         this.setState({ base: diff })
 
-        var fullSummary = "https://raw.githubusercontent.com/" +
-            diff + "/" +
-            this.props.branch + "/summary.md"
+        var fullSummary = "https://raw.githubusercontent.com/" + diff + "/" + this.props.branch + "/summary.md"
 
         axios.get(fullSummary)
         .then((response) => {
@@ -77,17 +75,13 @@ class ProjectBox extends Component {
                 <a href={this.props.href} className={styles.projectBox}>
 
                     <div className = {styles.projectBoxText}>
-                        <div className={styles.projectBoxTitle}>
-                            {this.props.name}
-                        </div>
-                        <div className={styles.tinyMarkdown}>
-                            {this.state.summaryLoaded && <ReactMarkdown>{this.state.summary}</ReactMarkdown>}
-                        </div>
+                        <div className={styles.projectBoxTitle}> {this.props.name} </div>
+                        <div className={styles.tinyMarkdown}> {this.state.summaryLoaded && <ReactMarkdown>{this.state.summary}</ReactMarkdown>} </div>
                     </div>
                     
-                    <div className={styles.projectBoxImage}>
-                    {this.state.imageExists && <Image alt={this.props.name} src={this.state.imagePath} ></Image>}
-                    </div>
+                    <div style={{ display: 'flex',maxWidth: '250px', width:'300px', position: 'relative', paddingLeft: '40px'}}>
+                        {this.state.imageExists && <Image className = {styles.center_cropped} alt={this.props.name} src={this.state.imagePath} fill={true} 
+                        />}</div>
                 </a>
             )
         }
