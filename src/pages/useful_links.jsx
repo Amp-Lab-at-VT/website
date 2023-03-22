@@ -6,12 +6,12 @@ import rehypeRaw from "rehype-raw";
 
 import "@/pages/UsefulLinks/useful_links.module.css"
 
-export default function UsefulLinks({fileContents}) {
+export default function UsefulLinks({ fileContents }) {
   return (
     <div>
-      <header class="App-standardPage">
-        <div class = "App-pageHelper">
-        <ReactMarkdown class="App-standardPage" rehypePlugins={[rehypeRaw]}>{fileContents}</ReactMarkdown>
+      <header className="App-standardPage">
+        <div className="App-pageHelper">
+          <ReactMarkdown class="App-standardPage" rehypePlugins={[rehypeRaw]}>{fileContents}</ReactMarkdown>
         </div>
       </header>
     </div>
@@ -20,7 +20,7 @@ export default function UsefulLinks({fileContents}) {
 
 export async function getStaticProps() {
   const file = 'useful_links.md'
-  const fileContents = await fs.readFile( process.cwd() + '/markdowns/' + file, 'utf8')
-  return {props: {fileContents}}
+  const fileContents = await fs.readFile(process.cwd() + '/markdowns/' + file, 'utf8')
+  return { props: { fileContents } }
 }
 

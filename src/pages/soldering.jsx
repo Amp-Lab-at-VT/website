@@ -5,13 +5,13 @@ import rehypeRaw from "rehype-raw";
 
 import "@/pages/Soldering/soldering.module.css"
 
-export default function Soldering({fileContents}) {
+export default function Soldering({ fileContents }) {
   return (
     <div>
-      <header class="App-standardPage">
-        <div class = "App-pageHelper">
-        <ReactMarkdown class="App-standardPage" rehypePlugins={[rehypeRaw]}>{fileContents}</ReactMarkdown>
-        </div> 
+      <header className="App-standardPage">
+        <div className="App-pageHelper">
+          <ReactMarkdown class="App-standardPage" rehypePlugins={[rehypeRaw]}>{fileContents}</ReactMarkdown>
+        </div>
       </header>
     </div>
   );
@@ -19,7 +19,7 @@ export default function Soldering({fileContents}) {
 
 export async function getStaticProps() {
   const file = 'soldering.md'
-  const fileContents = await fs.readFile( process.cwd() + '/markdowns/' + file, 'utf8')
-  return {props: {fileContents}}
+  const fileContents = await fs.readFile(process.cwd() + '/markdowns/' + file, 'utf8')
+  return { props: { fileContents } }
 }
 

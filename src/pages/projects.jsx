@@ -16,10 +16,10 @@ export default function Projects() {
       var allProjects = []
 
       Object.keys(items).forEach(function (key) {
-          var name = (items[key]["key"]["value"]) //Gives us the project name
-          var href = (items[key]['value']['items'][0]['value']['value']) //Gives us the project url
-          var branch = (items[key]['value']['items'][1]['value']['value']) //Gives us the branch name
-          allProjects.push(<ProjectBox branch = {branch} href={href} name={name}></ProjectBox>)
+        var name = (items[key]["key"]["value"]) //Gives us the project name
+        var href = (items[key]['value']['items'][0]['value']['value']) //Gives us the project url
+        var branch = (items[key]['value']['items'][1]['value']['value']) //Gives us the branch name
+        allProjects.push(<ProjectBox branch={branch} href={href} name={name}></ProjectBox>)
       });
 
       setProjects(allProjects)
@@ -27,13 +27,11 @@ export default function Projects() {
   }, []);
 
   return (
-    <div class="App">
-      <header class="App-standardPage">
-        <div class="App-pageHelper">
-        <text>Projects</text>
-          <div class="flex-row-wrap">
-            {projects}
-          </div>
+    <div className="App">
+      <header className="App-standardPage">
+        <div className="App-pageHelper">
+          <text>Projects</text>
+          <div className="flex-row-wrap"> {projects} </div>
         </div>
       </header>
     </div>

@@ -14,23 +14,23 @@ export default function Leadership() {
 
   return (
     <div>
-    <header class="App-standardPage">
-      <div class="App-pageHelper">
-        <h2>Meet Our Team: Student Staff</h2>
-        <hr></hr>
-        <div class = "flex-row-left">
-          <LeadershipBox name = "Richard Gibbons" src={Gibbons} title = "Richard Gibbons: Team Lead" email = "gricha1@vt.edu"></LeadershipBox>
-          <LeadershipBox name = "Henry Forsyth" src={Forsyth} title = "Henry Forsyth: Mentor/Webdev" email = "rhforsythjr@vt.edu"></LeadershipBox>
+      <header className="App-standardPage">
+        <div className="App-pageHelper">
+          <h2>Meet Our Team: Student Staff</h2>
+          <hr />
+          <div class="flex-row-left">
+            <LeadershipBox name="Richard Gibbons" src={Gibbons} title="Richard Gibbons: Team Lead" email="gricha1@vt.edu" />
+            <LeadershipBox name="Henry Forsyth" src={Forsyth} title="Henry Forsyth: Mentor/Webdev" email="rhforsythjr@vt.edu" />
+          </div>
+          <h2>Meet Our Team: Professors</h2>
+          <hr />
+          <div class="flex-row-left">
+            <LeadershipBox name="William Baumann" src={Baumann} title="Dr.William Baumann: Professor" email="baumann@vt.edu" />
+            <LeadershipBox name="Toby Meadows" src={Meadows} title="Dr.Toby Meadows: Professor" email="toby88@vt.edu" />
+          </div>
         </div>
-        <h2>Meet Our Team: Professors</h2>
-        <hr></hr>
-        <div class = "flex-row-left">
-          <LeadershipBox name = "William Baumann" src={Baumann} title = "Dr.William Baumann: Professor" email = "baumann@vt.edu"></LeadershipBox>
-          <LeadershipBox name = "Toby Meadows" src={Meadows} title = "Dr.Toby Meadows: Professor" email = "toby88@vt.edu"></LeadershipBox>
-        </div>
-      </div>
-    </header>
-  </div>
+      </header>
+    </div>
   );
 }
 

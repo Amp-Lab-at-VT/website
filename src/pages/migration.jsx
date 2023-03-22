@@ -6,12 +6,12 @@ import rehypeRaw from "rehype-raw";
 
 import "@/pages/Migration/migration.module.css"
 
-export default function Migration({fileContents}) {
+export default function Migration({ fileContents }) {
   return (
     <div>
-      <header class="App-standardPage">
-        <div class = "App-pageHelper">
-        <ReactMarkdown class="App-standardPage" rehypePlugins={[rehypeRaw]}>{fileContents}</ReactMarkdown>
+      <header className="App-standardPage">
+        <div className="App-pageHelper">
+          <ReactMarkdown class="App-standardPage" rehypePlugins={[rehypeRaw]}>{fileContents}</ReactMarkdown>
         </div>
       </header>
     </div>
@@ -19,8 +19,8 @@ export default function Migration({fileContents}) {
 }
 export async function getStaticProps() {
   const file = 'migration.md'
-  const fileContents = await fs.readFile( process.cwd() + '/markdowns/' + file, 'utf8')
-  return {props: {fileContents}}
+  const fileContents = await fs.readFile(process.cwd() + '/markdowns/' + file, 'utf8')
+  return { props: { fileContents } }
 }
 
 
