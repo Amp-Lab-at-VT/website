@@ -14,7 +14,6 @@ export default function Leadership() {
 
   return (
     <div>
-    <header class="App-standardPage">
       <div class="App-pageHelper">
         <h2>Meet Our Team: Student Staff</h2>
         <hr></hr>
@@ -29,7 +28,6 @@ export default function Leadership() {
           <LeadershipBox name = "Toby Meadows" src={Meadows} title = "Dr.Toby Meadows: Professor" email = "toby88@vt.edu"></LeadershipBox>
         </div>
       </div>
-    </header>
   </div>
   );
 }
