@@ -15,8 +15,6 @@ Alexander Summerton - alexsummerton@vt.edu
 
 Eddie Prichard - epritchard@vt.edu
 
-Evan Gobien - egobien@vt.edu
-
 Purv Bandashi - purvbavishi@vt.edu
 
 Josh Sutton - joshs98@vt.edu
