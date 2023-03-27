@@ -18,7 +18,7 @@ class LeadershipBox extends Component {
         if (this.props.src !== undefined) {
             return (
                 <div class = {styles.leadershipBox}>
-                    <div class = {styles.alignImage}><Image src={this.props.src} alt={this.props.name + "Image"}></Image></div>
+                    <p><Image src={this.props.src} alt={this.props.name + "Image"}></Image></p>
                     <p><em>{this.props.title}</em></p>
                     <p><a href={"mailto:" + this.props.email}>{this.props.email}</a></p>
                 </div>
