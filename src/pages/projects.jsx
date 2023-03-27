@@ -6,7 +6,6 @@ export default function Projects({ projects }) {
   return (
     <div class="App">
       <header class="App-standardPage">
-        <div class="App-pageHelper">
           <text>Projects</text>
           <div class="flex-row-wrap">
             {
@@ -15,7 +14,6 @@ export default function Projects({ projects }) {
               })
             }
           </div>
-        </div>
       </header>
     </div>
   );

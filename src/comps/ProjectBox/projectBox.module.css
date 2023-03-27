@@ -18,6 +18,7 @@
     overflow: hidden;
     font-family: 'Roboto', sans-serif;
 }
+
 .projectBox:hover {
     background-color: rgb(208, 174, 129);
 }
@@ -55,6 +56,40 @@
 .center_cropped {
     object-fit: scale-down; /* Do not scale the image */
     object-position: center; /* Center the image within the element */
-    height: 50px;
-    width: 50px;
+    height:100px;
+    width: 100px;
   }
+
+  .image_div {
+    display: flex;
+    max-width: 250px;
+    width: 50vw;
+    position: relative;
+    padding-left: 40px;
+}
+
+  /* --------------- For Mobile Formatting --------------------*/
+
+  @media screen and (max-width: 1000px) {
+    .image_div {
+        display: flex;
+        max-width: 250px;
+        width: 50vw;
+        position: relative;
+        margin-left: 20px;
+        
+    }
+
+    .projectBox {
+        background-color: rgb(255, 255, 255);
+        padding: 15px;
+        margin: 20px;
+        border-radius: 0.5rem;
+        text-decoration:none;
+        display: flex;
+        box-shadow: 5px 5px 5px 5px gray;
+        justify-content: space-between;
+        height: 28vh;
+        width: 80vw;
+    }
+ }

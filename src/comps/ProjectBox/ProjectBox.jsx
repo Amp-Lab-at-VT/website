@@ -79,7 +79,7 @@ class ProjectBox extends Component {
                         <div className={styles.tinyMarkdown}> {this.state.summaryLoaded && <ReactMarkdown>{this.state.summary}</ReactMarkdown>} </div>
                     </div>
                     
-                    <div style={{ display: 'flex',maxWidth: '250px', width:'300px', position: 'relative', paddingLeft: '40px'}}>
+                    <div className={styles.image_div}>
                         {this.state.imageExists && <Image className = {styles.center_cropped} alt={this.props.name} src={this.state.imagePath} fill={true} 
                         />}</div>
                 </a>
