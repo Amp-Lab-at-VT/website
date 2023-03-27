@@ -2,17 +2,9 @@
     margin: 20px;
     padding: 10px;
     box-shadow: 5px 5px 5px 5px gray;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
 }
 
 .leadershipBox img {
-    height: 200px;
+    height: auto;
     width: auto;
-}
-
-.alignImage {
-    display: flex;
-    justify-content: center;
 }

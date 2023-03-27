@@ -18,7 +18,7 @@ class ProjectBox extends Component {
         super(props);
         this.getDifference = this.getDifference.bind(this);
         this.state = {
-            summary: "No Summary Avalible",
+            summary: "",
             summaryLoaded: false,
             imageExists: false,
             imagePath: "",
