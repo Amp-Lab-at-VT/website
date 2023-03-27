@@ -11,7 +11,7 @@ export default function Projects({ projects }) {
           <div class="flex-row-wrap">
             {
               Object.keys(projects).map((key) => {
-                return <ProjectBox name={key} branch={projects[key]['branch']} href={projects[key]['url']}/>
+                return <ProjectBox key = {key} name={key} branch={projects[key]['branch']} href={projects[key]['url']}/>
               })
             }
           </div>
