@@ -3,10 +3,6 @@ import YAML from 'yaml'
 import ProjectBox from "@/comps/ProjectBox/ProjectBox.jsx"
 
 export default function Projects({ projects }) {
-
-  console.log(JSON.stringify(projects))
-
-
   return (
     <div class="App">
       <header class="App-standardPage">
