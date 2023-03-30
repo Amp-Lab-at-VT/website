@@ -1,14 +1,14 @@
 .leadershipBox {
-    margin: 20px;
+    margin: 5px;
     padding: 10px;
-    box-shadow: 5px 5px 5px 5px gray;
+    box-shadow: 2px 2px 2px 2px gray;
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
 
 .leadershipBox img {
-    height: 200px;
+    height: 180px;
     width: auto;
 }
 
