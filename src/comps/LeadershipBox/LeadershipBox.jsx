@@ -10,8 +10,11 @@ class LeadershipBox extends Component {
     This will then generate a div with the image
     If the string is blank, the uid will be used instead
 
-    Props needed: image, uid
+    Props needed: name, title, email
     */
+
+    // Check if any of the expected props are undefined
+
 
     render() {
         // Simple div with a title and value
