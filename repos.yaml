@@ -6,13 +6,13 @@ PCB Engraver:
   branch: "main"
 InspireFly Cubesat Power Supply:
   url: "https://github.com/joeesser1842/eps"
-  branch: "main"
+  branch: "master"
 InspireFly Cubesat On Board Computer:
   url: "https://github.com/joeesser1842/obdh"
-  branch: "main"
+  branch: "master"
 InspireFly Cubesat Telemetry Tracking and Control:
   url: "https://github.com/joeesser1842/ttc"
-  branch: "main"
+  branch: "master"
 Stepper Motor Symphony:
   url: "https://github.com/Amp-Lab-at-VT/Stepper_Motor_Symphony"
   branch: "main"
@@ -21,7 +21,7 @@ ScratchBot:
   branch: "main"
 8 Bit Computer:
   url: "https://github.com/Amp-Lab-at-VT/8-bit-Computer"
-  branch: "master"
+  branch: "main"
 Stylophone:
   url: "https://github.com/Amp-Lab-at-VT/Stylophone"
   branch: "master"
