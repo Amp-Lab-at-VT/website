@@ -16,7 +16,7 @@ export default function Hamburger() {
         <Link href="/getting_started">Getting Started</Link>
         <Link href="/projects">Projects</Link>
         <Link href="/about">About</Link>
-        <Link href="/useful_links">Useful Links</Link>
+        <Link href="/resources">Resources</Link>
         <Link href="/soldering">Soldering</Link>
         <Link href="/print">Submit a File to 3D Print</Link>
       </div>
