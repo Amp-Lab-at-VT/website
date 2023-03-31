@@ -19,7 +19,7 @@ export default function UsefulLinks({fileContents}) {
 }
 
 export async function getStaticProps() {
-  const file = 'useful_links.md'
+  const file = 'resources.md'
   const fileContents = await fs.readFile( process.cwd() + '/markdowns/' + file, 'utf8')
   return {props: {fileContents}}
 }
