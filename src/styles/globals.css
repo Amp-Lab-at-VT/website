@@ -121,9 +121,9 @@ hr {
 /* My custom formats */
 
 .homeText {
-  font-size: 4em;
+  font-size: 3em;
   font-weight: 300;
-  color: rgb(185, 18, 18);
+  /* color: rgb(185, 18, 18); */
   text-align: center;
   margin: 0 auto;
   max-width: 600px;
@@ -131,12 +131,53 @@ hr {
   font-family: 'Georgia Bold'
 }
 
-code
-{
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 1.2em;
-  color: rgb(0, 0, 0);
-  padding: 0.2em;
-  border-radius: 0.5em;
+pre code {
+  display: flex;
+  background-color: #eeeeee;
+  padding: 10px;
 }
 
+code 
+{
+  display: block;
+  font-size: 1em;
+  font-weight: 300;
+  color: rgb(0, 0, 0);
+  text-align: left;
+  margin-bottom: 15px;
+  margin-top: 5px;
+  padding: 0 0px;
+  white-space: pre-wrap;
+}
+
+h2
+{
+  font-size: 2.5em;
+  font-weight: 300;
+  color: rgb(185, 18, 18);
+  text-align: left;
+  margin-bottom: 15px;
+  margin-top: 5px;
+  max-width: 600px;
+  padding: 0 0px;
+  font-family: 'Georgia Bold'
+}
+
+h1 
+{
+  font-size: 2em;
+  font-weight: 300;
+  color: rgb(185, 18, 18);
+  text-align: left;
+  margin-bottom: 15px;
+  margin-top: 5px;
+  max-width: 600px;
+  padding: 0 0px;
+  font-family: 'Georgia Bold'
+}
+
+li
+{
+  list-style-type: decimal;
+  margin-left: 20px;
+}

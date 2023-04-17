@@ -6,7 +6,7 @@ const Footer = () => {
       <div style={{ display: 'flex', justifyContent: 'space-between' }}>
         <div style={{ flex: 1 }}>
           <h3 style={{ fontWeight: 'bold', fontSize: '18px', color : "#666",marginBottom: '10px' }}>About Us</h3>
-          <p style={{ color: '#666' }}>We're a lab committed to getting students active in design. </p>
+          <p style={{ color: '#666' }}>We are a lab committed to getting students active in design. </p>
         </div>
 
         <div style={{ flex: 1 }}>
@@ -24,7 +24,7 @@ const Footer = () => {
           <h3 style={{ fontWeight: 'bold', fontSize: '18px', marginBottom: '10px' }}>Location</h3>
           <p style={{ color: '#666' }}>1185 Perry St</p>
           <p style={{ color: '#666' }}>Blacksburg, VA 24060</p>
-          <p style={{ color: '#666' }}>Room 200</p>
+          <p style={{ color: '#666' }}>Room 236</p>
         </div>
       </div>
     </footer>

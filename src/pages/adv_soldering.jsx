@@ -4,8 +4,6 @@ import { promises as fs } from 'fs'
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 
-import "@/pages/SolderingAdv/adv_soldering.module.css"
-
 export default function AdvSoldering({fileContents}) {  
   return (
     <div>

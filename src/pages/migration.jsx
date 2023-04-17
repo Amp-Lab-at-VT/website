@@ -4,8 +4,6 @@ import ReactMarkdown from "react-markdown";
 import { promises as fs } from 'fs'
 import rehypeRaw from "rehype-raw";
 
-import "@/pages/Migration/migration.module.css"
-
 export default function Migration({fileContents}) {
   return (
     <div>
