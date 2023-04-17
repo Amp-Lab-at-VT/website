@@ -1,3 +1,5 @@
+import styles from './iconAndName.module.css';
+
 const Box = ({icon, title, buttonTitle, color}) => {
   return (
     <div style={{ border: '1px solid #ccc', borderRadius: '4px', padding: '20px', backgroundColor: color , width : "15vw", minWidth: "200px", margin : "20px"}}>
@@ -6,7 +8,7 @@ const Box = ({icon, title, buttonTitle, color}) => {
           {icon}
         </div>
         <h3 style={{ fontSize: '24px', fontWeight: 'bold', marginBottom: '10px' }}>{title}</h3>
-        <button style={{ backgroundColor: '#61dafb', color: '#fff', border: 'none', borderRadius: '4px', padding: '10px 20px', }}>{buttonTitle}</button>
+        <button className = {styles.btn}>{buttonTitle}</button>
       </div>
     </div>
   );

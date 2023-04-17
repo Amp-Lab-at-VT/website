@@ -7,16 +7,23 @@ import rehypeRaw from "rehype-raw";
 import { FaReact } from 'react-icons/fa';
 
 import IconAndName from "@/comps/IconAndName/IconAndName";
+import {GiSolderingIron} from 'react-icons/gi'
+import {MdOutlineWavingHand} from 'react-icons/md'
+import {BsPrinterFill} from 'react-icons/bs'
 
 export default function GettingStarted({fileContents}) {
 return (
     <div className="App">
+      <div style ={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', flexWrap: 'wrap'}}>
+      <IconAndName icon ={<MdOutlineWavingHand> </MdOutlineWavingHand>} title = "Getting Started: New Members" buttonTitle = "Click here to begin" color = "#f9f9f9"></IconAndName>
+      <IconAndName icon ={<GiSolderingIron> </GiSolderingIron>} title = "Getting Started: New Members" buttonTitle = "Click here to begin" color = "#f9f9f9"></IconAndName>
       <IconAndName icon ={<FaReact> </FaReact>} title = "Getting Started: New Members" buttonTitle = "Click here to begin" color = "#f9f9f9"></IconAndName>
-      <header className="App-standardPage">
+      </div>
+      {/* <header className="App-standardPage">
        <div className="App-pageHelper">
         <ReactMarkdown class="App-standardPage" rehypePlugins={[rehypeRaw]}>{fileContents}</ReactMarkdown>
         </div>
-      </header>
+      </header> */}
     </div>
   );
 }
