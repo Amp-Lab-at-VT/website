@@ -3,11 +3,15 @@ import Modal from '@/comps/Modal/modal.jsx';
 
 import { useState } from 'react';
 
-const Box = ({icon, title, buttonTitle, color, children}) => {
+const Box = ({icon, title, buttonTitle, color, href, children}) => {
   const [showModal, setShowModal] = useState(false);
 
   const openModal = () => {
     setShowModal(prev => !prev);
+  };
+
+  const handleRedirect = () => {
+    window.location.href = href;
   };
 
   return (
@@ -18,12 +22,19 @@ const Box = ({icon, title, buttonTitle, color, children}) => {
           {icon}
         </div>
         <h3 style={{ fontSize: '24px', fontWeight: 'bold', marginBottom: '10px' }}>{title}</h3>
-        <button className = {styles.btn} onClick={openModal}>{buttonTitle}</button>
+        {(href != null) ? <button className = {styles.btn} onClick={handleRedirect}>{buttonTitle}</button> :
+                          <button className = {styles.btn} onClick={openModal}>{buttonTitle}</button> }
+
       </div>
     </div>
     {showModal ? <Modal title = {title} showModal = {showModal} setShowModal={setShowModal} children = {children} /> : null}
     </div>
   );
 };
+
+Box.defaultProps = {
+  href: null,
+};
+
 
 export default Box;

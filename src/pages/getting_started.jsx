@@ -21,7 +21,7 @@ return (
       </IconAndName>
       <IconAndName icon ={<GiReturnArrow> </GiReturnArrow>} title = "Returning Members" buttonTitle = "Click here to begin" color = "#f9f9f9"></IconAndName>
       <IconAndName icon ={<GiSolderingIron> </GiSolderingIron>} title = "Solder Training Information" buttonTitle = "Click here to begin" color = "#f9f9f9"></IconAndName>
-      <IconAndName icon ={<BsPrinterFill> </BsPrinterFill>} title = "Get Something 3D Printed" buttonTitle = "Click here to begin" color = "#f9f9f9"></IconAndName>
+      <IconAndName href = "https://github.com/Amp-Lab-at-VT/print-queue/issues/new?assignees=octocat&labels=3d-print&template=3d_print.yml&title=%5B3d-print%5D%3A+" icon ={<BsPrinterFill> </BsPrinterFill>} title = "Get Something 3D Printed" buttonTitle = "Click here to begin" color = "#f9f9f9"></IconAndName>
       </div>
     </div>
   );
