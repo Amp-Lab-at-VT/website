@@ -4,7 +4,6 @@ import ReactMarkdown from "react-markdown";
 import { promises as fs } from 'fs'
 import rehypeRaw from "rehype-raw";
 
-import "@/pages/MentorSteps/mentor_steps.module.css"
 
 export default function MentorSteps({fileContents}) {
   return (

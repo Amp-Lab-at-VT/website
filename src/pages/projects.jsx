@@ -7,7 +7,7 @@ export default function Projects({ projects }) {
     <div class="App">
       <header class="App-standardPage">
         <div class="App-pageHelper">
-          <text>Projects</text>
+          <h1>Projects</h1>
           <div class="flex-row-wrap">
             {
               Object.keys(projects).map((key) => {

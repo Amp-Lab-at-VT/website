@@ -4,7 +4,6 @@ import Link from 'next/link'
 import { promises as fs } from 'fs'
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
-import "@/pages/About/about.module.css"
 
 export default function About({fileContents}) {  
   return (
