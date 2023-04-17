@@ -16,7 +16,9 @@ export default function GettingStarted({fileContents}) {
 return (
     <div className="App">
       <div style ={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', flexWrap: 'wrap'}}>
-      <IconAndName icon ={<MdOutlineWavingHand> </MdOutlineWavingHand>} title = "Getting Started: New Members" buttonTitle = "Click here to begin" color = "#f9f9f9"></IconAndName>
+      <IconAndName icon ={<MdOutlineWavingHand> </MdOutlineWavingHand>} title = "Getting Started: New Members" buttonTitle = "Click here to begin" color = "#f9f9f9">
+        <p>Hello there</p>
+      </IconAndName>
       <IconAndName icon ={<GiReturnArrow> </GiReturnArrow>} title = "Returning Members" buttonTitle = "Click here to begin" color = "#f9f9f9"></IconAndName>
       <IconAndName icon ={<GiSolderingIron> </GiSolderingIron>} title = "Solder Training Information" buttonTitle = "Click here to begin" color = "#f9f9f9"></IconAndName>
       <IconAndName icon ={<BsPrinterFill> </BsPrinterFill>} title = "Get Something 3D Printed" buttonTitle = "Click here to begin" color = "#f9f9f9"></IconAndName>

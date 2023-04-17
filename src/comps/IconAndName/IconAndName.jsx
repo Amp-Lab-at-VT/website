@@ -3,7 +3,7 @@ import Modal from '@/comps/Modal/modal.jsx';
 
 import { useState } from 'react';
 
-const Box = ({icon, title, buttonTitle, color}) => {
+const Box = ({icon, title, buttonTitle, color, children}) => {
   const [showModal, setShowModal] = useState(false);
 
   const openModal = () => {
@@ -21,7 +21,7 @@ const Box = ({icon, title, buttonTitle, color}) => {
         <button className = {styles.btn} onClick={openModal}>{buttonTitle}</button>
       </div>
     </div>
-    {showModal ? <Modal showModal = {showModal} setShowModal={setShowModal} /> : null}
+    {showModal ? <Modal title = {title} showModal = {showModal} setShowModal={setShowModal} children = {children} /> : null}
     </div>
   );
 };
