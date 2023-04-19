@@ -10,18 +10,11 @@ export default function Projects({ projects }) {
     <div class="App">
       <header class="App-standardPage">
         <div class="App-pageHelper">
-          <Box
-            imageUrl="https://raw.githubusercontent.com/Rohit-Rangaraj/8-bit-computer-rangaraj-smith/main/hero.png"
-            text="Hover me!"
-            link="https://raw.githubusercontent.com/Rohit-Rangaraj/8-bit-computer-rangaraj-smith/main/hero.png"
-          />
-          <div class="flex-row-wrap">
             {
               Object.keys(projects).map((key) => {
-                return <ProjectBox key = {key} name={key} branch={projects[key]['branch']} href={projects[key]['url']}/>
+                return <Box key = {key} name={key} branch={projects[key]['branch']} href={projects[key]['url']}/>
               })
             }
-          </div>
         </div>
       </header>
     </div>
