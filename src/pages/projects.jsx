@@ -7,16 +7,12 @@ import Gibbons from "../../public/Headshots/Gibbons.jpg"
 
 export default function Projects({ projects }) {
   return (
-    <div class="App">
-      <header class="App-standardPage">
-        <div class="App-pageHelper">
+    <div>
             {
               Object.keys(projects).map((key) => {
                 return <Box key = {key} name={key} branch={projects[key]['branch']} href={projects[key]['url']}/>
               })
             }
-        </div>
-      </header>
     </div>
   );
 }

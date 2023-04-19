@@ -7,7 +7,6 @@ import ReactMarkdown from "react-markdown";
 
 const BoxWrapper = tw(motion.div)`
   relative
-  w-full
   h-64
   rounded-md
   overflow-hidden
