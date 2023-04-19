@@ -1,22 +1,18 @@
 import { promises as fs } from 'fs'
 import YAML from 'yaml'
 import ProjectBox from "@/comps/ProjectBox/ProjectBox.jsx"
+import Box from "@/comps/Box/Box.jsx"
+
+import Gibbons from "../../public/Headshots/Gibbons.jpg"
 
 export default function Projects({ projects }) {
   return (
-    <div class="App">
-      <header class="App-standardPage">
-        <div class="App-pageHelper">
-          <h1>Projects</h1>
-          <div class="flex-row-wrap">
+    <div>
             {
               Object.keys(projects).map((key) => {
-                return <ProjectBox key = {key} name={key} branch={projects[key]['branch']} href={projects[key]['url']}/>
+                return <Box key = {key} name={key} branch={projects[key]['branch']} href={projects[key]['url']}/>
               })
             }
-          </div>
-        </div>
-      </header>
     </div>
   );
 }
