@@ -14,7 +14,8 @@ const BoxWrapper = tw(motion.div)`
   transition-all
   duration-500
   shadow-md
-  m-10
+  m-5
+  w-96
 `;
 
 const TextWrapper = tw(motion.div)`
@@ -35,16 +36,15 @@ const TextWrapper = tw(motion.div)`
 const MobileTextWrapper = tw(motion.div)`
   absolute
   inset-0
-  flex
   items-center
   justify-center
-  text-white
-  text-xl
+  text-black
+  text-sm
   font-bold
-  bg-black
-  bg-opacity-50
+  bg-white
+  bg-opacity-75
   filter
-  blur-md
+  p-1
 `;
 
 const ImageWrapper = tw(Image)`
@@ -104,33 +104,35 @@ const Box = ({ name, branch, href }) => {
     });
 
   return (
-    <Link href={href} passHref>
-      <BoxWrapper
-        whileHover={{ scale: 1 }}
-        whileTap={{ scale: 0 }}
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-      >
-        {!isHovered && (<TitleWrapper>{name}</TitleWrapper>)}
+    <div className = "w-100">
+      <Link href={href} passHref>
+        <BoxWrapper
+          whileHover={{ scale: 1 }}
+          whileTap={{ scale: 0 }}
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
+          {!isHovered && (<TitleWrapper>{name}</TitleWrapper>)}
 
-        <ImageWrapper src={imgPath} alt="" width={640}
-          height={480}/> 
+          <ImageWrapper src={imgPath} alt="" width={640}
+            height={480}/> 
 
-        {isHovered && (
-          <TextWrapper
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-          >
+          {isHovered && (
+            <TextWrapper
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+            >
+              <ReactMarkdown>{text}</ReactMarkdown>
+            </TextWrapper>
+          )}
+
+          {/* <MobileTextWrapper>
             <ReactMarkdown>{text}</ReactMarkdown>
-          </TextWrapper>
-        )}
-
-        {/* <MobileTextWrapper>
-          {text}
-        </MobileTextWrapper> */}
-      </BoxWrapper>
-    </Link>
+          </MobileTextWrapper> */}
+        </BoxWrapper>
+      </Link>   
+    </div>
   );
 };
 
