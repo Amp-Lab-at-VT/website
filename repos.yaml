@@ -1,45 +1,59 @@
 8-Bit Computer:
   url: https://github.com/Rohit-Rangaraj/8-bit-computer-rangaraj-smith
   branch: "main"
+  mentor_last_name:  
 Vector Graphics Generator:
   url: https://github.com/ethanjamesauto/vector_pico
   branch: "main"
+  mentor_last_name:
 PCB Engraver:
   url : https://github.com/Amp-Lab-at-VT/PCB_Engraver
   branch: "main"
+  mentor_last_name: 
 InspireFly Cubesat Power Supply:
   url: "https://github.com/joeesser1842/eps"
   branch: "master"
+  mentor_last_name: 
 InspireFly Cubesat On Board Computer:
   url: "https://github.com/joeesser1842/obdh"
   branch: "master"
+  mentor_last_name: 
 InspireFly Cubesat Telemetry Tracking and Control:
   url: "https://github.com/joeesser1842/ttc"
   branch: "master"
+  mentor_last_name: 
 Stepper Motor Symphony:
   url: "https://github.com/Amp-Lab-at-VT/Stepper_Motor_Symphony"
   branch: "main"
+  mentor_last_name: 
 ScratchBot:
   url: "https://github.com/Amp-Lab-at-VT/Scratch-Bot"
   branch: "main"
+  mentor_last_name: 
 8 Bit Computer:
   url: "https://github.com/Amp-Lab-at-VT/8-bit-Computer"
   branch: "main"
+  mentor_last_name: 
 Stylophone:
   url: "https://github.com/Amp-Lab-at-VT/Stylophone"
   branch: "master"
+  mentor_last_name: 
 3-Phase-AC-generator:
   url : "https://github.com/Jack4891/3-Phase-AC-generator"
   branch: "main"
+  mentor_last_name: 
 Modular Flight Controller Recovey System (MFCRS):
   url : "https://github.com/devincress/MFCRS"
   branch: "main" 
+  mentor_last_name: 
 Temperature Controlled Fan:
  url: "https://github.com/Amp-Lab-at-VT/Temperature-controlled-fan"
  branch: "main"
+ mentor_last_name: 
 Split-Rail-DC-Power-Supply:
   url : "https://github.com/tylermwells/Split-Rail-DC-Power-Supply"
   branch: "main"
+  mentor_last_name: 
 # Sample:
 #   url : "https://github.com/Amp-Lab-at-VT/SampleProject"
 #   branch: "master"
