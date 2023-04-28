@@ -1,3 +1,9 @@
+## Quickstart with Dev
+
+For more information on the development of this website, see DEVNOTES.md. In this file I have included the specifics on how this website works, where to find the information you need, and how to learn how to develop on this site. This will be crucial if this website ever fails. Good luck! - Henry Forsyth
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started

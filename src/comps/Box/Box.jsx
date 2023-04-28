@@ -5,16 +5,26 @@ import { motion } from 'framer-motion';
 import tw from 'tailwind-styled-components';
 import ReactMarkdown from "react-markdown";
 
+const LinkWrapper = tw(motion.a)`
+  sm:w-600
+  lg:w-600
+`;
+
 const BoxWrapper = tw(motion.div)`
   relative
-  h-64
+  h-96
+  border-2
+  border-slate-950
   rounded-md
   overflow-hidden
   cursor-pointer
   transition-all
   duration-500
   shadow-md
-  m-10
+  m-2
+  sm:h-80
+  sm:border-0
+
 `;
 
 const TextWrapper = tw(motion.div)`
@@ -25,26 +35,29 @@ const TextWrapper = tw(motion.div)`
   text-white
   text-sm
   font-bold
+  font 
   bg-black
   bg-opacity-75
   transition-all
   duration-500
   p-2
+  hidden
+  sm:block
 `;
 
 const MobileTextWrapper = tw(motion.div)`
   absolute
   inset-0
-  flex
   items-center
   justify-center
-  text-white
-  text-xl
+  text-black
+  text-sm
   font-bold
-  bg-black
-  bg-opacity-50
+  bg-white
+  bg-opacity-90
   filter
-  blur-md
+  p-1
+  sm:hidden
 `;
 
 const ImageWrapper = tw(Image)`
@@ -65,10 +78,11 @@ const TitleWrapper = tw(motion.div)`
     z-10
     bg-black
     p-2
+    hidden
+    sm:block
 `;
 
 
-{/* <ProjectBox key = {key} name={key} branch={projects[key]['branch']} href={projects[key]['url']}/> */}
 
 const Box = ({ name, branch, href }) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -82,10 +96,11 @@ const Box = ({ name, branch, href }) => {
     return diff;
   }
 
-  var diff = getDifference("https://github.com/", href)
 
+  var diff = getDifference("https://github.com/", href)
   var fullSummary = "https://raw.githubusercontent.com/" + diff + "/" + branch + "/summary.md"
   var imgPath = "https://raw.githubusercontent.com/" + diff + "/" + branch + "/hero.png"
+
 
   // Pull text from fullSummary url
     const [text, setText] = useState("No Summary Avalible");
@@ -104,34 +119,44 @@ const Box = ({ name, branch, href }) => {
     });
 
   return (
-    <Link href={href} passHref>
-      <BoxWrapper
-        whileHover={{ scale: 1 }}
-        whileTap={{ scale: 0 }}
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-      >
-        {!isHovered && (<TitleWrapper>{name}</TitleWrapper>)}
+    
+      <LinkWrapper className = "flex-none" href={href} passHref>
+        <BoxWrapper
+          whileHover={{ scale: 1 }}
+          whileTap={{ scale: 0 }}
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
+          {!isHovered && (<TitleWrapper>{name}</TitleWrapper>)}
 
-        <ImageWrapper src={imgPath} alt="" width={640}
-          height={480}/> 
+          <ImageWrapper src={imgPath} alt="" width={640}
+            height={480}/> 
 
-        {isHovered && (
-          <TextWrapper
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-          >
-            <ReactMarkdown>{text}</ReactMarkdown>
-          </TextWrapper>
-        )}
+          {isHovered && (
+            <TextWrapper
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+            >
+              <ReactMarkdown>{text}</ReactMarkdown>
+            </TextWrapper>
+          )}
 
-        {/* <MobileTextWrapper>
-          {text}
-        </MobileTextWrapper> */}
-      </BoxWrapper>
-    </Link>
+          <MobileTextWrapper>
+            <p className = "text-2xl bg-black text-white p-2">{name}</p>
+            <div>
+              <ReactMarkdown>{text}</ReactMarkdown>
+            </div>
+          </MobileTextWrapper>
+        </BoxWrapper>
+      </LinkWrapper>   
   );
+};
+
+Box.defaultProps = {
+  name : "Sample", 
+  branch: "main",
+  href: "https://github.com/Amp-Lab-at-VT/SampleProject"
 };
 
 export default Box;

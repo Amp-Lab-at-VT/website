@@ -128,7 +128,7 @@ hr {
   margin: 0 auto;
   max-width: 600px;
   padding: 0 20px;
-  font-family: 'Georgia Bold'
+  font-family: 'Georgia'
 }
 
 pre code {
@@ -165,15 +165,13 @@ h2
 
 h1 
 {
-  font-size: 2em;
+  font-size: 1.5em;
   font-weight: 300;
-  color: rgb(185, 18, 18);
   text-align: left;
   margin-bottom: 15px;
   margin-top: 5px;
   max-width: 600px;
   padding: 0 0px;
-  font-family: 'Georgia Bold'
 }
 
 li
