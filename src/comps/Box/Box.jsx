@@ -5,17 +5,26 @@ import { motion } from 'framer-motion';
 import tw from 'tailwind-styled-components';
 import ReactMarkdown from "react-markdown";
 
+const LinkWrapper = tw(motion.a)`
+  sm:w-600
+  lg:w-600
+`;
+
 const BoxWrapper = tw(motion.div)`
   relative
-  h-64
+  h-96
+  border-2
+  border-slate-950
   rounded-md
   overflow-hidden
   cursor-pointer
   transition-all
   duration-500
   shadow-md
-  m-5
-  w-96
+  m-2
+  sm:h-80
+  sm:border-0
+
 `;
 
 const TextWrapper = tw(motion.div)`
@@ -26,11 +35,14 @@ const TextWrapper = tw(motion.div)`
   text-white
   text-sm
   font-bold
+  font 
   bg-black
   bg-opacity-75
   transition-all
   duration-500
   p-2
+  hidden
+  sm:block
 `;
 
 const MobileTextWrapper = tw(motion.div)`
@@ -42,9 +54,10 @@ const MobileTextWrapper = tw(motion.div)`
   text-sm
   font-bold
   bg-white
-  bg-opacity-75
+  bg-opacity-90
   filter
   p-1
+  sm:hidden
 `;
 
 const ImageWrapper = tw(Image)`
@@ -65,10 +78,11 @@ const TitleWrapper = tw(motion.div)`
     z-10
     bg-black
     p-2
+    hidden
+    sm:block
 `;
 
 
-{/* <ProjectBox key = {key} name={key} branch={projects[key]['branch']} href={projects[key]['url']}/> */}
 
 const Box = ({ name, branch, href }) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -82,10 +96,11 @@ const Box = ({ name, branch, href }) => {
     return diff;
   }
 
-  var diff = getDifference("https://github.com/", href)
 
+  var diff = getDifference("https://github.com/", href)
   var fullSummary = "https://raw.githubusercontent.com/" + diff + "/" + branch + "/summary.md"
   var imgPath = "https://raw.githubusercontent.com/" + diff + "/" + branch + "/hero.png"
+
 
   // Pull text from fullSummary url
     const [text, setText] = useState("No Summary Avalible");
@@ -104,8 +119,8 @@ const Box = ({ name, branch, href }) => {
     });
 
   return (
-    <div className = "w-100">
-      <Link href={href} passHref>
+    
+      <LinkWrapper className = "flex-none" href={href} passHref>
         <BoxWrapper
           whileHover={{ scale: 1 }}
           whileTap={{ scale: 0 }}
@@ -127,13 +142,21 @@ const Box = ({ name, branch, href }) => {
             </TextWrapper>
           )}
 
-          {/* <MobileTextWrapper>
-            <ReactMarkdown>{text}</ReactMarkdown>
-          </MobileTextWrapper> */}
+          <MobileTextWrapper>
+            <p className = "text-2xl bg-black text-white p-2">{name}</p>
+            <div>
+              <ReactMarkdown>{text}</ReactMarkdown>
+            </div>
+          </MobileTextWrapper>
         </BoxWrapper>
-      </Link>   
-    </div>
+      </LinkWrapper>   
   );
+};
+
+Box.defaultProps = {
+  name : "Sample", 
+  branch: "main",
+  href: "https://github.com/Amp-Lab-at-VT/SampleProject"
 };
 
 export default Box;

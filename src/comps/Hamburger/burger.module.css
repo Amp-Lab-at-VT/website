@@ -2,6 +2,7 @@
     border: 0px solid rgb(49, 36, 37);
     background-color: transparent;
     margin: 5px;
+
 }
 
 .dropdownContent {
@@ -9,7 +10,7 @@
   position: absolute;
   background-color: rgb(49, 36, 37);
   min-width: 160px;
-  z-index: 2;
+  z-index: 200;
 }
 
 .dropdownIcon {
