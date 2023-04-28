@@ -1,3 +1,7 @@
+FPV Car:
+  url : "https://github.com/Amp-Lab-at-VT/FPV-Car"
+  branch: "main"
+  mentor_last_name: "Forsyth" 
 8-Bit Computer:
   url: https://github.com/Rohit-Rangaraj/8-bit-computer-rangaraj-smith
   branch: "main"
