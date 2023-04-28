@@ -54,6 +54,10 @@ Split-Rail-DC-Power-Supply:
   url : "https://github.com/tylermwells/Split-Rail-DC-Power-Supply"
   branch: "main"
   mentor_last_name: "Unknown" 
+Cockcroft-Walton Circuit:
+  url : "https://github.com/pbroome4VT/CockcroftWaltonCircuit"
+  branch: "main"
+  mentor_last_name: "Forsyth" 
 # Sample:
 #   url : "https://github.com/Amp-Lab-at-VT/SampleProject"
 #   branch: "master"
