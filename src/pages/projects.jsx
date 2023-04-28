@@ -20,7 +20,7 @@ export default function Projects({ projects }) {
             if (searchTerm == "" && filterType == "") {
               count = 1;
               return (
-                <div className="w-screen h-fit sm:w-6/12">
+                <div className="w-screen h-fit sm:w-6/12" key={key}>
                   <Box key={key} name={key} branch={projects[key]['branch']} href={projects[key]['url']} />
                 </div>
               )
@@ -32,7 +32,7 @@ export default function Projects({ projects }) {
                 if (filterType == "option1" && projects[key]['mentor_last_name'].includes(searchTerm)) {
                   count++;
                   return (
-                    <div className="w-screen h-fit sm:w-6/12">
+                    <div className="w-screen h-fit sm:w-6/12" key={key}>
                       <Box key={key} name={key} branch={projects[key]['branch']} href={projects[key]['url']} />
                     </div>
                   )
@@ -40,7 +40,7 @@ export default function Projects({ projects }) {
                 else if (filterType == "option2" && key.includes(searchTerm)) {
                   count++;
                   return (
-                    <div className="w-screen h-fit sm:w-6/12">
+                    <div className="w-screen h-fit sm:w-6/12" key={key}>
                       <Box key={key} name={key} branch={projects[key]['branch']} href={projects[key]['url']} />
                     </div>
                   )
