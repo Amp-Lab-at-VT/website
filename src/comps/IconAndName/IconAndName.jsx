@@ -16,7 +16,7 @@ const Box = ({icon, title, buttonTitle, color, href, children}) => {
 
   return (
     <div>
-    <div className = {styles.pop_in} style={{ height: "100%", border: '1px solid #ccc', borderRadius: '4px', padding: '20px', backgroundColor: color , width : "15vw", minWidth: "200px", margin : "20px"}}>
+    <div className = {styles.pop_in} style={{border: '1px solid #ccc', borderRadius: '4px', padding: '10px', backgroundColor: color , width : "15vw", minWidth: "200px", margin : "10px"}}>
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
         <div className = "text-primary-50" style={{ fontSize: '80px', marginBottom: '5px' }}>
           {icon}

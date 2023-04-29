@@ -13,10 +13,13 @@ import {BsPrinterFill} from 'react-icons/bs'
 import {GiReturnArrow} from 'react-icons/gi'
 import {RxDiscordLogo} from 'react-icons/rx'
 import {BiPurchaseTagAlt} from 'react-icons/bi'
+import {GiSwipeCard} from 'react-icons/gi'
 
 export default function GettingStarted({new_members, returning_members}) {
 return (
-    <div className="App">
+    <div className = "h-screen App">
+      <h1 className = "m-5">Getting Started:</h1>
+      <p className = "text-left m-5">Below is a list of options for you to engage with our lab. Select one to get started!</p>
       <div style ={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', flexWrap: 'wrap'}}>
       <IconAndName icon ={<MdOutlineWavingHand> </MdOutlineWavingHand>} title = "Getting Started: New Members" buttonTitle = "Click here to begin" color = "#f9f9f9">
         <ReactMarkdown class="App-standardPage" rehypePlugins={[rehypeRaw]}>{new_members}</ReactMarkdown>
@@ -32,6 +35,8 @@ return (
         <p>
           It is now easier than ever to get what you need! Just head on over to the Discord, and submit your bill of materials in the <b>purchase request</b> channel
         </p>
+      </IconAndName>
+      <IconAndName href = "https://docs.google.com/forms/d/12icOKHbNeDZ8ujELWmOtG40Jp1nv_s4Irs7IfWHoRPA/edit?ts=63d27e7e" icon ={<GiSwipeCard> </GiSwipeCard>} title = "Get Lab Swipe Access" buttonTitle = "Click here to begin" color = "#f9f9f9">
       </IconAndName>
       </div>
     </div>

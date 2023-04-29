@@ -12,4 +12,6 @@ This process is now simpler than ever! Follow the steps below to get started:
 
 4. Wait for AMP lab staff to reach out to you about your project!
 
+**Too confusing?** We get it, git isn't an easy thing to master. Check <a href = "/beginners_guide">this tutorial</a> to get started without having to clone the repo locally.
+
 <hr>
