@@ -6,7 +6,7 @@ import SearchBar from "@/comps/SearchBar/searchbar.jsx"
 
 import Gibbons from "../../public/Headshots/Gibbons.jpg"
 
-export default function Projects({ projects }) {
+export default function Projects({ activeProjects, inactiveProjects }) {
   const [searchTerm, setSearchTerm] = useState("");
   const [filterType, setFilterType] = useState("");
   var count = 0;
@@ -14,14 +14,16 @@ export default function Projects({ projects }) {
   return (
     <div>
       <SearchBar setExternalSearchTerm={setSearchTerm} setExternalFilterType={setFilterType} />
+      {/* Green bar that says active */}
       <div className="flex flex-wrap justify-center min-h-screen">
+      {searchTerm || filterType ? <div></div> : <div className="w-full h-20 bg-green-500 p-2"><h1>Active Projects</h1></div>}
         {
-          Object.keys(projects).map((key) => {
+          Object.keys(activeProjects).map((key) => {
             if (searchTerm == "" && filterType == "") {
               count = 1;
               return (
                 <div className="w-screen h-fit sm:w-6/12" key={key}>
-                  <Box key={key} name={key} branch={projects[key]['branch']} href={projects[key]['url']} />
+                  <Box key={key} name={key} branch={activeProjects[key]['branch']} href={activeProjects[key]['url']} />
                 </div>
               )
             }
@@ -29,11 +31,11 @@ export default function Projects({ projects }) {
             {
               // Option 1: Mentor. See searchbar.jsx for more details
               try {
-                if (filterType == "option1" && projects[key]['mentor_last_name'].includes(searchTerm)) {
+                if (filterType == "option1" && activeProjects[key]['mentor_last_name'].includes(searchTerm)) {
                   count++;
                   return (
                     <div className="w-screen h-fit sm:w-6/12" key={key}>
-                      <Box key={key} name={key} branch={projects[key]['branch']} href={projects[key]['url']} />
+                      <Box key={key} name={key} branch={activeProjects[key]['branch']} href={activeProjects[key]['url']} />
                     </div>
                   )
                 }
@@ -41,7 +43,7 @@ export default function Projects({ projects }) {
                   count++;
                   return (
                     <div className="w-screen h-fit sm:w-6/12" key={key}>
-                      <Box key={key} name={key} branch={projects[key]['branch']} href={projects[key]['url']} />
+                      <Box key={key} name={key} branch={activeProjects[key]['branch']} href={activeProjects[key]['url']} />
                     </div>
                   )
                 }
@@ -51,10 +53,14 @@ export default function Projects({ projects }) {
             }
           })
         }
+
         {
           count == 0 ? <p className="p-20 h-screen">No such projects avalible. Did you select a filer?</p> : <div></div>
         }
       </div>
+      {!searchTerm || !filterType && inactiveProjects ? <div></div> : <div><div className="w-full h-20 bg-red-500 p-2"><h1>Inactive Projects</h1></div></div>}
+      
+  
     </div>
   );
 }
@@ -63,5 +69,51 @@ export async function getStaticProps() {
   const file = 'repos.yaml'
   const fileContents = await fs.readFile(process.cwd() + '/' + file, 'utf8')
   var projects = YAML.parse(fileContents);
-  return { props: { projects } }
+
+  var inactiveProjects = {};
+  var activeProjects = {};
+
+  // Find the date of each commit, and add it to the project
+  for (var key in projects) {
+    var url = projects[key]['url'];
+    var branch = projects[key]['branch'];
+    var repo = url.split("/")[4];
+    var owner = url.split("/")[3];
+
+    // Pull the date from the commit
+    var date = await fetch("https://api.github.com/repos/" + owner + "/" + repo + "/commits/" + branch)
+      .then((response) => response.json())
+      .then((data) => {
+        // Add the date to the project
+        projects[key]['date'] = data['commit']['committer']['date'];
+        // return data['commit']['committer']['date'];
+      })
+      .catch((error) => {
+        console.log("Odds are your query is being throttled. Try again in a few minutes.")
+      });
+  }
+
+  // Sort the projects by date
+  // projects = Object.fromEntries(
+  //   Object.entries(projects).sort(([, a], [, b]) => {
+  //     return new Date(b['date']) - new Date(a['date']);
+  //   })
+  // );
+
+  // if a project hasn't been updates in 3 months, move it to inactive
+  for (var key in projects) {
+    var date = new Date(projects[key]['date']);
+    var today = new Date();
+    var diffTime = Math.abs(today - date);
+    var diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+    if (diffDays > 30) {
+      inactiveProjects[key] = projects[key];
+    }
+    else {
+      activeProjects[key] = projects[key];
+    }
+  }
+  
+  return { props: { activeProjects,  inactiveProjects} }
 }

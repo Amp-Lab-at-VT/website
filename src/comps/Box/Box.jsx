@@ -120,7 +120,7 @@ const Box = ({ name, branch, href }) => {
 
   return (
     
-      <LinkWrapper className = "flex-none" href={href} passHref>
+      <LinkWrapper className = "flex-none" href={href} >
         <BoxWrapper
           whileHover={{ scale: 1 }}
           whileTap={{ scale: 0 }}
