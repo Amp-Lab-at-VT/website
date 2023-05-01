@@ -5,11 +5,11 @@ FPV Car:
 8-Bit Computer:
   url: https://github.com/Rohit-Rangaraj/8-bit-computer-rangaraj-smith
   branch: "main"
-  mentor_last_name: "Unknown"  
+  mentor_last_name: "James"  
 Vector Graphics Generator:
   url: https://github.com/ethanjamesauto/vector_pico
   branch: "main"
-  mentor_last_name: "Unknown"
+  mentor_last_name: "Pritchard"
 PCB Engraver:
   url : https://github.com/Amp-Lab-at-VT/PCB_Engraver
   branch: "main"
@@ -17,15 +17,15 @@ PCB Engraver:
 InspireFly Cubesat Power Supply:
   url: "https://github.com/joeesser1842/eps"
   branch: "master"
-  mentor_last_name: "Unknown" 
+  mentor_last_name: "Gibbons" 
 InspireFly Cubesat On Board Computer:
   url: "https://github.com/joeesser1842/obdh"
   branch: "master"
-  mentor_last_name: "Unknown" 
+  mentor_last_name: "Gibbons" 
 InspireFly Cubesat Telemetry Tracking and Control:
   url: "https://github.com/joeesser1842/ttc"
   branch: "master"
-  mentor_last_name: "Unknown" 
+  mentor_last_name: "Gibbons" 
 Stepper Motor Symphony:
   url: "https://github.com/Amp-Lab-at-VT/Stepper_Motor_Symphony"
   branch: "main"
@@ -37,27 +37,27 @@ Stepper Motor Symphony:
 8 Bit Computer:
   url: "https://github.com/Amp-Lab-at-VT/8-bit-Computer"
   branch: "main"
-  mentor_last_name: "Unknown" 
+  mentor_last_name: "Gibbons" 
 Stylophone:
   url: "https://github.com/Amp-Lab-at-VT/Stylophone"
   branch: "master"
-  mentor_last_name: "Unknown" 
+  mentor_last_name: "Gibbons" 
 3-Phase-AC-generator:
   url : "https://github.com/Jack4891/3-Phase-AC-generator"
   branch: "main"
-  mentor_last_name: "Unknown" 
+  mentor_last_name: "Gibbons" 
 # Modular Flight Controller Recovey System (MFCRS):
 #   url : "https://github.com/devincress/MFCRS"
 #   branch: "main" 
-#   mentor_last_name: "Unknown" 
+#   mentor_last_name: "Forsyth" 
 # Temperature Controlled Fan:
 #  url: "https://github.com/Amp-Lab-at-VT/Temperature-controlled-fan"
 #  branch: "main"
-#  mentor_last_name: "Unknown" 
+#  mentor_last_name: "Gibbons" 
 Split-Rail-DC-Power-Supply:
   url : "https://github.com/tylermwells/Split-Rail-DC-Power-Supply"
   branch: "main"
-  mentor_last_name: "Unknown" 
+  mentor_last_name: "Gibbons" 
 Cockcroft-Walton Circuit:
   url : "https://github.com/pbroome4VT/CockcroftWaltonCircuit"
   branch: "main"
