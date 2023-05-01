@@ -17,7 +17,7 @@ import {GiSwipeCard} from 'react-icons/gi'
 
 export default function GettingStarted({new_members, returning_members}) {
 return (
-    <div className = "h-screen App">
+    <div className = "flex flex-wrap min-h-screen">
       <h1 className = "m-5">Getting Started:</h1>
       <p className = "text-left m-5">Below is a list of options for you to engage with our lab. Select one to get started!</p>
       <div style ={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', flexWrap: 'wrap'}}>

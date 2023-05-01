@@ -21,7 +21,7 @@ const Box = ({icon, title, buttonTitle, color, href, children}) => {
         <div className = "text-primary-50" style={{ fontSize: '80px', marginBottom: '5px' }}>
           {icon}
         </div>
-        <h3 style={{ fontSize: '24px', fontWeight: 'bold', marginBottom: '10px' }}>{title}</h3>
+        <h3 className = "text-center" style={{ fontSize: '24px', fontWeight: 'bold', marginBottom: '10px' }}>{title}</h3>
         {(href != null) ? <button className = "bg-primary-50 text-white  border-0  rounded-md  px-5 py-2  transition duration-300 ease-in-out hover:bg-gray-500 p-5" 
                                           onClick={handleRedirect}>{buttonTitle}
                                           </button> :
