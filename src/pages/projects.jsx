@@ -16,7 +16,7 @@ export default function Projects({ activeProjects, inactiveProjects }) {
     <div>
       <SearchBar setExternalSearchTerm={setSearchTerm} setExternalFilterType={setFilterType} />
       {/* Green bar that says active */}
-      <div className="flex flex-wrap justify-center min-h-screen">
+      <div className="flex flex-wrap justify-center">
       {searchTerm || filterType ? <div></div> : <div className="w-full h-20 bg-green-500 p-2"><h1>Active Projects</h1></div>}
         {
           Object.keys(activeProjects).map((key) => {
@@ -56,7 +56,7 @@ export default function Projects({ activeProjects, inactiveProjects }) {
         }
 
         {
-          activeCount == 0 ? <p className="p-20 h-screen">No such projects avalible. Did you select a filer?</p> : <div></div>
+          activeCount == 0 ? <p className="p-20 h-screen">No such projects avalible. Did you select a filter?</p> : <div></div>
         }
       </div>
       {/* Inactive Project Section */}
@@ -67,7 +67,7 @@ export default function Projects({ activeProjects, inactiveProjects }) {
 
       {inactiveProjects ? 
   <div>
-    <div className="flex flex-wrap justify-center min-h-screen">
+    <div className="flex flex-wrap justify-center">
       {Object.keys(inactiveProjects).map((key) => {
         inactiveCount = 1;
         if (searchTerm === "" && filterType === "") {
