@@ -6,6 +6,10 @@ FPV Car:
   url: https://github.com/Rohit-Rangaraj/8-bit-computer-rangaraj-smith
   branch: "main"
   mentor_last_name: "James"  
+Instrument Looper Pedal:
+  url: https://github.com/ethanjamesauto/auto-looper
+  branch: "Main"
+  mentor_last_name: "Pritchard"
 Vector Graphics Generator:
   url: https://github.com/ethanjamesauto/vector_pico
   branch: "main"
