@@ -8,7 +8,7 @@ FPV Car:
   mentor_last_name: "James"  
 Instrument Looper Pedal:
   url: https://github.com/ethanjamesauto/auto-looper
-  branch: "Main"
+  branch: "main"
   mentor_last_name: "Pritchard"
 Vector Graphics Generator:
   url: https://github.com/ethanjamesauto/vector_pico
