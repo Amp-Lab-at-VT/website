@@ -17,7 +17,7 @@ Vector Graphics Generator:
 PCB Engraver:
   url : https://github.com/Amp-Lab-at-VT/PCB_Engraver
   branch: "main"
-  mentor_last_name: "Forsyth" 
+  mentor_last_name: "Gibbons" 
 InspireFly Cubesat Power Supply:
   url: "https://github.com/joeesser1842/eps"
   branch: "master"

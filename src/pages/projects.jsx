@@ -17,7 +17,7 @@ export default function Projects({ activeProjects, inactiveProjects }) {
       <SearchBar setExternalSearchTerm={setSearchTerm} setExternalFilterType={setFilterType} />
       {/* Green bar that says active */}
       <div className="flex flex-wrap justify-center">
-      {searchTerm || filterType ? <div></div> : <div className="w-screen h-20 bg-green-500 p-2"><h1>Active Projects</h1></div>}
+      {((!searchTerm) && Object.keys(activeProjects).length) ? <div className="w-screen h-20 bg-green-500 p-2"><h1>Active Projects</h1></div> : <div></div>}
         {
           Object.keys(activeProjects).map((key) => {
             if (searchTerm == "" && filterType == "") {
@@ -60,10 +60,12 @@ export default function Projects({ activeProjects, inactiveProjects }) {
         }
       </div>
       {/* Inactive Project Section */}
-      {(searchTerm || filterType) && !inactiveProjects ? <div></div> :     
+      {/* Get length of inactive projects */}
+
+      {((!searchTerm) && Object.keys(inactiveProjects).length) ?      
       <div className="w-100% h-20 bg-red-500 p-2">
       <h1>Inactive Projects (No commits in 90 days)</h1>
-      </div>}
+      </div> : <div></div>}
 
       {inactiveProjects ? 
   <div>
