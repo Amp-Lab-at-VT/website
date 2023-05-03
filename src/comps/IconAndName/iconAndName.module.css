@@ -18,6 +18,7 @@
     animation-fill-mode: forwards;
     opacity: 0;
   }
+
   
   @keyframes pop_in {
     0% {
