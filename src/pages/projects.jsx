@@ -4,21 +4,79 @@ import YAML from 'yaml'
 import Box from "@/comps/Box/Box.jsx"
 import SearchBar from "@/comps/SearchBar/searchbar.jsx"
 
-import Gibbons from "../../public/Headshots/Gibbons.jpg"
-
-export default function Projects({ activeProjects, inactiveProjects }) {
+export default function Projects({ activeProjects, inactiveProjects, activeCount, inactiveCount }) {
   const [searchTerm, setSearchTerm] = useState("");
   const [filterType, setFilterType] = useState("");
-  var activeCount = 0;
-  var inactiveCount = 0;
+
+  var enableSearch = searchTerm;
 
   return (
     <div>
       <SearchBar setExternalSearchTerm={setSearchTerm} setExternalFilterType={setFilterType} />
-      <div className="flex flex-wrap justify-center"> {/* Green bar that says active */}
+      <div className="flex flex-wrap justify-center w-screen">
 
-        {((!searchTerm) && Object.keys(activeProjects).length) ? <div className="w-screen h-20 bg-green-500 p-2"><h1>Active Projects</h1></div> : <div></div>}
+        {/* Default for when seach is disabled */}
         {
+          ((!enableSearch)) ?
+            <div className="w-screen m-0">
+              {/* Active Projets */}
+              {activeCount > 0 ?
+                <div>
+                  <div className="h-20 bg-green-500 p-2"><h1>Active Projects</h1></div>
+                  <div className="flex flex-wrap justify-center">
+                    {Object.keys(activeProjects).map((key) => {
+                      if (searchTerm === "" && filterType === "") {
+                        return (
+                          <div className="w-screen h-fit sm:w-6/12" key={key}>
+                            <Box key={key} name={key} branch={activeProjects[key]['branch']} href={activeProjects[key]['url']} />
+                          </div>
+                        );
+                      }
+                      else {
+                        return (<p key={key}>No inactive projects</p>);
+                      }
+                    })}
+                  </div>
+                </div>
+
+                :
+                <div></div>
+              }
+
+              {/* Inactive Projects */}
+              {/* Active Projets */}
+              {inactiveCount > 0 ?
+                <div>
+                  <div className="h-20 bg-red-500 p-2"><h1>Inactive Projects (No Commits in 90 Days)</h1></div>
+                  <div className="flex flex-wrap justify-center">
+                    {Object.keys(inactiveProjects).map((key) => {
+                      if (searchTerm === "" && filterType === "") {
+                        return (
+                          <div className="w-screen h-fit sm:w-6/12" key={key}>
+                            <Box key={key} name={key} branch={inactiveProjects[key]['branch']} href={inactiveProjects[key]['url']} />
+                          </div>
+                        );
+                      }
+                      else {
+                        return (<p key={key}>No inactive projects</p>);
+                      }
+                    })}
+                  </div>
+                </div>
+
+                :
+                <div></div>
+              }
+            </div>
+
+            : <div></div>
+        }
+
+        {/* Search is enabled */}
+
+
+
+        {/* {
           Object.keys(activeProjects).map((key) => {
             if (searchTerm == "" && filterType == "") {
               activeCount = 1;
@@ -53,21 +111,22 @@ export default function Projects({ activeProjects, inactiveProjects }) {
               }
             }
           })
-        }
+        } */}
 
-        {
+        {/* {
           activeCount == 0 ? <p className="p-20 h-screen">No such projects avalible. Did you select a filter?</p> : <div></div>
-        }
+        } */}
+
       </div>
       {/* Inactive Project Section */}
       {/* Get length of inactive projects */}
 
-      {((!searchTerm) && Object.keys(inactiveProjects).length) ?
+      {/* {((!searchTerm) && Object.keys(inactiveProjects).length) ?
         <div className="w-100% h-20 bg-red-500 p-2">
           <h1>Inactive Projects (No commits in 90 days)</h1>
-        </div> : <div></div>}
+        </div> : <div></div>} */}
 
-      {inactiveProjects ?
+      {/* {inactiveProjects ?
         <div>
           <div className="flex flex-wrap justify-center">
             {Object.keys(inactiveProjects).map((key) => {
@@ -86,7 +145,7 @@ export default function Projects({ activeProjects, inactiveProjects }) {
           </div>
         </div>
         : <div></div>
-      }
+      } */}
 
 
 
@@ -95,6 +154,9 @@ export default function Projects({ activeProjects, inactiveProjects }) {
 }
 
 export async function getStaticProps() {
+
+  var activeCount = 0, inactiveCount = 0;
+
   const file = 'repos.yaml'
   const fileContents = await fs.readFile(process.cwd() + '/' + file, 'utf8')
   var projects = YAML.parse(fileContents);
@@ -139,11 +201,18 @@ export async function getStaticProps() {
     if (diffDays > 90) {
       inactiveProjects[key] = projects[key];
       console.log("Inactive: " + key);
+      // increase the count of inactive projects
+      inactiveCount = inactiveCount + 1;
     }
     else {
       activeProjects[key] = projects[key];
+      // increase the count of active projects
+      activeCount = activeCount + 1;
     }
   }
 
-  return { props: { activeProjects, inactiveProjects } }
+  console.log("activeCount: " + activeCount);
+  console.log("inactiveCount: " + inactiveCount);
+
+  return { props: { activeProjects, inactiveProjects, activeCount, inactiveCount } }
 }
