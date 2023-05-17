@@ -15,9 +15,9 @@ export default function Projects({ activeProjects, inactiveProjects }) {
   return (
     <div>
       <SearchBar setExternalSearchTerm={setSearchTerm} setExternalFilterType={setFilterType} />
-      {/* Green bar that says active */}
-      <div className="flex flex-wrap justify-center">
-      {((!searchTerm) && Object.keys(activeProjects).length) ? <div className="w-screen h-20 bg-green-500 p-2"><h1>Active Projects</h1></div> : <div></div>}
+      <div className="flex flex-wrap justify-center"> {/* Green bar that says active */}
+
+        {((!searchTerm) && Object.keys(activeProjects).length) ? <div className="w-screen h-20 bg-green-500 p-2"><h1>Active Projects</h1></div> : <div></div>}
         {
           Object.keys(activeProjects).map((key) => {
             if (searchTerm == "" && filterType == "") {
@@ -62,35 +62,34 @@ export default function Projects({ activeProjects, inactiveProjects }) {
       {/* Inactive Project Section */}
       {/* Get length of inactive projects */}
 
-      {((!searchTerm) && Object.keys(inactiveProjects).length) ?      
-      <div className="w-100% h-20 bg-red-500 p-2">
-      <h1>Inactive Projects (No commits in 90 days)</h1>
-      </div> : <div></div>}
+      {((!searchTerm) && Object.keys(inactiveProjects).length) ?
+        <div className="w-100% h-20 bg-red-500 p-2">
+          <h1>Inactive Projects (No commits in 90 days)</h1>
+        </div> : <div></div>}
 
-      {inactiveProjects ? 
-  <div>
-    <div className="flex flex-wrap justify-center">
-      {Object.keys(inactiveProjects).map((key) => {
-        inactiveCount = 1;
-        if (searchTerm === "" && filterType === "") {
-          return (
-            <div className="w-screen h-fit sm:w-6/12" key={key}>
-              <Box key={key} name={key} branch={inactiveProjects[key]['branch']} href={inactiveProjects[key]['url']} />
-            </div>
-          );
-        }
-        else
-        {
-          return (<p key={key}>No inactive projects</p>);
-        }
-      })}
-    </div>
-  </div>
-  : <div></div>
-}
+      {inactiveProjects ?
+        <div>
+          <div className="flex flex-wrap justify-center">
+            {Object.keys(inactiveProjects).map((key) => {
+              inactiveCount = 1;
+              if (searchTerm === "" && filterType === "") {
+                return (
+                  <div className="w-screen h-fit sm:w-6/12" key={key}>
+                    <Box key={key} name={key} branch={inactiveProjects[key]['branch']} href={inactiveProjects[key]['url']} />
+                  </div>
+                );
+              }
+              else {
+                return (<p key={key}>No inactive projects</p>);
+              }
+            })}
+          </div>
+        </div>
+        : <div></div>
+      }
 
-  
-  
+
+
     </div>
   );
 }
@@ -145,6 +144,6 @@ export async function getStaticProps() {
       activeProjects[key] = projects[key];
     }
   }
-  
-  return { props: { activeProjects,  inactiveProjects} }
+
+  return { props: { activeProjects, inactiveProjects } }
 }
