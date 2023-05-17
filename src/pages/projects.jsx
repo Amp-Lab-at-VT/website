@@ -13,28 +13,22 @@ export default function Projects({ activeProjects, inactiveProjects, activeCount
   return (
     <div>
       <SearchBar setExternalSearchTerm={setSearchTerm} setExternalFilterType={setFilterType} />
-      <div className="flex flex-wrap justify-center w-screen">
-
+      <div className="flex flex-wrap justify-center min-h-screen">
         {/* Default for when seach is disabled */}
         {
           ((!enableSearch)) ?
-            <div className="w-screen m-0">
+            <div className="m-0">
               {/* Active Projets */}
               {activeCount > 0 ?
                 <div>
-                  <div className="h-20 bg-green-500 p-2"><h1>Active Projects</h1></div>
+                  <div className="h-20 bg-green-500 p-2 w-screen"><h1>Active Projects</h1></div>
                   <div className="flex flex-wrap justify-center">
                     {Object.keys(activeProjects).map((key) => {
-                      if (searchTerm === "" && filterType === "") {
                         return (
                           <div className="w-screen h-fit sm:w-6/12" key={key}>
                             <Box key={key} name={key} branch={activeProjects[key]['branch']} href={activeProjects[key]['url']} />
                           </div>
                         );
-                      }
-                      else {
-                        return (<p key={key}>No inactive projects</p>);
-                      }
                     })}
                   </div>
                 </div>
@@ -50,16 +44,11 @@ export default function Projects({ activeProjects, inactiveProjects, activeCount
                   <div className="h-20 bg-red-500 p-2"><h1>Inactive Projects (No Commits in 90 Days)</h1></div>
                   <div className="flex flex-wrap justify-center">
                     {Object.keys(inactiveProjects).map((key) => {
-                      if (searchTerm === "" && filterType === "") {
                         return (
                           <div className="w-screen h-fit sm:w-6/12" key={key}>
                             <Box key={key} name={key} branch={inactiveProjects[key]['branch']} href={inactiveProjects[key]['url']} />
                           </div>
                         );
-                      }
-                      else {
-                        return (<p key={key}>No inactive projects</p>);
-                      }
                     })}
                   </div>
                 </div>
@@ -68,7 +57,6 @@ export default function Projects({ activeProjects, inactiveProjects, activeCount
                 <div></div>
               }
             </div>
-
             : <div></div>
         }
 
