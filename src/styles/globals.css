@@ -133,8 +133,8 @@ hr {
 
 pre code {
   display: flex;
-  background-color: #eeeeee;
-  padding: 10px;
+  background-color: #d9baba;
+  padding: 20px;
 }
 
 code 
@@ -148,13 +148,16 @@ code
   margin-top: 5px;
   padding: 0 0px;
   white-space: pre-wrap;
+  padding: 10px;
+  background-color: #d2cfcf;
+  border-radius: 0.5rem;
 }
 
 h2
 {
-  font-size: 2.5em;
+  font-size: 2em;
   font-weight: 300;
-  color: rgb(185, 18, 18);
+  color: rgb(0, 0, 0);
   text-align: left;
   margin-bottom: 15px;
   margin-top: 5px;
@@ -163,9 +166,13 @@ h2
   font-family: 'Georgia Bold'
 }
 
+h2~p{
+  margin: 20px;
+}
+
 h1 
 {
-  font-size: 1.5em;
+  font-size: 2.5em;
   font-weight: 300;
   text-align: left;
   margin-bottom: 5px;
@@ -176,6 +183,10 @@ h1
 ul
 {
   margin-left: 10px;
+}
+
+h1~p{
+  margin: 20px;
 }
 
 li
