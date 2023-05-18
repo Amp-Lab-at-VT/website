@@ -10,25 +10,28 @@ export default function Projects({ activeProjects, inactiveProjects, activeCount
 
   var enableSearch = searchTerm;
 
+  var activeProjectsInSearch = 0;
+  var inactiveProjectsInSearch = 0;
+
   return (
     <div>
       <SearchBar setExternalSearchTerm={setSearchTerm} setExternalFilterType={setFilterType} />
       <div className="flex flex-wrap justify-center min-h-screen">
         {/* Default for when seach is disabled */}
         {
-          ((!enableSearch)) ?
-            <div className="m-0">
+          (!enableSearch) ?
+            <div id="defaultWithoutSearch" className="m-0">
               {/* Active Projets */}
               {activeCount > 0 ?
                 <div>
-                  <div className="h-20 bg-green-500 p-2 w-screen"><h1>Active Projects</h1></div>
+                  <div className=" p-2 bg-green-500 flex"><h1 className = "m-4">Active Projects</h1></div>
                   <div className="flex flex-wrap justify-center">
                     {Object.keys(activeProjects).map((key) => {
-                        return (
-                          <div className="w-screen h-fit sm:w-6/12" key={key}>
-                            <Box key={key} name={key} branch={activeProjects[key]['branch']} href={activeProjects[key]['url']} />
-                          </div>
-                        );
+                      return (
+                        <div className="w-screen h-fit sm:w-6/12" key={key}>
+                          <Box key={key} name={key} branch={activeProjects[key]['branch']} href={activeProjects[key]['url']} />
+                        </div>
+                      );
                     })}
                   </div>
                 </div>
@@ -38,17 +41,16 @@ export default function Projects({ activeProjects, inactiveProjects, activeCount
               }
 
               {/* Inactive Projects */}
-              {/* Active Projets */}
               {inactiveCount > 0 ?
                 <div>
-                  <div className="h-20 bg-red-500 p-2"><h1>Inactive Projects (No Commits in 90 Days)</h1></div>
+                  <div className=" p-2 bg-red-500 flex"><h1 className = "m-4">Inactive Projects (No Commits in 90 Days)</h1></div>
                   <div className="flex flex-wrap justify-center">
                     {Object.keys(inactiveProjects).map((key) => {
-                        return (
-                          <div className="w-screen h-fit sm:w-6/12" key={key}>
-                            <Box key={key} name={key} branch={inactiveProjects[key]['branch']} href={inactiveProjects[key]['url']} />
-                          </div>
-                        );
+                      return (
+                        <div className="w-screen h-fit sm:w-6/12" key={key}>
+                          <Box key={key} name={key} branch={inactiveProjects[key]['branch']} href={inactiveProjects[key]['url']} />
+                        </div>
+                      );
                     })}
                   </div>
                 </div>
@@ -57,86 +59,85 @@ export default function Projects({ activeProjects, inactiveProjects, activeCount
                 <div></div>
               }
             </div>
-            : <div></div>
+            : null
         }
 
         {/* Search is enabled */}
-
-
-
-        {/* {
-          Object.keys(activeProjects).map((key) => {
-            if (searchTerm == "" && filterType == "") {
-              activeCount = 1;
-              return (
-                <div className="w-screen h-fit sm:w-6/12" key={key}>
-                  <Box key={key} name={key} branch={activeProjects[key]['branch']} href={activeProjects[key]['url']} />
-                </div>
-              )
-            }
-            else // This is where we implement the search
-            {
-              // Option 1: Mentor. See searchbar.jsx for more details
-              try {
-                if (filterType == "option1" && activeProjects[key]['mentor_last_name'].includes(searchTerm)) {
-                  activeCount++;
-                  return (
-                    <div className="w-screen h-fit sm:w-6/12" key={key}>
-                      <Box key={key} name={key} branch={activeProjects[key]['branch']} href={activeProjects[key]['url']} />
-                    </div>
-                  )
-                }
-                else if (filterType == "option2" && key.includes(searchTerm)) {
-                  activeCount++;
-                  return (
-                    <div className="w-screen h-fit sm:w-6/12" key={key}>
-                      <Box key={key} name={key} branch={activeProjects[key]['branch']} href={activeProjects[key]['url']} />
-                    </div>
-                  )
-                }
-              } catch (error) {
-                console.log("Search Error " + error);
-              }
-            }
-          })
-        } */}
-
-        {/* {
-          activeCount == 0 ? <p className="p-20 h-screen">No such projects avalible. Did you select a filter?</p> : <div></div>
-        } */}
-
-      </div>
-      {/* Inactive Project Section */}
-      {/* Get length of inactive projects */}
-
-      {/* {((!searchTerm) && Object.keys(inactiveProjects).length) ?
-        <div className="w-100% h-20 bg-red-500 p-2">
-          <h1>Inactive Projects (No commits in 90 days)</h1>
-        </div> : <div></div>} */}
-
-      {/* {inactiveProjects ?
-        <div>
-          <div className="flex flex-wrap justify-center">
-            {Object.keys(inactiveProjects).map((key) => {
-              inactiveCount = 1;
-              if (searchTerm === "" && filterType === "") {
-                return (
-                  <div className="w-screen h-fit sm:w-6/12" key={key}>
-                    <Box key={key} name={key} branch={inactiveProjects[key]['branch']} href={inactiveProjects[key]['url']} />
+        {
+          ((enableSearch && filterType)) ?
+            <div className="m-0">
+              {/* Active Projets */}
+              {activeCount > 0 ?
+                <div>
+                  <div className=" p-2 bg-green-500 flex"><h1 className = "m-4">Active Projects</h1></div>
+                  <div className="flex flex-wrap justify-center">
+                    {filterType != "" ?
+                      Object.keys(activeProjects).map((key) => {
+                        if (((filterType == "option1" && activeProjects[key]['mentor_last_name'].includes(searchTerm)) ||
+                          (filterType == "option2" && key.includes(searchTerm)))) {
+                          activeProjectsInSearch++;
+                          return (
+                            <div className="w-screen h-fit sm:w-6/12" key={key}>
+                              <Box key={key} name={key} branch={activeProjects[key]['branch']} href={activeProjects[key]['url']} />
+                            </div>
+                          );
+                        }
+                      })
+                      :
+                      null
+                    }
+                    {
+                    activeProjectsInSearch == 0 ?
+                    <p className = "p-20"> No active projects for your search term <b>'{searchTerm}'</b></p>
+                    : null}
                   </div>
-                );
+                </div>
+
+                :
+                <div></div>
               }
-              else {
-                return (<p key={key}>No inactive projects</p>);
+
+              {/* Inactive Projects */}
+              {inactiveCount > 0 ?
+                <div>
+                  <div className=" p-2 bg-red-500 flex"><h1 className = "m-4">Inactive Projects (No Commits in 90 Days)</h1></div>
+                  <div className="flex flex-wrap justify-center">
+                    {filterType != "" ?
+                      Object.keys(inactiveProjects).map((key) => {
+                        if (((filterType == "option1" && inactiveProjects[key]['mentor_last_name'].includes(searchTerm)) ||
+                          (filterType == "option2" && key.includes(searchTerm)))) {
+                          inactiveProjectsInSearch++;
+                          return (
+                            <div className="w-screen h-fit sm:w-6/12" key={key}>
+                              <Box key={key} name={key} branch={inactiveProjects[key]['branch']} href={inactiveProjects[key]['url']} />
+                            </div>
+                          );
+                        }
+                      })
+                      :
+                      null
+                    }
+                    {inactiveProjectsInSearch == 0 ?
+                    <p className = "p-20"> No inactive projects for your search term <b>'{searchTerm}'</b></p>
+                    : null}
+                  </div>
+                </div>
+                :
+                null
               }
-            })}
-          </div>
-        </div>
-        : <div></div>
-      } */}
+            </div>
+            : <div></div>
+        }
 
-
-
+        {/* Search with no filter  */}
+        {
+          ((enableSearch && !filterType)) ?
+            <div className="m-0">
+              <p>Please select a filter to run your search</p>
+            </div>
+            : null
+        }
+      </div>
     </div>
   );
 }
