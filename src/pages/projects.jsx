@@ -88,7 +88,7 @@ export default function Projects({ activeProjects, inactiveProjects, activeCount
                     }
                     {
                     activeProjectsInSearch == 0 ?
-                    <p className = "p-20"> No active projects for your search term <b>'{searchTerm}'</b></p>
+                    <p className = "p-20"> No active projects for your search term <b>"{searchTerm}"</b></p>
                     : null}
                   </div>
                 </div>
@@ -118,7 +118,7 @@ export default function Projects({ activeProjects, inactiveProjects, activeCount
                       null
                     }
                     {inactiveProjectsInSearch == 0 ?
-                    <p className = "p-20"> No inactive projects for your search term <b>'{searchTerm}'</b></p>
+                    <p className = "p-20"> No inactive projects for your search term <b>"{searchTerm}"</b></p>
                     : null}
                   </div>
                 </div>
