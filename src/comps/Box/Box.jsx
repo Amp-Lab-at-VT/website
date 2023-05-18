@@ -131,7 +131,6 @@ const Box = ({ name, branch, href }) => {
 
           <ImageWrapper src={imgPath} alt="" width={640}
             height={480}/> 
-
           {isHovered && (
             <TextWrapper
               initial={{ opacity: 0 }}
