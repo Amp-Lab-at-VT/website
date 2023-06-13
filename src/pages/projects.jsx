@@ -7,18 +7,23 @@ import Head from 'next/head'
 import axios from 'axios'
 
 export default function Projects({ activeProjects, inactiveProjects, activeCount, inactiveCount }) {
-
-  const total = Object.assign({}, activeProjects, inactiveProjects) //Combining our active and inactive projects into one dictionary
-
   const [searchTerm, setSearchTerm] = useState("");
 
   const searchFilter = (dict) => {
     return Object.keys(dict).filter((key) => {
-      return dict[key]['mentor_last_name'].toLowerCase().includes(searchTerm.toLowerCase()) || key.toLowerCase().includes(searchTerm.toLowerCase())
-    }).reduce((obj, key) => { // I have absolutely no idea how this works, chatGPT gave me this code
+      const exclude = /\-\w*/g.exec(key); // regex to find the -[name] in the project name
+      if (key.toLowerCase().includes(exclude)) return false;
+      if (searchTerm.toLowerCase().includes("mentor:")) {
+        return dict[key]['mentor_last_name'].toLowerCase().includes(searchTerm.split("mentor:")[1].toLowerCase()) && key.toLowerCase().includes(searchTerm.split("mentor:")[0].toLowerCase())
+      } // this only works if the title is first and the "mentor:" is second.
+      else {
+        return key.toLowerCase().includes(searchTerm.toLowerCase())
+      }
+
+    }).reduce((obj, key) => {
       obj[key] = dict[key];
       return obj;
-    }, {}); // Searching by mentor last name doesnt work, but searching by project name does
+    }, {});
   };
 
   //Applying our search filter function to our dictionary of projects recieved from the API
@@ -38,7 +43,7 @@ export default function Projects({ activeProjects, inactiveProjects, activeCount
         <meta name="description" content="Projects" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      
+
       {/* Search Bar */}
       <div className='w-11/12 p-5 flex flex-col  md:items-center'>
         <input className="text-sm py-3 w-[30rem] rounded pl-10 shadow-lg focus:outline-none" onChange={handleChange} type='text' placeholder='Search...' />
@@ -56,13 +61,10 @@ export default function Projects({ activeProjects, inactiveProjects, activeCount
       <div className="p-1flex"><h1 className="m-4">Inactive Projects</h1></div>
       <div className='m-5 flex flex-wrap justify-center'>
         {Object.keys(filteredInact).map((key) => {
-          return (
-            <div className="w-screen h-fit sm:w-6/12" key={key}><Box key={key} name={key} branch={inactiveProjects[key]['branch']} href={inactiveProjects[key]['url']} /></div>
-          )
+          return (<div className="w-screen h-fit sm:w-6/12" key={key}><Box key={key} name={key} branch={inactiveProjects[key]['branch']} href={inactiveProjects[key]['url']} /></div>)
         })}
-        <>No Inactive Projects</>
       </div>
-      
+
     </div>
   )
 

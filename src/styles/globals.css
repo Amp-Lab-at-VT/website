@@ -22,7 +22,7 @@ body {
 }
 
 .App-header {
-  background-color: #ffffff;
+  background-color: rgb(243 244 246);
   min-height: 85vh;
   display: flex;
   flex-direction: column;
@@ -46,7 +46,7 @@ body {
 }
 
 .App-standardPage {
-  background-color: #ffffff;
+  background-color: rgb(243 244 246);
   min-height: 90vh;
   display: flex;
   flex-direction: column;
