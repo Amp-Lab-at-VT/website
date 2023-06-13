@@ -3,143 +3,75 @@ import { promises as fs } from 'fs'
 import YAML from 'yaml'
 import Box from "@/comps/Box/Box.jsx"
 import SearchBar from "@/comps/SearchBar/searchbar.jsx"
+import Head from 'next/head'
+import axios from 'axios'
 
 export default function Projects({ activeProjects, inactiveProjects, activeCount, inactiveCount }) {
+
+  const total = Object.assign({}, activeProjects, inactiveProjects) //Combining our active and inactive projects into one dictionary
+
   const [searchTerm, setSearchTerm] = useState("");
-  const [filterType, setFilterType] = useState("");
 
-  var enableSearch = searchTerm;
+  const searchFilter = (dict) => {
+    return Object.keys(dict).filter((key) => {
+      return dict[key]['mentor_last_name'].toLowerCase().includes(searchTerm.toLowerCase()) || key.toLowerCase().includes(searchTerm.toLowerCase())
+    }).reduce((obj, key) => { // I have absolutely no idea how this works, chatGPT gave me this code
+      obj[key] = dict[key];
+      return obj;
+    }, {}); // Searching by mentor last name doesnt work, but searching by project name does
+  };
 
-  var activeProjectsInSearch = 0;
-  var inactiveProjectsInSearch = 0;
+  //Applying our search filter function to our dictionary of projects recieved from the API
+  const filteredActive = searchFilter(activeProjects)
+  const filteredInact = searchFilter(inactiveProjects)
+
+  //Handling the input on our search bar
+  const handleChange = (e) => {
+    setSearchTerm(e.target.value)
+  }
+
 
   return (
-    <div>
-      <SearchBar setExternalSearchTerm={setSearchTerm} setExternalFilterType={setFilterType} />
-      <div className="flex flex-wrap justify-center min-h-screen">
-        {/* Default for when seach is disabled */}
-        {
-          (!enableSearch) ?
-            <div id="defaultWithoutSearch" className="m-0">
-              {/* Active Projets */}
-              {activeCount > 0 ?
-                <div>
-                  <div className=" p-2 bg-green-500 flex"><h1 className = "m-4">Active Projects</h1></div>
-                  <div className="flex flex-wrap justify-center">
-                    {Object.keys(activeProjects).map((key) => {
-                      return (
-                        <div className="w-screen h-fit sm:w-6/12" key={key}>
-                          <Box key={key} name={key} branch={activeProjects[key]['branch']} href={activeProjects[key]['url']} />
-                        </div>
-                      );
-                    })}
-                  </div>
-                </div>
-
-                :
-                <div></div>
-              }
-
-              {/* Inactive Projects */}
-              {inactiveCount > 0 ?
-                <div>
-                  <div className=" p-2 bg-red-500 flex"><h1 className = "m-4">Inactive Projects (No Commits in 90 Days)</h1></div>
-                  <div className="flex flex-wrap justify-center">
-                    {Object.keys(inactiveProjects).map((key) => {
-                      return (
-                        <div className="w-screen h-fit sm:w-6/12" key={key}>
-                          <Box key={key} name={key} branch={inactiveProjects[key]['branch']} href={inactiveProjects[key]['url']} />
-                        </div>
-                      );
-                    })}
-                  </div>
-                </div>
-
-                :
-                <div></div>
-              }
-            </div>
-            : null
-        }
-
-        {/* Search is enabled */}
-        {
-          ((enableSearch && filterType)) ?
-            <div className="m-0">
-              {/* Active Projets */}
-              {activeCount > 0 ?
-                <div>
-                  <div className=" p-2 bg-green-500 flex"><h1 className = "m-4">Active Projects</h1></div>
-                  <div className="flex flex-wrap justify-center">
-                    {filterType != "" ?
-                      Object.keys(activeProjects).map((key) => {
-                        if (((filterType == "option1" && activeProjects[key]['mentor_last_name'].includes(searchTerm)) ||
-                          (filterType == "option2" && key.includes(searchTerm)))) {
-                          activeProjectsInSearch++;
-                          return (
-                            <div className="w-screen h-fit sm:w-6/12" key={key}>
-                              <Box key={key} name={key} branch={activeProjects[key]['branch']} href={activeProjects[key]['url']} />
-                            </div>
-                          );
-                        }
-                      })
-                      :
-                      null
-                    }
-                    {
-                    activeProjectsInSearch == 0 ?
-                    <p className = "p-20"> No active projects for your search term <b>"{searchTerm}"</b></p>
-                    : null}
-                  </div>
-                </div>
-
-                :
-                <div></div>
-              }
-
-              {/* Inactive Projects */}
-              {inactiveCount > 0 ?
-                <div>
-                  <div className=" p-2 bg-red-500 flex"><h1 className = "m-4">Inactive Projects (No Commits in 90 Days)</h1></div>
-                  <div className="flex flex-wrap justify-center">
-                    {filterType != "" ?
-                      Object.keys(inactiveProjects).map((key) => {
-                        if (((filterType == "option1" && inactiveProjects[key]['mentor_last_name'].includes(searchTerm)) ||
-                          (filterType == "option2" && key.includes(searchTerm)))) {
-                          inactiveProjectsInSearch++;
-                          return (
-                            <div className="w-screen h-fit sm:w-6/12" key={key}>
-                              <Box key={key} name={key} branch={inactiveProjects[key]['branch']} href={inactiveProjects[key]['url']} />
-                            </div>
-                          );
-                        }
-                      })
-                      :
-                      null
-                    }
-                    {inactiveProjectsInSearch == 0 ?
-                    <p className = "p-20"> No inactive projects for your search term <b>"{searchTerm}"</b></p>
-                    : null}
-                  </div>
-                </div>
-                :
-                null
-              }
-            </div>
-            : <div></div>
-        }
-
-        {/* Search with no filter  */}
-        {
-          ((enableSearch && !filterType)) ?
-            <div className="m-0">
-              <p>Please select a filter to run your search</p>
-            </div>
-            : null
-        }
+    <div className={`bg-gray-100`}>
+      <Head>
+        <title>Projects</title>
+        <meta name="description" content="Projects" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      
+      {/* Search Bar */}
+      <div className='w-11/12 p-5 flex flex-col  md:items-center'>
+        <input className="text-sm py-3 w-[30rem] rounded pl-10 shadow-lg focus:outline-none" onChange={handleChange} type='text' placeholder='Search...' />
       </div>
+
+      {/* Active Projects */}
+      <div className="p-1 flex"><h1 className="m-4">Active Projects</h1></div>
+      <div className='m-5 flex flex-wrap justify-center'>
+        {Object.keys(filteredActive).map((key) => {
+          return (<div className="w-screen h-fit sm:w-6/12" key={key}><Box key={key} name={key} branch={activeProjects[key]['branch']} href={activeProjects[key]['url']} /></div>)
+        })}
+      </div>
+
+      {/* Inactive Projects */}
+      <div className="p-1flex"><h1 className="m-4">Inactive Projects</h1></div>
+      <div className='m-5 flex flex-wrap justify-center'>
+        {Object.keys(filteredInact).map((key) => {
+          return (
+            <div className="w-screen h-fit sm:w-6/12" key={key}><Box key={key} name={key} branch={inactiveProjects[key]['branch']} href={inactiveProjects[key]['url']} /></div>
+          )
+        })}
+        <>No Inactive Projects</>
+      </div>
+      
     </div>
-  );
+  )
+
+  // saving this as a reference for later
+  //   <SearchBar setExternalSearchTerm={setSearchTerm} setExternalFilterType={setFilterType} />
+  //   Object.keys(activeProjects).map((key) => {
+  //      if (((filterType == "option1" && activeProjects[key]['mentor_last_name'].includes(searchTerm)) || (filterType == "option2" && key.includes(searchTerm)))) {
+  //       return (<div className="w-screen h-fit sm:w-6/12" key={key}><Box key={key} name={key} branch={activeProjects[key]['branch']} href={activeProjects[key]['url']} /></div>);
+
 }
 
 export async function getStaticProps() {
