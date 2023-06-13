@@ -8,7 +8,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <div>
       <Navigation />
-      <Component {...pageProps} className = "h-100"/>
+      <Component {...pageProps} className="h-100" />
       <Footer />
     </div>
   )

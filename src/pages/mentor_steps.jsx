@@ -5,12 +5,12 @@ import { promises as fs } from 'fs'
 import rehypeRaw from "rehype-raw";
 
 
-export default function MentorSteps({fileContents}) {
+export default function MentorSteps({ fileContents }) {
   return (
     <div>
-      <header class="App-standardPage">
-        <div class = "App-pageHelper">
-        <ReactMarkdown class="App-standardPage" rehypePlugins={[rehypeRaw]}>{fileContents}</ReactMarkdown>
+      <header className="App-standardPage">
+        <div className="App-pageHelper">
+          <ReactMarkdown class="App-standardPage" rehypePlugins={[rehypeRaw]}>{fileContents}</ReactMarkdown>
         </div>
       </header>
     </div>
@@ -18,8 +18,7 @@ export default function MentorSteps({fileContents}) {
 }
 
 export async function getStaticProps() {
-  const file = 'mentor_steps.md'
-  const fileContents = await fs.readFile( process.cwd() + '/markdowns/' + file, 'utf8')
-  return {props: {fileContents}}
+  const fileContents = await fs.readFile(process.cwd() + '/markdowns/mentor_steps.md', 'utf8')
+  return { props: { fileContents } }
 }
 

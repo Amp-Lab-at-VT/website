@@ -4,12 +4,12 @@ import ReactMarkdown from "react-markdown";
 import { promises as fs } from 'fs'
 import rehypeRaw from "rehype-raw";
 
-export default function Tutorial({fileContents}) {
+export default function Tutorial({ fileContents }) {
   return (
     <div>
-      <header class="App-standardPage">
-        <div class = "App-pageHelper tutorialText">
-        <ReactMarkdown rehypePlugins={[rehypeRaw]}>{fileContents}</ReactMarkdown>
+      <header className="App-standardPage">
+        <div className="App-pageHelper tutorialText">
+          <ReactMarkdown rehypePlugins={[rehypeRaw]}>{fileContents}</ReactMarkdown>
         </div>
       </header>
     </div>
@@ -17,8 +17,7 @@ export default function Tutorial({fileContents}) {
 }
 
 export async function getStaticProps() {
-  const file = 'tutorial.md'
-  const fileContents = await fs.readFile( process.cwd() + '/markdowns/' + file, 'utf8')
-  return {props: {fileContents}}
+  const fileContents = await fs.readFile(process.cwd() + '/markdowns/tutorial.md', 'utf8')
+  return { props: { fileContents } }
 }
 

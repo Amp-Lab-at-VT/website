@@ -5,20 +5,19 @@ import { promises as fs } from 'fs'
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 
-export default function About({fileContents}) {  
+export default function About({ fileContents }) {
   return (
     <div className="App">
       <header className="App-standardPage">
-       <div className="App-pageHelper">
-        <ReactMarkdown class="App-standardPage" rehypePlugins={[rehypeRaw]}>{fileContents}</ReactMarkdown>
-        <Link className= "btn" href="/Leadership">Leadership Team</Link>
+        <div className="App-pageHelper">
+          <ReactMarkdown class="App-standardPage" rehypePlugins={[rehypeRaw]}>{fileContents}</ReactMarkdown>
+          <Link className="btn" href="/Leadership">Leadership Team</Link>
         </div>
       </header>
     </div>
   );
 }
 export async function getStaticProps() {
-  const file = 'about.md'
-  const fileContents = await fs.readFile( process.cwd() + '/markdowns/' + file, 'utf8')
-  return {props: {fileContents}}
+  const fileContents = await fs.readFile(process.cwd() + '/markdowns/about.md', 'utf8')
+  return { props: { fileContents } }
 }

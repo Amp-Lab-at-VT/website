@@ -5,19 +5,18 @@ import { promises as fs } from 'fs'
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 
-export default function Mentee_Checksheet({fileContents}) {  
+export default function Mentee_Checksheet({ fileContents }) {
   return (
     <div className="App">
       <header className="App-standardPage">
-       <div className="App-pageHelper">
-        <ReactMarkdown class="App-standardPage" rehypePlugins={[rehypeRaw]}>{fileContents}</ReactMarkdown>
+        <div className="App-pageHelper">
+          <ReactMarkdown class="App-standardPage" rehypePlugins={[rehypeRaw]}>{fileContents}</ReactMarkdown>
         </div>
       </header>
     </div>
   );
 }
 export async function getStaticProps() {
-  const file = 'mentee_checksheet.md'
-  const fileContents = await fs.readFile( process.cwd() + '/markdowns/' + file, 'utf8')
-  return {props: {fileContents}}
+  const fileContents = await fs.readFile(process.cwd() + '/markdowns/mentee_checksheet.md', 'utf8')
+  return { props: { fileContents } }
 }

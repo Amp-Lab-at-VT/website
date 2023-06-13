@@ -11,20 +11,20 @@ export default function Home() {
     <div className="App max-h-screen">
       <header className="App-header">
         <div className="App">
-            <div className = "homeText text-primary-50">
-              <Typewriter
-              onInit={(typewriter)=> {
-              typewriter.changeDelay(50)
-                .pauseFor(250)
-                .typeString("The AMP Lab at Virginia Tech")
-                .pauseFor(500)
-                .callFunction(() => { setShowButton(true); })
-                .start();
+          <div className="homeText text-primary-50">
+            <Typewriter
+              onInit={(typewriter) => {
+                typewriter.changeDelay(50)
+                  .pauseFor(250)
+                  .typeString("The AMP Lab at Virginia Tech")
+                  .pauseFor(500)
+                  .callFunction(() => { setShowButton(true); })
+                  .start();
               }} />
           </div>
-          <div style = {{padding: "50px"} }>
-          {(showButton && <Link href="/getting_started" className = "btn">Getting Started</Link>) ||
-          (!showButton && <Link href="/getting_started" style = {{visibility: "hidden"}} className = "btn">Getting Started</Link>)}
+          <div style={{ padding: "50px" }}>
+            {(showButton && <Link href="/getting_started" className="btn">Getting Started</Link>) ||
+              (!showButton && <Link href="/getting_started" style={{ visibility: "hidden" }} className="btn">Getting Started</Link>)}
           </div>
         </div>
       </header>
