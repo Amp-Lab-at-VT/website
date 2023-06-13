@@ -2,9 +2,7 @@ import React, { useState } from "react";
 import { promises as fs } from 'fs'
 import YAML from 'yaml'
 import Box from "@/comps/Box/Box.jsx"
-import SearchBar from "@/comps/SearchBar/searchbar.jsx"
 import Head from 'next/head'
-import axios from 'axios'
 
 export default function Projects({ activeProjects, inactiveProjects, activeCount, inactiveCount }) {
   const [searchTerm, setSearchTerm] = useState("");
@@ -67,13 +65,6 @@ export default function Projects({ activeProjects, inactiveProjects, activeCount
 
     </div>
   )
-
-  // saving this as a reference for later
-  //   <SearchBar setExternalSearchTerm={setSearchTerm} setExternalFilterType={setFilterType} />
-  //   Object.keys(activeProjects).map((key) => {
-  //      if (((filterType == "option1" && activeProjects[key]['mentor_last_name'].includes(searchTerm)) || (filterType == "option2" && key.includes(searchTerm)))) {
-  //       return (<div className="w-screen h-fit sm:w-6/12" key={key}><Box key={key} name={key} branch={activeProjects[key]['branch']} href={activeProjects[key]['url']} /></div>);
-
 }
 
 export async function getStaticProps() {
