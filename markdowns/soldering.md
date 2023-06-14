@@ -1,4 +1,5 @@
-### The AMP Lab provides two levels of soldering training for students:
+### The AMP Lab provides two levels of soldering training for students
+
 <a class="btn" href="/basic_soldering">Basic Soldering Training</a>
 <a class="btn" href="/adv_soldering">Advanced Soldering Training</a>
 
@@ -6,7 +7,7 @@ Note, students must have a mastery level of basic soldering knowledge to partici
 
 Use the contacts below to get in touch with an instructor for training:
 
-```
+``` text
 Amp Lab Leadership (General) - amp-lab-leadership-team-g@vt.edu
 
 Richard Gibbons - gricha1@vt.edu

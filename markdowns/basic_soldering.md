@@ -7,20 +7,14 @@ Schedule a meeting with one of our mentors to provide basic training at:
 
         amp-lab-leadership-team-g@vt.edu
 
-#### Populate a PC board with an instructor.
+#### Populate a PC board with an instructor
 
 Available PCBs
 
 - B-BOP, Bipolar Breadboard Power Supply (recommended)
-
 - Boost Converter Business Card
 
 Contact an instructor by sending a message to the Google Group below with your available meeting times.
 
-Please send questions and requests to: 
-
-        amp-lab-leadership-team-g@vt.edu
-
-Note: 
-
-Instructors are student volunteers. If you haven't received a reply, please send a follow-up email. 
+Please email [amp-lab-leadership-team-g@vt.edu](mailto:amp-lab-leadership-team-g@vt.edu) with questions or concerns.
+> **Note: Instructors are student volunteers. If you haven't received a reply, please send a follow-up email.**

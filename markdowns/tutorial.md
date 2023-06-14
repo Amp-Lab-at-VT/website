@@ -13,22 +13,25 @@ It is also recommended that you install Visual Code Studio, a common IDE used in
 
 <a class="button is-link" href="https://code.visualstudio.com/download" >Download Visual Code</a>
 
-<hr>
+---
 
 ## Step 1: Shoot us an Email
+
 Before going through these steps, make sure to shoot us an email! That way we can get you started on your projects. Here is out email:
+
 ``` bash
 amp-lab-leadership-team-g@vt.edu 
 ```
+
 We will add you to our Github organization, which can be found below:
 
 <a class="button is-link" href="https://github.com/Amp-Lab-at-VT" >Amp Lab at VT</a>
 
 Once you are added, you will have access to your own project repo: where you can store all your files. This is directly linked to the website, so this removes the hastle of having to keep up with other docs! All your files, all your documentation, all in one place!
 
-<hr>
+---
 
-## Step 2: Maintaining Your Repo:
+## Step 2: Maintaining Your Repo
 
 Now that you have the link to your repo, let's go through a few things. First, let's clone that repo. 
 
@@ -115,11 +118,9 @@ show_sidebar: false
 
 Next, update the file to reflect your project. But do not touch the following fields
 
-```
-layout
-series
-show_sidebar
-```
+- layout
+- series
+- show_sidebar
 
 Here is an example:
 
@@ -217,9 +218,7 @@ You can update it to look like the following, where you are only changing the hr
 This code will produce the following on your website.
 Just a simple button that will direct people to your work:
 
-
 <a class="button is-link" href="https://github.com/Amp-Lab-at-VT/SampleProject" >Sample Project</a>
-
 
 # Step 4: Posting Your Files
 
@@ -233,13 +232,13 @@ git push
 
 That's it, your done! Notify your mentor that you have updated your webpage, and they will take care of making sure the website gets updated!
 
-<hr>
+---
 
 ## FAQ
 
 - What is bash?
-    - "Bash" is a program interface. When you run a termincal, "bash" is the program connecting and interpretting your commands to make them "machine readible". 
+  - "Bash" is a program interface. When you run a termincal, "bash" is the program connecting and interpretting your commands to make them "machine readible". 
 - Why are we not using Google Sites?
-    - Google Sites is a great platform. However, the best sites are still made with a little elbow grease. Besides that, this creates a great opportunity for you to use git, and learn it well. This is greatly looked for by recruiters **cough** put it on your resume that you know git **cough**
+  - Google Sites is a great platform. However, the best sites are still made with a little elbow grease. Besides that, this creates a great opportunity for you to use git, and learn it well. This is greatly looked for by recruiters **cough** put it on your resume that you know git **cough**
 - What on earth is a 'CLI'?
-    - A CLI is a "Command Line Interface". It's the quick way of saying terminal. They mean the same thing
+  - A CLI is a "Command Line Interface". It's the quick way of saying terminal. They mean the same thing
