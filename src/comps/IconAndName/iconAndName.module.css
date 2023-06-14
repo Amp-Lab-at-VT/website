@@ -1,39 +1,49 @@
 .btn {
-    /* background-color: #61dafb; */
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    padding: 10px 20px;
-    transition: background-color 0.3s ease-in-out;
-  }
-  
-  .btn:hover {
-    background-color: #056794;
-  }
+	/* background-color: #61dafb; */
+	color: #fff;
+	border: none;
+	border-radius: 4px;
+	padding: 10px 20px;
+	transition: background-color 0.3s ease-in-out;
+}
 
-  .pop_in {
-    animation-name: pop_in;
-    animation-duration: 0.5s;
-    animation-timing-function: ease-out;
-    animation-fill-mode: forwards;
-    opacity: 0;
-  }
+.btn:hover {
+	background-color: #056794;
+}
 
-  
-  @keyframes pop_in {
-    0% {
-      transform: scale(0);
-      opacity: 0;
-    }
-    60% {
-      transform: scale(1.1);
-      opacity: 1;
-    }
-    80% {
-      transform: scale(0.9);
-    }
-    100% {
-      transform: scale(1);
-      opacity: 1;
-    }
-  }
+.pop_in {
+	animation-name: pop_in;
+	animation-duration: 0.5s;
+	animation-timing-function: ease-out;
+	animation-fill-mode: forwards;
+	opacity: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 10px;
+	width: 15vw;
+	min-width: 200px;
+	margin: 10px;
+	height: 200px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	background-color: #f9f9f9;
+}
+
+@keyframes pop_in {
+	0% {
+		transform: scale(0);
+		opacity: 0;
+	}
+	60% {
+		transform: scale(1.1);
+		opacity: 1;
+	}
+	80% {
+		transform: scale(0.9);
+	}
+	100% {
+		transform: scale(1);
+		opacity: 1;
+	}
+}

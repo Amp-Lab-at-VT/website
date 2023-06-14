@@ -11,6 +11,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        boxback: '#f9f9f9',
         primary: {
           50: '#AA3333',
         },
