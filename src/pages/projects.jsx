@@ -49,13 +49,13 @@ export default function Projects({ activeProjects, inactiveProjects }) {
       {/* Active Projects */}
       <div className="p-1 flex"><h1 className="m-4">Active Projects</h1></div>
       <div className='m-5 flex flex-wrap justify-center'>
-        { Object.entries(filteredActive).map(([key, value]) => { return (<Box key={value['owner']} owner={value['owner']} imgPath={value['imgUrl']} name={value['name']} text={value['text']}/>) }) }
+        {Object.entries(filteredActive).map(([key, value]) => { return (<Box key={value['owner']} owner={value['owner']} imgPath={value['imgUrl']} name={value['name']} text={value['text']} />) })}
       </div>
 
       {/* Inactive Projects */}
       <div className="p-1flex"><h1 className="m-4">Inactive Projects</h1></div>
       <div className='m-5 flex flex-wrap justify-center'>
-        { Object.entries(filteredInact).map(([key, value]) => { return (<Box key={value['owner']} owner={value['owner']} imgPath={value['imgUrl']} name={value['name']} text={value['text']}/>) }) }
+        {Object.entries(filteredInact).map(([key, value]) => { return (<Box key={value['owner']} owner={value['owner']} imgPath={value['imgUrl']} name={value['name']} text={value['text']} />) })}
       </div>
     </div>
   )
@@ -72,7 +72,7 @@ export async function getStaticProps() {
   // Find the date of each commit, and add it to the project
   for (var key in projects) {
     var url = projects[key]['url'];
-    var branch = projects[key]['branch'];
+    var branch = projects[key]['branch']; // not needed (probably) since the graphql query gets commit date on all branches and default branch name too
     var repo = url.split("/")[4];
     var owner = url.split("/")[3];
 
@@ -130,12 +130,9 @@ export async function getStaticProps() {
     lastCommit: value.refs.edges[0].node.target.history.edges[0].node.committedDate,
     imgUrl: "https://raw.githubusercontent.com/" + value.nameWithOwner + "/" + value.defaultBranchRef.name + "/hero.png",
     text: value.defaultBranchRef.target.summary.object.text,
-  }));
+  })
+  ).sort((a, b) => b.lastCommit - a.lastCommit); // sort by most recent commit
 
-  // sort the filtered repos by date
-  filtered.sort((a, b) => b.lastCommit - a.lastCommit);
-
-  // if any of the filtered projects haven't been updated in 3 months, move it to inactive list
   filtered.forEach(function (project) {
 
     // loop through the filtered repos and find the name of the project from the projects YAML file and add it to the object
@@ -146,13 +143,13 @@ export async function getStaticProps() {
       }
     });
 
-
+    // if any of the filtered projects haven't been updated in 3 months, move it to inactive list
     var diffDays = Math.ceil((new Date() - new Date(project.lastCommit)) / (1000 * 60 * 60 * 24));
-    if (diffDays > 90) {
+    if (diffDays > 90) 
       inactiveProjects[project.name] = project;
-    } else {
+    else 
       activeProjects[project.name] = project;
-    }
+    
   });
   return { props: { activeProjects, inactiveProjects } }
 }
