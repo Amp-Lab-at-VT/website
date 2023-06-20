@@ -3,8 +3,9 @@ import { promises as fs } from 'fs'
 import YAML from 'yaml'
 import Box from "@/comps/Box/Box.jsx"
 import Head from 'next/head'
+import { graphql } from "@octokit/graphql";
 
-export default function Projects({ activeProjects, inactiveProjects, activeCount, inactiveCount }) {
+export default function Projects({ activeProjects, inactiveProjects }) {
   const [searchTerm, setSearchTerm] = useState("");
 
   const searchFilter = (dict) => {
@@ -32,8 +33,6 @@ export default function Projects({ activeProjects, inactiveProjects, activeCount
   const handleChange = (e) => {
     setSearchTerm(e.target.value)
   }
-
-
   return (
     <div className={`bg-gray-100`}>
       <Head>
@@ -50,33 +49,25 @@ export default function Projects({ activeProjects, inactiveProjects, activeCount
       {/* Active Projects */}
       <div className="p-1 flex"><h1 className="m-4">Active Projects</h1></div>
       <div className='m-5 flex flex-wrap justify-center'>
-        {Object.keys(filteredActive).map((key) => {
-          return (<div className="w-screen h-fit sm:w-6/12" key={key}><Box key={key} name={key} branch={activeProjects[key]['branch']} href={activeProjects[key]['url']} /></div>)
-        })}
+        { Object.entries(filteredActive).map(([key, value]) => { return (<Box key={value['owner']} owner={value['owner']} imgPath={value['imgUrl']} name={value['name']} text={value['text']}/>) }) }
       </div>
 
       {/* Inactive Projects */}
       <div className="p-1flex"><h1 className="m-4">Inactive Projects</h1></div>
       <div className='m-5 flex flex-wrap justify-center'>
-        {Object.keys(filteredInact).map((key) => {
-          return (<div className="w-screen h-fit sm:w-6/12" key={key}><Box key={key} name={key} branch={inactiveProjects[key]['branch']} href={inactiveProjects[key]['url']} /></div>)
-        })}
+        { Object.entries(filteredInact).map(([key, value]) => { return (<Box key={value['owner']} owner={value['owner']} imgPath={value['imgUrl']} name={value['name']} text={value['text']}/>) }) }
       </div>
-
     </div>
   )
 }
 
 export async function getStaticProps() {
-
-  var activeCount = 0, inactiveCount = 0;
-
-  const file = 'repos.yaml'
-  const fileContents = await fs.readFile(process.cwd() + '/' + file, 'utf8')
+  const fileContents = await fs.readFile(process.cwd() + "/repos.yaml", 'utf8')
   var projects = YAML.parse(fileContents);
 
   var inactiveProjects = {};
   var activeProjects = {};
+  const repositories = [];
 
   // Find the date of each commit, and add it to the project
   for (var key in projects) {
@@ -85,48 +76,83 @@ export async function getStaticProps() {
     var repo = url.split("/")[4];
     var owner = url.split("/")[3];
 
-    // Pull the date from the commit
-    var date = await fetch("https://api.github.com/repos/" + owner + "/" + repo + "/commits/" + branch)
-      .then((response) => response.json())
-      .then((data) => {
-        // Add the date to the project
-        projects[key]['date'] = data['commit']['committer']['date'];
-        // return data['commit']['committer']['date'];
-      })
-      .catch((error) => {
-        console.log("Odds are your query is being throttled. Try again in a few minutes.")
-      });
+    repositories.push({ owner: owner, repo: repo, branch: branch, name: key });
   }
 
-  // Sort the projects by date
-  projects = Object.fromEntries(
-    Object.entries(projects).sort(([, a], [, b]) => {
-      return new Date(b['date']) - new Date(a['date']);
-    })
-  );
+  // GraphQL query
+  // This query will get the last commit date *on all branches*, the summary.md file, and the name of the repo
+  // fragments are used to avoid repeating the same query for each repo (get the same details for all repos)
+  const query = `
+  fragment repoDetails on Repository {
+    nameWithOwner
+    defaultBranchRef {
+      name
+        target {
+          ... on Commit {
+            summary: file(path: "summary.md") {
+              object {
+                ... on Blob {
+                  text
+                }
+              }
+            }
+          }
+        }
+      }
+      refs(first: 100, refPrefix: "refs/heads/") {
+        edges {
+          node {
+            target {
+              ... on Commit {
+                history(first: 1) {
+                  edges {
+                    node {
+                      committedDate
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }   
+  } 
+  
+  { ${repositories.map(({ owner, repo }, index) => `repo${index + 1}: repository(owner: "${owner}", name: "${repo}") { ...repoDetails }`).join("\n")} } 
+  `;
 
-  // if a project hasn't been updates in 3 months, move it to inactive
-  for (var key in projects) {
-    var date = new Date(projects[key]['date']);
-    var today = new Date();
-    var diffTime = Math.abs(today - date);
-    var diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+  const token = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+  const result = await graphql(query, { headers: { authorization: `token ${token}`, } });
 
+  const filtered = Object.entries(result).map(([, value]) => ({
+    name: '',
+    owner: value.nameWithOwner,
+    lastCommit: value.refs.edges[0].node.target.history.edges[0].node.committedDate,
+    imgUrl: "https://raw.githubusercontent.com/" + value.nameWithOwner + "/" + value.defaultBranchRef.name + "/hero.png",
+    text: value.defaultBranchRef.target.summary.object.text,
+  }));
+
+  // sort the filtered repos by date
+  filtered.sort((a, b) => b.lastCommit - a.lastCommit);
+
+  // if any of the filtered projects haven't been updated in 3 months, move it to inactive list
+  filtered.forEach(function (project) {
+
+    // loop through the filtered repos and find the name of the project from the projects YAML file and add it to the object
+    Object.keys(projects).forEach(key => {
+      if (projects[key]['url'].split("github.com/")[1] === project.owner) {
+        project.name = key;
+        project.branch = projects[key]['branch'];
+      }
+    });
+
+
+    var diffDays = Math.ceil((new Date() - new Date(project.lastCommit)) / (1000 * 60 * 60 * 24));
     if (diffDays > 90) {
-      inactiveProjects[key] = projects[key];
-      console.log("Inactive: " + key);
-      // increase the count of inactive projects
-      inactiveCount = inactiveCount + 1;
+      inactiveProjects[project.name] = project;
+    } else {
+      activeProjects[project.name] = project;
     }
-    else {
-      activeProjects[key] = projects[key];
-      // increase the count of active projects
-      activeCount = activeCount + 1;
-    }
-  }
-
-  console.log("activeCount: " + activeCount);
-  console.log("inactiveCount: " + inactiveCount);
-
-  return { props: { activeProjects, inactiveProjects, activeCount, inactiveCount } }
+  });
+  return { props: { activeProjects, inactiveProjects } }
 }
