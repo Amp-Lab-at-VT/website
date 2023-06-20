@@ -112,6 +112,9 @@ const Box = ({ name, branch, href }) => {
             return response.text();
         }
     }).then((response) => {
+        const maxTextLength = 585; // this code isnt perfect, its just to make sure the "date started" is always visible by truncuating the summary text
+        const startDate = "# Date Started\n\n" + response.split("# Date Started")[1];
+        response = response.length > maxTextLength ? response.substring(0, maxTextLength-23) + "...\n\n"+startDate : response;
         setText(response);
         setSummaryLoaded(true);
     }).catch((response) => {
