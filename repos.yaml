@@ -1,3 +1,7 @@
+Digital Audio Workstation:
+  url : "https://github.com/epritchard13/FPGA-DAW"
+  branch: "main"
+  mentor_last_name: "Pritchard"
 Smart Water Bottle:
   url : "https://github.com/KGouttumukkala/SmartWaterBottle"
   branch: "main"
