@@ -46,10 +46,6 @@ IOT Arm:
   url: "https://github.com/Forsyth-Creations/IOT_Arm"
   branch: "main"
   mentor_last_name: "Forsyth" 
-# ScratchBot:
-#   url: "https://github.com/Amp-Lab-at-VT/Scratch-Bot"
-#   branch: "main"
-#   mentor_last_name: "Unknown" 
 8 Bit Computer:
   url: "https://github.com/Amp-Lab-at-VT/8-bit-Computer"
   branch: "main"
@@ -62,14 +58,6 @@ Stylophone:
   url : "https://github.com/Jack4891/3-Phase-AC-generator"
   branch: "main"
   mentor_last_name: "Gibbons" 
-# Modular Flight Controller Recovey System (MFCRS):
-#   url : "https://github.com/devincress/MFCRS"
-#   branch: "main" 
-#   mentor_last_name: "Forsyth" 
-# Temperature Controlled Fan:
-#  url: "https://github.com/Amp-Lab-at-VT/Temperature-controlled-fan"
-#  branch: "main"
-#  mentor_last_name: "Gibbons" 
 Split-Rail-DC-Power-Supply:
   url : "https://github.com/tylermwells/Split-Rail-DC-Power-Supply"
   branch: "main"
