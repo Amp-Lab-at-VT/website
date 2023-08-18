@@ -8,7 +8,7 @@ Assign it a name
 Make it Public
 Give it a blank readme
 License MIT
-Create Repoe
+Create Repo
 
 ### Step 2: Give them access to the repo
 
