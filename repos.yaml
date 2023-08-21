@@ -70,6 +70,10 @@ Protoglove:
   url: "https://github.com/Amp-Lab-at-VT/Protoglove"
   branch: "main"
   mentor_last_name: "Wells"
+Modular Amateur Rocket Computer:
+  url : "https://github.com/devincress/marc"
+  branch: "main"
+  mentor_last_name: "Forsyth"
 # Sample:
 #   url : "https://github.com/Amp-Lab-at-VT/SampleProject"
 #   branch: "master"
