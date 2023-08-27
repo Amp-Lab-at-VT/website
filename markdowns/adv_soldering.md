@@ -1,6 +1,6 @@
-### Advanced Soldering
+### Advanced Soldering Training
 
-In the ECE Integrated Design Studio, Bob has created an advanced surface-mount soldering facility. 
+Welcome to the realm of Advanced Soldering Training at the AMP Lab. If you're seeking to elevate your soldering skills and master intricate surface-mount soldering techniques, you're in the right place. Bob has created an exceptional facility tailored to help you conquer the world of surface-mount soldering with finesse.
 
 **Prerequisites:**
 
@@ -10,16 +10,14 @@ In the ECE Integrated Design Studio, Bob has created an advanced surface-mount s
 
 - Patience and good attention to detail.
 
-To sign up for advanced soldering, email us at:
+Email the following address to schedule advance soldering training (Please note that basic training must be completed before starting advanced soldering training.)
 
         amp-lab-leadership-team-g@vt.edu
 
-Note: You must have basic soldering experience before signing up for the advanced soldering training.
-
 --------------------------------------------------------------------------
 
-#### Advanced Soldering Training Info
-Bob has designed a surface-mount soldering qualifier board. This board covers:
+#### Objectives
+Upon completing the Advanced Soldering Training, you'll confidently master soldering the following components:
 
 - SOIC-8, 1.27 mm pitch
 
@@ -47,6 +45,6 @@ Bob has designed a surface-mount soldering qualifier board. This board covers:
 
 - 0402 resistors (1005 metric) 1.0 x 0.5 mm
 
-Those who complete the advanced surface-mount certification will be strongly encouraged to mentor others who wish to master surface-mount prototype soldering. 
+Those who complete the advanced surface-mount certification will be strongly encouraged to mentor others who wish to learn surface-mount prototype soldering. 
 
 Please email amp-lab-leadership-team-g@vt.edu with questions or concerns.

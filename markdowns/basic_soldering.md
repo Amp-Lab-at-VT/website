@@ -1,26 +1,25 @@
 ### Basic Soldering Training
+Basic soldering training training program builds upon the foundation of general soldering techniques and focuses on practical skills for soldering a functional PCB. You have the option to select one of the following PCB projects for this training:
 
-Completion of basic soldering training allows the use of soldering equipment, unsupervised, in the AMP Lab. For soldering quality standards, see this page. Anyone caught using soldering equipment without basic training will be denied access to the AMP Lab for at least one semester.
-Signing up for Basic Soldering Training:
+- B-BOP: Bipolar Breadboard Power Supply (Recommended)
+- Boost Converter Business Card (Parts Out of Stock)
 
-Schedule a meeting with one of our mentors to provide basic training at:
+Upon successfully completing the training, you'll not only gain invaluable soldering skills but also get to keep the PCB board you've assembled during the training!
 
-        amp-lab-leadership-team-g@vt.edu
+This training will not cover advanced soldering techniques (techniques for building circuits such as microcontroller board, PC’s, etc). It is highly recomended you sign up for advanced soldering after completion of general training.
 
-#### Populate a PC board with an instructor.
+Schedule a meeting with one of our mentors for basic training using the following form (Please note that general training must be completed before starting advanced soldering training.)
+:
 
-Available PCBs
+<a class="button is-link" href="https://forms.gle/KyfVNspm22WMLAKk8">   
+        
+    Soldering Training Sign Up Form
+</a>
 
-- B-BOP, Bipolar Breadboard Power Supply (recommended)
+#### Objectives
+By the end of this Basic Soldering Masterclass, you will be able to:
 
-- Boost Converter Business Card
-
-Contact an instructor by sending a message to the Google Group below with your available meeting times.
-
-Please send questions and requests to: 
-
-        amp-lab-leadership-team-g@vt.edu
-
-Note: 
-
-Instructors are student volunteers. If you haven't received a reply, please send a follow-up email. 
+- Confidently populate a PCB with a diverse range of SMD and THT components.
+- Be equipped to identify and rectify common soldering mistakes.
+- Exhibit proficiency in operating a soldering iron with various tips.
+- Utilize advanced tools like microscopic cameras for precision work.
