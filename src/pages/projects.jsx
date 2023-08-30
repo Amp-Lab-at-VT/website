@@ -189,7 +189,6 @@ export async function getStaticProps() {
 
     if (diffDays > 90) {
       inactiveProjects[key] = projects[key];
-      console.log("Inactive: " + key);
       // increase the count of inactive projects
       inactiveCount = inactiveCount + 1;
     }
