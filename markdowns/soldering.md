@@ -1,8 +1,8 @@
 ## Soldering Training
 The AMP Lab provides three levels of soldering training for students:
-<a class="btn" href="/gen_soldering">General Soldering Training</a>
-<a class="btn" href="/basic_soldering">Basic Soldering Training</a>
-<a class="btn" href="/adv_soldering">Advanced Soldering Training</a> 
+<a class="btn" href="/soldering/general">General Soldering Training</a>
+<a class="btn" href="/soldering/basic">Basic Soldering Training</a>
+<a class="btn" href="/soldering/advanced">Advanced Soldering Training</a> 
 
 Completion of general or higher soldering training allows the use of soldering equipment, unsupervised, in the AMP Lab. Anyone caught using soldering equipment without the general or higher training will be denied access to the AMP Lab for at least one semester.
 
