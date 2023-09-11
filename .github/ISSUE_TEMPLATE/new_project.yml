@@ -3,7 +3,7 @@ description: Start a New Project
 title: "[new-project]: "
 labels: ["new-project"]
 assignees:
-  - forsyth_creations
+  - Forsyth-Creations
 body:
   - type: markdown
     attributes:
