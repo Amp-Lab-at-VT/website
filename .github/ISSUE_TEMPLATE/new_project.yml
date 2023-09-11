@@ -1,0 +1,69 @@
+name: Submit a 3D Print Request
+description: Start a New Project
+title: "[new-project]: "
+labels: ["new-project"]
+assignees:
+  - forsyth_creations
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this print request!
+  - type: input
+    id: name
+    attributes:
+      label: Name
+      description: Please provide your name(s) below
+      placeholder: ex. John Snow, Daenerys Targaryen, etc.
+    validations:
+      required: true
+  - type: input
+    id: contact
+    attributes:
+      label: Contact Details
+      description: Please provide your email(s) below
+      placeholder: ex. email@example.com
+    validations:
+      required: true
+  - type: input
+    id: project_url
+    attributes:
+      label: Project Link
+      description: Please provide the link to your Github project below. If you don't have one, please leave this blank or saw "N/A"
+      placeholder: ex. https://github.com/epritchard13/FPGA-DAW
+    validations:
+      required: false
+  - type: textarea
+    id: general-comments
+    attributes:
+      label: About Your Print
+      description: Tell us about your print (Dimensions). Also attach your file by dropping it into this text body (STL or 3mf are expectd in a compressed ZIP file)
+      placeholder: Please provide them in mm of length, width, and height
+    validations:
+      required: true
+  - type: dropdown
+    id: major
+    attributes:
+      label: What is your major?
+      description: What is your major?
+      options:
+        - GE (General Engineering)
+        - EE (Electrical Engineering)
+        - CPE (Computer Engineering)
+        - ECE (double major in both Electrical and Computer Engineering)
+        - Other (Note we will follow up with you to get more information)
+    validations:
+      required: true
+  - type: dropdown
+    id: howLong
+    attributes:
+      label: How Long?
+      description: How long do you anticipate this project taking?
+      options:
+        - 1 Semester
+        - 2 Semesters
+        - 3 Semesters
+        - 4 Semesters
+        - Unknown
+    validations:
+      required: true
