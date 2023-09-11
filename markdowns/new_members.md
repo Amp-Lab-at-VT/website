@@ -8,7 +8,7 @@ This process is now simpler than ever! Follow the steps below to get started:
 
 3. Include the link to the forked repo in this form:
 
-    <a class="btn" href="https://forms.gle/XZtVwm5prgZkJmnF6" >Sign up for the Amp Lab</a>
+    <a class="btn" href="https://github.com/Amp-Lab-at-VT/website/issues/new/choose" >Join the Amp Lab: Submit your project for review!</a>
 
 4. Wait for AMP lab staff to reach out to you about your project!
 
