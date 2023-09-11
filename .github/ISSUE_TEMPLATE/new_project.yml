@@ -29,18 +29,10 @@ body:
     id: project_url
     attributes:
       label: Project Link
-      description: Please provide the link to your Github project below. If you don't have one, please leave this blank or saw "N/A"
+      description: Please provide the link to your Github project below. If you don't have one, please leave this blank or say "N/A"
       placeholder: ex. https://github.com/epritchard13/FPGA-DAW
     validations:
       required: false
-  - type: textarea
-    id: general-comments
-    attributes:
-      label: About Your Print
-      description: Tell us about your print (Dimensions). Also attach your file by dropping it into this text body (STL or 3mf are expectd in a compressed ZIP file)
-      placeholder: Please provide them in mm of length, width, and height
-    validations:
-      required: true
   - type: dropdown
     id: major
     attributes:
