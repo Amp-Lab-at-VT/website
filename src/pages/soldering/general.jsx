@@ -16,7 +16,7 @@ export default function BeginnersGuide({fileContents}) {
 }
 
 export async function getStaticProps() {
-  const file = 'gen_soldering.md'
+  const file = 'basic_soldering.md'
   const fileContents = await fs.readFile( process.cwd() + '/markdowns/' + file, 'utf8')
   return {props: {fileContents}}
 }
