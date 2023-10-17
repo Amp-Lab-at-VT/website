@@ -8,5 +8,6 @@ module.exports = {
 				pathname: "/**",
 			},
 		],
+		unoptimized: true,
 	},
 };
