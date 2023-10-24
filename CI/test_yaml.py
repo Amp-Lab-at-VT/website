@@ -32,10 +32,14 @@ class TryTesting(TestCase):
             repo_path = url.split("/")[-1].split(".")[0]
             repo_owner = url.split("/")[-2]
 
-            api_url = f"https://api.github.com/repos/{repo_owner}/{repo_path}/branches/{branch}"
             image_url = f"https://raw.githubusercontent.com/{repo_owner}/{repo_path}/{branch}/{image_name}"
             # pull the image from the repo
-            r = requests.get(image_url, auth=(token))
+
+            headers = {
+                'Authorization': f'token {token}'
+            }
+            
+            r = requests.get(image_url, headers=headers)
             
             # Check #1: Mentor is not none
             if mentor is None:
