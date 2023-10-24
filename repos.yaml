@@ -74,7 +74,12 @@ Modular Amateur Rocket Computer:
   url : "https://github.com/devincress/marc"
   branch: "main"
   mentor_last_name: "Forsyth"
+Analog Guitar Amplifier with Effects:
+  url: "https://github.com/KyleHouchin/AnalogSignalProcessing"
+  branch: "main"
+  mentor_last_name: "Costescu"
 # Sample:
 #   url : "https://github.com/Amp-Lab-at-VT/SampleProject"
 #   branch: "master"
 #   mentor_last_name: "Forsyth"
+
