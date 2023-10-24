@@ -29,6 +29,21 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  # Test the yaml
+  PyTest:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install PyTest Dependencies
+        run: |
+          cd CI
+          python -m pip install poetry==1.1.14
+          poetry install
+      - name: Run Pytest tests
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          cd CI
+          poetry run python -m unittest
   # Build job
   build:
     runs-on: ubuntu-latest
@@ -52,17 +67,6 @@ jobs:
       #       echo "Unable to determine packager manager"
       #       exit 1
       #     fi
-      - name: Install PyTest Dependencies
-        run: |
-          cd CI
-          python -m pip install poetry==1.1.14
-          poetry install
-      - name: Run Pytest tests
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          cd CI
-          poetry run python -m unittest
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
