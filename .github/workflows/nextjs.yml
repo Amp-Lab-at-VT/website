@@ -30,7 +30,7 @@ concurrency:
 
 jobs:
   # Test the yaml
-  Check the YAML File:
+  check_yaml:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
