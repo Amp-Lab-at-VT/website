@@ -74,6 +74,10 @@ Modular Amateur Rocket Computer:
   url : "https://github.com/devincress/marc"
   branch: "main"
   mentor_last_name: "Forsyth"
+Temperature Controlled Fan:
+  url : "https://github.com/tylermwells/Temperature_Controlled_Fan"
+  branch: "main"
+  mentor_last_name: "Gibbons"
 # Sample:
 #   url : "https://github.com/Amp-Lab-at-VT/SampleProject"
 #   branch: "master"
