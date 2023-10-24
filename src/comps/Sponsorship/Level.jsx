@@ -23,7 +23,7 @@ export default function SponsorshipLevel(props) {
             <Divider sx={{m: "10px"}}/>
             <Typography variant="h6" sx={{ ml: "20px" }}>
                 <ul>
-                    {perks.map((perk) => <li> {perk} </li>)}
+                    {perks.map((perk) => <li key={perk}> {perk} </li>)}
                 </ul>
             </Typography>       
         </Paper>
