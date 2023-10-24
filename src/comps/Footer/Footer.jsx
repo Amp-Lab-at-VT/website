@@ -1,8 +1,10 @@
 import Link from 'next/link';
 
+import Box from '@mui/material/Box';
+
 const Footer = () => {
   return (
-    <footer style={{ backgroundColor: '#000000', borderTop: '1px solid #ddd', padding: '20px' }}>
+    <Box style={{ backgroundColor: '#000000', borderTop: '1px solid #ddd', padding: '20px' }}>
       <div style={{ display: 'flex', justifyContent: 'space-between' }}>
         <div style={{ flex: 1 }}>
           <h3 className = "text-gray-400" style={{ fontWeight: 'bold', fontSize: '18px', marginBottom: '10px' }}>About Us</h3>
@@ -32,7 +34,7 @@ const Footer = () => {
           <p className = "text-gray-400">Room 236</p>
         </div>
       </div>
-    </footer>
+    </Box>
   );
 };
 
