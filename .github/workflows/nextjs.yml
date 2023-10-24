@@ -29,6 +29,23 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  # Test the yaml
+  check_yaml:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Install PyTest Dependencies
+        run: |
+          cd CI
+          python -m pip install poetry==1.1.14
+          poetry install
+      - name: Run Pytest tests
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          cd CI
+          poetry run python -m unittest
   # Build job
   build:
     runs-on: ubuntu-latest
@@ -38,7 +55,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: "16"
+          node-version: "18"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
       - name: Setup Pages
         uses: actions/configure-pages@v3
