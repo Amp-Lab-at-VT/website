@@ -52,10 +52,23 @@ jobs:
       #       echo "Unable to determine packager manager"
       #       exit 1
       #     fi
+      - name: Set up Python to check the yaml
+          uses: actions/setup-python@v2
+          with:
+            python-version: 3.8
+      - name: Install dependencies
+        run: |
+          cd CI
+          python -m install poetry==1.114
+          poetry install
+      - name: Run Pytest tests
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: poetry run python -m unittest
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: "16"
+          node-version: "18"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
       - name: Setup Pages
         uses: actions/configure-pages@v3
