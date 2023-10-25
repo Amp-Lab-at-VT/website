@@ -47,7 +47,6 @@ body {
 
 .App-standardPage {
   background-color: #ffffff;
-  min-height: 90vh;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -67,6 +66,7 @@ body {
   text-align: left;
 }
 
+/* 
 hr {
   width: 95%;
   padding: 0px;
@@ -74,7 +74,7 @@ hr {
   height: 1px;
   border: none;
   background-color: #000000;
-}
+} */
 
 .btn {
   background-color: rgb(196, 178, 178);

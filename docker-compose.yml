@@ -4,3 +4,8 @@ services:
     build: .
     ports:
       - "3000:3000"
+    volumes:
+      - ./src:/app/src
+      - ./package.json:/app/package.json
+      - ./package-lock.json:/app/package-lock.json
+      - ./public:/app/public

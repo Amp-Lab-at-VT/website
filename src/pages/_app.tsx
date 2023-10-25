@@ -4,12 +4,14 @@ import Footer from "@/comps/Footer/Footer.jsx"
 
 import type { AppProps } from 'next/app'
 
+import Box from '@mui/material/Box';
+
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <div>
+    <Box>
       <Navigation />
-      <Component {...pageProps} className = "h-100"/>
+      <Component {...pageProps} sx={{minHeight : "100vh"}}/>
       <Footer />
-    </div>
+    </Box>
   )
 }
