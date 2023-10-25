@@ -11,7 +11,7 @@ check = "\u2713"
 cross = "\u2717"
 
 username = "Forsyth-Creations"
-token = os.getenv("GITHUB_TOKEN", None)
+token = os.environ("GITHUB_TOKEN")
 
 class TryTesting(TestCase):
     def test_yaml_for_repo(self):
@@ -35,7 +35,7 @@ class TryTesting(TestCase):
             api_url = f"https://api.github.com/repos/{repo_owner}/{repo_path}/branches/{branch}"
             image_url = f"https://raw.githubusercontent.com/{repo_owner}/{repo_path}/{branch}/{image_name}"
             # pull the image from the repo
-            r = requests.get(image_url, auth=(username,token))
+            r = requests.get(image_url, auth=(token))
             
             # Check #1: Mentor is not none
             if mentor is None:
