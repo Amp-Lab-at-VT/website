@@ -11,7 +11,7 @@ check = "\u2713"
 cross = "\u2717"
 
 username = "Forsyth-Creations"
-token = os.environ("GITHUB_TOKEN")
+token = os.environ['GITHUB_TOKEN']
 
 class TryTesting(TestCase):
     def test_yaml_for_repo(self):
