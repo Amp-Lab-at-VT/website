@@ -52,10 +52,6 @@ jobs:
       #       echo "Unable to determine packager manager"
       #       exit 1
       #     fi
-      - name: Set up Python to check the yaml
-          uses: actions/setup-python@v2
-          with:
-            python-version: 3.8
       - name: Install dependencies
         run: |
           cd CI
