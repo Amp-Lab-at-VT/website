@@ -61,8 +61,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-        cd CI
-        poetry run python -m unittest
+          cd CI
+          poetry run python -m unittest
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
