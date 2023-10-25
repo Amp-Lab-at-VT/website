@@ -3,6 +3,7 @@ from yaml import load
 from yaml import Loader
 import requests
 from IPython.display import Image
+import os
 
 path_to_repos = "../repos.yaml"
 
@@ -10,7 +11,7 @@ check = "\u2713"
 cross = "\u2717"
 
 username = "Forsyth-Creations"
-token = "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"
+token = os.getenv("GITHUB_TOKEN", None)
 
 class TryTesting(TestCase):
     def test_yaml_for_repo(self):
