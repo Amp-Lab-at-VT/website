@@ -55,7 +55,7 @@ jobs:
       - name: Install dependencies
         run: |
           cd CI
-          python -m install poetry==1.114
+          python -m pip install poetry==1.114
           poetry install
       - name: Run Pytest tests
         env:
