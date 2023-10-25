@@ -55,7 +55,7 @@ export default function Sponsorship() {
         <Level perks={["Recognition on our website"]} price={"1,000"} icon={<BronzeIcon />} level="Bronze"></Level>
 
         <Stack direction="row" justifyContent="center">
-          <Button href="mailto:rhforsythjr@vt.edu">Reach out about sponsoring us now!</Button>
+          <Button href="mailto:amp-lab-leadership-team-g@vt.edu">Reach out about sponsoring us now!</Button>
         </Stack>
 
         <Divider sx={{ m: "20px" }} />
@@ -119,7 +119,7 @@ function BasicTable() {
 function Example(props) {
   var items = [
     {
-      name: "Updating lab to be more modern",
+      name: "Modernizing the Lab",
       description: "We are currently in the process of updating our lab to be more modern. We are seeking sustainable ways to keep the lab clean, organized, and safe. We are also looking to update our equipment to be more modern and efficient.",
       image : "/Generics/Lab1.jpg"
     },
