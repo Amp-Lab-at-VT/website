@@ -49,10 +49,10 @@ export default function Sponsorship() {
 
         <Typography variant="h5"> Sponsorship Levels </Typography>
         <Alert severity="info">Note: higher tiers automatically roll in perks of lower tiers</Alert>
-        <Level perks={["Signage in-lab praising your sponsorship", "Invitations to our weekly leadership meetings"]} price={"10,000"} icon={<DiamondIcon />} level="Diamond"></Level>
-        <Level perks={["Invitations to visit, meet our staff, and discuss your gift and what it means to us", "Receive emails from us about our latest lab updates"]} price={"7,500"} icon={<GoldIcon />} level="Gold"></Level>
-        <Level perks={["Resumes from all our active members", "Virtual meeting with Amp Lab leadership to thank you for your contribution"]} price={"5,000"} icon={<SilverIcon />} level="Silver"></Level>
-        <Level perks={["Recognition on our website"]} price={"2,500"} icon={<BronzeIcon />} level="Bronze"></Level>
+        <Level perks={["Signage in-lab praising your sponsorship", "Opportunity to suggest projects for students to collaborate and work on with the company", "Private recruiting event for the company for Amp Lab students"]} price={"10,000"} icon={<DiamondIcon />} level="Diamond"></Level>
+        <Level perks={["Invitation to attend our Amp Lab sponsored recruiting event", "Receive emails from us about our latest lab updates"]} price={"5,000"} icon={<GoldIcon />} level="Gold"></Level>
+        <Level perks={["Resumes from all our active members", "Virtual meeting with Amp Lab leadership to thank you for your contribution"]} price={"2,500"} icon={<SilverIcon />} level="Silver"></Level>
+        <Level perks={["Recognition on our website"]} price={"1,000"} icon={<BronzeIcon />} level="Bronze"></Level>
 
         <Stack direction="row" justifyContent="center">
           <Button href="mailto:rhforsythjr@vt.edu">Reach out about sponsoring us now!</Button>
@@ -79,7 +79,7 @@ function BasicTable() {
           <TableRow>
             <TableCell>Description</TableCell>
             <TableCell align="right">Value to Lab</TableCell>
-            <TableCell align="right">Approximate Cost</TableCell>
+            <TableCell align="right">Approximate Annual Cost</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
