@@ -5,7 +5,7 @@ import Hamburger from "@/comps/Hamburger/Hamburger.jsx"
 export default function Navigation() {
 
     return (
-    <div className={styles.navbar}>
+    <div sx={{zIndex : 20000}} className={styles.navbar}>
         <div className={styles.parentNav}>
             <div style={{display : "flex", alignItems: "center"}}>
                 <Hamburger />
