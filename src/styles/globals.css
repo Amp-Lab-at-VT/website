@@ -22,7 +22,6 @@ body {
 }
 
 .App-header {
-  background-color: #ffffff;
   min-height: 85vh;
   display: flex;
   flex-direction: column;
@@ -64,6 +63,7 @@ body {
   margin: 10px;
   display: block;
   text-align: left;
+  min-height: 90vh;
 }
 
 /* 
