@@ -1,16 +1,16 @@
 ### Advanced Soldering Training
 
-Welcome to the realm of Advanced Soldering Training at the AMP Lab. If you're seeking to elevate your soldering skills and master intricate surface-mount soldering techniques, you're in the right place. Bob has created an exceptional facility tailored to help you conquer the world of surface-mount soldering with finesse.
+Welcome to the realm of Advanced Soldering Training at the AMP Lab. If you're seeking to elevate your soldering skills and master intricate surface-mount soldering techniques, you're in the right place. There is an exceptional facility tailored at the lab to help you conquer the world of surface-mount soldering with finesse.
 
 **Prerequisites:**
 
-- Basic soldering certification.
+- Intermediate soldering certification.
 
 - Steady hands. Good eye-hand coordination. Ability to coordinate your fingers' motions with the results displayed on a large monitor connected to a microscope. 
 
 - Patience and good attention to detail.
 
-Email the following address to schedule advance soldering training (Please note that basic training must be completed before starting advanced soldering training.)
+Email the following address to schedule advance soldering training (Please note that intermediate training must be completed before starting advanced soldering training.)
 
         amp-lab-leadership-team-g@vt.edu
 
