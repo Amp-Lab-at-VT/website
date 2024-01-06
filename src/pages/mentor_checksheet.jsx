@@ -18,6 +18,6 @@ export default function Mentor_Checksheet({fileContents}) {
 }
 export async function getStaticProps() {
   const file = 'mentor_checksheet.md'
-  const fileContents = await fs.readFile( process.cwd() + '/markdowns/' + file, 'utf8')
+  const fileContents = await fs.readFile( process.cwd() + '/docs/' + file, 'utf8')
   return {props: {fileContents}}
 }
