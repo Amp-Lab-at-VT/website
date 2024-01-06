@@ -15,7 +15,7 @@ export default function Rules({fileContents}) {
 
 export async function getStaticProps() {
   const file = 'rules.md'
-  const fileContents = await fs.readFile( process.cwd() + '/markdowns/' + file, 'utf8')
+  const fileContents = await fs.readFile( process.cwd() + '/docs/' + file, 'utf8')
   return {props: {fileContents}}
 }
 

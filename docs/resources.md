@@ -17,4 +17,7 @@
 
 [Advanced Solder Training Checksheet](/soldering/advanced)
 
+## For MDE Students: 
+
+[MDE Documents](/mde/docs)
 

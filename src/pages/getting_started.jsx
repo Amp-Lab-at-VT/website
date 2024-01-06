@@ -47,10 +47,10 @@ return (
 
 export async function getStaticProps() {
   const new_members_file = 'new_members.md'
-  const new_members = await fs.readFile( process.cwd() + '/markdowns/' + new_members_file, 'utf8')
+  const new_members = await fs.readFile( process.cwd() + '/docs/' + new_members_file, 'utf8')
 
   const returning_members_file = 'returning_members.md'
-  const returning_members = await fs.readFile( process.cwd() + '/markdowns/' + returning_members_file, 'utf8')
+  const returning_members = await fs.readFile( process.cwd() + '/docs/' + returning_members_file, 'utf8')
 
   return {props: {new_members, returning_members}}
 }
