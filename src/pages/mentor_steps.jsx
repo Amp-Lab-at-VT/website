@@ -19,7 +19,7 @@ export default function MentorSteps({fileContents}) {
 
 export async function getStaticProps() {
   const file = 'mentor_steps.md'
-  const fileContents = await fs.readFile( process.cwd() + '/markdowns/' + file, 'utf8')
+  const fileContents = await fs.readFile( process.cwd() + '/docs/' + file, 'utf8')
   return {props: {fileContents}}
 }
 

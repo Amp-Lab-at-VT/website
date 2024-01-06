@@ -9,4 +9,4 @@ services:
       - ./package.json:/app/package.json
       - ./package-lock.json:/app/package-lock.json
       - ./public:/app/public
-      - ./markdowns:/app/markdowns
+      - ./docs:/app/docs
