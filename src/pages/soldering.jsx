@@ -3,15 +3,17 @@ import { promises as fs } from 'fs'
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 
+import { Alert, Container, Button, Stack, Typography } from '@mui/material';
+
 export default function Soldering({fileContents}) {
   return (
-    <div>
-      <header class="App-standardPage">
-        <div class = "App-pageHelper">
-        <ReactMarkdown class="App-standardPage" rehypePlugins={[rehypeRaw]}>{fileContents}</ReactMarkdown>
-        </div> 
-      </header>
-    </div>
+    <Container>
+      <Alert severity = "info">
+        <Stack sx={{display : "flex", justifyContent : "flex-start"}}>
+          <Typography variant="h5">Want to book a solder training?</Typography>
+          <Button href = {"/soldering/booking"}>www.amp-lab.ord/soldering/booking</Button></Stack></Alert>
+    <ReactMarkdown class="App-standardPage" rehypePlugins={[rehypeRaw]}>{fileContents}</ReactMarkdown>
+    </Container> 
   );
 }
 
