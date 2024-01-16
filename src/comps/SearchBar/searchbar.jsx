@@ -1,19 +1,19 @@
 import React, { useState } from "react";
 
-const SearchBar = ({setExternalSearchTerm, setExternalFilterType}) => {
+const SearchBar = ({ setExternalSearchTerm, setExternalFilterType }) => {
   const [searchTerm, setSearchTerm] = useState("");
   const [filterType, setFilterType] = useState("");
 
   const handleInputChange = (event) => {
     setSearchTerm(event.target.value);
     if (setExternalSearchTerm != null)
-        setExternalSearchTerm(event.target.value);
+      setExternalSearchTerm(event.target.value);
   };
 
   const handleFilterChange = (event) => {
     setFilterType(event.target.value);
     if (setExternalFilterType != null)
-        setExternalFilterType(event.target.value);
+      setExternalFilterType(event.target.value);
   };
 
   const handleClear = () => {
@@ -43,7 +43,12 @@ const SearchBar = ({setExternalSearchTerm, setExternalFilterType}) => {
         <option value="option1">Mentor</option>
         <option value="option2">Project Name</option>
       </select>
-      <button onClick={handleClear} style={{ marginLeft: "10px", padding: "10px" }}>Clear</button>
+      <button
+        onClick={handleClear}
+        style={{ marginLeft: "10px", padding: "10px" }}
+      >
+        Clear
+      </button>
     </div>
   );
 };
