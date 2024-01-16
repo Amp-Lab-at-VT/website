@@ -1,8 +1,7 @@
 .dropbtn {
-    border: 0px solid rgb(49, 36, 37);
-    background-color: transparent;
-    margin: 5px;
-
+  border: 0px solid rgb(49, 36, 37);
+  background-color: transparent;
+  margin: 5px;
 }
 
 .dropdownContent {
@@ -24,7 +23,7 @@
   text-decoration: none;
   display: block;
   text-align: left;
-  right:0;
+  right: 0;
   font-size: 14px;
 }
 

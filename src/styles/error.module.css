@@ -20,7 +20,8 @@
   border-right: 2px solid rgba(32, 77, 113, 0.9);
 
   /* define animation types for text + cursor */
-  animation: animated-text__1 2s steps(30, end) 1s 1 normal both,
+  animation:
+    animated-text__1 2s steps(30, end) 1s 1 normal both,
     animated-cursor__1 900ms steps(30, end) 8;
 }
 
@@ -28,7 +29,8 @@
   border-right: 2px solid rgba(32, 77, 113, 0.9);
 
   /* define animation types for text + cursor */
-  animation: animated-text__2 2s steps(30, end) 1s 1 normal both,
+  animation:
+    animated-text__2 2s steps(30, end) 1s 1 normal both,
     animated-cursor__2 900ms steps(30, end) infinite;
   -webkit-animation-delay: 3s;
   animation-delay: 3s;

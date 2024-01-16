@@ -58,7 +58,7 @@ body {
   margin: 10px;
 } */
 
-.App-pageHelper{
+.App-pageHelper {
   padding: 10px;
   margin: 10px;
   display: block;
@@ -81,7 +81,7 @@ hr {
   padding: 10px;
   border-radius: 0.5rem;
   text-decoration: none;
-  color:black;
+  color: black;
   pointer-events: all;
   display: block;
   margin: 2px;
@@ -111,12 +111,11 @@ hr {
 .flex-row-wrap {
   display: flex;
   flex-direction: row;
-  justify-content:center;
+  justify-content: center;
   align-items: center;
   width: 100%;
   flex-wrap: wrap;
 }
-
 
 /* My custom formats */
 
@@ -128,7 +127,7 @@ hr {
   margin: 0 auto;
   max-width: 600px;
   padding: 0 20px;
-  font-family: 'Georgia'
+  font-family: "Georgia";
 }
 
 pre code {
@@ -137,8 +136,7 @@ pre code {
   padding: 20px;
 }
 
-code 
-{
+code {
   display: block;
   font-size: 1em;
   font-weight: 300;
@@ -153,8 +151,7 @@ code
   border-radius: 0.5rem;
 }
 
-h2
-{
+h2 {
   font-size: 2em;
   font-weight: 300;
   color: rgb(0, 0, 0);
@@ -163,15 +160,14 @@ h2
   margin-top: 5px;
   max-width: 600px;
   padding: 0 0px;
-  font-family: 'Georgia Bold'
+  font-family: "Georgia Bold";
 }
 
-h2~p{
+h2 ~ p {
   margin: 20px;
 }
 
-h1 
-{
+h1 {
   font-size: 2.5em;
   font-weight: 300;
   text-align: left;
@@ -180,30 +176,26 @@ h1
   padding: 0 0px;
 }
 
-ul
-{
+ul {
   margin-left: 10px;
 }
 
-h1~p{
+h1 ~ p {
   margin: 20px;
 }
 
-li
-{
+li {
   list-style-type: decimal;
   margin-left: 20px;
 }
 
-a
-{
+a {
   color: rgb(185, 18, 18);
   text-decoration: none;
   font-weight: 600;
 }
 
-a:hover
-{
+a:hover {
   color: rgb(185, 18, 18);
   text-decoration: underline;
 }
