@@ -17,10 +17,12 @@ export default function Page() {
   return (
     <Container>
       <div class="App-pageHelper">
-        <Typography variant="h4">Documents for MDE Students</Typography>
+        <Typography variant="h4">Documents for Students using the ECE Design Studio</Typography>
         <Alert severity="info">
-          Below are the documents for MDE students. If you have any questions,
-          please contact the leadership team.
+          Below are doucments you will need to read and sign before you can use the ECE Design Studio.
+          Note that these documents are universal to both the MDE and AMP lab sides of the lab, but 
+          they do NOT grant you access to both sides of the lab. You will need to be apart of the 
+          AMP lab to use their side.
         </Alert>
         <Stack>
           <SingleDoc
@@ -43,7 +45,7 @@ export default function Page() {
                 <Typography>This contains the Lab Training Guide</Typography>
               </Box>
             }
-            link={`https://github.com/Amp-Lab-at-VT/website/raw/${branchName}/docs/mde_docs/Lab%20Training%20Guide%20Rev%202`}
+            link={`https://github.com/Amp-Lab-at-VT/website/raw/${branchName}/docs/mde_docs/Lab%20Training%20Guide%20Rev%202.docx`}
             last_updated="1/16/2024"
           />
         </Stack>
