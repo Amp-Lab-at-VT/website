@@ -3,19 +3,18 @@ Intermediate soldering training training program builds upon the foundation of b
 
 - B-BOP: Bipolar Breadboard Power Supply (Recommended)\
     -><a class="button is-link" href="https://drive.google.com/file/d/11N8RAQ3UUFXRoRf0y4xIY5uxhCQwwssp/view?usp=drive_link"> Soldering manual for reference available here </a>
-- Boost Converter Business Card (AMP Lab Ruler) \
+- AMP Lab Ruler \
     -><a class="button is-link" href="https://docs.google.com/document/d/1wgnPKMF7ByreYXETFxVT-L0oyo6WmKPLUtgBnkKjxEQ/edit?usp=sharing"> Soldering manual for reference available here</a>
 
 Upon successfully completing the training, you'll not only gain invaluable soldering skills but also get to keep the PCB board you've assembled during the training!
 
 This training will not cover advanced soldering techniques (techniques for building circuits such as microcontroller board, PC’s, etc). It is highly recomended you sign up for advanced soldering after completion of intermediate training.
 
-Schedule a meeting with one of our mentors for basic training using the following form (Please note that basic training must be completed before starting advanced soldering training.)
-:
+Schedule a meeting with one of our mentors for basic training using the following link (Please note that basic training must be completed before starting intermediate soldering training):
 
-<a class="button is-link" href="https://forms.gle/KyfVNspm22WMLAKk8">   
-        
-    Soldering Training Sign Up Form
+<a class="button is-link" href="/soldering/booking">   
+
+    Soldering Training Sign Up
 </a>
 
 ___
