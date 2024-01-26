@@ -16,7 +16,7 @@ export default function Home() {
                 typewriter
                   .changeDelay(50)
                   .pauseFor(250)
-                  .typeString("The AMP Lab at Virginia Tech")
+                  .typeString("The AMP Lab Virginia Tech")
                   .pauseFor(500)
                   .callFunction(() => {
                     setShowButton(true);
