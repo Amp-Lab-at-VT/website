@@ -12,7 +12,10 @@ Welcome to the realm of Advanced Soldering Training at the AMP Lab. If you're se
 
 Email the following address to schedule advance soldering training (Please note that intermediate training must be completed before starting advanced soldering training.)
 
-        amp-lab-leadership-team-g@vt.edu
+<a class="button is-link" href="mailto:AMPLabSolderTrainingTeam@groups.office365.vt.edu">   
+    
+    AMPLabSolderTrainingTeam@groups.office365.vt.edu
+</a>
 
 --------------------------------------------------------------------------
 
