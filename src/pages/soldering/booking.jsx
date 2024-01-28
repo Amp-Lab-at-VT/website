@@ -6,8 +6,6 @@ import { Container, Stack, Alert } from "@mui/material";
 const src =
   "https://outlook.office365.com/owa/calendar/SolderingTrainings@VirginiaTech.onmicrosoft.com/bookings/";
 
-import { Container, Stack } from "@mui/material";
-
 export default function Booking() {
   // todo: attempt to connect to microsoft account
   // if not connected, display alert
