@@ -20,18 +20,18 @@ export default function Page() {
         <Typography variant="h4">
           Documents for Students using the ECE Design Studio
         </Typography>
-        <Alert sx={{marginBottom : "10px"}} severity="info">
+        <Alert sx={{ marginBottom: "10px" }} severity="info">
           The documents on this page are utilized to obtain swipe access to AMP
           Lab (Whittemore 264), MDE Lab (Whittemore 264) and/or Robotics Lab
           (Durham 373). To obtain swipe access to these labs, download and
-          adhere to requirements outlined in the Lab Training Guide. ECE Lab Policy and ECE Lab Waiver are support
-          documents called out in the Lab Training Guide. 
+          adhere to requirements outlined in the Lab Training Guide. ECE Lab
+          Policy and ECE Lab Waiver are support documents called out in the Lab
+          Training Guide.
         </Alert>
-        <Alert sx={{marginBottom : "10px"}} severity="info">
-          Note: These documents
-          are universal to both the MDE and AMP lab sides of the lab, but they
-          do NOT grant you access to both sides of the lab. You will need to be
-          apart of the AMP lab to use their side
+        <Alert sx={{ marginBottom: "10px" }} severity="info">
+          Note: These documents are universal to both the MDE and AMP lab sides
+          of the lab, but they do NOT grant you access to both sides of the lab.
+          You will need to be apart of the AMP lab to use their side
         </Alert>
         <Stack>
           <SingleDoc
