@@ -3,7 +3,7 @@
 Basic soldering training will cover operation of the soldering iron and how it works, how to solder some common through hole components, what tools to use when fixing soldering mistakes, and how to clean up the workspace after oneself. You have the option to select one of the following PCB projects for this training:
 
 - LED Color Organ \
-    -> [Soldering manual for reference available here](https://github.com/Amp-Lab-at-VT/website/raw/main/docs/mde_docs/Basic%20Soldering%20Training%20Manual%20(LED%20Color%20Organ).pdf') 
+    -> [Soldering manual for reference available here](https://github.com/Amp-Lab-at-VT/website/raw/master/docs/sold_docs/Basic%20Soldering%20Training%20Manual%20(LED%20Color%20Organ).pdf) 
 
 Upon successfully completing the training, you'll not only gain invaluable soldering skills but also get to keep the PCB board you've assembled during the training!
 

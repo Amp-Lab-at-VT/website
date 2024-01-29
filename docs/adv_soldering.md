@@ -50,4 +50,4 @@ Upon completing the Advanced Soldering Training, you'll confidently master solde
 
 Those who complete the advanced surface-mount certification will be strongly encouraged to mentor others who wish to learn surface-mount prototype soldering. 
 
-Please email amp-lab-leadership-team-g@vt.edu with questions or concerns.
+Please email AMPLabSolderTrainingTeam@groups.office365.vt.edu with questions or concerns.

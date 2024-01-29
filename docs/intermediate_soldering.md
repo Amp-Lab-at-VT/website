@@ -2,9 +2,9 @@
 Intermediate soldering training training program builds upon the foundation of basic soldering techniques and focuses on practical skills for soldering a functional PCB. You have the option to select one of the following PCB projects for this training:
 
 - B-BOP: Bipolar Breadboard Power Supply (Recommended)\
-    -><a class="button is-link" href="https://drive.google.com/file/d/11N8RAQ3UUFXRoRf0y4xIY5uxhCQwwssp/view?usp=drive_link"> Soldering manual for reference available here </a>
+    -> [Soldering manual for reference available here](https://github.com/Amp-Lab-at-VT/website/raw/master/docs/sold_docs/Intermediate%20Soldering%20Training%20Manual%20(Isolated%20Breadboard%20Bipolar%20Power%20Supply).pdf)
 - AMP Lab Ruler \
-    -><a class="button is-link" href="https://docs.google.com/document/d/1wgnPKMF7ByreYXETFxVT-L0oyo6WmKPLUtgBnkKjxEQ/edit?usp=sharing"> Soldering manual for reference available here</a>
+    -> [Soldering manual for reference available here](https://github.com/Amp-Lab-at-VT/website/raw/master/docs/sold_docs/Intermediate%20Soldering%20Certification%20Manual%20(AMP%20Ruler).pdf)
 
 Upon successfully completing the training, you'll not only gain invaluable soldering skills but also get to keep the PCB board you've assembled during the training!
 
