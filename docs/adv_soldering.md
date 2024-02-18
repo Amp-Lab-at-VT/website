@@ -1,26 +1,13 @@
-### Advanced Soldering Training
+# **Advanced Soldering Training**
 
 Welcome to the realm of Advanced Soldering Training at the AMP Lab. If you're seeking to elevate your soldering skills and master intricate surface-mount soldering techniques, you're in the right place. There is an exceptional facility tailored at the lab to help you conquer the world of surface-mount soldering with finesse.
 
-**Prerequisites:**
+Upon successfully completing the training, you'll have mastered the ability to solder surface mount devices and utilize equipment like stencil printer, reflow oven, etc.
 
-- Intermediate soldering certification.
+Those who complete the advanced surface-mount certification will be strongly encouraged to mentor others who wish to learn surface-mount prototype soldering.
 
-- Steady hands. Good eye-hand coordination. Ability to coordinate your fingers' motions with the results displayed on a large monitor connected to a microscope. 
-
-- Patience and good attention to detail.
-
-Email the following address to schedule advance soldering training (Please note that intermediate training must be completed before starting advanced soldering training.)
-
-<a class="button is-link" href="mailto:AMPLabSolderTrainingTeam@groups.office365.vt.edu">   
-    
-    AMPLabSolderTrainingTeam@groups.office365.vt.edu
-</a>
-
---------------------------------------------------------------------------
-
-#### Objectives
-Upon completing the Advanced Soldering Training, you'll confidently master soldering the following components:
+**Objective:** \
+Upon completing the Advanced Soldering Training, you'll confidently master soldering the following surface mount components:
 
 - SOIC-8, 1.27 mm pitch
 
@@ -48,6 +35,34 @@ Upon completing the Advanced Soldering Training, you'll confidently master solde
 
 - 0402 resistors (1005 metric) 1.0 x 0.5 mm
 
-Those who complete the advanced surface-mount certification will be strongly encouraged to mentor others who wish to learn surface-mount prototype soldering. 
+**Prerequisite:** \
+Intermediate Solder Training at The AMP Lab
 
-Please email [AMPLabSolderTrainingTeam@groups.office365.vt.edu](mailto:AMPLabSolderTrainingTeam@groups.office365.vt.edu) with questions or concerns.
+**Estimated Time:** \
+4-6 Weeks
+
+**Practice Board:** \
+Do Nothing Board 2
+
+**Certification Board Available:** \
+->The AMP Lab Microcontroller \
+&emsp; ->[Manual TBD](https://amp-lab.org/404) \
+&emsp; ->[Board Files TBD](https://amp-lab.org/404)
+
+
+**Procedure:** \
+    ->The instructor will meet with you once a week. \
+    ->You will then practice on your own what the instructor went over that week. \
+    ->You will first hand solder as much of the practice board possible. \
+    ->You will then use the reflow oven to solder the practice board. \
+    ->Once the instructor is satisfied with your progress they will hand you the certfiction board of your choice.\
+    ->Solder the certfiction board. Be sure to check it manual above. 
+
+**How to Sign Up** \
+Email the following address to schedule advance soldering training (Please note that intermediate training must be completed before starting advanced soldering training.)
+
+
+<a class="button is-link" href="mailto:AMPLabSolderTrainingTeam@groups.office365.vt.edu">   
+    
+    AMPLabSolderTrainingTeam@groups.office365.vt.edu
+</a>

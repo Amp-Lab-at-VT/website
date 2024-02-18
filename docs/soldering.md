@@ -1,4 +1,4 @@
-## Soldering Training
+# **Soldering Trainings**
 The AMP Lab provides three levels of soldering training for students:
 <a class="btn" href="/soldering/basic">Basic Soldering Training</a>
 <a class="btn" href="/soldering/intermediate">Intermediate Soldering Training</a>
