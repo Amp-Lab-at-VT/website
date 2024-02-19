@@ -4,45 +4,45 @@ import Typewriter from "typewriter-effect";
 import Link from "next/link";
 
 export default function Home() {
-  const [showButton, setShowButton] = useState(false);
+    const [showButton, setShowButton] = useState(false);
 
-  return (
-    <div className="App max-h-screen">
-      <header className="App-header">
-        <div className="App">
-          <div className="homeText text-primary-50">
-            <Typewriter
-              onInit={(typewriter) => {
-                typewriter
-                  .changeDelay(50)
-                  .pauseFor(250)
-                  .typeString("The AMP Lab Virginia Tech")
-                  .pauseFor(500)
-                  .callFunction(() => {
-                    setShowButton(true);
-                  })
-                  .start();
-              }}
-            />
-          </div>
-          <div style={{ padding: "50px" }}>
-            {(showButton && (
-              <Link href="/getting_started" className="btn">
-                Getting Started
-              </Link>
-            )) ||
+    return (
+        <div className="App max-h-screen">
+            <header className="App-header">
+                <div className="App">
+                    <div className="homeText text-primary-50">
+                        <Typewriter
+                            onInit={(typewriter) => {
+                                typewriter
+                                    .changeDelay(50)
+                                    .pauseFor(250)
+                                    .typeString("The AMP Lab Virginia Tech")
+                                    .pauseFor(500)
+                                    .callFunction(() => {
+                                        setShowButton(true);
+                                    })
+                                    .start();
+                            }}
+                        />
+                    </div>
+                    <div style={{ padding: "50px" }}>
+                        {(showButton && (
+                            <Link href="/getting_started" className="btn">
+                                Getting Started
+                            </Link>
+                        )) ||
               (!showButton && (
-                <Link
-                  href="/getting_started"
-                  style={{ visibility: "hidden" }}
-                  className="btn"
-                >
-                  Getting Started
-                </Link>
+                  <Link
+                      href="/getting_started"
+                      style={{ visibility: "hidden" }}
+                      className="btn"
+                  >
+                      Getting Started
+                  </Link>
               ))}
-          </div>
+                    </div>
+                </div>
+            </header>
         </div>
-      </header>
-    </div>
-  );
+    );
 }
