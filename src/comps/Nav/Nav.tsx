@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "@/comps/Nav/nav.module.css";
-import Hamburger from "@/comps/Hamburger/Hamburger.jsx";
+import Hamburger from "@/comps/Hamburger/Hamburger";
 
 export default function Navigation() {
     return (
