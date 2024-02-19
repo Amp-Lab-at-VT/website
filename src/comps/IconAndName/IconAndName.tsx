@@ -1,5 +1,5 @@
 import styles from "./iconAndName.module.css";
-import Modal from "@/comps/Modal/modal.jsx";
+import Modal from "@/comps/Modal/modal";
 import { useRouter } from "next/router";
 
 import React, { useState } from "react";

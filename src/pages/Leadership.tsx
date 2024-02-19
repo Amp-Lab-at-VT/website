@@ -1,7 +1,7 @@
 //https://react-icons.github.io/react-icons/icons?name=bs
 import React from "react";
 
-import LeadershipBox from "@/comps/LeadershipBox/LeadershipBox.jsx";
+import LeadershipBox from "@/comps/LeadershipBox/LeadershipBox";
 
 export default function Leadership() {
     return (

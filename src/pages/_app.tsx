@@ -1,7 +1,7 @@
 import "@/styles/globals.css";
 import '@mantine/core/styles.css';
-import Navigation from "@/comps/Nav/Nav.jsx";
-import Footer from "@/comps/Footer/Footer.jsx";
+import Navigation from "@/comps/Nav/Nav";
+import Footer from "@/comps/Footer/Footer";
 
 // import image
 import Image from "next/image";

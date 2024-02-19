@@ -3,8 +3,8 @@
 import React, { useState } from "react";
 import { promises as fs } from "fs";
 import YAML from "yaml";
-import Box from "@/comps/Box/Box.jsx";
-import SearchBar from "@/comps/SearchBar/searchbar.jsx";
+import Box from "@/comps/Box/Box";
+import SearchBar from "@/comps/SearchBar/searchbar";
 import { StaticProps } from "@/utils/types";
 
 export default function Projects({
