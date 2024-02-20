@@ -1,0 +1,211 @@
+(kicad_sch (version 20211123) (generator eeschema)
+
+  (uuid 1591b1d6-2c13-4d15-9be2-67ca8d12a313)
+
+  (paper "A4")
+
+  (lib_symbols
+  )
+
+
+  (sheet (at 25.4 25.4) (size 12.7 3.81) (fields_autoplaced)
+    (stroke (width 0) (type solid) (color 0 0 0 0))
+    (fill (color 0 0 0 0.0000))
+    (uuid 67bab5c3-d0e2-401b-b5df-c48250db076d)
+    (property "Sheet name" "AMP_Ruler-LT1370_24feb2017_2" (id 0) (at 25.4 24.6884 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheet file" "AMP_Ruler-LT1370_24feb2017_2.kicad_sch" (id 1) (at 25.4 29.7946 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+  )
+
+  (sheet (at 76.2 25.4) (size 12.7 3.81) (fields_autoplaced)
+    (stroke (width 0) (type solid) (color 0 0 0 0))
+    (fill (color 0 0 0 0.0000))
+    (uuid a8ae42ff-d055-47b8-a95d-37b214d572f1)
+    (property "Sheet name" "AMP_Ruler-LT1370_24feb2017_3" (id 0) (at 76.2 24.6884 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheet file" "AMP_Ruler-LT1370_24feb2017_3.kicad_sch" (id 1) (at 76.2 29.7946 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+  )
+
+  (sheet_instances
+    (path "/" (page "1"))
+    (path "/67bab5c3-d0e2-401b-b5df-c48250db076d" (page "2"))
+    (path "/a8ae42ff-d055-47b8-a95d-37b214d572f1" (page "3"))
+  )
+
+  (symbol_instances
+    (path "/a8ae42ff-d055-47b8-a95d-37b214d572f1/966bdb6d-3f31-4fee-9520-31ad7fbd5b30"
+      (reference "#FLG0101") (unit 1) (value "PWR_FLAG") (footprint "")
+    )
+    (path "/a8ae42ff-d055-47b8-a95d-37b214d572f1/95334536-27ce-421a-92fe-37c3aba37eea"
+      (reference "#FLG0102") (unit 1) (value "PWR_FLAG") (footprint "")
+    )
+    (path "/a8ae42ff-d055-47b8-a95d-37b214d572f1/9e27b226-1d5f-4ac6-ae46-5587d29a4ea4"
+      (reference "#PWR0101") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/a8ae42ff-d055-47b8-a95d-37b214d572f1/ebb64593-6c1c-4170-af73-3238626c702d"
+      (reference "#PWR0102") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/a8ae42ff-d055-47b8-a95d-37b214d572f1/62850051-e057-41fc-bd87-15740d2e3bf4"
+      (reference "+12V-OUT0") (unit 1) (value "FE03-1-TB") (footprint "AMP_Ruler-LT1370_24feb2017:FE03-1-TB")
+    )
+    (path "/a8ae42ff-d055-47b8-a95d-37b214d572f1/6c9dc751-94b8-4431-aa82-0d8b07d63593"
+      (reference "---0") (unit 1) (value "DIODE-DPAK") (footprint "AMP_Ruler-LT1370_24feb2017:DIODE-DPAK")
+    )
+    (path "/a8ae42ff-d055-47b8-a95d-37b214d572f1/7349b048-f407-477c-a01d-8104f9d285b1"
+      (reference "C1") (unit 1) (value "336") (footprint "AMP_Ruler-LT1370_24feb2017:C-2917")
+    )
+    (path "/a8ae42ff-d055-47b8-a95d-37b214d572f1/c9681cc5-f2f8-47a2-8830-9d563f4ea4a3"
+      (reference "C2") (unit 1) (value "107") (footprint "AMP_Ruler-LT1370_24feb2017:C-2917")
+    )
+    (path "/a8ae42ff-d055-47b8-a95d-37b214d572f1/808d1319-626d-4ad5-9918-974c54e4e4f4"
+      (reference "C3") (unit 1) (value "107") (footprint "AMP_Ruler-LT1370_24feb2017:C-2917")
+    )
+    (path "/a8ae42ff-d055-47b8-a95d-37b214d572f1/3fa14358-3b74-49bd-9d1e-f44f39105570"
+      (reference "C4") (unit 1) (value "104") (footprint "AMP_Ruler-LT1370_24feb2017:C-1206")
+    )
+    (path "/a8ae42ff-d055-47b8-a95d-37b214d572f1/50058e08-a888-404b-bd99-6e88baf0b840"
+      (reference "C5") (unit 1) (value "104") (footprint "AMP_Ruler-LT1370_24feb2017:C-1206")
+    )
+    (path "/a8ae42ff-d055-47b8-a95d-37b214d572f1/a5746986-ccc1-4199-bfaa-8d02d0f151dc"
+      (reference "C6") (unit 1) (value "475") (footprint "AMP_Ruler-LT1370_24feb2017:C-1206")
+    )
+    (path "/a8ae42ff-d055-47b8-a95d-37b214d572f1/43864862-a07b-432b-82a1-8f5a69155fe9"
+      (reference "C7") (unit 1) (value "102") (footprint "AMP_Ruler-LT1370_24feb2017:C-1206")
+    )
+    (path "/a8ae42ff-d055-47b8-a95d-37b214d572f1/9782f798-1e99-4450-94d6-f08e7031f9a1"
+      (reference "GND0") (unit 1) (value "DOUBLE_RF_VIA") (footprint "AMP_Ruler-LT1370_24feb2017:DOUBLE_RF_VIA")
+    )
+    (path "/a8ae42ff-d055-47b8-a95d-37b214d572f1/3f80b641-8b68-476e-abe5-fb498bcc22c7"
+      (reference "J1") (unit 1) (value "USB_C_Receptacle_USB2.0") (footprint "LIB_GCT-USB4125-GF-A-190:GCTUSB4125GFA190")
+    )
+    (path "/a8ae42ff-d055-47b8-a95d-37b214d572f1/ccd563a3-93a1-40d5-b51e-fbd23f4aa0df"
+      (reference "L1") (unit 1) (value "6.8uH") (footprint "AMP_Ruler-LT1370_24feb2017:SRR1240")
+    )
+    (path "/a8ae42ff-d055-47b8-a95d-37b214d572f1/6d0b4acd-9a55-4dc6-b414-6ed2340b5886"
+      (reference "R1") (unit 1) (value "6191") (footprint "AMP_Ruler-LT1370_24feb2017:R1206")
+    )
+    (path "/a8ae42ff-d055-47b8-a95d-37b214d572f1/37c5c5d6-c9fa-4399-a11a-6e3717887592"
+      (reference "R2") (unit 1) (value "5362") (footprint "AMP_Ruler-LT1370_24feb2017:R1206")
+    )
+    (path "/a8ae42ff-d055-47b8-a95d-37b214d572f1/c4382122-27d1-40a2-9106-1ade53f0d9fd"
+      (reference "R3") (unit 1) (value "5.1k") (footprint "AMP_Ruler-LT1370_24feb2017:R1206")
+    )
+    (path "/a8ae42ff-d055-47b8-a95d-37b214d572f1/a9e0592d-6755-414c-a7d3-fada620e3854"
+      (reference "R4") (unit 1) (value "4700") (footprint "AMP_Ruler-LT1370_24feb2017:R1206")
+    )
+    (path "/a8ae42ff-d055-47b8-a95d-37b214d572f1/387e9f7e-1eca-4607-925b-50b93630034e"
+      (reference "R5") (unit 1) (value "10R0") (footprint "AMP_Ruler-LT1370_24feb2017:R1206")
+    )
+    (path "/a8ae42ff-d055-47b8-a95d-37b214d572f1/7992e845-7085-439e-b5f2-fd185500fdec"
+      (reference "R6") (unit 1) (value "5.1k") (footprint "AMP_Ruler-LT1370_24feb2017:R1206")
+    )
+    (path "/67bab5c3-d0e2-401b-b5df-c48250db076d/335cd34b-ffc7-4edc-a3e0-87c0fa794cb1"
+      (reference "U$1") (unit 1) (value "SOIC 1.27 MM") (footprint "AMP_Ruler-LT1370_24feb2017:SOIC-8")
+    )
+    (path "/67bab5c3-d0e2-401b-b5df-c48250db076d/c62d935b-4012-4886-9edd-ffc720b3b55e"
+      (reference "U$2") (unit 1) (value "SOT 0.95 MM") (footprint "AMP_Ruler-LT1370_24feb2017:SOT23-5")
+    )
+    (path "/67bab5c3-d0e2-401b-b5df-c48250db076d/df016fc0-f85b-4ea2-a057-c7c768d914f7"
+      (reference "U$3") (unit 1) (value "TSSOP 0.65 MM") (footprint "AMP_Ruler-LT1370_24feb2017:TSSOP-8")
+    )
+    (path "/67bab5c3-d0e2-401b-b5df-c48250db076d/0c90108e-20a6-42d3-93e3-ee67bf52b4c9"
+      (reference "U$4") (unit 1) (value "VSSOP 0.5 MM") (footprint "AMP_Ruler-LT1370_24feb2017:VSSOP-8")
+    )
+    (path "/67bab5c3-d0e2-401b-b5df-c48250db076d/4074a950-8831-4fc1-a754-b906b22c4bdc"
+      (reference "U$5") (unit 1) (value "QFP-44-10X10") (footprint "AMP_Ruler-LT1370_24feb2017:QFP-44")
+    )
+    (path "/67bab5c3-d0e2-401b-b5df-c48250db076d/24f0e9f9-4cca-4e80-ba56-ec61ec7b24c2"
+      (reference "U$6") (unit 1) (value "QFP-100-12X12") (footprint "AMP_Ruler-LT1370_24feb2017:QFP-100")
+    )
+    (path "/67bab5c3-d0e2-401b-b5df-c48250db076d/68132360-268a-4294-8223-5e45b03bc9ee"
+      (reference "U$8") (unit 1) (value "QFN 0.5 MM") (footprint "AMP_Ruler-LT1370_24feb2017:QFN-20-4X4")
+    )
+    (path "/67bab5c3-d0e2-401b-b5df-c48250db076d/5a4482a2-3913-4734-94fd-08df9ec5e5fa"
+      (reference "U$9") (unit 1) (value "QFN 0.4 MM") (footprint "AMP_Ruler-LT1370_24feb2017:QFN-20-3X3")
+    )
+    (path "/67bab5c3-d0e2-401b-b5df-c48250db076d/68d82284-6b6c-49f3-8546-1d13c0c880b4"
+      (reference "U$10") (unit 1) (value "1206") (footprint "AMP_Ruler-LT1370_24feb2017:R1206")
+    )
+    (path "/67bab5c3-d0e2-401b-b5df-c48250db076d/aaa7d3df-e6e1-4811-99c2-82e412ecf337"
+      (reference "U$11") (unit 1) (value "0805") (footprint "AMP_Ruler-LT1370_24feb2017:R0805")
+    )
+    (path "/67bab5c3-d0e2-401b-b5df-c48250db076d/367858a4-3715-4e1b-bf10-d0850c7fbd84"
+      (reference "U$12") (unit 1) (value "0603") (footprint "AMP_Ruler-LT1370_24feb2017:R0603")
+    )
+    (path "/67bab5c3-d0e2-401b-b5df-c48250db076d/d71a554a-aeeb-4c08-b282-0bb29d645e93"
+      (reference "U$13") (unit 1) (value "0402") (footprint "AMP_Ruler-LT1370_24feb2017:R0402")
+    )
+    (path "/67bab5c3-d0e2-401b-b5df-c48250db076d/c5cdfcc3-38fa-4768-b90b-4f6554a6023e"
+      (reference "U$14") (unit 1) (value "MMRULER") (footprint "AMP_Ruler-LT1370_24feb2017:MMRULER")
+    )
+    (path "/67bab5c3-d0e2-401b-b5df-c48250db076d/4e6b2d23-79fd-4fe5-a37b-b5b8230fc005"
+      (reference "U$15") (unit 1) (value "MILRULER") (footprint "AMP_Ruler-LT1370_24feb2017:MILRULER")
+    )
+    (path "/a8ae42ff-d055-47b8-a95d-37b214d572f1/b6ef8be5-dc38-47d7-aaa4-a14c7439a36c"
+      (reference "U$16") (unit 1) (value "DOUBLE_RF_VIA") (footprint "AMP_Ruler-LT1370_24feb2017:DOUBLE_RF_VIA")
+    )
+    (path "/a8ae42ff-d055-47b8-a95d-37b214d572f1/ec0cc26b-550a-4e32-9d21-3ea0381c763a"
+      (reference "U$17") (unit 1) (value "DOUBLE_RF_VIA") (footprint "AMP_Ruler-LT1370_24feb2017:DOUBLE_RF_VIA")
+    )
+    (path "/a8ae42ff-d055-47b8-a95d-37b214d572f1/f68350ef-f7be-41fb-9b89-3c194d16c7f8"
+      (reference "U$18") (unit 1) (value "DOUBLE_RF_VIA") (footprint "AMP_Ruler-LT1370_24feb2017:DOUBLE_RF_VIA")
+    )
+    (path "/a8ae42ff-d055-47b8-a95d-37b214d572f1/6fef79f0-3499-406d-b27f-e3523fc2cbe5"
+      (reference "U$19") (unit 1) (value "DOUBLE_RF_VIA") (footprint "AMP_Ruler-LT1370_24feb2017:DOUBLE_RF_VIA")
+    )
+    (path "/a8ae42ff-d055-47b8-a95d-37b214d572f1/cea0ec09-c8a5-4884-b1db-292487995acd"
+      (reference "U$20") (unit 1) (value "DOUBLE_RF_VIA") (footprint "AMP_Ruler-LT1370_24feb2017:DOUBLE_RF_VIA")
+    )
+    (path "/a8ae42ff-d055-47b8-a95d-37b214d572f1/3c77f144-9e2d-4259-b2a3-154a9d5d8059"
+      (reference "U$21") (unit 1) (value "DOUBLE_RF_VIA") (footprint "AMP_Ruler-LT1370_24feb2017:DOUBLE_RF_VIA")
+    )
+    (path "/a8ae42ff-d055-47b8-a95d-37b214d572f1/b5e289ca-523a-476e-be92-c1f76b3ab897"
+      (reference "U$22") (unit 1) (value "DOUBLE_RF_VIA") (footprint "AMP_Ruler-LT1370_24feb2017:DOUBLE_RF_VIA")
+    )
+    (path "/a8ae42ff-d055-47b8-a95d-37b214d572f1/051f73a3-8443-4121-9d58-cb36a09dd27b"
+      (reference "U$23") (unit 1) (value "DOUBLE_RF_VIA") (footprint "AMP_Ruler-LT1370_24feb2017:DOUBLE_RF_VIA")
+    )
+    (path "/a8ae42ff-d055-47b8-a95d-37b214d572f1/289d8ba5-4485-4372-bb03-fd97888cb7ff"
+      (reference "U$24") (unit 1) (value "DOUBLE_RF_VIA") (footprint "AMP_Ruler-LT1370_24feb2017:DOUBLE_RF_VIA")
+    )
+    (path "/a8ae42ff-d055-47b8-a95d-37b214d572f1/7a11b387-2eea-4100-a526-24e67c057896"
+      (reference "U$25") (unit 1) (value "DOUBLE_RF_VIA") (footprint "AMP_Ruler-LT1370_24feb2017:DOUBLE_RF_VIA")
+    )
+    (path "/a8ae42ff-d055-47b8-a95d-37b214d572f1/1ab23d87-7bc0-4fa0-8a36-12b09ddda24e"
+      (reference "U$26") (unit 1) (value "DOUBLE_RF_VIA") (footprint "AMP_Ruler-LT1370_24feb2017:DOUBLE_RF_VIA")
+    )
+    (path "/a8ae42ff-d055-47b8-a95d-37b214d572f1/62df65e8-6752-4e3b-b4c5-ffb3557e0bd6"
+      (reference "U$27") (unit 1) (value "DOUBLE_RF_VIA") (footprint "AMP_Ruler-LT1370_24feb2017:DOUBLE_RF_VIA")
+    )
+    (path "/a8ae42ff-d055-47b8-a95d-37b214d572f1/75c5660a-5553-47af-a387-de179cfea46d"
+      (reference "U$32") (unit 1) (value "DOUBLE_RF_VIA") (footprint "AMP_Ruler-LT1370_24feb2017:DOUBLE_RF_VIA")
+    )
+    (path "/a8ae42ff-d055-47b8-a95d-37b214d572f1/6a9d1aca-fbf6-4640-93b7-c32eaf58b2c1"
+      (reference "U$33") (unit 1) (value "DOUBLE_RF_VIA") (footprint "AMP_Ruler-LT1370_24feb2017:DOUBLE_RF_VIA")
+    )
+    (path "/a8ae42ff-d055-47b8-a95d-37b214d572f1/81895f92-e2a7-441e-be8b-8f0e6fb3ab48"
+      (reference "U$34") (unit 1) (value "DOUBLE_RF_VIA") (footprint "AMP_Ruler-LT1370_24feb2017:DOUBLE_RF_VIA")
+    )
+    (path "/a8ae42ff-d055-47b8-a95d-37b214d572f1/d2c7fe9d-ef66-4f62-818c-4725c3b44764"
+      (reference "U$35") (unit 1) (value "DOUBLE_RF_VIA") (footprint "AMP_Ruler-LT1370_24feb2017:DOUBLE_RF_VIA")
+    )
+    (path "/a8ae42ff-d055-47b8-a95d-37b214d572f1/3bf415df-95d6-4479-b686-6a538b68b8af"
+      (reference "U$36") (unit 1) (value "TPD2E001") (footprint "AMP_Ruler-LT1370_24feb2017:SOT-143")
+    )
+    (path "/a8ae42ff-d055-47b8-a95d-37b214d572f1/09c43d0b-674c-4710-a8c6-2d43bc7de953"
+      (reference "U$37") (unit 1) (value "DOUBLE_RF_VIA") (footprint "AMP_Ruler-LT1370_24feb2017:DOUBLE_RF_VIA")
+    )
+    (path "/a8ae42ff-d055-47b8-a95d-37b214d572f1/d2af5cc6-01e6-47de-97a2-c20282556e43"
+      (reference "U$38") (unit 1) (value "FE02-TB") (footprint "AMP_Ruler-LT1370_24feb2017:FE02-TB")
+    )
+    (path "/a8ae42ff-d055-47b8-a95d-37b214d572f1/8b392940-463e-4899-a746-6d19b57fa1a6"
+      (reference "U1") (unit 1) (value "LT1370") (footprint "AMP_Ruler-LT1370_24feb2017:LT1370")
+    )
+  )
+)
