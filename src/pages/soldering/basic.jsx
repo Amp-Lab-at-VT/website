@@ -6,12 +6,10 @@ import rehypeRaw from "rehype-raw";
 
 export default function BeginnersGuide({ fileContents }) {
   return (
-      <div className="m-5">
-        <ReactMarkdown rehypePlugins={[rehypeRaw]}>
-          {fileContents}
-        </ReactMarkdown>{" "}
-        {/* Render Markdown */}
-      </div>
+    <div className="m-5">
+      <ReactMarkdown rehypePlugins={[rehypeRaw]}>{fileContents}</ReactMarkdown>{" "}
+      {/* Render Markdown */}
+    </div>
   );
 }
 
