@@ -6,8 +6,21 @@ Upon successfully completing the training, you'll have mastered the ability to s
 
 Those who complete the advanced surface-mount certification will be strongly encouraged to mentor others who wish to learn surface-mount prototype soldering.
 
-**Objective:** \
-Upon completing the Advanced Soldering Training, you'll confidently master soldering the following surface mount components:
+- Steady hands. Good eye-hand coordination. Ability to coordinate your fingers' motions with the results displayed on a large monitor connected to a microscope. 
+
+- Patience and good attention to detail.
+
+Email the following address to schedule advance soldering training (Please note that intermediate training must be completed before starting advanced soldering training.)
+
+<a class="button is-link" href="mailto:AMPLabSolderTrainingTeam@groups.office365.vt.edu">   
+    
+    AMPLabSolderTrainingTeam@groups.office365.vt.edu
+</a>
+
+--------------------------------------------------------------------------
+
+#### Objectives
+Upon completing the Advanced Soldering Training, you'll confidently master soldering the following components:
 
 - SOIC-8, 1.27 mm pitch
 

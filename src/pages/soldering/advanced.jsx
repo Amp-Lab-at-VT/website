@@ -6,7 +6,7 @@ import rehypeRaw from "rehype-raw";
 
 export default function BeginnersGuide({ fileContents }) {
   return (
-    <div className="h-screen">
+    <div>
       <div className="m-5">
         <ReactMarkdown rehypePlugins={[rehypeRaw]}>
           {fileContents}
