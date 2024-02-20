@@ -11,26 +11,19 @@ import { BsPrinterFill } from "react-icons/bs";
 import { RxDiscordLogo } from "react-icons/rx";
 import { BiPurchaseTagAlt } from "react-icons/bi";
 import { StaticProps } from "@/utils/types";
+import { Flex, Title, Text, Container, SimpleGrid } from "@mantine/core";
 
 export default function GettingStarted({ new_members, returning_members } : StaticProps<typeof getStaticProps>) {
     return (
-        <div className="min-h-screen">
-            <div>
-                <h1 className="m-5">Getting Started:</h1>
-                <p className="text-left m-5">
-                    Below is a list of options for you to engage with our lab. Select one
-                    to get started!
-                </p>
-            </div>
-            <div
-                style={{
-                    display: "flex",
-                    flexDirection: "row",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    flexWrap: "wrap",
-                }}
-            >
+        <Container fluid={true}>
+            <Title>Getting Started:</Title>
+            <Text>
+                Below is a list of options for you to engage with our lab. Select one
+                to get started!
+            </Text>
+            <SimpleGrid cols={{ base: 1, sm: 3, lg: 6 }}
+                spacing={{ base: 10, sm: 'xl' }}
+                verticalSpacing={{ base: 'md', sm: 'xl' }}>
                 <IconAndName
                     icon={<MdOutlineWavingHand> </MdOutlineWavingHand>}
                     title="Getting Started: New Members"
@@ -92,8 +85,8 @@ export default function GettingStarted({ new_members, returning_members } : Stat
                     buttonTitle="Click here to begin"
                     color="#f9f9f9"
                 ></IconAndName>
-            </div>
-        </div>
+            </SimpleGrid>
+        </Container>
     );
 }
 
