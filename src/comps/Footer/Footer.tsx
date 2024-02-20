@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import Box from "@mui/material/Box";
+import {Box} from "@mantine/core";
 
 const Footer = () => {
     return (
