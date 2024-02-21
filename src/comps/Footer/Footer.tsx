@@ -1,82 +1,42 @@
+import {Anchor, Flex, Group, Text} from "@mantine/core";
+import classes from "./Footer.module.css";
 import Link from "next/link";
 
-import {Box} from "@mantine/core";
 
-const Footer = () => {
-    return (
-        <Box
-            style={{
-                backgroundColor: "#000000",
-                borderTop: "1px solid #ddd",
-                padding: "20px",
-            }}
+const links = [
+    { link: '/getting_started', label: 'Getting Started' },
+    { link: '/Leadership', label: 'Leadership' },
+];
+
+export default function Footer(): JSX.Element {
+    const items = links.map((link) => (
+        <Anchor
+            component={Link}
+            c="red"
+            key={link.label}
+            href={link.link}
+            fw={600}
+            lh={1}
+            // onClick={(event) => event.preventDefault()}
+            size="sm"
         >
-            <div style={{ display: "flex", justifyContent: "space-between" }}>
-                <div style={{ flex: 1 }}>
-                    <h3
-                        className="text-gray-400"
-                        style={{
-                            fontWeight: "bold",
-                            fontSize: "18px",
-                            marginBottom: "10px",
-                        }}
-                    >
-                        About Us
-                    </h3>
-                    <p className="text-gray-400">
-                        We are a lab committed to getting students active in design.{" "}
-                    </p>
-                </div>
+            {link.label}
+        </Anchor>
+    ));
 
-                <div style={{ flex: 1 }}>
-                    <h3
-                        style={{
-                            fontWeight: "bold",
-                            fontSize: "18px",
-                            marginBottom: "10px",
-                        }}
-                    >
-                        Important Links
-                    </h3>
-                    <ul style={{ listStyle: "none", margin: 0, padding: 0 }}>
-                        <li style={{ marginBottom: "5px" }}>
-                            <Link
-                                className="hover:text-primary-50 text-gray-400"
-                                style={{ textDecoration: "none" }}
-                                href="/getting_started"
-                            >
-                                Getting Started
-                            </Link>
-                        </li>
-                        <li style={{ marginBottom: "5px" }}>
-                            <Link
-                                className="hover:text-primary-50 text-gray-400"
-                                style={{ textDecoration: "none" }}
-                                href="/Leadership"
-                            >
-                                Leadership
-                            </Link>
-                        </li>
-                    </ul>
-                </div>
+    return (
+        <Flex justify={'space-between'} align={'center'} className={classes.inner}>
 
-                <div style={{ flex: 1 }}>
-                    <h3
-                        style={{
-                            fontWeight: "bold",
-                            fontSize: "18px",
-                            marginBottom: "10px",
-                        }}
-                    >
-                        Location
-                    </h3>
-                    <p className="text-gray-400">1185 Perry St</p>
-                    <p className="text-gray-400">Blacksburg, VA 24060</p>
-                    <p className="text-gray-400">Room 236</p>
-                </div>
-            </div>
-        </Box>
+            <>LOGO HERE</>
+
+            <Text> We are a lab committed to getting students active in design </Text>
+
+            <Group className={classes.links}>{items}</Group>
+
+            <Group gap="xs" justify="flex-end" wrap="nowrap">
+                <Text c='red'>1185 Perry St, Blacksburg, VA 24060</Text>
+                <Text c='red'>Room 236</Text>
+            </Group>
+        </Flex>
     );
 };
-
-export default Footer;

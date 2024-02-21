@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Typewriter from "typewriter-effect";
 import Link from "next/link";
-import { Center } from "@mantine/core";
+import { Button, Center } from "@mantine/core";
 
 export default function Home() {
     const [showButton, setShowButton] = useState(false);
@@ -22,13 +22,8 @@ export default function Home() {
                     }}
                 />
             </Center>
-            {/* <div style={{ padding: "50px" }}>
-                {(showButton && (
-                    <Link href="/getting_started" className="btn">
-                        Getting Started
-                    </Link>
-                )) || (!showButton && ( <Link href="/getting_started" style={{ visibility: "hidden" }} className="btn" > Getting Started </Link> ))}
-            </div> */}
+
+            {showButton && <Button component={Link} href='/getting_started'>Getting Started</Button>}
         </>
     );
 }

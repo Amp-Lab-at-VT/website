@@ -1,54 +1,56 @@
 import "@/styles/globals.css";
 import '@mantine/core/styles.css';
 import Footer from "@/comps/Footer/Footer";
-
-// import image
-import Image from "next/image";
-import { MantineProvider, AppShell, Burger, Group, Stack } from '@mantine/core';
+import { MantineProvider, AppShell, Burger, Group, Stack, createTheme, BackgroundImage } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import type { AppProps } from "next/app";
-import background from "../images/cover.jpeg";
 import Link from "next/link";
-import { BackgroundImage } from '@mantine/core';
+
+
+const theme = createTheme({
+    /** Put your mantine theme override here */
+});
 
 export default function App({ Component, pageProps }: AppProps) {
-    const [mobileOpened, { toggle: toggleMobile }] = useDisclosure();
-    const [desktopOpened, { toggle: toggleDesktop }] = useDisclosure(false);
+    const [mobileOpened, { toggle: toggleMobile, close: closeMobile }] = useDisclosure();
+    const [desktopOpened, { toggle: toggleDesktop, close: closeDesktop }] = useDisclosure(false);
+
+    function close() {
+        closeMobile();
+        closeDesktop();
+    }
 
     return (
-        <MantineProvider>
+        <MantineProvider theme={theme} defaultColorScheme="dark">
             <AppShell
                 header={{ height: 60 }}
-                navbar={{
-                    width: 300,
-                    breakpoint: 'sm',
-                    collapsed: { mobile: !mobileOpened, desktop: !desktopOpened },
-                }}
-                padding="md"
-            >
+                navbar={{ width: 300, breakpoint: 'sm', collapsed: { mobile: !mobileOpened, desktop: !desktopOpened }}}
+                padding="md" >
                 <AppShell.Header color="black">
                     <Group h="100%" px="md">
                         <Burger opened={mobileOpened} onClick={toggleMobile} hiddenFrom="sm" size="sm" />
                         <Burger opened={desktopOpened} onClick={toggleDesktop} visibleFrom="sm" size="sm" />
                     </Group>
                 </AppShell.Header>
-                <AppShell.Navbar p="md">
+                <AppShell.Navbar p="md" >
                     <Stack>
-                        <Link href="/">Home</Link>
-                        <Link href="/getting_started">Getting Started</Link>
-                        <Link href="/projects">Projects</Link>
-                        <Link href="/about">About</Link>
-                        <Link href="/resources">Resources</Link>
+                        <Link onClick={close} href="/">Home</Link>
+                        <Link onClick={close} href="/getting_started">Getting Started</Link>
+                        <Link onClick={close} href="/projects">Projects</Link>
+                        <Link onClick={close} href="/about">About</Link>
+                        <Link onClick={close} href="/resources">Resources</Link>
                         {/* <Link href="/useful_links">Useless Links</Link> */}
                     </Stack>
                 </AppShell.Navbar>
-                <AppShell.Main>
+                <AppShell.Main pl={0} pr={0}>
                     <BackgroundImage
                         src='https://raw.githubusercontent.com/Amp-Lab-at-VT/website/master/src/images/cover.jpeg'
-                        // fill={true}
+                        w={'99vw'}
+                        h={'100vh'}
                         // sizes="100vw" style={{ objectFit: "cover" }}
-                    />
-                    <Component {...pageProps} />
+                    >
+                        <Component {...pageProps} />
+                    </BackgroundImage>
                 </AppShell.Main>
                 <AppShell.Footer>
                     <Footer />

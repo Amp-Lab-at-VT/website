@@ -1,26 +1,29 @@
 import React from "react";
-
-import styles from "@/comps/LeadershipBox/leadership.module.css";
-
 import Image from "next/image";
+import { Anchor, Card, Center, Text } from "@mantine/core";
 
+const ImageSize = 200;
 
 export default function LeadershipBox({src, name, title, email} : LeadershipBoxProps) {
     if (!src)
         return null;
 
     return (
-        <div  className={styles.leadershipBox}>
-            <div className={styles.alignImage}>
-                <Image src={src} alt={name + "Image"} width={100} height={100}></Image>
-            </div>
-            <p>
-                <em>{title}</em>
-            </p>
-            <p>
-                <a href={"mailto:" + email}>{email}</a>
-            </p>
-        </div>
+        <Card shadow="sm" padding="xl" m={'5px'} >
+            <Card.Section>
+                <Center pt={'sm'}>
+                    <Image src={src} alt={name + "Image"} width={ImageSize} height={ImageSize} />
+                </Center>
+            </Card.Section>
+
+            <Text fw={500} size="lg" mt="md">
+                {title}
+            </Text>
+
+            <Anchor mt="xs" c="dimmed" size="sm" href={"mailto:" + email}>
+                {email}
+            </Anchor>
+        </Card>
     );
 }
 
