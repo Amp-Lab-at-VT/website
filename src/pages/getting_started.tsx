@@ -25,7 +25,7 @@ export default function GettingStarted({ new_members, returning_members } : Stat
                 spacing={{ base: 10, sm: 'xl' }}
                 verticalSpacing={{ base: 'md', sm: 'xl' }}>
                 <IconAndName
-                    icon={<MdOutlineWavingHand> </MdOutlineWavingHand>}
+                    icon={<MdOutlineWavingHand />}
                     title="Getting Started: New Members"
                     buttonTitle="Click here to begin"
                     color="#f9f9f9"
@@ -36,7 +36,7 @@ export default function GettingStarted({ new_members, returning_members } : Stat
                 </IconAndName>
 
                 <IconAndName
-                    icon={<GiReturnArrow> </GiReturnArrow>}
+                    icon={<GiReturnArrow />}
                     title="Returning Members"
                     buttonTitle="Click here to begin"
                     color="#f9f9f9"
@@ -47,27 +47,27 @@ export default function GettingStarted({ new_members, returning_members } : Stat
                 </IconAndName>
                 <IconAndName
                     href="https://discord.gg/DjFCeQEMmE"
-                    icon={<RxDiscordLogo> </RxDiscordLogo>}
+                    icon={<RxDiscordLogo />}
                     title="Join our Discord"
                     buttonTitle="Click here to begin"
                     color="#f9f9f9"
                 ></IconAndName>
                 <IconAndName
                     href="/soldering"
-                    icon={<GiSolderingIron> </GiSolderingIron>}
+                    icon={<GiSolderingIron />}
                     title="Solder Training Information"
                     buttonTitle="Click here to begin"
                     color="#f9f9f9"
                 ></IconAndName>
                 <IconAndName
                     href="https://github.com/Amp-Lab-at-VT/print-queue/issues/new?assignees=octocat&labels=3d-print&template=3d_print.yml&title=%5B3d-print%5D%3A+"
-                    icon={<BsPrinterFill> </BsPrinterFill>}
+                    icon={<BsPrinterFill />}
                     title="Get Something 3D Printed"
                     buttonTitle="Click here to begin"
                     color="#f9f9f9"
                 ></IconAndName>
                 <IconAndName
-                    icon={<BiPurchaseTagAlt> </BiPurchaseTagAlt>}
+                    icon={<BiPurchaseTagAlt />}
                     title="Submit a Purchase Request"
                     buttonTitle="Click here to begin"
                     color="#f9f9f9"
@@ -80,7 +80,7 @@ export default function GettingStarted({ new_members, returning_members } : Stat
                 </IconAndName>
                 <IconAndName
                     href="/docs/swipe-access"
-                    icon={<GiSwipeCard> </GiSwipeCard>}
+                    icon={<GiSwipeCard />}
                     title="Get Lab Swipe Access"
                     buttonTitle="Click here to begin"
                     color="#f9f9f9"
