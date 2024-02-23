@@ -1,18 +1,5 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 body {
   margin: 0;
-}
-
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -35,100 +22,9 @@ body {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.App-standardPage {
-  background-color: #ffffff;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  font-size: calc(10px + 1vmin);
-  color: rgb(0, 0, 0);
-}
-
-/* .App-standardPage * {
-  padding: 10px;
-  margin: 10px;
-} */
-
-.App-pageHelper {
-  padding: 10px;
-  margin: 10px;
-  display: block;
-  text-align: left;
-  min-height: 90vh;
-}
-
-/* 
-hr {
-  width: 95%;
-  padding: 0px;
-  margin: 0px;
-  height: 1px;
-  border: none;
-  background-color: #000000;
-} */
-
-.btn {
-  background-color: rgb(196, 178, 178);
-  padding: 10px;
-  border-radius: 0.5rem;
-  text-decoration: none;
-  color: black;
-  pointer-events: all;
-  display: block;
-  margin: 2px;
-}
-
-.btn:hover {
-  background-color: rgba(244, 118, 118, 0.802);
-}
-
-.flex-row {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
-
-.flex-row-left {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  width: 100%;
-  flex-wrap: wrap;
-}
-
-.flex-row-wrap {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  flex-wrap: wrap;
-}
-
 /* My custom formats */
 
-.homeText {
-  font-size: 3em;
-  font-weight: 300;
-  /* color: rgb(185, 18, 18); */
-  text-align: center;
-  margin: 0 auto;
-  max-width: 600px;
-  padding: 0 20px;
-  font-family: "Georgia";
-}
+
 
 pre code {
   display: flex;
@@ -151,22 +47,6 @@ code {
   border-radius: 0.5rem;
 }
 
-h2 {
-  font-size: 2em;
-  font-weight: 300;
-  color: rgb(0, 0, 0);
-  text-align: left;
-  margin-bottom: 15px;
-  margin-top: 5px;
-  max-width: 600px;
-  padding: 0 0px;
-  font-family: "Georgia Bold";
-}
-
-h2 ~ p {
-  margin: 20px;
-}
-
 h1 {
   font-size: 2.5em;
   font-weight: 300;
@@ -174,28 +54,4 @@ h1 {
   margin-bottom: 5px;
   margin-top: 15px;
   padding: 0 0px;
-}
-
-ul {
-  margin-left: 10px;
-}
-
-h1 ~ p {
-  margin: 20px;
-}
-
-li {
-  list-style-type: decimal;
-  margin-left: 20px;
-}
-
-a {
-  color: rgb(185, 18, 18);
-  text-decoration: none;
-  font-weight: 600;
-}
-
-a:hover {
-  color: rgb(185, 18, 18);
-  text-decoration: underline;
 }

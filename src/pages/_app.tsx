@@ -47,6 +47,7 @@ export default function App({ Component, pageProps }: AppProps) {
                         src='https://raw.githubusercontent.com/Amp-Lab-at-VT/website/master/src/images/cover.jpeg'
                         w={'99vw'}
                         h={'100vh'}
+                        style={{backgroundRepeat : "repeat-y"}}
                         // sizes="100vw" style={{ objectFit: "cover" }}
                     >
                         <Component {...pageProps} />
