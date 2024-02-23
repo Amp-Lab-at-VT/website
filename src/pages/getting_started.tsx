@@ -11,7 +11,7 @@ import { BsPrinterFill } from "react-icons/bs";
 import { RxDiscordLogo } from "react-icons/rx";
 import { BiPurchaseTagAlt } from "react-icons/bi";
 import { StaticProps } from "@/utils/types";
-import { Flex, Title, Text, Container, SimpleGrid } from "@mantine/core";
+import { Title, Text, Container, SimpleGrid } from "@mantine/core";
 
 export default function GettingStarted({ new_members, returning_members } : StaticProps<typeof getStaticProps>) {
     return (

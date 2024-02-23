@@ -1,88 +1,13 @@
 import { useState } from "react";
-import Image from "next/image";
-import { motion } from "framer-motion";
-import tw from "tailwind-styled-components";
 import ReactMarkdown from "react-markdown";
+import { useHover } from "@mantine/hooks";
+import Link from "next/link";
+import { AspectRatio, Overlay, Text, Image, Paper, Stack} from "@mantine/core";
 
-const LinkWrapper = tw(motion.a)`
-  sm:w-600
-  lg:w-600
-`;
-
-const BoxWrapper = tw(motion.div)`
-  relative
-  h-96
-  border-2
-  border-slate-950
-  rounded-md
-  overflow-hidden
-  cursor-pointer
-  transition-all
-  duration-500
-  shadow-md
-  m-2
-  sm:h-80
-  sm:border-0
-
-`;
-
-const TextWrapper = tw(motion.div)`
-  absolute
-  inset-0
-  items-center
-  justify-center
-  text-white
-  text-sm
-  font-bold
-  font
-  bg-black
-  bg-opacity-75
-  transition-all
-  duration-500
-  p-2
-  hidden
-  sm:block
-`;
-
-const MobileTextWrapper = tw(motion.div)`
-  absolute
-  inset-0
-  items-center
-  justify-center
-  text-black
-  text-sm
-  font-bold
-  bg-white
-  bg-opacity-90
-  filter
-  p-1
-  sm:hidden
-`;
-
-const ImageWrapper = tw(Image)`
-  w-full
-  h-full
-  object-cover
-`;
-
-const TitleWrapper = tw(motion.div)`
-    absolute
-    font-bold
-    text-2xl
-    text-white
-    top-5
-    left-5
-    opacity-100
-    transition-all
-    z-10
-    bg-black
-    p-2
-    hidden
-    sm:block
-`;
 
 export default function Box({ name="Sample", branch="main", href="https://github.com/Amp-Lab-at-VT/SampleProject" }) {
-    const [isHovered, setIsHovered] = useState(false);
+    const { hovered, ref } = useHover();
+
 
     const getDifference = (str1 : string, str2 : string) => {
         let diff = "";
@@ -109,33 +34,25 @@ export default function Box({ name="Sample", branch="main", href="https://github
         .catch((response) => {console.log(`Project is not avalibe at that address. Warning: ${response}`)});
 
     return (
-        <LinkWrapper className="flex-none" href={href}>
-            <BoxWrapper
-                whileHover={{ scale: 1 }}
-                whileTap={{ scale: 0 }}
-                onMouseEnter={() => setIsHovered(true)}
-                onMouseLeave={() => setIsHovered(false)}
-            >
-                {!isHovered && <TitleWrapper>{name}</TitleWrapper>}
+        <AspectRatio ratio={2} ref={ref}
+            // href={href}
+            component={Link}>
+            {!hovered &&
+                <Overlay>
+                    <Paper color="black">
+                        <Text>{name}</Text>
+                    </Paper>
+                </Overlay>}
 
-                <ImageWrapper src={imgPath} alt="" width={640} height={480} />
-                {isHovered && (
-                    <TextWrapper
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                    >
+            <Image src={imgPath} alt="" />
+            {hovered && (
+                <Overlay color="#000" backgroundOpacity={0.85} >
+                    <Stack gap={'xs'}>
+                        <Text className="text-2xl bg-black text-white p-2">{name}</Text>
                         <ReactMarkdown>{text}</ReactMarkdown>
-                    </TextWrapper>
-                )}
-
-                <MobileTextWrapper>
-                    <p className="text-2xl bg-black text-white p-2">{name}</p>
-                    <div>
-                        <ReactMarkdown>{text}</ReactMarkdown>
-                    </div>
-                </MobileTextWrapper>
-            </BoxWrapper>
-        </LinkWrapper>
+                    </Stack>
+                </Overlay>
+            )}
+        </AspectRatio>
     );
 }
