@@ -7,7 +7,6 @@ import rehypeRaw from "rehype-raw";
 export default function BeginnersGuide({ fileContents }) {
   return (
     <div>
-      <h1 className="m-5">Beginners Guide</h1>
       <div className="m-5">
         <ReactMarkdown rehypePlugins={[rehypeRaw]}>
           {fileContents}
@@ -19,7 +18,7 @@ export default function BeginnersGuide({ fileContents }) {
 }
 
 export async function getStaticProps() {
-  const file = "basic_soldering.md";
+  const file = "intermediate_soldering.md";
   const fileContents = await fs.readFile(
     process.cwd() + "/docs/" + file,
     "utf8",
