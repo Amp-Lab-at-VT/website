@@ -1,6 +1,4 @@
 // Create an iframe for a booking calendar
-
-import React from "react";
 import { Container, Stack, Alert } from "@mui/material";
 
 const src =

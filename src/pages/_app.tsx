@@ -1,3 +1,4 @@
+import '@mantine/code-highlight/styles.css';
 import "@/styles/globals.css";
 import '@mantine/core/styles.css';
 import Footer from "@/comps/Footer/Footer";
@@ -5,6 +6,7 @@ import { MantineProvider, AppShell, Burger, Group, Stack, createTheme, Backgroun
 import { useDisclosure } from '@mantine/hooks';
 import type { AppProps } from "next/app";
 import Link from "next/link";
+import { Themer } from "@/comps/Themer";
 
 
 const theme = createTheme({
@@ -30,6 +32,7 @@ export default function App({ Component, pageProps }: AppProps) {
                     <Group h="100%" px="md">
                         <Burger opened={mobileOpened} onClick={toggleMobile} hiddenFrom="sm" size="sm" />
                         <Burger opened={desktopOpened} onClick={toggleDesktop} visibleFrom="sm" size="sm" />
+                        <Themer />
                     </Group>
                 </AppShell.Header>
                 <AppShell.Navbar p="md" >

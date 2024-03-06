@@ -1,50 +1,7 @@
-body {
-  margin: 0;
-}
-
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
-
-.App-header {
-  min-height: 85vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: rgb(0, 0, 0);
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-/* My custom formats */
-
-
-
-pre code {
-  display: flex;
-  background-color: #d9baba;
-  padding: 20px;
-}
-
-code {
-  display: block;
-  font-size: 1em;
-  font-weight: 300;
-  color: rgb(0, 0, 0);
-  text-align: left;
-  margin-bottom: 15px;
-  margin-top: 5px;
-  padding: 0 0px;
-  white-space: pre-wrap;
-  padding: 10px;
-  background-color: #d2cfcf;
-  border-radius: 0.5rem;
 }
 
 h1 {

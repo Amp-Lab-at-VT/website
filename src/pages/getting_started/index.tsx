@@ -1,19 +1,15 @@
 //https://react-icons.github.io/react-icons/icons?name=bs
-import React from "react";
-import { promises as fs } from "fs";
-import ReactMarkdown from "react-markdown";
-import rehypeRaw from "rehype-raw";
-
 import IconAndName from "@/comps/IconAndName/IconAndName";
 import { GiSolderingIron, GiReturnArrow, GiSwipeCard} from "react-icons/gi";
 import { MdOutlineWavingHand } from "react-icons/md";
 import { BsPrinterFill } from "react-icons/bs";
 import { RxDiscordLogo } from "react-icons/rx";
 import { BiPurchaseTagAlt } from "react-icons/bi";
-import { StaticProps } from "@/utils/types";
 import { Title, Text, Container, SimpleGrid } from "@mantine/core";
+import NewMembers from "./new_members.mdx";
+import ReturningMembers from "./returning_members.mdx";
 
-export default function GettingStarted({ new_members, returning_members } : StaticProps<typeof getStaticProps>) {
+export default function GettingStarted() {
     return (
         <Container fluid={true}>
             <Title>Getting Started:</Title>
@@ -30,9 +26,7 @@ export default function GettingStarted({ new_members, returning_members } : Stat
                     buttonTitle="Click here to begin"
                     color="#f9f9f9"
                 >
-                    <ReactMarkdown className="App-standardPage" rehypePlugins={[rehypeRaw]}>
-                        {new_members}
-                    </ReactMarkdown>
+                    <NewMembers />
                 </IconAndName>
 
                 <IconAndName
@@ -41,9 +35,7 @@ export default function GettingStarted({ new_members, returning_members } : Stat
                     buttonTitle="Click here to begin"
                     color="#f9f9f9"
                 >
-                    <ReactMarkdown className="App-standardPage" rehypePlugins={[rehypeRaw]}>
-                        {returning_members}
-                    </ReactMarkdown>
+                    <ReturningMembers />
                 </IconAndName>
                 <IconAndName
                     href="https://discord.gg/DjFCeQEMmE"
@@ -88,20 +80,4 @@ export default function GettingStarted({ new_members, returning_members } : Stat
             </SimpleGrid>
         </Container>
     );
-}
-
-export async function getStaticProps() {
-    const new_members_file = "new_members.md";
-    const new_members = await fs.readFile(
-        process.cwd() + "/docs/" + new_members_file,
-        "utf8",
-    );
-
-    const returning_members_file = "returning_members.md";
-    const returning_members = await fs.readFile(
-        process.cwd() + "/docs/" + returning_members_file,
-        "utf8",
-    );
-
-    return { props: { new_members, returning_members } };
 }

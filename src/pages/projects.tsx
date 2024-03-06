@@ -1,7 +1,7 @@
 import { promises as fs } from "fs";
 import YAML from "yaml";
 import Box from "@/comps/Box/Box";
-import { StaticProps } from "@/utils/types";
+import { type StaticProps } from "@/utils/types";
 import { Container, Title, SimpleGrid, Box as MBox } from "@mantine/core";
 
 export default function Projects({
