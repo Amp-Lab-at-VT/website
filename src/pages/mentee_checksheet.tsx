@@ -1,4 +1,4 @@
-import MenteeChecksheet from './mentee_checksheet.mdx';
+import MenteeChecksheet from '../../docs/mentee_checksheet.mdx';
 
 
 export default function Mentee_Checksheet() {

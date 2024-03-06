@@ -1,4 +1,4 @@
-import TutorialMDX from "./tutorial.mdx";
+import TutorialMDX from "../../docs/tutorial.mdx";
 
 
 export default function Tutorial() {

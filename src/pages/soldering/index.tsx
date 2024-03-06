@@ -1,7 +1,7 @@
 import { Alert } from "@mui/material";
 import { Button, Container, Stack, Text } from "@mantine/core";
 import Link from "next/link";
-import SolderingMDX from "./soldering.mdx";
+import SolderingMDX from "../../../docs/soldering.mdx";
 
 export default function Soldering() {
     return (

@@ -1,4 +1,4 @@
-import MigrationMDX from "./migration.mdx";
+import MigrationMDX from "../../docs/migration.mdx";
 
 export default function Migration() {
     return (<MigrationMDX />);

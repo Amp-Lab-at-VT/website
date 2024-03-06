@@ -1,4 +1,4 @@
-import CleaningStandards from "./cleaning_standards.mdx";
+import CleaningStandards from "../../docs/cleaning_standards.mdx";
 
 
 export default function Clean() {

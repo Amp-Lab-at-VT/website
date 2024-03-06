@@ -6,8 +6,8 @@ import { BsPrinterFill } from "react-icons/bs";
 import { RxDiscordLogo } from "react-icons/rx";
 import { BiPurchaseTagAlt } from "react-icons/bi";
 import { Title, Text, Container, SimpleGrid } from "@mantine/core";
-import NewMembers from "./new_members.mdx";
-import ReturningMembers from "./returning_members.mdx";
+import NewMembers from "../../docs/new_members.mdx";
+import ReturningMembers from "../../docs/returning_members.mdx";
 
 export default function GettingStarted() {
     return (
