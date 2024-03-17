@@ -44,10 +44,10 @@ Intermediate Solder Training at The AMP Lab
 **Practice Board:** \
 Do Nothing Board 2
 
-**Certification Board Available:** \
-- The AMP Lab Microcontroller \
-        - [Manual TBD](https://amp-lab.org/404) \
-        - [Board Files TBD](https://amp-lab.org/404)
+**Certification Board Available:** 
+- The AMP Lab Microcontroller 
+    - [Manual](https://github.com/Amp-Lab-at-VT/website/raw/master/docs/sold_docs/JiviBoard_Usage_and_Soldering_Guide.pdf)
+    - [Board Files](https://github.com/Amp-Lab-at-VT/website/raw/master/docs/solder_board_files/JiviBoard) 
 
 
 **Procedure:** \
