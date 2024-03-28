@@ -18,7 +18,7 @@ export default function Box({ name, project } : { project: GraphQLResult[string]
     return (
         <AspectRatio ratio={2}
             component={Link}
-            // @ts-expect-error not sure why this is throwing an error. you can probably ignore it
+            // @ts-expect-error not sure why this line is throwing an error. you can probably ignore it
             href={project.url}
             ref={ref} >
             <Image src={imgPath} alt="" />

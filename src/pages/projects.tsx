@@ -1,7 +1,8 @@
 import { promises as fs } from "fs";
 import YAML from "yaml";
 import Project from "@/comps/ProjectBox";
-import { type StaticProps, type GraphQLResult, type YAMLResult, generateRepositoryQueryPart } from "@/utils/types";
+import type { StaticProps, GraphQLResult, YAMLResult } from "@/utils";
+import { generateRepositoryQueryPart } from "@/utils";
 import { Container, Title, SimpleGrid, Box } from "@mantine/core";
 
 export default function Projects({
