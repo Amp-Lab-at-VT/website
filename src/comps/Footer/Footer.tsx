@@ -6,7 +6,7 @@ import Link from "next/link";
 const links = [
     { link: '/getting_started', label: 'Getting Started' },
     { link: '/Leadership', label: 'Leadership' },
-];
+] as const;
 
 export default function Footer(): JSX.Element {
     const items = links.map((link) => (

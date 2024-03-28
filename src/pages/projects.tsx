@@ -1,7 +1,7 @@
 import { promises as fs } from "fs";
 import YAML from "yaml";
 import Box from "@/comps/Box/Box";
-import { type StaticProps } from "@/utils/types";
+import { type StaticProps, type GraphQLResult, type YAMLResult, generateRepositoryQueryPart } from "@/utils/types";
 import { Container, Title, SimpleGrid, Box as MBox } from "@mantine/core";
 
 export default function Projects({
@@ -24,7 +24,7 @@ export default function Projects({
                                     <Box
                                         key={key}
                                         name={key}
-                                        branch={activeProjects[key]["branch"]}
+                                        branch={activeProjects[key]["defaultBranchRef"]['name']}
                                         href={activeProjects[key]["url"]}
                                     />
                                 </MBox>
@@ -43,7 +43,7 @@ export default function Projects({
                                     <Box
                                         key={key}
                                         name={key}
-                                        branch={inactiveProjects[key]["branch"]}
+                                        branch={inactiveProjects[key]["defaultBranchRef"]['name']}
                                         href={inactiveProjects[key]["url"]}
                                     />
                                 </div>
@@ -56,65 +56,78 @@ export default function Projects({
     );
 }
 
+
+import { request, gql } from 'graphql-request';
+
+
+const GITHUB_GRAPHQL_API = 'https://api.github.com/graphql';
+const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
+
 export async function getStaticProps() {
-    let activeCount = 0,
-        inactiveCount = 0;
+    const fileContents = await fs.readFile(process.cwd() + "/repos.yaml", "utf8");
+    const projects = YAML.parse(fileContents) as YAMLResult;
 
-    const file = "repos.yaml";
-    const fileContents = await fs.readFile(process.cwd() + "/" + file, "utf8");
-    let projects = YAML.parse(fileContents) as YAMLResult;
+    let query = '{';
+    let index = 0; // Initialize a counter outside the loop
 
-    console.log(projects);
 
-    const inactiveProjects = {} as YAMLResult;
-    const activeProjects = {} as YAMLResult;
-
-    // Find the date of each commit, and add it to the project
     for (const key in projects) {
-        const url = projects[key]["url"];
-        const branch = projects[key]["branch"];
-        const repo = url.split("/")[4];
-        const owner = url.split("/")[3];
+        const url = projects[key]["url"].split("github.com/")[1];
+        const repo = url.split("/")[1];
+        const owner = url.split("/")[0];
 
-        // Pull the date from the commit
-        projects[key]['date'] = await fetch(`https://api.github.com/repos/${owner}/${repo}/commits/${branch}`)
-            .then((response) => response.json())
-            .then((data) => data["commit"]["committer"]["date"])
-            .catch(() => {
-                console.log( "Odds are your query is being throttled. Try again in a few minutes.");
-            });
-        projects[key]['date'] = new Date(projects[key]['date']).toISOString();
+        // console.log(owner, repo)
+
+        query += generateRepositoryQueryPart(`repo${index + 1}`, owner, repo);
+        index++; // Increment the counter at the end of each iteration
     }
+    query += '}';
 
-    // Sort the projects by date
-    projects = Object.fromEntries(
-        Object.entries(projects).sort(([, a], [, b]) => {
-            return new Date(b["date"]).getTime() - new Date(a["date"]).getTime();
+    const data = await request<GraphQLResult>({
+        url: GITHUB_GRAPHQL_API,
+        document: gql`${query}` ,
+        requestHeaders: {
+            Authorization: `bearer ${GITHUB_TOKEN}`,
+        },
+    });
+
+    // sort data by date
+    const sortedData = Object.fromEntries(
+        Object.entries(data).sort(([, a], [, b]) => {
+            return new Date(b['defaultBranchRef']['target']['history']['nodes']["committedDate"]).getTime() - new Date(a['defaultBranchRef']['target']['history']['nodes']["committedDate"]).getTime();
         }),
     );
 
+    const inactiveProjects = {} as GraphQLResult;
+    const activeProjects = {} as GraphQLResult;
+
+    let activeCount = 0, inactiveCount = 0;
+
     // if a project hasn't been updates in 3 months, move it to inactive
-    for (const key in projects) {
-        const date = new Date(projects[key]["date"]).getTime();
+    for (const key in sortedData) {
+        const date = new Date(sortedData[key]['defaultBranchRef']['target']['history']['nodes']["committedDate"]).getTime();
         const diffTime = Math.abs(new Date().getTime() - date);
         const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
 
+        sortedData[key].defaultBranchRef.target.tree = null;
+
         if (diffDays > 90) {
-            inactiveProjects[key] = projects[key];
+            inactiveProjects[key] = sortedData[key];
             // increase the count of inactive projects
-            inactiveCount = inactiveCount + 1;
+            inactiveCount++;
         } else {
-            activeProjects[key] = projects[key];
+            activeProjects[key] = sortedData[key];
             // increase the count of active projects
-            activeCount = activeCount + 1;
+            activeCount++;
         }
     }
 
-    console.log("activeCount: " + activeCount);
-    console.log("inactiveCount: " + inactiveCount);
+    const props = { activeProjects, inactiveProjects, activeCount, inactiveCount };
+
+    console.log(props)
 
     return {
-        props: { activeProjects, inactiveProjects, activeCount, inactiveCount },
+        props,
     };
 }
 
@@ -127,12 +140,3 @@ function SectionTitle({title} : {title: string}) {
         </Container>
     );
 }
-
-type YAMLResult = {
-    [key: string]: {
-        url: string;
-        branch: string;
-        mentor_last_name: string;
-        date : string;
-    };
-};
