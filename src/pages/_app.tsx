@@ -13,7 +13,9 @@ const theme = createTheme({
 export default function App({ Component, pageProps }: AppProps) {
     return (
         <MantineProvider theme={theme} defaultColorScheme="dark">
-            <Shell Component={Component} pageProps={pageProps} />
+            <Shell>
+                <Component {...pageProps} />
+            </Shell>
         </MantineProvider>
     );
 }

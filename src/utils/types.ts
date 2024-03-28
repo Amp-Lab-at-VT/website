@@ -11,33 +11,27 @@ export type YAMLResult = {
 
 export type GraphQLResult = {
     [key: string]: {
-        url : string;
+        url : string;                // url of the repository
         defaultBranchRef: {
-            name: string;
+            name: string;            // name if the default branch
             target: {
                 history: {
                     nodes: {
-                        committedDate: string;
+                        committedDate: string; // date of the last commit
                     };
                 };
                 tree: {
                     entries: {
-                        name: string;
+                        name: string; // name of the text file in root directory
                         object: {
-                            text: string;
+                            text: string; // content of the file
                         };
                     }[];
-                } | null;
+                };
             };
         };
     };
 };
-
-// export type Project = GraphQLResult & {
-//     [key: string]: {
-//         mentor_last_name: string;
-//     };
-// };
 
 // Function to generate the query part for a single repository
 export function generateRepositoryQueryPart(alias : string, owner : string, name : string) {

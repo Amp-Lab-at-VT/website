@@ -1,12 +1,11 @@
 import Footer from "@/comps/Footer/Footer";
 import { AppShell, Burger, Group, Stack, BackgroundImage } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import type { AppProps } from "next/app";
 import Link from "next/link";
 import { Themer } from "@/comps/Themer";
 
 
-export default function Shell({Component, pageProps} : AppProps){
+export default function Shell({children} : {children: React.ReactNode}){
     const [mobileOpened, { toggle: toggleMobile, close: closeMobile }] = useDisclosure();
     const [desktopOpened, { toggle: toggleDesktop, close: closeDesktop }] = useDisclosure(false);
 
@@ -44,7 +43,7 @@ export default function Shell({Component, pageProps} : AppProps){
                     style={{backgroundRepeat : "repeat-y"}}
                     // sizes="100vw" style={{ objectFit: "cover" }}
                 >
-                    <Component {...pageProps} />
+                    {children}
                 </BackgroundImage>
             </AppShell.Main>
             <AppShell.Footer>

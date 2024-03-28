@@ -1,4 +1,4 @@
-import LeadershipBox from "@/comps/LeadershipBox/LeadershipBox";
+import LeadershipBox from "@/comps/LeadershipBox";
 
 
 export default function Leadership() {

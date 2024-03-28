@@ -1,8 +1,8 @@
 import { promises as fs } from "fs";
 import YAML from "yaml";
-import Box from "@/comps/Box/Box";
+import Project from "@/comps/ProjectBox";
 import { type StaticProps, type GraphQLResult, type YAMLResult, generateRepositoryQueryPart } from "@/utils/types";
-import { Container, Title, SimpleGrid, Box as MBox } from "@mantine/core";
+import { Container, Title, SimpleGrid, Box } from "@mantine/core";
 
 export default function Projects({
     activeProjects,
@@ -20,14 +20,13 @@ export default function Projects({
                     <SimpleGrid cols={{ base: 1, sm: 2}}>
                         {Object.keys(activeProjects).map((key) => {
                             return (
-                                <MBox key={key}>
-                                    <Box
-                                        key={key}
+                                <Box key={key}>
+                                    <Project
                                         name={key}
-                                        branch={activeProjects[key]["defaultBranchRef"]['name']}
-                                        href={activeProjects[key]["url"]}
+                                        key={key}
+                                        project={activeProjects[key]}
                                     />
-                                </MBox>
+                                </Box>
                             );
                         })}
                     </SimpleGrid>
@@ -40,11 +39,10 @@ export default function Projects({
                         {Object.keys(inactiveProjects).map((key) => {
                             return (
                                 <div className="w-screen h-fit sm:w-6/12" key={key}>
-                                    <Box
-                                        key={key}
+                                    <Project
                                         name={key}
-                                        branch={inactiveProjects[key]["defaultBranchRef"]['name']}
-                                        href={inactiveProjects[key]["url"]}
+                                        key={key}
+                                        project={activeProjects[key]}
                                     />
                                 </div>
                             );
@@ -59,13 +57,10 @@ export default function Projects({
 
 import { request, gql } from 'graphql-request';
 
-
-const GITHUB_GRAPHQL_API = 'https://api.github.com/graphql';
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 
 export async function getStaticProps() {
-    const fileContents = await fs.readFile(process.cwd() + "/repos.yaml", "utf8");
-    const projects = YAML.parse(fileContents) as YAMLResult;
+    const projects = YAML.parse(await fs.readFile(process.cwd() + "/repos.yaml", "utf8")) as YAMLResult;
 
     let query = '{';
     let index = 0; // Initialize a counter outside the loop
@@ -84,11 +79,9 @@ export async function getStaticProps() {
     query += '}';
 
     const data = await request<GraphQLResult>({
-        url: GITHUB_GRAPHQL_API,
+        url: 'https://api.github.com/graphql',
         document: gql`${query}` ,
-        requestHeaders: {
-            Authorization: `bearer ${GITHUB_TOKEN}`,
-        },
+        requestHeaders: { Authorization: `bearer ${GITHUB_TOKEN}` },
     });
 
     // sort data by date
@@ -104,12 +97,14 @@ export async function getStaticProps() {
     let activeCount = 0, inactiveCount = 0;
 
     // if a project hasn't been updates in 3 months, move it to inactive
+    // this seems broken, but I'm not sure why
     for (const key in sortedData) {
         const date = new Date(sortedData[key]['defaultBranchRef']['target']['history']['nodes']["committedDate"]).getTime();
         const diffTime = Math.abs(new Date().getTime() - date);
         const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
 
-        sortedData[key].defaultBranchRef.target.tree = null;
+        // @ts-expect-error weird error with the tree entries. had to remove it for now. uncomment when fixed
+        sortedData[key].defaultBranchRef.target.tree.entries = null;
 
         if (diffDays > 90) {
             inactiveProjects[key] = sortedData[key];
@@ -133,7 +128,7 @@ export async function getStaticProps() {
 
 function SectionTitle({title} : {title: string}) {
     return (
-        <Container fluid={true} c={'greed'} m={4} p={2}>
+        <Container fluid={true} c={'green'} m={4} p={2}>
             <Title>
                 {title}
             </Title>
