@@ -6,6 +6,10 @@ Smart Water Bottle:
   url : "https://github.com/KGouttumukkala/SmartWaterBottle"
   branch: "main"
   mentor_last_name: "Forsyth" 
+DIY Kick Drum:
+  url : "https://github.com/epritchard13/kick_drum"
+  branch: "main"
+  mentor_last_name: "Hood"
 FPV Car:
   url : "https://github.com/Amp-Lab-at-VT/FPV-Car"
   branch: "main"
