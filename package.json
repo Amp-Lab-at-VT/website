@@ -11,11 +11,12 @@
     "format": "npx prettier src --write"
   },
   "dependencies": {
-    "@mantine/code-highlight": "^7.6.1",
-    "@mantine/core": "^7.6.1",
-    "@mantine/hooks": "^7.6.1",
-    "@mantine/modals": "^7.6.1",
-    "@mantine/tiptap": "^7.6.1",
+    "@mantine/carousel": "^7.7.1",
+    "@mantine/code-highlight": "7.7.1",
+    "@mantine/core": "7.7.1",
+    "@mantine/hooks": "^7.7.1",
+    "@mantine/modals": "7.7.1",
+    "@mantine/tiptap": "7.7.1",
     "@mdx-js/loader": "^3.0.1",
     "@mdx-js/react": "^3.0.1",
     "@next/mdx": "^14.1.2",
@@ -27,6 +28,7 @@
     "@types/node": "20.11.19",
     "@types/react": "18.2.56",
     "@types/react-dom": "18.2.19",
+    "embla-carousel-react": "^8.0.2",
     "eslint": "8.56.0",
     "eslint-config-next": "14.1.0",
     "graphql": "^16.8.1",
@@ -52,7 +54,7 @@
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-unused-imports": "^3.1.0",
     "postcss": "^8.4.35",
-    "postcss-preset-mantine": "1.12.3",
+    "postcss-preset-mantine": "1.14.0",
     "postcss-simple-vars": "^7.0.1"
   }
 }

@@ -1,149 +1,116 @@
-//https://react-icons.github.io/react-icons/icons?name=bs
-import React from "react";
-
-import {
-    Box,
-    Container,
-    Stack,
-    Typography,
-    Divider,
-    Paper,
-    Alert,
-    Table,
-    TableBody,
-    TableCell,
-    TableContainer,
-    TableHead,
-    TableRow,
-    Button,
-} from "@mui/material";
-
-import Carousel from "react-material-ui-carousel";
-import DiamondIcon from "@mui/icons-material/Diamond";
-import GoldIcon from "@mui/icons-material/EmojiEvents";
-import SilverIcon from "@mui/icons-material/Stars";
-import BronzeIcon from "@mui/icons-material/StarOutline";
 import Level from "@/comps/Sponsorship/Level";
-import Image from "next/image";
-
-function createData(description : string, value : string, cost : string) {
-    return { description, value, cost } as const;
-}
+import { Box, Text, Group, Container, Divider, Alert, Button, Table, Card, Stack } from "@mantine/core";
+import Link from "next/link";
+import { IconRosette, IconStar, IconTrophy, IconDiamond } from '@tabler/icons-react';
+import { Carousel } from '@mantine/carousel';
 
 const rows = [
-    createData("Funding Student Project", "High", "$300 per project"),
-    createData("Solder Training", "High", "$50 per student"),
-    createData("3D Printer Maintenance", "Medium", "$100"),
-    createData("CNC Supplies", "Medium", "$200"),
-    createData("Lab Upkeep", "High", "$500 per semester"),
-];
+    {description : "Funding Student Project", value : "High",   cost :  "$300 per project"},
+    {description : "Solder Training",         value : "High",   cost : "$50 per student"},
+    {description : "3D Printer Maintenance",  value : "Medium", cost : "$100"},
+    {description : "CNC Supplies",            value : "Medium", cost : "$200"},
+    {description : "Lab Upkeep",              value : "High",   cost : "$500 per semester"},
+] as const;
 
 export default function Sponsorship() {
     return (
-        <Box className="App-standardPage">
-            <Container maxWidth="lg" sx={{ minHeight: "90vh", pt: "20px" }}>
-                <Typography variant="h3"> Sponsoring the Amp Lab </Typography>
-                <Divider sx={{ m: "5px" }} />
-                {/* Who are we */}
-                <Typography variant="h5"> Who are we? </Typography>
-                <Typography sx={{ ml: "20px" }} variant="body1">
-                    {" "}
-                    The Amp Lab is a student-run organization at Virginia Tech that aims
-                    to provide students with hands-on experience with PCB design, CAD,
-                    C++, and more. You name it, our students do it. That's where "Amp"
-                    comes from: we amplify the skills of our members. Giving them a true
-                    experience in "Autonomous Mastery Prototyping" (AMP)
-                </Typography>
+        <Container pt={'20px'}>
+            <Text size="xl"> Sponsoring the Amp Lab</Text>
+            <Divider m={'5px'}/>
+            {/* Who are we */}
+            <Text size="lg"> Who are we? </Text>
+            <Text size="sm">
+                The Amp Lab is a student-run organization at Virginia Tech that aims
+                to provide students with hands-on experience with PCB design, CAD,
+                C++, and more. You name it, our students do it. That's where "Amp"
+                comes from: we amplify the skills of our members. Giving them a true
+                experience in "Autonomous Mastery Prototyping" (AMP)
+            </Text>
 
-                <Divider sx={{ m: "5px" }} />
-                <Typography variant="h5"> On the Horizon </Typography>
-                <Example></Example>
-                <Divider sx={{ m: "5px" }} />
+            <Divider m={'5px'} />
+            <Text size="lg"> On the Horizon </Text>
+            <HorizonCarousel />
+            <Divider m={'5px'} />
 
-                <Typography variant="h5"> Sponsorship Levels </Typography>
-                <Alert severity="info">
-                    Note: higher tiers automatically roll in perks of lower tiers
-                </Alert>
-                <Level
-                    perks={[
-                        "Signage in-lab praising your sponsorship",
-                        "Opportunity to suggest projects for students to collaborate and work on with the company",
-                        "Private recruiting event for the company for Amp Lab students",
-                    ]}
-                    price={"10,000"}
-                    icon={<DiamondIcon />}
-                    level="Diamond"
-                ></Level>
-                <Level
-                    perks={[
-                        "Invitation to attend our Amp Lab sponsored recruiting event",
-                        "Receive emails from us about our latest lab updates",
-                    ]}
-                    price={"5,000"}
-                    icon={<GoldIcon />}
-                    level="Gold"
-                ></Level>
-                <Level
-                    perks={[
-                        "Resumes from all our active members",
-                        "Virtual meeting with Amp Lab leadership to thank you for your contribution",
-                    ]}
-                    price={"2,500"}
-                    icon={<SilverIcon />}
-                    level="Silver"
-                ></Level>
-                <Level
-                    perks={["Recognition on our website"]}
-                    price={"1,000"}
-                    icon={<BronzeIcon />}
-                    level="Bronze"
-                ></Level>
+            <Text size="lg"> Sponsorship Levels </Text>
+            <Alert variant="light">
+                Note: higher tiers automatically roll in perks of lower tiers
+            </Alert>
+            <Level
+                perks={[
+                    "Signage in-lab praising your sponsorship",
+                    "Opportunity to suggest projects for students to collaborate and work on with the company",
+                    "Private recruiting event for the company for Amp Lab students",
+                ]}
+                price={"10,000"}
+                icon={<IconDiamond />}
+                level="Diamond"
+            ></Level>
+            <Level
+                perks={[
+                    "Invitation to attend our Amp Lab sponsored recruiting event",
+                    "Receive emails from us about our latest lab updates",
+                ]}
+                price={"5,000"}
+                icon={<IconTrophy />}
+                level="Gold"
+            ></Level>
+            <Level
+                perks={[
+                    "Resumes from all our active members",
+                    "Virtual meeting with Amp Lab leadership to thank you for your contribution",
+                ]}
+                price={"2,500"}
+                icon={<IconStar />}
+                level="Silver"
+            ></Level>
+            <Level
+                perks={["Recognition on our website"]}
+                price={"1,000"}
+                icon={<IconRosette />}
+                level="Bronze"
+            ></Level>
 
-                <Stack direction="row" justifyContent="center">
-                    <Button href="mailto:amp-lab-leadership-team-g@vt.edu">
-                        Reach out about sponsoring us now!
-                    </Button>
-                </Stack>
+            <Group justify="center">
+                <Button component={Link} href="mailto:amp-lab-leadership-team-g@vt.edu">
+                    Reach out about sponsoring us now!
+                </Button>
+            </Group>
 
-                <Divider sx={{ m: "20px" }} />
+            <Divider  m={'20px'} />
 
-                <Typography variant="h5"> Average Current Operating Costs </Typography>
-                <Divider sx={{ m: "5px" }} />
-                <Box sx={{ m: "5px" }}>
-                    <BasicTable></BasicTable>
-                </Box>
-            </Container>
-        </Box>
+            <Text variant="h5"> Average Current Operating Costs </Text>
+            <Divider  m={'5px'} />
+            <Box>
+                <CostsTable />
+            </Box>
+        </Container>
     );
 }
 
-function BasicTable() {
+function CostsTable() {
+    const content = rows.map(row => (
+        <Table.Tr key={row.description} >
+            <Table.Td>{row.description}</Table.Td>
+            <Table.Td align="right">{row.value}</Table.Td>
+            <Table.Td align="right">{row.cost}</Table.Td>
+        </Table.Tr>
+    ));
+
     return (
-        <TableContainer component={Paper}>
-            <Table sx={{ minWidth: 650 }} aria-label="simple table">
-                <TableHead>
-                    <TableRow>
-                        <TableCell>Description</TableCell>
-                        <TableCell align="right">Value to Lab</TableCell>
-                        <TableCell align="right">Approximate Annual Cost</TableCell>
-                    </TableRow>
-                </TableHead>
-                <TableBody>
-                    {rows.map((row) => (
-                        <TableRow
-                            key={row.description}
-                            sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-                        >
-                            <TableCell component="th" scope="row">
-                                {row.description}
-                            </TableCell>
-                            <TableCell align="right">{row.value}</TableCell>
-                            <TableCell align="right">{row.cost}</TableCell>
-                        </TableRow>
-                    ))}
-                </TableBody>
-            </Table>
-        </TableContainer>
+        // <Table component={Paper}>
+        <Table>
+            <Table.Thead>
+                <Table.Tr>
+                    <Table.Th>Description</Table.Th>
+                    <Table.Th align="right">Value to Lab</Table.Th>
+                    <Table.Th align="right">Approximate Annual Cost</Table.Th>
+                </Table.Tr>
+            </Table.Thead>
+            <Table.Tbody>
+                {content}
+            </Table.Tbody>
+        </Table>
     );
 }
 
@@ -162,7 +129,7 @@ function BasicTable() {
 // - Batham Tools
 // - OpenAI API Tokens
 
-function Example() {
+function HorizonCarousel() {
     const items = [
         {
             name: "Modernizing the Lab",
@@ -193,33 +160,16 @@ function Example() {
     ] as const;
 
     return (
-        <Carousel autoPlay={true} interval={6000} sx={{ mt: "10px" }}>
+        <Carousel align="start" slideGap="xs" controlsOffset="xl" controlSize={25} loop={true} withIndicators={true}>
             {items.map((item) => (
-                <Item key={item.name} item={item} name={item.description} description={item.description}/>
+                <Carousel.Slide component={Card} key={item.name}>
+                    <Stack>
+                        <Text fw={500}>{item.name}</Text>
+                        <Text>{item.description}</Text>
+                    </Stack>
+
+                </Carousel.Slide>
             ))}
         </Carousel>
     );
 }
-
-function Item({ name, description, image } : ItemProps) {
-
-    return (
-        <Paper sx={{ p: "10px", backgroundColor: "#FAFAFA" }}>
-            <Stack direction="row">
-                <Box>
-                    <Typography variant="h6">{name}</Typography>
-                    <Typography>{description}</Typography>
-                </Box>
-                {image && <Image src={image} alt="" width="400" height="50" style={{ maxWidth: "100%" }} />}
-            </Stack>
-        </Paper>
-    );
-}
-// use this instead: https://mantine.dev/x/carousel/
-
-type ItemProps = {
-    name: string;
-    description: string;
-    image ?: string;
-    item: Omit<ItemProps, "item">;
-};

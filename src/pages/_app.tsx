@@ -1,6 +1,7 @@
 import '@mantine/code-highlight/styles.css';
 import "@/styles/globals.css";
 import '@mantine/core/styles.css';
+import '@mantine/carousel/styles.css';
 import { MantineProvider, createTheme } from '@mantine/core';
 import type { AppProps } from "next/app";
 import Shell from './Shell';

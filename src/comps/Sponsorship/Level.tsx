@@ -4,47 +4,35 @@ import React from "react";
 
 import {
     Box,
-    Typography,
+    Text,
     Divider,
-    Stack,
-    Paper,
-} from "@mui/material";
+    Group,
+    Card,
+} from "@mantine/core";
 
 export default function SponsorshipLevel({ level, price, perks = [], icon = null } : SponsorshipLevelProps) {
 
     return (
-        <Paper sx={{ mb: "5px", pt: "20px", pb: "20px" }}>
-            <Stack
-                direction="row"
-                alignItems={"center"}
-                justifyContent={"space-between"}
-            >
-                <Stack
-                    alignItems={"center"}
-                    justifyContent={"space-between"}
-                    sx={{ ml: "20px" }}
-                    direction="row"
-                >
+        <Card>
+            <Group justify="space-between" align="center" >
+                <Group
+                    align="center"
+                    justify="space-between"
+                    ml={'20px'} >
                     <Box>{icon}</Box>
-                    <Typography sx={{ ml: "10px" }} variant="h6">
-                        {" "}
-                        {level}{" "}
-                    </Typography>
-                </Stack>
-                <Typography sx={{ mr: "10px" }} variant="h6">
-                    {" "}
-                    ${price}{" "}
-                </Typography>
-            </Stack>
-            <Divider sx={{ m: "10px" }} />
-            <Typography variant="h6" sx={{ ml: "20px" }}>
-                <ul>
-                    {perks.map((perk) => (
-                        <li key={perk}> {perk} </li>
-                    ))}
-                </ul>
-            </Typography>
-        </Paper>
+                    <Text ml={'10px'} variant="h6">
+                        {level}
+                    </Text>
+                </Group>
+                <Text mr={'10px'} variant="h6">
+                    ${price}
+                </Text>
+            </Group>
+            <Divider m={'10px'}/>
+            {perks.map((perk) => (
+                <li key={perk}> {perk} </li>
+            ))}
+        </Card>
     );
 }
 
