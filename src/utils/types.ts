@@ -12,6 +12,7 @@ export type YAMLResult = {
 export type GraphQLResult = {
     [key: string]: {
         url : string;                // url of the repository
+        name : string;               // name of the repository
         defaultBranchRef: {
             name: string;            // name if the default branch
             target: {

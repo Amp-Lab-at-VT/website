@@ -4,7 +4,7 @@ import '@mantine/core/styles.css';
 import '@mantine/carousel/styles.css';
 import { MantineProvider, createTheme } from '@mantine/core';
 import type { AppProps } from "next/app";
-import Shell from './Shell';
+import { Shell } from '../comps/Shell';
 
 const theme = createTheme({
     /** Put your mantine theme override here */

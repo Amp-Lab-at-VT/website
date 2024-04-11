@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 
 import React from "react";
 
-const Box : React.FC<BoxProps> = ({ icon, title, buttonTitle, color, href=null, children }) => {
+const Box : React.FC<BoxProps> = ({ icon, title, buttonTitle, color, href, modalContent }) => {
     const router = useRouter();
     const [opened, { open, close }] = useDisclosure(false);
 
@@ -15,14 +15,14 @@ const Box : React.FC<BoxProps> = ({ icon, title, buttonTitle, color, href=null, 
 
     return (
         <>
-            <Modal opened={opened} onClose={close} centered={true}>
-                {children}
+            <Modal opened={opened} onClose={close} centered={true} withCloseButton={false}>
+                {modalContent}
             </Modal>
             <Card withBorder={true}>
                 <Card.Section fz={'80px'} color={color}>
-                    <Center> {icon} </Center>
+                    <Center pt={'sm'}> {icon} </Center>
                 </Card.Section>
-                <Text fw={500}>{title}</Text>
+                <Text fw={500} ta={'center'}>{title}</Text>
                 <Button color="blue" fullWidth={true} mt="md" radius="md" onClick={buttonClick}>
                     {buttonTitle}
                 </Button>
@@ -37,6 +37,6 @@ type BoxProps = {
     title: string;
     buttonTitle: string;
     color: string;
-    href ?: string | null;
-    children ?: React.ReactNode;
+    href ?: string;
+    modalContent ?: React.ReactNode;
 };

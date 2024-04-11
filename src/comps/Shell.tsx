@@ -1,5 +1,5 @@
 import Footer from "@/comps/Footer/Footer";
-import { AppShell, Burger, Group, Stack, BackgroundImage, useMantineColorScheme, Space, Title } from '@mantine/core';
+import { AppShell, Burger, Group, Stack, BackgroundImage, useMantineColorScheme, Space, Title, Container } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import Link from "next/link";
 import { Themer } from "@/comps/Themer";
@@ -8,7 +8,7 @@ import Image from "next/image";
 
 const ImageSize = 30;
 
-export default function Shell({children} : {children: React.ReactNode}){
+export function Shell({children} : {children: React.ReactNode}){
     const [mobileOpened, { toggle: toggleMobile, close: closeMobile }] = useDisclosure();
     const [desktopOpened, { toggle: toggleDesktop, close: closeDesktop }] = useDisclosure(false);
     const { colorScheme } = useMantineColorScheme();
@@ -20,15 +20,14 @@ export default function Shell({children} : {children: React.ReactNode}){
     return (
         <AppShell
             header={{ height: 60 }}
-            navbar={{ width: 300, breakpoint: 'sm', collapsed: { mobile: !mobileOpened, desktop: !desktopOpened }}}
-            padding="md" >
+            navbar={{ width: 300, breakpoint: 'sm', collapsed: { mobile: !mobileOpened, desktop: !desktopOpened }}}>
             <AppShell.Header color="black">
                 <Group h="100%" px="md" justify="space-between">
                     <Group>
                         <Burger opened={mobileOpened} onClick={toggleMobile} hiddenFrom="sm" size="sm" />
                         <Burger opened={desktopOpened} onClick={toggleDesktop} visibleFrom="sm" size="sm" />
 
-                        <Group ml='sm'>
+                        <Group ml='sm' component={Link} href={'/'} td={'none'} style={{color : 'unset'}}>
                             <Image src={'/favicon.ico'} alt={'AMP Lab Logo'} width={ImageSize} height={ImageSize} />
                             <Title order={2} m={0}>The AMP Lab at Virginia Tech</Title>
                         </Group>
@@ -57,7 +56,10 @@ export default function Shell({children} : {children: React.ReactNode}){
                     style={{backgroundRepeat : "repeat-y"}}
                     // sizes="100vw" style={{ objectFit: "cover" }}
                 >
-                    {children}
+                    <Container size="90%">
+                        {children}
+                    </Container>
+
                     <Space h="100px" />
                 </BackgroundImage>
             </AppShell.Main >

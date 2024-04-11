@@ -3,6 +3,7 @@ export function generateRepositoryQueryPart(alias : string, owner : string, name
     return `
       ${alias}: repository(owner: "${owner}", name: "${name}") {
         url
+        name
         defaultBranchRef {
           name
           target {

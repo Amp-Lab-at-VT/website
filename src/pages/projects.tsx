@@ -3,58 +3,51 @@ import YAML from "yaml";
 import Project from "@/comps/ProjectBox";
 import type { StaticProps, GraphQLResult, YAMLResult } from "@/utils";
 import { generateRepositoryQueryPart } from "@/utils";
-import { Container, Title, SimpleGrid, Box } from "@mantine/core";
+import { Title, SimpleGrid, Group, Autocomplete } from "@mantine/core";
+import type { ComboboxItem, OptionsFilter } from "@mantine/core";
+
 
 export default function Projects({
     activeProjects,
     inactiveProjects,
-    activeCount,
-    inactiveCount,
 } : StaticProps<typeof getStaticProps>) {
 
     return (
         <>
-            {/* Active Projets */}
-            {activeCount > 0 && (
-                <div>
-                    <SectionTitle title={'Active Projects'} />
-                    <SimpleGrid cols={{ base: 1, sm: 2}}>
-                        {Object.keys(activeProjects).map((key) => {
-                            return (
-                                <Box key={key}>
-                                    <Project
-                                        name={key}
-                                        key={key}
-                                        project={activeProjects[key]}
-                                    />
-                                </Box>
-                            );
-                        })}
-                    </SimpleGrid>
-                </div>
-            )}
-            {inactiveCount > 0 && (
-                <div>
-                    <SectionTitle title={'Inactive Projects (No Commits in 90 Days)'} />
-                    <div className="flex flex-wrap justify-center">
-                        {Object.keys(inactiveProjects).map((key) => {
-                            return (
-                                <div className="w-screen h-fit sm:w-6/12" key={key}>
-                                    <Project
-                                        name={key}
-                                        key={key}
-                                        project={activeProjects[key]}
-                                    />
-                                </div>
-                            );
-                        })}
-                    </div>
-                </div>
-            )}
+            {/* <Group justify="space-between"> */}
+            <Title c={'green'} m={4} p={2}>
+                {'Active Projects'}
+            </Title>
+            <Autocomplete
+                placeholder='Search...'
+                data={Object.values(activeProjects).map(({name}) => name)}
+                filter={optionsFilter}
+            />
+            {/* </Group> */}
+
+            <SimpleGrid cols={{ base: 1, sm: 2, xl : 3}}>
+                {Object.keys(activeProjects).map((key) =>
+                    <Project
+                        name={key}
+                        key={key}
+                        project={activeProjects[key]}
+                    />)}
+            </SimpleGrid>
+
+            <Title c={'green'} m={4} p={2}>
+                {'Inactive Projects (No Commits in 90 Days)'}
+            </Title>
+            <SimpleGrid cols={{ base: 1, sm: 2, xl : 3}}>
+                {Object.keys(inactiveProjects).map((key) =>
+                    <Project
+                        name={key}
+                        key={key}
+                        project={inactiveProjects[key]}
+                    />)}
+            </SimpleGrid>
         </>
     );
 }
-
 
 import { request, gql } from 'graphql-request';
 
@@ -95,8 +88,6 @@ export async function getStaticProps() {
     const inactiveProjects = {} as GraphQLResult;
     const activeProjects = {} as GraphQLResult;
 
-    let activeCount = 0, inactiveCount = 0;
-
     // if a project hasn't been updates in 3 months, move it to inactive
     // this seems broken, but I'm not sure why
     for (const key in sortedData) {
@@ -109,30 +100,18 @@ export async function getStaticProps() {
 
         if (diffDays > 90) {
             inactiveProjects[key] = sortedData[key];
-            // increase the count of inactive projects
-            inactiveCount++;
         } else {
             activeProjects[key] = sortedData[key];
-            // increase the count of active projects
-            activeCount++;
         }
     }
 
-    const props = { activeProjects, inactiveProjects, activeCount, inactiveCount };
-
-    console.log(props)
-
-    return {
-        props,
-    };
+    return { props : { activeProjects, inactiveProjects }};
 }
 
-function SectionTitle({title} : {title: string}) {
-    return (
-        <Container fluid={true} c={'green'} m={4} p={2}>
-            <Title>
-                {title}
-            </Title>
-        </Container>
-    );
-}
+const optionsFilter: OptionsFilter = ({ options, search }) => {
+    const splittedSearch = search.toLowerCase().trim().split(' ');
+    return (options as ComboboxItem[]).filter((option) => {
+        const words = option.label.toLowerCase().trim().split(' ');
+        return splittedSearch.every((searchWord) => words.some((word) => word.includes(searchWord)));
+    });
+};
