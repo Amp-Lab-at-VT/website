@@ -5,10 +5,3 @@
 		flex-direction: column;
 	}
 }
-
-.links {
-	@media (max-width: $mantine-breakpoint-sm) {
-		margin-top: var(--mantine-spacing-lg);
-		margin-bottom: var(--mantine-spacing-sm);
-	}
-}

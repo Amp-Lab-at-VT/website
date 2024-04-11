@@ -3,7 +3,7 @@ import { Button, useComputedColorScheme, useMantineColorScheme } from '@mantine/
 
 export function Themer() {
     const { setColorScheme } = useMantineColorScheme();
-    const computedColorScheme = useComputedColorScheme('light', { getInitialValueInEffect: true });
+    const computedColorScheme = useComputedColorScheme('dark');
 
     return (
         <Button

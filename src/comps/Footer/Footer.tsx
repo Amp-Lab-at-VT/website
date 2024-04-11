@@ -26,12 +26,10 @@ export default function Footer(): JSX.Element {
 
     return (
         <Flex justify={'space-between'} align={'center'} className={classes.inner}>
-
-            <>LOGO HERE</>
-
             <Text> We are a lab committed to getting students active in design </Text>
 
-            <Group className={classes.links}>{items}</Group>
+
+            <Group>{items}</Group>
 
             <Group gap="xs" justify="flex-end" wrap="nowrap">
                 <Text c='red'>1185 Perry St, Blacksburg, VA 24060</Text>

@@ -1,9 +1,12 @@
 import Footer from "@/comps/Footer/Footer";
-import { AppShell, Burger, Group, Stack, BackgroundImage, useMantineColorScheme } from '@mantine/core';
+import { AppShell, Burger, Group, Stack, BackgroundImage, useMantineColorScheme, Space, Title } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import Link from "next/link";
 import { Themer } from "@/comps/Themer";
+import Image from "next/image";
 
+
+const ImageSize = 30;
 
 export default function Shell({children} : {children: React.ReactNode}){
     const [mobileOpened, { toggle: toggleMobile, close: closeMobile }] = useDisclosure();
@@ -20,9 +23,19 @@ export default function Shell({children} : {children: React.ReactNode}){
             navbar={{ width: 300, breakpoint: 'sm', collapsed: { mobile: !mobileOpened, desktop: !desktopOpened }}}
             padding="md" >
             <AppShell.Header color="black">
-                <Group h="100%" px="md">
-                    <Burger opened={mobileOpened} onClick={toggleMobile} hiddenFrom="sm" size="sm" />
-                    <Burger opened={desktopOpened} onClick={toggleDesktop} visibleFrom="sm" size="sm" />
+                <Group h="100%" px="md" justify="space-between">
+                    <Group>
+                        <Burger opened={mobileOpened} onClick={toggleMobile} hiddenFrom="sm" size="sm" />
+                        <Burger opened={desktopOpened} onClick={toggleDesktop} visibleFrom="sm" size="sm" />
+
+                        <Group ml='sm'>
+                            <Image src={'/favicon.ico'} alt={'AMP Lab Logo'} width={ImageSize} height={ImageSize} />
+                            <Title order={2} m={0}>The AMP Lab at Virginia Tech</Title>
+                        </Group>
+
+                    </Group>
+
+
                     <Themer />
                 </Group>
             </AppShell.Header>
@@ -36,7 +49,7 @@ export default function Shell({children} : {children: React.ReactNode}){
                     {/* <Link href="/useful_links">Useless Links</Link> */}
                 </Stack>
             </AppShell.Navbar>
-            <AppShell.Main pl={0} pr={0}>
+            <AppShell.Main pl={0} pr={0} >
                 <BackgroundImage
                     src={colorScheme === 'light' ? '/cover.jpeg' : '/cover_dark.jpg'}
                     w={'99vw'}
@@ -45,9 +58,10 @@ export default function Shell({children} : {children: React.ReactNode}){
                     // sizes="100vw" style={{ objectFit: "cover" }}
                 >
                     {children}
+                    <Space h="100px" />
                 </BackgroundImage>
-            </AppShell.Main>
-            <AppShell.Footer>
+            </AppShell.Main >
+            <AppShell.Footer >
                 <Footer />
             </AppShell.Footer>
         </AppShell>

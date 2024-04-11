@@ -4,20 +4,21 @@ import { Anchor, Card, Center, Text } from "@mantine/core";
 
 const ImageSize = 200;
 
-export default function LeadershipBox({src, name, title, email} : LeadershipBoxProps) {
-    if (!src)
-        return null;
-
+export default function LeadershipBox({src, name, title, email, role } : LeadershipBoxProps) {
     return (
-        <Card shadow="sm" padding="xl" m={'5px'} >
+        <Card shadow="sm" padding="xl" m={'5px'}>
             <Card.Section>
-                <Center pt={'sm'}>
+                <Center p={'sm'}>
                     <Image src={src} alt={name + "Image"} width={ImageSize} height={ImageSize} />
                 </Center>
             </Card.Section>
 
             <Text fw={500} size="lg" mt="md">
                 {title}
+            </Text>
+
+            <Text mt="xs" c="dimmed" size="sm">
+                {role}
             </Text>
 
             <Anchor mt="xs" c="dimmed" size="sm" href={"mailto:" + email}>
@@ -28,8 +29,9 @@ export default function LeadershipBox({src, name, title, email} : LeadershipBoxP
 }
 
 type LeadershipBoxProps = {
-    src: string,
-    name: string,
-    title: string,
-    email: string
+    src   : string;
+    name  : string;
+    title : string;
+    email : string;
+    role ?: string;
 }

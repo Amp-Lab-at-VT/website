@@ -1,5 +1,5 @@
 // Create an iframe for a booking calendar
-import { Container, Stack, Alert } from "@mui/material";
+import { Container, Stack, Alert } from "@mantine/core";
 
 const src =
   "https://outlook.office365.com/owa/calendar/SolderingTrainings@VirginiaTech.onmicrosoft.com/bookings/";
@@ -10,8 +10,8 @@ export default function Booking() {
 
     return (
         <Container>
-            <Stack justifyContent="center">
-                <Alert severity="warning">
+            <Stack justify="center">
+                <Alert>
                     You must be logged into your Microsoft account to access. If the
                     application doesn't load, please log into your Microsoft account
                     separately and return to this page
