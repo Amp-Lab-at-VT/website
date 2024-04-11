@@ -6,6 +6,10 @@ Smart Water Bottle:
   url : "https://github.com/KGouttumukkala/SmartWaterBottle"
   branch: "main"
   mentor_last_name: "Forsyth" 
+DIY Kick Drum:
+  url : "https://github.com/epritchard13/kick_drum"
+  branch: "main"
+  mentor_last_name: "Hood"
 FPV Car:
   url : "https://github.com/Amp-Lab-at-VT/FPV-Car"
   branch: "main"
@@ -78,6 +82,14 @@ Temperature Controlled Fan:
   url : "https://github.com/tylermwells/Temperature_Controlled_Fan"
   branch: "main"
   mentor_last_name: "Gibbons"
+Electronic Drum Set:
+  url : "https://github.com/Amp-Lab-at-VT/drums"
+  branch: "main"
+  mentor_last_name: "Pritchard"
+Airbus A320 Simulator Cockpit:
+  url : "https://github.com/Amp-Lab-at-VT/airbus-cockpit"
+  branch: "main"
+  mentor_last_name: "Pritchard"
 # Sample:
 #   url : "https://github.com/Amp-Lab-at-VT/SampleProject"
 #   branch: "master"

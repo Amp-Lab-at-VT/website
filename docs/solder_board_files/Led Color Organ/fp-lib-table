@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name "ColorOrgan")(type "KiCad")(uri "${KIPRJMOD}/ColorOrgan.pretty")(options "")(descr ""))
+  (lib (name "STX-3000")(type "Legacy")(uri "${KIPRJMOD}/LIB_STX-3000/STX-3000.mod")(options "")(descr ""))
+)

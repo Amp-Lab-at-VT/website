@@ -9,6 +9,9 @@ import Shell from './Shell';
 const theme = createTheme({
     /** Put your mantine theme override here */
 });
+const theme = createTheme({
+    /** Put your mantine theme override here */
+});
 
 export default function App({ Component, pageProps }: AppProps) {
     return (
