@@ -5,10 +5,6 @@ import { MantineProvider, createTheme } from '@mantine/core';
 import type { AppProps } from "next/app";
 import Shell from './Shell';
 
-
-const theme = createTheme({
-    /** Put your mantine theme override here */
-});
 const theme = createTheme({
     /** Put your mantine theme override here */
 });
