@@ -26,10 +26,10 @@ export function Shell({children} : {children: React.ReactNode}){
                     <Group>
                         <Burger opened={mobileOpened} onClick={toggleMobile} hiddenFrom="sm" size="sm" />
                         <Burger opened={desktopOpened} onClick={toggleDesktop} visibleFrom="sm" size="sm" />
-
+                        {/** @ts-expect-error mantine has weird issue. ignore */}
                         <Group ml='sm' component={Link} href={'/'} td={'none'} style={{color : 'unset'}}>
                             <Image src={'/favicon.ico'} alt={'AMP Lab Logo'} width={ImageSize} height={ImageSize} />
-                            <Title order={2} m={0}>The AMP Lab at Virginia Tech</Title>
+                            <Title order={2} m={0}>The AMP Lab</Title>
                         </Group>
 
                     </Group>
@@ -56,7 +56,7 @@ export function Shell({children} : {children: React.ReactNode}){
                     style={{backgroundRepeat : "repeat-y"}}
                     // sizes="100vw" style={{ objectFit: "cover" }}
                 >
-                    <Container size="90%">
+                    <Container size="90%" h={'80%'}>
                         {children}
                     </Container>
 

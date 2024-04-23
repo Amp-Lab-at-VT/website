@@ -2,9 +2,7 @@ import { Card, Button, Text, Modal, Center } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { useRouter } from "next/router";
 
-import React from "react";
-
-const Box : React.FC<BoxProps> = ({ icon, title, buttonTitle, color, href, modalContent }) => {
+function IconAndName({ icon, title, buttonTitle, color, href, modalContent } : BoxProps) {
     const router = useRouter();
     const [opened, { open, close }] = useDisclosure(false);
 
@@ -29,8 +27,9 @@ const Box : React.FC<BoxProps> = ({ icon, title, buttonTitle, color, href, modal
             </Card>
         </>
     );
-};
-export default Box;
+}
+
+export default IconAndName;
 
 type BoxProps = {
     icon: JSX.Element;

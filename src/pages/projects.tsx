@@ -3,7 +3,7 @@ import YAML from "yaml";
 import Project from "@/comps/ProjectBox";
 import type { StaticProps, GraphQLResult, YAMLResult } from "@/utils";
 import { generateRepositoryQueryPart } from "@/utils";
-import { Title, SimpleGrid, Group, Autocomplete } from "@mantine/core";
+import { Title, SimpleGrid, Autocomplete } from "@mantine/core";
 import type { ComboboxItem, OptionsFilter } from "@mantine/core";
 
 
@@ -28,7 +28,6 @@ export default function Projects({
             <SimpleGrid cols={{ base: 1, sm: 2, xl : 3}}>
                 {Object.keys(activeProjects).map((key) =>
                     <Project
-                        name={key}
                         key={key}
                         project={activeProjects[key]}
                     />)}
@@ -40,7 +39,6 @@ export default function Projects({
             <SimpleGrid cols={{ base: 1, sm: 2, xl : 3}}>
                 {Object.keys(inactiveProjects).map((key) =>
                     <Project
-                        name={key}
                         key={key}
                         project={inactiveProjects[key]}
                     />)}
@@ -94,9 +92,6 @@ export async function getStaticProps() {
         const date = new Date(sortedData[key]['defaultBranchRef']['target']['history']['nodes']["committedDate"]).getTime();
         const diffTime = Math.abs(new Date().getTime() - date);
         const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-
-        // @ts-expect-error weird error with the tree entries. had to remove it for now. uncomment when fixed
-        sortedData[key].defaultBranchRef.target.tree.entries = null;
 
         if (diffDays > 90) {
             inactiveProjects[key] = sortedData[key];
