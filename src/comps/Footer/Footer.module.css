@@ -1,0 +1,7 @@
+.inner {
+	padding: var(--mantine-spacing-md) var(--mantine-spacing-md);
+
+	@media (max-width: $mantine-breakpoint-sm) {
+		flex-direction: column;
+	}
+}
