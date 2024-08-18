@@ -94,6 +94,10 @@ Breadboard Graphics Card:
     url: "https://github.com/ethanjamesauto/gpu"
     branch: "main"
     mentor_last_name: "James"
+Modular 8-Bit Computer:
+  url: "https://github.com/ethanjamesauto/modular_8bit_computer"
+  branch: "main"
+  mentor_last_name: "James"
 # Sample:
 #   url : "https://github.com/Amp-Lab-at-VT/SampleProject"
 #   branch: "master"
