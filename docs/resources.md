@@ -17,7 +17,7 @@
 
 [Advanced Solder Training Checksheet](/soldering/advanced)
 
-## For MDE Students: 
+## Get Access to The Lab:
 
-[MDE Documents](/mde/docs)
+[Getting Swite Access](docs/swipe-access)
 
