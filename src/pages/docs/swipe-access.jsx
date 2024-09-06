@@ -37,7 +37,7 @@ export default function Page() {
           <SingleDoc
             title="Lab Training Guide"
             description="This contains the Lab Training Guide"
-            link={`https://github.com/Amp-Lab-at-VT/website/raw/${branchName}/docs/mde_docs/Lab%20Training%20Guide%20Rev%202.docx`}
+            link={`https://github.com/Amp-Lab-at-VT/website/raw/${branchName}/docs/mde_docs/Lab%20Training%20Guide%20Rev%20.docx`}
             last_updated="1/16/2024"
           />
           <SingleDoc
