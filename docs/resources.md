@@ -20,4 +20,3 @@
 ## Get Access to The Lab:
 
 [Getting Swipe Access](docs/swipe-access)
-
