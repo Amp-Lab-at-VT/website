@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Grid, Typography, Divider } from "@mui/material";
 import LeadershipBox from "@/comps/LeadershipBox/LeadershipBox.jsx";
 import Baumann from "../../public/Headshots/Baumann.jpg";
-import Gibbons from "../../public/Headshots/Gibbons.jpg";
+import Wells from "../../public/Headshots/Wells.jpg";
 import Forsyth from "../../public/Headshots/Forsyth2.jpg";
 import Meadows from "../../public/Headshots/Meadows.jpg";
 import Pritchard from "../../public/Headshots/Pritchard.jpeg";
@@ -18,10 +18,10 @@ export default function Leadership() {
       <Divider />
       <Grid container spacing={3} sx={{ marginTop: 2 }}>
         <LeadershipBox
-          name="Richard Gibbons"
-          src={Gibbons}
-          title="Team Lead"
-          email="gricha1@vt.edu"
+          name="Tyler Wells 2"
+          src={Wells}
+          title="Lab Lead"
+          email="tylermwells@vt.edu"
         />
         <LeadershipBox
           name="Henry Forsyth"
