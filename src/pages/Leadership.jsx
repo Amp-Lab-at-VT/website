@@ -18,7 +18,7 @@ export default function Leadership() {
       <Divider />
       <Grid container spacing={3} sx={{ marginTop: 2 }}>
         <LeadershipBox
-          name="Tyler Wells 2"
+          name="Tyler Wells"
           src={Wells}
           title="Lab Lead"
           email="tylermwells@vt.edu"
