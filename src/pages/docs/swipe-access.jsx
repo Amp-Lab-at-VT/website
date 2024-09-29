@@ -35,6 +35,12 @@ export default function Page() {
         </Alert>
         <Stack>
           <SingleDoc
+            title="Welcome to the AMP LAB. You are probably here to request access to the AMP LAB. "
+            description="If so, EMAIL toby88@vt.edu with your name and graduation year. Read the below documents and email him proof of completing safety requirements."
+            link={`https://github.com/Amp-Lab-at-VT/website/raw/${branchName}/docs/mde_docs/Lab%20Training%20Guide%20Rev%201.docx`}
+            last_updated="1/16/2024"
+          />
+          <SingleDoc
             title="Lab Training Guide"
             description="This contains the Lab Training Guide"
             link={`https://github.com/Amp-Lab-at-VT/website/raw/${branchName}/docs/mde_docs/Lab%20Training%20Guide%20Rev%202.docx`}
