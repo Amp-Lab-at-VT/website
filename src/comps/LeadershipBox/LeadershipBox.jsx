@@ -1,38 +1,29 @@
-import React, { Component } from "react";
+import React from "react";
+import { Box, Typography, Avatar, Grid } from "@mui/material";
 
-import styles from "@/comps/LeadershipBox/leadership.module.css";
-
-import Image from "next/image";
-
-class LeadershipBox extends Component {
-  /*
-    Expects an image prop, which is a string
-    This will then generate a div with the image
-    If the string is blank, the uid will be used instead
-
-    Props needed: name, title, email
-    */
-
-  // Check if any of the expected props are undefined
-
-  render() {
-    // Simple div with a title and value
-    if (this.props.src !== undefined) {
-      return (
-        <div class={styles.leadershipBox}>
-          <div class={styles.alignImage}>
-            <Image src={this.props.src} alt={this.props.name + "Image"}></Image>
-          </div>
-          <p>
-            <em>{this.props.title}</em>
-          </p>
-          <p>
-            <a href={"mailto:" + this.props.email}>{this.props.email}</a>
-          </p>
-        </div>
-      );
-    }
-  }
-}
+const LeadershipBox = ({ name, title, email, src }) => {
+  return (
+    <Grid item xs={12} sm={6} md={4}>
+      <Box sx={{ textAlign: "center" }}>
+        <Avatar
+          src={src.src}
+          alt={`Headshot of ${name}`}
+          sx={{ width: 120, height: 120, margin: "0 auto" }}
+        />
+        <Typography variant="h6" sx={{ marginTop: 2 }}>
+          {name}
+        </Typography>
+        <Typography variant="subtitle1" color="textSecondary">
+          {title}
+        </Typography>
+        <Typography variant="body2">
+          <a href={`mailto:${email}`} aria-label={`Send an email to ${name}`}>
+            {email}
+          </a>
+        </Typography>
+      </Box>
+    </Grid>
+  );
+};
 
 export default LeadershipBox;
