@@ -15,6 +15,8 @@ import { RxDiscordLogo } from "react-icons/rx";
 import { BiPurchaseTagAlt } from "react-icons/bi";
 import { GiSwipeCard } from "react-icons/gi";
 
+import {Alert} from "@mui/material";
+
 export default function GettingStarted({ new_members, returning_members }) {
   return (
     <div className="min-h-screen">
@@ -40,6 +42,11 @@ export default function GettingStarted({ new_members, returning_members }) {
           buttonTitle="Click here to begin"
           color="#f9f9f9"
         >
+          <Alert severity="info">
+            If you need help with any of this process, please don't hesitate to
+            come into the lab and ask for help! Or reach out to leadership through
+            the Discord!
+          </Alert>
           <ReactMarkdown class="App-standardPage" rehypePlugins={[rehypeRaw]}>
             {new_members}
           </ReactMarkdown>
