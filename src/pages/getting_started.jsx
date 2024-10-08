@@ -89,7 +89,7 @@ export default function GettingStarted({ new_members, returning_members }) {
           </p>
         </IconAndName>
         <IconAndName
-          href="/docs/swipe-access"
+          href="/swipe-access"
           icon={<GiSwipeCard> </GiSwipeCard>}
           title="Get Lab Swipe Access"
           buttonTitle="Click here to begin"

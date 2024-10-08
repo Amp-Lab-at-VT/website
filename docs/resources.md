@@ -19,5 +19,5 @@
 
 ## Get Access to The Lab:
 
-[Getting Swite Access](docs/swipe-access)
+[Getting Swipe Access](/swipe-access)
 

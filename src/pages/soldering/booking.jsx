@@ -17,10 +17,7 @@ export default function Booking() {
           You must be logged into your Microsoft account to access. If the
           application doesn't load, please log into your Microsoft account
           separately and return to this page
-
-          <Button href={src}>
-            Click here if the application doesn't load
-          </Button>
+          <Button href={src}>Click here if the application doesn't load</Button>
         </Alert>
         <iframe style={{ height: "90vh", border: "none" }} src={src}></iframe>
       </Stack>
