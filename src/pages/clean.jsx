@@ -4,10 +4,11 @@ import Link from "next/link";
 import { promises as fs } from "fs";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
+import Layout from "@/comps/layout.jsx";
 
 import { Typography } from "@mui/material";
 
-export default function Clean({ fileContents }) {
+function Clean({ fileContents }) {
   return (
     <div className="App">
       <header className="App-standardPage">
@@ -35,3 +36,5 @@ export async function getStaticProps() {
   );
   return { props: { fileContents } };
 }
+
+export default Layout(Clean);

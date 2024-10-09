@@ -1,6 +1,4 @@
 import "@/styles/globals.css";
-import Navigation from "@/comps/Nav/Nav.jsx";
-import Footer from "@/comps/Footer/Footer.jsx";
 
 // import image
 import Image from "next/image";
@@ -11,7 +9,7 @@ import { Box } from "@mui/material";
 
 import background from "../images/cover.jpeg";
 
-export default function App({ Component, pageProps }: AppProps) {
+function App({ Component, pageProps }: AppProps) {
   return (
     <Box sx={{ position: "relative", overflow: "hidden", minHeight: "100vh" }}>
       <Box
@@ -33,10 +31,10 @@ export default function App({ Component, pageProps }: AppProps) {
         />
       </Box>
       <Box sx={{ position: "relative", zIndex: 1 }}>
-        <Navigation />
         <Component {...pageProps} />
-        <Footer />
       </Box>
     </Box>
   );
 }
+
+export default App;

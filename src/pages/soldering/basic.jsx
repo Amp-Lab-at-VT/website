@@ -3,8 +3,9 @@ import React from "react";
 import ReactMarkdown from "react-markdown";
 import { promises as fs } from "fs";
 import rehypeRaw from "rehype-raw";
+import Layout from "../../comps/layout.jsx";
 
-export default function BeginnersGuide({ fileContents }) {
+function BeginnersGuide({ fileContents }) {
   return (
     <div className="m-5">
       <ReactMarkdown rehypePlugins={[rehypeRaw]}>{fileContents}</ReactMarkdown>{" "}
@@ -21,3 +22,5 @@ export async function getStaticProps() {
   );
   return { props: { fileContents } };
 }
+
+export default Layout(BeginnersGuide);

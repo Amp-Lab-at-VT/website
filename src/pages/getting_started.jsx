@@ -3,6 +3,7 @@ import React from "react";
 import { promises as fs } from "fs";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
+import Layout from "@/comps/layout.jsx";
 
 import { FaReact } from "react-icons/fa";
 
@@ -15,7 +16,7 @@ import { RxDiscordLogo } from "react-icons/rx";
 import { BiPurchaseTagAlt } from "react-icons/bi";
 import { GiSwipeCard } from "react-icons/gi";
 
-export default function GettingStarted({ new_members, returning_members }) {
+function GettingStarted({ new_members, returning_members }) {
   return (
     <div className="min-h-screen">
       <div>
@@ -115,3 +116,5 @@ export async function getStaticProps() {
 
   return { props: { new_members, returning_members } };
 }
+
+export default Layout(GettingStarted);

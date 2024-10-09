@@ -40,16 +40,12 @@ const Footer = () => {
           <List sx={{ padding: 0 }}>
             <ListItem sx={{ padding: 0, marginBottom: "5px" }}>
               <Link href="/getting_started" style={{ textDecoration: "none" }}>
-                <Typography variant="body2">
-                  Getting Started
-                </Typography>
+                <Typography variant="body2">Getting Started</Typography>
               </Link>
             </ListItem>
             <ListItem sx={{ padding: 0, marginBottom: "5px" }}>
               <Link href="/Leadership" style={{ textDecoration: "none" }}>
-                <Typography variant="body2">
-                  Leadership
-                </Typography>
+                <Typography variant="body2">Leadership</Typography>
               </Link>
             </ListItem>
           </List>

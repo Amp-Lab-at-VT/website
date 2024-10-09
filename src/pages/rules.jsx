@@ -2,8 +2,9 @@
 import { promises as fs } from "fs";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
+import Layout from "@/comps/layout.jsx";
 
-export default function Rules({ fileContents }) {
+function Rules({ fileContents }) {
   return (
     <div>
       <div class="App-pageHelper">
@@ -23,3 +24,5 @@ export async function getStaticProps() {
   );
   return { props: { fileContents } };
 }
+
+export default Layout(Rules);
