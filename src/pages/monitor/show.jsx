@@ -80,7 +80,6 @@ const Page = ({ images }) => {
         left: 0,
         height: "100vh",
         width: "100vw",
-        zIndex: 10000000000, // Very high zIndex to stay above everything
         pointerEvents: "none", // Prevent interaction with the drifting layer
       }}
     >
