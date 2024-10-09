@@ -10,8 +10,9 @@ import {
   Button,
   Alert,
 } from "@mui/material";
+import Layout from "@/comps/layout.jsx";
 
-export default function Page() {
+function Page() {
   const branchName = "master";
 
   return (
@@ -97,3 +98,5 @@ function SingleDoc(props) {
     </Fade>
   );
 }
+
+export default Layout(Page);

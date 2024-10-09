@@ -3,8 +3,9 @@ import { promises as fs } from "fs";
 import YAML from "yaml";
 import Box from "@/comps/Box/Box.jsx";
 import SearchBar from "@/comps/SearchBar/searchbar.jsx";
+import Layout from "@/comps/layout.jsx";
 
-export default function Projects({
+function Projects({
   activeProjects,
   inactiveProjects,
   activeCount,
@@ -258,3 +259,5 @@ export async function getStaticProps() {
     props: { activeProjects, inactiveProjects, activeCount, inactiveCount },
   };
 }
+
+export default Layout(Projects);

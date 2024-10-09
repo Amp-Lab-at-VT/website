@@ -1,6 +1,7 @@
 import Link from "next/link";
+import Layout from "@/comps/layout.jsx";
 
-export default function Print({ fileContents }) {
+function Print({ fileContents }) {
   return (
     <div>
       <header class="App-standardPage">
@@ -24,3 +25,5 @@ export default function Print({ fileContents }) {
     </div>
   );
 }
+
+export default Layout(Print);

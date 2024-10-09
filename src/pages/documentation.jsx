@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import React from "react";
 import { useRouter } from "next/router";
+import Layout from "@/comps/layout.jsx";
 
 import ArticleIcon from "@mui/icons-material/Article";
 import {
@@ -46,7 +47,7 @@ function IconAndName({ icon, title, buttonTitle, color, onClick }) {
   );
 }
 
-export default function Documentation({ files }) {
+function Documentation({ files }) {
   const router = useRouter();
 
   return (
@@ -102,3 +103,5 @@ export async function getStaticProps() {
 
   return { props: { files } };
 }
+
+export default Layout(Documentation);

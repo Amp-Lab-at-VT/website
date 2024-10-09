@@ -10,8 +10,9 @@ import Pritchard from "../../public/Headshots/Pritchard.jpeg";
 import Blank from "../../public/Headshots/blank.jpeg";
 import Ethan from "../../public/Headshots/Ethan.jpg";
 import PB from "../../public/Headshots/pb.jpeg";
+import Layout from "@/comps/layout.jsx";
 
-export default function Leadership() {
+function Leadership() {
   return (
     <div>
       <div class="App-pageHelper">
@@ -69,3 +70,5 @@ export default function Leadership() {
     </div>
   );
 }
+
+export default Layout(Leadership);
