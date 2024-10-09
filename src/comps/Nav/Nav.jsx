@@ -1,15 +1,15 @@
 import React from "react";
-import styles from "@/comps/Nav/nav.module.css";
+import { Box, AppBar, Toolbar } from "@mui/material";
 import Hamburger from "@/comps/Hamburger/Hamburger.jsx";
 
 export default function Navigation() {
   return (
-    <div sx={{ zIndex: 20000 }} className={styles.navbar}>
-      <div className={styles.parentNav}>
-        <div style={{ display: "flex", alignItems: "center" }}>
+    <AppBar position="static" sx={{ backgroundColor: 'black', zIndex: 0 }}>
+      <Toolbar>
+        <Box display="flex" alignItems="center">
           <Hamburger />
-        </div>
-      </div>
-    </div>
+        </Box>
+      </Toolbar>
+    </AppBar>
   );
 }

@@ -199,3 +199,27 @@ a:hover {
   color: rgb(185, 18, 18);
   text-decoration: underline;
 }
+
+
+/* ------- Things for the monitor -------- */
+.drifting-image {
+  position: absolute;
+  right: -120vw;
+  animation: drift-left linear infinite;
+}
+
+@keyframes drift-left {
+  0% {
+    right: -140vw; /* Start just outside the right side of the viewport */
+  }
+  100% {
+    right: 100vw; /* Move across the entire viewport */
+  }
+}
+
+.overrideMFUI {
+  position: absolute;
+  top: 0;
+  display: block;
+  z-index: 1150;
+}
