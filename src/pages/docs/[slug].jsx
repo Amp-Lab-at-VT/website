@@ -4,9 +4,10 @@ import React from "react";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import { Paper, Typography, Container } from "@mui/material";
+import Layout from "@/comps/layout.jsx";
 
 // Page to render markdown content
-export default function DocPage({ content, title }) {
+function DocPage({ content, title }) {
   return (
     <Container className="min-h-screen" sx={{ pt: "10px" }}>
       <Typography variant="h5" gutterBottom>
@@ -54,3 +55,5 @@ export async function getStaticProps({ params }) {
     },
   };
 }
+
+export default Layout(DocPage);

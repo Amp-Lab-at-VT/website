@@ -2,11 +2,12 @@
 
 import React from "react";
 import { Container, Stack, Alert, Button } from "@mui/material";
+import Layout from "../../comps/layout.jsx";
 
 const src =
   "https://outlook.office365.com/owa/calendar/SolderingTrainings@VirginiaTech.onmicrosoft.com/bookings/";
 
-export default function Booking() {
+function Booking() {
   // todo: attempt to connect to microsoft account
   // if not connected, display alert
 
@@ -24,3 +25,5 @@ export default function Booking() {
     </Container>
   );
 }
+
+export default Layout(Booking);

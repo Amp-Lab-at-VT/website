@@ -17,6 +17,7 @@ import {
   TableRow,
   Button,
 } from "@mui/material";
+import Layout from "@/comps/layout.jsx";
 
 import Carousel from "react-material-ui-carousel";
 import DiamondIcon from "@mui/icons-material/Diamond";
@@ -41,7 +42,7 @@ const rows = [
   createData("Lab Upkeep", "High", "$500 per semester"),
 ];
 
-export default function Sponsorship() {
+function Sponsorship() {
   return (
     <Box class="App-standardPage">
       <Container maxWidth="lg" sx={{ minHeight: "90vh", pt: "20px" }}>
@@ -218,3 +219,5 @@ function Item(props) {
     </Paper>
   );
 }
+
+export default Layout(Sponsorship);

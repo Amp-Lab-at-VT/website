@@ -1,8 +1,9 @@
 import styles from "@/styles/error.module.css";
+import Layout from "@/comps/layout.jsx";
 
 import Link from "next/link";
 
-export default function Error() {
+function Error() {
   return (
     <div class="App">
       <header class="App-header">
@@ -16,3 +17,5 @@ export default function Error() {
     </div>
   );
 }
+
+export default Layout(Error);
