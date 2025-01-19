@@ -1,3 +1,4 @@
+"use client";
 import Footer from "@/comps/Footer/Footer";
 import { AppShell, Burger, Group, Stack, BackgroundImage, useMantineColorScheme, Space, Title, Container } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';

@@ -1,17 +1,17 @@
 import React from "react";
 import Image from "next/image";
-import { Anchor, Card, Center, Text } from "@mantine/core";
+import { Anchor, Card, Center, Text, CardSection } from "@mantine/core";
 
 const ImageSize = 200;
 
 export default function LeadershipBox({src, name, title, email, role } : LeadershipBoxProps) {
     return (
         <Card shadow="sm" padding="xl" m={'5px'}>
-            <Card.Section>
+            <CardSection>
                 <Center p={'sm'}>
                     <Image src={src} alt={name + "Image"} width={ImageSize} height={ImageSize} />
                 </Center>
-            </Card.Section>
+            </CardSection>
 
             <Text fw={500} size="lg" mt="md">
                 {title}

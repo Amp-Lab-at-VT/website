@@ -1,11 +1,12 @@
 import {Anchor, Flex, Group, Text} from "@mantine/core";
 import classes from "./Footer.module.css";
 import Link from "next/link";
+import type { JSX } from "react";
 
 
 const links = [
     { link: '/getting_started', label: 'Getting Started' },
-    { link: '/Leadership', label: 'Leadership' },
+    { link: '/leadership', label: 'Leadership' },
 ] as const;
 
 export default function Footer(): JSX.Element {
@@ -25,7 +26,8 @@ export default function Footer(): JSX.Element {
     ));
 
     return (
-        <Flex justify={'space-between'} align={'center'} className={classes.inner}>
+        // @ts-expect-error unsure
+        <Flex justify={'space-between'} align={'center'} className={classes["inner"]}>
             <Text> We are a lab committed to getting students active in design </Text>
 
 

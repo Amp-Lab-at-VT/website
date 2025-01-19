@@ -1,0 +1,17 @@
+/* import mantine */
+@import "@mantine/core/styles.layer.css";
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+h1 {
+  font-size: 2.5em;
+  font-weight: 300;
+  text-align: left;
+  margin-bottom: 5px;
+  margin-top: 15px;
+  padding: 0 0px;
+}
