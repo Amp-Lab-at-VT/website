@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+pre code {
+  display: flex;
+  background-color: #d9baba;
+  padding: 20px;
+}
+
+code {
+  display: block;
+  font-size: 1em;
+  font-weight: 300;
+  color: rgb(0, 0, 0);
+  text-align: left;
+  margin-bottom: 15px;
+  margin-top: 5px;
+  padding: 0 0px;
+  white-space: pre-wrap;
+  padding: 10px;
+  background-color: #d2cfcf;
+  border-radius: 0.5rem;
+}
