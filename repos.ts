@@ -1,4 +1,4 @@
-{
+export default {
   "Pacheck's BLDC Driver": {
     "github": "Amp-Lab-at-VT/Pacheck_BLDC_Driver",
     "branch": "main",

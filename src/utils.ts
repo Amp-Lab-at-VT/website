@@ -24,7 +24,7 @@ export function generateRepositoryQueryPart(
 	  `;
 }
 
-import projectslist from "@/../repos.json" with { type: "json" };
+import projectslist from "../repos";
 import { Graffle } from "graffle";
 const GITHUB_TOKEN = process.env["GITHUB_TOKEN"];
 export async function generateAPIRequest() {
