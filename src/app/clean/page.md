@@ -4,8 +4,6 @@
 
 "Everything has a place. If you don't know, just ask. If no leadership is around, reach out on Discord or refer to this page for general reference"
 
-"
-
 ## For Personal Spaces
 
 - "We do not have official personal spaces in the lab"

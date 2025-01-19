@@ -25,6 +25,7 @@
     "@types/node": "^22",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "framer-motion": "^11.18.1",
     "graffle": "^8.0.0-next.157",
     "graphql": "^16.10.0",
     "next": "^15.1.5",
