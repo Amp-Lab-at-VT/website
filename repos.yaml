@@ -106,6 +106,10 @@ Blues Jam SRV Guitar Pedal:
   url: "https://github.com/Amp-Lab-at-VT/guitar-pedal"
   branch: "main"
   mentor_last_name: "James"
+GameBoy:
+   url : "https://github.com/zlacava/gameboy"
+   branch: "main"
+   mentor_last_name: "Wells"
 Home-Built STM:
   url: "https://github.com/philipturner/home-built-stm"
   branch: "main"
