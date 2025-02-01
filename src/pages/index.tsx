@@ -2,8 +2,9 @@
 import { useState } from "react";
 import Typewriter from "typewriter-effect";
 import Link from "next/link";
+import Layout from "@/comps/layout.jsx";
 
-export default function Home() {
+function Home() {
   const [showButton, setShowButton] = useState(false);
 
   return (
@@ -46,3 +47,5 @@ export default function Home() {
     </div>
   );
 }
+
+export default Layout(Home);

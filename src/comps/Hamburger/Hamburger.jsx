@@ -16,6 +16,7 @@ export default function Hamburger() {
         <Link href="/projects">Projects</Link>
         <Link href="/about">About</Link>
         <Link href="/resources">Resources</Link>
+        <Link href="/documentation">Documentation</Link>
         <Link href="https://github.com/Amp-Lab-at-VT/website">Github</Link>
         {/* <Link href="/useful_links">Useless Links</Link> */}
       </div>
