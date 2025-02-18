@@ -180,14 +180,14 @@ export const DarkmodeContext = React.createContext(null);
 // const localStorage = new LocalStorage("./settings");
 
 export function DarkmodeWrapper(props) {
-  const [isDark, setIsDarkFinal] = React.useState(true);
+  const [isDark, setIsDarkFinal] = React.useState(false);
 
   // when the component mounts, check if the user has a preference for dark mode
   // if they do, set the dark mode to their preference
 
   useEffect(() => {
     const isDark =
-      getCookie("isDark") !== undefined ? getCookie("isDark") === "true" : true;
+      getCookie("isDark") !== undefined ? getCookie("isDark") === "true" : false;
     setIsDarkFinal(isDark);
   }, []);
 
