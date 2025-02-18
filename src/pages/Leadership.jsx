@@ -8,7 +8,7 @@ import Meadows from "../../public/Headshots/Meadows.jpg";
 import Pritchard from "../../public/Headshots/Pritchard.jpeg";
 import Ethan from "../../public/Headshots/Ethan.jpg";
 import PB from "../../public/Headshots/pb.jpeg";
-import Yassin from "../../public/Headshots/Yassin.jpg";
+import Yassin from "../../public/Headshots/yassin.jpg";
 import Layout from "@/comps/layout.jsx";
 
 function Leadership() {
@@ -20,11 +20,11 @@ function Leadership() {
       <Divider />
       <Grid container spacing={3} sx={{ marginTop: 2 }}>
       <LeadershipBox
-            name="Richard Gibbons"
-            src={Gibbons}
-            title="Richard Gibbons: Team Lead"
-            email="gricha1@vt.edu"
-          ></LeadershipBox>
+          name="Tyler Wells"
+          src={Wells}
+          title="Lab Lead"
+          email="tylermwells@vt.edu"
+        />
           <LeadershipBox
             name="Henry Forsyth"
             src={Forsyth}
