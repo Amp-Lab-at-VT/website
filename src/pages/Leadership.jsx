@@ -10,6 +10,7 @@ import Pritchard from "../../public/Headshots/Pritchard.jpeg";
 import Blank from "../../public/Headshots/blank.jpeg";
 import Ethan from "../../public/Headshots/Ethan.jpg";
 import PB from "../../public/Headshots/pb.jpeg";
+import Yassin from "../../public/Headshots/Yassin.jpg";
 import Layout from "@/comps/layout.jsx";
 
 function Leadership() {
@@ -48,6 +49,12 @@ function Leadership() {
             src={Ethan}
             title="Ethan James: Mentor"
             email="ethanjamesauto@vt.edu"
+          ></LeadershipBox>
+            <LeadershipBox
+            name="Yassin Lahrime"
+            src={Yassin}
+            title="Yassin Lahrime: Mentor"
+            email="yassinl@vt.edu"
           ></LeadershipBox>
         </div>
         <h2>Meet Our Team: Professors</h2>
