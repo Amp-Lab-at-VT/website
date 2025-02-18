@@ -4,9 +4,6 @@ import { promises as fs } from "fs";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import Layout from "@/comps/layout.jsx";
-
-import { FaReact } from "react-icons/fa";
-
 import IconAndName from "@/comps/IconAndName/IconAndName";
 import { GiSolderingIron } from "react-icons/gi";
 import { MdOutlineWavingHand } from "react-icons/md";
