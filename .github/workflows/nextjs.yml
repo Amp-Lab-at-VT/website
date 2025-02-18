@@ -38,7 +38,7 @@ jobs:
       - name: Install PyTest Dependencies
         run: |
           cd CI
-          python -m pip install poetry==1.1.14
+          python -m pip install poetry==2.1.1
           poetry install
       - name: Run Pytest tests
         env:
@@ -46,7 +46,7 @@ jobs:
         run: |
           cd CI
           poetry run python -m unittest
-          
+
   build:
     runs-on: ubuntu-latest
     steps:
