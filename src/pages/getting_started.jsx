@@ -4,9 +4,6 @@ import { promises as fs } from "fs";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import Layout from "@/comps/layout.jsx";
-
-import { FaReact } from "react-icons/fa";
-
 import IconAndName from "@/comps/IconAndName/IconAndName";
 import { GiSolderingIron } from "react-icons/gi";
 import { MdOutlineWavingHand } from "react-icons/md";
@@ -15,6 +12,7 @@ import { GiReturnArrow } from "react-icons/gi";
 import { RxDiscordLogo } from "react-icons/rx";
 import { BiPurchaseTagAlt } from "react-icons/bi";
 import { GiSwipeCard } from "react-icons/gi";
+import Alert from "@mui/material/Alert";
 
 function GettingStarted({ new_members, returning_members }) {
   return (
@@ -41,6 +39,11 @@ function GettingStarted({ new_members, returning_members }) {
           buttonTitle="Click here to begin"
           color="#f9f9f9"
         >
+          <Alert severity="info">
+            If you need help with any of this process, please don't hesitate to
+            come into the lab and ask for help! Or reach out to leadership through
+            the Discord!
+          </Alert>
           <ReactMarkdown class="App-standardPage" rehypePlugins={[rehypeRaw]}>
             {new_members}
           </ReactMarkdown>
