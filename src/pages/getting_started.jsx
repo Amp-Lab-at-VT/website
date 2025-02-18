@@ -12,6 +12,7 @@ import { GiReturnArrow } from "react-icons/gi";
 import { RxDiscordLogo } from "react-icons/rx";
 import { BiPurchaseTagAlt } from "react-icons/bi";
 import { GiSwipeCard } from "react-icons/gi";
+import Alert from "@mui/material/Alert";
 
 function GettingStarted({ new_members, returning_members }) {
   return (
