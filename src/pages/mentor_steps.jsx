@@ -3,8 +3,9 @@ import React from "react";
 import ReactMarkdown from "react-markdown";
 import { promises as fs } from "fs";
 import rehypeRaw from "rehype-raw";
+import Layout from "@/comps/layout.jsx";
 
-export default function MentorSteps({ fileContents }) {
+function MentorSteps({ fileContents }) {
   return (
     <div>
       <header class="App-standardPage">
@@ -26,3 +27,5 @@ export async function getStaticProps() {
   );
   return { props: { fileContents } };
 }
+
+export default Layout(MentorSteps);

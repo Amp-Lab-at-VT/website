@@ -4,8 +4,9 @@ import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 
 import { Alert, Container, Button, Stack, Typography } from "@mui/material";
+import Layout from "@/comps/layout.jsx";
 
-export default function Soldering({ fileContents }) {
+function Soldering({ fileContents }) {
   return (
     <Container>
       <Alert severity="info">
@@ -31,3 +32,5 @@ export async function getStaticProps() {
   );
   return { props: { fileContents } };
 }
+
+export default Layout(Soldering);

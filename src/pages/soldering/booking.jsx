@@ -2,11 +2,12 @@
 
 import React from "react";
 import { Container, Stack, Alert, Button } from "@mui/material";
+import Layout from "../../comps/layout.jsx";
 
 const src =
   "https://outlook.office365.com/owa/calendar/SolderingTrainings@VirginiaTech.onmicrosoft.com/bookings/";
 
-export default function Booking() {
+function Booking() {
   // todo: attempt to connect to microsoft account
   // if not connected, display alert
 
@@ -17,13 +18,12 @@ export default function Booking() {
           You must be logged into your Microsoft account to access. If the
           application doesn't load, please log into your Microsoft account
           separately and return to this page
-
-          <Button href={src}>
-            Click here if the application doesn't load
-          </Button>
+          <Button href={src}>Click here if the application doesn't load</Button>
         </Alert>
         <iframe style={{ height: "90vh", border: "none" }} src={src}></iframe>
       </Stack>
     </Container>
   );
 }
+
+export default Layout(Booking);

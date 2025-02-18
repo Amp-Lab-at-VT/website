@@ -4,23 +4,25 @@ import Link from "next/link";
 import { promises as fs } from "fs";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
+import Layout from "@/comps/layout.jsx";
+import { Box, Button, Container } from "@mui/material";
 
-export default function About({ fileContents }) {
+function About({ fileContents }) {
   return (
-    <div className="App">
-      <header className="App-standardPage">
-        <div className="App-pageHelper">
-          <ReactMarkdown class="App-standardPage" rehypePlugins={[rehypeRaw]}>
-            {fileContents}
-          </ReactMarkdown>
-          <Link className="btn" href="/Leadership">
-            Leadership Team
-          </Link>
-        </div>
-      </header>
-    </div>
+    <Container>
+      <ReactMarkdown rehypePlugins={[rehypeRaw]}>{fileContents}</ReactMarkdown>
+      <Button
+        variant="contained"
+        color="primary"
+        component={Link}
+        href="/Leadership"
+      >
+        Leadership Team
+      </Button>
+    </Container>
   );
 }
+
 export async function getStaticProps() {
   const file = "about.md";
   const fileContents = await fs.readFile(
@@ -29,3 +31,5 @@ export async function getStaticProps() {
   );
   return { props: { fileContents } };
 }
+
+export default Layout(About);

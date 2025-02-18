@@ -38,7 +38,7 @@ jobs:
       - name: Install PyTest Dependencies
         run: |
           cd CI
-          python -m pip install poetry==1.1.14
+          python -m pip install poetry==2.1.1
           poetry install
       - name: Run Pytest tests
         env:
@@ -46,29 +46,35 @@ jobs:
         run: |
           cd CI
           poetry run python -m unittest
-  # Build job
+
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: "18"
+          node-version: "v22.6.0"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
+
       - name: Setup Pages
         uses: actions/configure-pages@v3
         with:
           static_site_generator: next
+
       - name: Install dependencies
         run: npm install
+
       - name: Build with Next.js
         run: npm run build
+
       - name: Static HTML export with Next.js
-        run: npm run export
+        run: npm run build
+        
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v3
         with:
           path: ./out
 
@@ -83,4 +89,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4

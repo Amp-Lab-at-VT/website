@@ -8,8 +8,9 @@ import Meadows from "../../public/Headshots/Meadows.jpg";
 import Pritchard from "../../public/Headshots/Pritchard.jpeg";
 import Ethan from "../../public/Headshots/Ethan.jpg";
 import PB from "../../public/Headshots/pb.jpeg";
+import Layout from "@/comps/layout.jsx";
 
-export default function Leadership() {
+function Leadership() {
   return (
     <Box sx={{ padding: 3 }}>
       <Typography variant="h4" gutterBottom>
@@ -70,3 +71,5 @@ export default function Leadership() {
     </Box>
   );
 }
+
+export default Layout(Leadership);

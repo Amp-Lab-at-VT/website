@@ -3,9 +3,7 @@ import React from "react";
 import { promises as fs } from "fs";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
-
-import { FaReact } from "react-icons/fa";
-
+import Layout from "@/comps/layout.jsx";
 import IconAndName from "@/comps/IconAndName/IconAndName";
 import { GiSolderingIron } from "react-icons/gi";
 import { MdOutlineWavingHand } from "react-icons/md";
@@ -15,9 +13,7 @@ import { RxDiscordLogo } from "react-icons/rx";
 import { BiPurchaseTagAlt } from "react-icons/bi";
 import { GiSwipeCard } from "react-icons/gi";
 
-import {Alert} from "@mui/material";
-
-export default function GettingStarted({ new_members, returning_members }) {
+function GettingStarted({ new_members, returning_members }) {
   return (
     <div className="min-h-screen">
       <div>
@@ -96,7 +92,7 @@ export default function GettingStarted({ new_members, returning_members }) {
           </p>
         </IconAndName>
         <IconAndName
-          href="/docs/swipe-access"
+          href="/swipe-access"
           icon={<GiSwipeCard> </GiSwipeCard>}
           title="Get Lab Swipe Access"
           buttonTitle="Click here to begin"
@@ -122,3 +118,5 @@ export async function getStaticProps() {
 
   return { props: { new_members, returning_members } };
 }
+
+export default Layout(GettingStarted);
