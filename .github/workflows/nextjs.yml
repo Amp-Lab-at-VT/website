@@ -2,7 +2,7 @@
 #
 # To get started with Next.js see: https://nextjs.org/docs/getting-started
 #
-name: Forsyth Creations Deployment
+name: CI/CD Pipeline for Amp Lab Website
 
 on:
   # Runs on pushes targeting the default branch
@@ -29,6 +29,24 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  # Test the yaml
+  check_yaml:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Install PyTest Dependencies
+        run: |
+          cd CI
+          python -m pip install poetry==1.1.14
+          poetry install
+      - name: Run Pytest tests
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          cd CI
+          poetry run python -m unittest
+          
   build:
     runs-on: ubuntu-latest
     steps:
