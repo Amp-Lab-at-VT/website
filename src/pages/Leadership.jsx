@@ -1,31 +1,30 @@
-//https://react-icons.github.io/react-icons/icons?name=bs
 import React from "react";
-
+import { Box, Grid, Typography, Divider } from "@mui/material";
 import LeadershipBox from "@/comps/LeadershipBox/LeadershipBox.jsx";
 import Baumann from "../../public/Headshots/Baumann.jpg";
-import Gibbons from "../../public/Headshots/Gibbons.jpg";
+import Wells from "../../public/Headshots/Wells.jpg";
 import Forsyth from "../../public/Headshots/Forsyth2.jpg";
 import Meadows from "../../public/Headshots/Meadows.jpg";
 import Pritchard from "../../public/Headshots/Pritchard.jpeg";
-import Blank from "../../public/Headshots/blank.jpeg";
 import Ethan from "../../public/Headshots/Ethan.jpg";
 import PB from "../../public/Headshots/pb.jpeg";
-import Yassin from "../../public/Headshots/Yassin.jpg";
+import Yassin from "../../public/Headshots/yassin.jpg";
 import Layout from "@/comps/layout.jsx";
 
 function Leadership() {
   return (
-    <div>
-      <div class="App-pageHelper">
-        <h2>Meet Our Team: Student Staff</h2>
-        <hr></hr>
-        <div class="flex-row-left">
-          <LeadershipBox
-            name="Richard Gibbons"
-            src={Gibbons}
-            title="Richard Gibbons: Team Lead"
-            email="gricha1@vt.edu"
-          ></LeadershipBox>
+    <Box sx={{ padding: 3 }}>
+      <Typography variant="h4" gutterBottom>
+        Meet Our Team: Student Staff
+      </Typography>
+      <Divider />
+      <Grid container spacing={3} sx={{ marginTop: 2 }}>
+      <LeadershipBox
+          name="Tyler Wells"
+          src={Wells}
+          title="Lab Lead"
+          email="tylermwells@vt.edu"
+        />
           <LeadershipBox
             name="Henry Forsyth"
             src={Forsyth}
@@ -56,25 +55,27 @@ function Leadership() {
             title="Yassin Lahrime: Mentor"
             email="yassinl@vt.edu"
           ></LeadershipBox>
-        </div>
-        <h2>Meet Our Team: Professors</h2>
-        <hr></hr>
-        <div class="flex-row-left">
-          <LeadershipBox
-            name="William Baumann"
-            src={Baumann}
-            title="Dr.William Baumann: Professor"
-            email="baumann@vt.edu"
-          ></LeadershipBox>
-          <LeadershipBox
-            name="Toby Meadows"
-            src={Meadows}
-            title="Dr.Toby Meadows: Professor"
-            email="toby88@vt.edu"
-          ></LeadershipBox>
-        </div>
-      </div>
-    </div>
+      </Grid>
+
+      <Typography variant="h4" gutterBottom sx={{ marginTop: 4 }}>
+        Meet Our Team: Professors
+      </Typography>
+      <Divider />
+      <Grid container spacing={3} sx={{ marginTop: 2 }}>
+        <LeadershipBox
+          name="William Baumann"
+          src={Baumann}
+          title="Professor"
+          email="baumann@vt.edu"
+        />
+        <LeadershipBox
+          name="Toby Meadows"
+          src={Meadows}
+          title="Professor"
+          email="toby88@vt.edu"
+        />
+      </Grid>
+    </Box>
   );
 }
 
