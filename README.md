@@ -10,7 +10,7 @@ You have two options for working on this locally: Docker, or Node. The following
 2. **Clone the repository**: Open a terminal and run the following command to clone the repository
 3. **Build and Run the Docker container**: Navigate to the cloned repository and run the following command to build and run the Docker container:
    ```bash
-   docker-compose up
+   docker-compose up --build
    ```
 
    And that's it!
