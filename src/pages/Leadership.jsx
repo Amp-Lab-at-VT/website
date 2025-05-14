@@ -9,7 +9,9 @@ import Pritchard from "../../public/Headshots/Pritchard.jpeg";
 import Ethan from "../../public/Headshots/Ethan.jpg";
 import PB from "../../public/Headshots/pb.jpeg";
 import Yassin from "../../public/Headshots/yassin.jpg";
+import Wuhu from "../../public/Headshots/Wuhu.jpg";
 import Layout from "@/comps/layout.jsx";
+
 
 function Leadership() {
   return (
@@ -55,6 +57,13 @@ function Leadership() {
             title="Yassin Lahrime: Mentor"
             email="yassinl@vt.edu"
           ></LeadershipBox>
+            <LeadershipBox
+            name="wuhu"
+            src={Wuhu}
+            title="Yassin Lahrime: Mentor"
+            email="yassinl@vt.edu"
+          ></LeadershipBox>
+
       </Grid>
 
       <Typography variant="h4" gutterBottom sx={{ marginTop: 4 }}>
