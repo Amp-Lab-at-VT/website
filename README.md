@@ -1,44 +1,58 @@
-## Quickstart with Dev
+# Developing the Amp Lab website
 
-For more information on the development of this website, see DEVNOTES.md. In this file I have included the specifics on how this website works, where to find the information you need, and how to learn how to develop on this site. This will be crucial if this website ever fails. Good luck! - Henry Forsyth
+Hello student of faculty! Welcome to the Amp Lab website repository. This is a simple static website built NextJS. It is hosted through Github Pages, making it easy to deploy and maintain. This document will guide you through the process of setting up your local development environment, making changes to the website, and deploying those changes.
 
+You have two options for working on this locally: Docker, or Node. The following will describe both methods
 
+# Using Docker
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+1. **Install Docker**: If you don't have Docker installed, download and install it from the [Docker website](https://www.docker.com/get-started).
+2. **Clone the repository**: Open a terminal and run the following command to clone the repository
+3. **Build and Run the Docker container**: Navigate to the cloned repository and run the following command to build and run the Docker container:
+   ```bash
+   docker-compose up --build
+   ```
 
-## Getting Started
+   And that's it!
 
-First, run the development server:
+# Using Node
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+1. **Install NVM**: If you don't have NVM installed, download and install it from the [NVM for Windows website](https://github.com/coreybutler/nvm-windows)
+2.**Restart your computer to apply the changes**: After installing NVM, restart your computer to ensure that the changes take effect.
+2. **Install Node**: Open a terminal and run the following command to install Node:
+   ```bash
+   nvm install 22
+   nvm use 22
+   ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# Installing Dependencies
+1. **Clone the repository**: Open a terminal and run the following command to clone the repository
+   ```bash
+   npm install
+   ```
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+# Branch Before You Start Working
+1. **Create a new branch**: Before making any changes, create a new branch for your work. This will help keep the main branch clean and allow for easier collaboration. Run the following command to create a new branch:
+   ```bash
+   git checkout -b your-branch-name
+   ```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+# Start the development server: Run the following command to start the development server:
+   ```bash
+   npm run dev
+   ```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+   This will start the development server and open the website in your default web browser. You can now make changes to the code and see them reflected in real-time.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+# Pushing and PR Process
+1. **Commit your changes**: After making changes, commit them to your branch with a descriptive message. Run the following command to commit your changes:
+   ```bash
+   git add .
+   git commit -m "Your commit message"
+   ```
+2. Push your changes: Push your changes to the remote repository with the following command:
+   ```bash
+   git push origin your-branch-name
+   ```
+3. **Create a pull request**: Go to the GitHub repository and create a pull request from your branch to the main branch. This will allow others to review your changes before merging them into the main branch.
+4. **Review and merge**: Once your pull request is approved, you can merge it into the main branch. This will update the main branch with your changes.
