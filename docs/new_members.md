@@ -10,10 +10,10 @@ This process is now simpler than ever! Follow the steps below to get started:
 
     <a class="btn" href="https://github.com/Amp-Lab-at-VT/website/issues/new/choose" >Join the Amp Lab: Submit your project for review!</a>
 
-4. Create a brief project proposal composed of:
+4. Create a brief project proposal PowerPoint composed of:
     - Overview (2-3 slides)
         - Clearly state the goal of the project
-        - Use visuals such as block diagrams, flow charts, or system level.
+        - Use visuals such as block diagrams, flow charts, CAD models, or any system level picture.
     - Educational value (1 slide)
         - Explain how working on this project will enhance your knowledge, skills, or experience as a student.
     - Component cost (1 slide)
