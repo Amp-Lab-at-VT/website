@@ -114,10 +114,6 @@ FPV Drone:
   url: "https://github.com/daveencar03/Frankenstein_FPV_Drone"
   branch: "main"
   mentor_last_name: "James"
-Portable Blood Pressure Monitoring Device:
-  url: "https://github.com/yassinl/BP_CUFF_PCB"
-  branch: "main"
-  mentor_last_name: "Wells"  
 # Sample:
 #   url : "https://github.com/Amp-Lab-at-VT/SampleProject"
 #   branch: "master"
