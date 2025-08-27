@@ -4,13 +4,25 @@ This process is now simpler than ever! Follow the steps below to get started:
 
     <a class="btn" href="https://github.com/Amp-Lab-at-VT/SampleProject/fork" >Sample Project</a>
 
-2. Clone the repo locally, edit the files, and push it to Github. If you are unsure about a section, skip it and your mentor will discuss it with you when it comes time! At the very least, please include a project description
+2. Clone the repo locally, update the readme.md file, and push it to Github. 
 
 3. Include the link to the forked repo in this form:
 
     <a class="btn" href="https://github.com/Amp-Lab-at-VT/website/issues/new/choose" >Join the Amp Lab: Submit your project for review!</a>
 
-4. Wait for AMP lab staff to reach out to you about your project!
+4. Create a brief project proposal composed of project overview (1-2 slides), project components (1-2 slides) !
+    - Overview (2-3 slides)
+        - Explain the goal of the project
+        - We recommend including block diagrams, flow charts, or visual description of the project.
+    - Educational value (1 slide)
+        - Explain how working on this project contributes to your learning as a student
+    - Component cost (1 slide)
+        - Provide a list of the components that will be used, and the associated cost.
+        - Provide a total cost estimate.
+    - Timeline (1 slide)
+        - Estimate how long it would take to complete the project
+    
+    Once completed, schedule a Project Proposal presentation with the AMP team at https://amp-lab.org/soldering/booking. Include your name and github repository in the notes section. The presentation length should be no longer than 10 minutes.
 
 **Too confusing?** We get it, git isn't an easy thing to master. Check <a href = "/beginners_guide">this tutorial</a> to get started without having to clone the repo locally.
 

@@ -37,7 +37,7 @@ function Page() {
         <Stack>
           <SingleDoc
             title="Welcome to the AMP LAB. You are probably here to request access to the AMP LAB. "
-            description="If so, EMAIL toby88@vt.edu with your name and graduation year. Read the below documents and email him proof of completing safety requirements."
+            description="If you your project proposal is completed, EMAIL phillipb23@vt.edu with your name and graduation year. Read the below documents and email him proof of completing safety requirements."
             link={`https://github.com/Amp-Lab-at-VT/website/raw/${branchName}/docs/mde_docs/Lab%20Training%20Guide%20Rev%201.docx`}
             last_updated="1/16/2024"
           />
