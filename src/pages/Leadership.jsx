@@ -9,6 +9,8 @@ import Pritchard from "../../public/Headshots/Pritchard.jpeg";
 import Ethan from "../../public/Headshots/Ethan.jpg";
 import PB from "../../public/Headshots/pb.jpeg";
 import Yassin from "../../public/Headshots/yassin.jpg";
+import phillip from "../../public/Headshots/phillip.jpg";
+import Jijun from "../../public/Headshots/Jijun.jpg";
 import Layout from "@/comps/layout.jsx";
 
 function Leadership() {
@@ -20,39 +22,51 @@ function Leadership() {
       <Divider />
       <Grid container spacing={3} sx={{ marginTop: 2 }}>
       <LeadershipBox
+          name="Phillip Bozzay"
+          src={phillip}
+          title="Lab Lead"
+          email="phillipb23@vt.edu"
+          />
+          <LeadershipBox
+          name="Jijun Niu"
+          src={Jijun}
+          title="Lab Safety Lead/Web Maintain"
+          email="njijun24@vt.edu"
+          />
+          <LeadershipBox
           name="Tyler Wells"
           src={Wells}
-          title="Lab Lead"
+          title="Former Lab Lead"
           email="tylermwells@vt.edu"
-        />
+          />
           <LeadershipBox
             name="Henry Forsyth"
             src={Forsyth}
-            title="Henry Forsyth: Mentor/Webdev"
+            title="Mentor/Webdev"
             email="rhforsythjr@vt.edu"
           ></LeadershipBox>
           <LeadershipBox
             name="Eddie Pritchard"
             src={Pritchard}
-            title="Eddie Pritchard: Mentor"
+            title="Former Lab Lead/Mentor"
             email="epritchard@vt.edu"
           ></LeadershipBox>
           <LeadershipBox
             name="Purv Bavishi"
             src={PB}
-            title="Purv Bavishi: Mentor"
+            title="Souldering Trainer/Mentor"
             email="purvbavishi@vt.edu"
           ></LeadershipBox>
           <LeadershipBox
             name="Ethan James"
             src={Ethan}
-            title="Ethan James: Mentor"
+            title="Mentor"
             email="ethanjamesauto@vt.edu"
           ></LeadershipBox>
             <LeadershipBox
             name="Yassin Lahrime"
             src={Yassin}
-            title="Yassin Lahrime: Mentor"
+            title="Mentor"
             email="yassinl@vt.edu"
           ></LeadershipBox>
       </Grid>
