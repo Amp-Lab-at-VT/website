@@ -34,22 +34,37 @@ function Leadership() {
           title="Lab Safety Lead/Web Maintain"
           email="njijun24@vt.edu"
           />
-          <LeadershipBox
+
+            {/* <LeadershipBox
+            name="Yassin Lahrime"
+            src={Yassin}
+            title="Mentor"
+            email="yassinl@vt.edu"
+          ></LeadershipBox> */}
+      </Grid>
+
+
+      <Typography variant="h4" gutterBottom sx={{ marginTop: 4 }}>
+        Meet Our Team: Student Alumni
+      </Typography>
+      <Divider />
+      <Grid container spacing={3} sx={{ marginTop: 2 }}>
+      <LeadershipBox
           name="Tyler Wells"
           src={Wells}
-          title="Former Lab Lead"
+          title="Lab Lead"
           email="tylermwells@vt.edu"
           />
           <LeadershipBox
             name="Henry Forsyth"
             src={Forsyth}
-            title="Mentor/Webdev"
+            title="Lab Lead/Webdev"
             email="rhforsythjr@vt.edu"
           ></LeadershipBox>
           <LeadershipBox
             name="Eddie Pritchard"
             src={Pritchard}
-            title="Former Lab Lead/Mentor"
+            title="Mentor"
             email="epritchard@vt.edu"
           ></LeadershipBox>
           <LeadershipBox
@@ -64,15 +79,11 @@ function Leadership() {
             title="Mentor"
             email="ethanjamesauto@vt.edu"
           ></LeadershipBox>
-            <LeadershipBox
-            name="Yassin Lahrime"
-            src={Yassin}
-            title="Mentor"
-            email="yassinl@vt.edu"
-          ></LeadershipBox>
-
 
       </Grid>
+
+
+     
 
       <Typography variant="h4" gutterBottom sx={{ marginTop: 4 }}>
         Meet Our Team: Professors
