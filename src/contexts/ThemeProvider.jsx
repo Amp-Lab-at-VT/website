@@ -54,62 +54,184 @@ export const brand = {
 };
 
 const commonText = {
-  fontFamily: ["Poppins", "sans-serif"].join(","),
+  fontFamily: ["Inter", "system-ui", "-apple-system", "sans-serif"].join(","),
+  h1: {
+    fontSize: "3rem",
+    fontWeight: 700,
+    lineHeight: 1.2,
+    letterSpacing: "-0.025em",
+    color: "#1a1a1a",
+  },
   h2: {
-    fontSize: 36,
-    fontWeight: 500,
-    lineHeight: 1.5,
-    fontFamily: ["Source Sans Pro", "sans-serif"].join(","),
+    fontSize: "2.25rem",
+    fontWeight: 600,
+    lineHeight: 1.3,
+    letterSpacing: "-0.02em",
     color: "#204d71",
   },
   h3: {
-    fontSize: 24,
-    fontWeight: 500,
-    lineHeight: 1.5,
-    fontFamily: ["Source Sans Pro", "sans-serif"].join(","),
+    fontSize: "1.875rem",
+    fontWeight: 600,
+    lineHeight: 1.4,
+    letterSpacing: "-0.015em",
+    color: "#1a1a1a",
   },
   h4: {
-    fontSize: 36,
-    fontWeight: 500,
-    lineHeight: 1.5,
-    fontFamily: ["Source Sans Pro", "sans-serif"].join(","),
+    fontSize: "1.5rem",
+    fontWeight: 600,
+    lineHeight: 1.4,
+    color: "#204d71",
   },
-  body: {
-    fontSize: 36,
+  h5: {
+    fontSize: "1.25rem",
     fontWeight: 500,
     lineHeight: 1.5,
-    fontFamily: ["Source Sans Pro", "sans-serif"].join(","),
+    color: "#374151",
+  },
+  h6: {
+    fontSize: "1.125rem",
+    fontWeight: 500,
+    lineHeight: 1.5,
+    color: "#374151",
+  },
+  body1: {
+    fontSize: "1rem",
+    fontWeight: 400,
+    lineHeight: 1.6,
+    color: "#4b5563",
+  },
+  body2: {
+    fontSize: "0.875rem",
+    fontWeight: 400,
+    lineHeight: 1.5,
+    color: "#6b7280",
+  },
+  subtitle1: {
+    fontSize: "1.125rem",
+    fontWeight: 500,
+    lineHeight: 1.5,
+    color: "#374151",
+  },
+  subtitle2: {
+    fontSize: "1rem",
+    fontWeight: 500,
+    lineHeight: 1.4,
+    color: "#6b7280",
   },
 };
 
 const darkTheme = createTheme({
   palette: {
     mode: "dark",
-    // palette values for dark mode
     primary: {
-      main: "#204d71",
-      light: brand[200],
-      dark: brand[200],
-      background: "204d71",
+      main: "#3b6fa0",
+      light: "#6d9bcc",
+      dark: "#204d71",
+      contrastText: "#ffffff",
     },
     secondary: {
-      main: "#fff",
-      light: "#222",
+      main: "#7BC78C",
+      light: "#a1d7b7",
+      dark: "#4a8d62",
+      contrastText: "#000000",
+    },
+    error: {
+      main: "#f87171",
+      light: "#fca5a5",
+      dark: "#dc2626",
+    },
+    warning: {
+      main: "#fbbf24",
+      light: "#fde047",
+      dark: "#d97706",
+    },
+    info: {
+      main: "#60a5fa",
+      light: "#93c5fd",
+      dark: "#2563eb",
+    },
+    success: {
+      main: "#34d399",
+      light: "#6ee7b7",
+      dark: "#059669",
     },
     background: {
-      default: "#000",
-      paper: "#000",
-      modal: grey[900],
+      default: "#0f172a",
+      paper: "#1e293b",
+      modal: "#334155",
     },
     text: {
-      primary: "#fff",
-      secondary: grey[500],
+      primary: "#f8fafc",
+      secondary: "#cbd5e1",
+      disabled: "#64748b",
     },
-    forsythBlue: {
-      main: "#0A3D62",
+    divider: "#334155",
+    action: {
+      active: "#3b6fa0",
+      hover: "rgba(59, 111, 160, 0.08)",
+      selected: "rgba(59, 111, 160, 0.12)",
+      disabled: "rgba(255, 255, 255, 0.26)",
+      disabledBackground: "rgba(255, 255, 255, 0.12)",
     },
   },
   components: {
+    MuiCssBaseline: {
+      styleOverrides: {
+        body: {
+          scrollbarColor: "#64748b #1e293b",
+          "&::-webkit-scrollbar, & *::-webkit-scrollbar": {
+            backgroundColor: "#1e293b",
+            width: 8,
+          },
+          "&::-webkit-scrollbar-thumb, & *::-webkit-scrollbar-thumb": {
+            borderRadius: 8,
+            backgroundColor: "#64748b",
+            minHeight: 24,
+          },
+        },
+      },
+    },
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          textTransform: "none",
+          borderRadius: 8,
+          fontWeight: 500,
+          padding: "10px 20px",
+          transition: "all 0.2s ease-in-out",
+          "&:hover": {
+            transform: "translateY(-1px)",
+            boxShadow: "0 4px 12px rgba(0, 0, 0, 0.3)",
+          },
+        },
+        contained: {
+          boxShadow: "0 2px 8px rgba(59, 111, 160, 0.3)",
+        },
+      },
+    },
+    MuiCard: {
+      styleOverrides: {
+        root: {
+          borderRadius: 12,
+          boxShadow: "0 2px 8px rgba(0, 0, 0, 0.2)",
+          transition: "all 0.2s ease-in-out",
+          "&:hover": {
+            boxShadow: "0 8px 24px rgba(0, 0, 0, 0.3)",
+            transform: "translateY(-2px)",
+          },
+        },
+      },
+    },
+    MuiAppBar: {
+      styleOverrides: {
+        root: {
+          backgroundColor: "#1e293b",
+          color: "#f8fafc",
+          boxShadow: "0 1px 3px rgba(0, 0, 0, 0.3)",
+          backdropFilter: "blur(10px)",
+        },
+      },
+    },
     MuiTableCell: {
       styleOverrides: {
         root: {
@@ -125,37 +247,137 @@ const darkTheme = createTheme({
       },
     },
   },
-  typography: commonText,
+  typography: {
+    ...commonText,
+    h1: { ...commonText.h1, color: "#f8fafc" },
+    h2: { ...commonText.h2, color: "#3b6fa0" },
+    h3: { ...commonText.h3, color: "#f8fafc" },
+    h4: { ...commonText.h4, color: "#3b6fa0" },
+    h5: { ...commonText.h5, color: "#cbd5e1" },
+    h6: { ...commonText.h6, color: "#cbd5e1" },
+    body1: { ...commonText.body1, color: "#e2e8f0" },
+    body2: { ...commonText.body2, color: "#cbd5e1" },
+    subtitle1: { ...commonText.subtitle1, color: "#cbd5e1" },
+    subtitle2: { ...commonText.subtitle2, color: "#94a3b8" },
+  },
+  spacing: 8,
+  shape: {
+    borderRadius: 8,
+  },
 });
 
 const lightTheme = createTheme({
   palette: {
     mode: "light",
-    // palette values for dark mode
     primary: {
       main: "#204d71",
-      light: brand[200],
-      dark: brand[500],
-      background: "#204d71",
+      light: "#3b6fa0",
+      dark: "#173953",
+      contrastText: "#ffffff",
     },
     secondary: {
-      main: "#000000",
-      light: "#eee",
+      main: "#7BC78C",
+      light: "#a1d7b7",
+      dark: "#4a8d62",
+      contrastText: "#ffffff",
+    },
+    error: {
+      main: "#dc2626",
+      light: "#f87171",
+      dark: "#991b1b",
+    },
+    warning: {
+      main: "#d97706",
+      light: "#fbbf24",
+      dark: "#92400e",
+    },
+    info: {
+      main: "#2563eb",
+      light: "#60a5fa",
+      dark: "#1d4ed8",
+    },
+    success: {
+      main: "#059669",
+      light: "#34d399",
+      dark: "#047857",
     },
     background: {
-      default: "#fff",
-      paper: "#fff",
-      modal: grey[100],
+      default: "#fafafa",
+      paper: "#ffffff",
+      modal: "#f3f4f6",
     },
     text: {
-      primary: "#000",
-      secondary: grey[500],
+      primary: "#111827",
+      secondary: "#6b7280",
+      disabled: "#9ca3af",
     },
-    forsythBlue: {
-      main: "#0A3D62",
+    divider: "#e5e7eb",
+    action: {
+      active: "#204d71",
+      hover: "rgba(32, 77, 113, 0.04)",
+      selected: "rgba(32, 77, 113, 0.08)",
+      disabled: "rgba(0, 0, 0, 0.26)",
+      disabledBackground: "rgba(0, 0, 0, 0.12)",
     },
   },
   components: {
+    MuiCssBaseline: {
+      styleOverrides: {
+        body: {
+          scrollbarColor: "#6b7280 #f3f4f6",
+          "&::-webkit-scrollbar, & *::-webkit-scrollbar": {
+            backgroundColor: "#f3f4f6",
+            width: 8,
+          },
+          "&::-webkit-scrollbar-thumb, & *::-webkit-scrollbar-thumb": {
+            borderRadius: 8,
+            backgroundColor: "#6b7280",
+            minHeight: 24,
+          },
+        },
+      },
+    },
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          textTransform: "none",
+          borderRadius: 8,
+          fontWeight: 500,
+          padding: "10px 20px",
+          transition: "all 0.2s ease-in-out",
+          "&:hover": {
+            transform: "translateY(-1px)",
+            boxShadow: "0 4px 12px rgba(0, 0, 0, 0.15)",
+          },
+        },
+        contained: {
+          boxShadow: "0 2px 8px rgba(32, 77, 113, 0.2)",
+        },
+      },
+    },
+    MuiCard: {
+      styleOverrides: {
+        root: {
+          borderRadius: 12,
+          boxShadow: "0 2px 8px rgba(0, 0, 0, 0.08)",
+          transition: "all 0.2s ease-in-out",
+          "&:hover": {
+            boxShadow: "0 8px 24px rgba(0, 0, 0, 0.12)",
+            transform: "translateY(-2px)",
+          },
+        },
+      },
+    },
+    MuiAppBar: {
+      styleOverrides: {
+        root: {
+          backgroundColor: "#ffffff",
+          color: "#111827",
+          boxShadow: "0 1px 3px rgba(0, 0, 0, 0.1)",
+          backdropFilter: "blur(10px)",
+        },
+      },
+    },
     MuiTableCell: {
       styleOverrides: {
         root: {
@@ -172,6 +394,10 @@ const lightTheme = createTheme({
     },
   },
   typography: commonText,
+  spacing: 8,
+  shape: {
+    borderRadius: 8,
+  },
 });
 
 // Create a context for dark mode or light mode
