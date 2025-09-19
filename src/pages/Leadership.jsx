@@ -11,6 +11,9 @@ import PB from "../../public/Headshots/pb.jpeg";
 import Yassin from "../../public/Headshots/yassin.jpg";
 import phillip from "../../public/Headshots/phillip.jpg";
 import Jijun from "../../public/Headshots/Jijun.jpg";
+import Alek from "../../public/Headshots/Alek.jpg";
+import Shane_Wyman from "../../public/Headshots/Shane_Wyman.png";
+
 import Layout from "@/comps/layout.jsx";
 
 function Leadership() {
@@ -33,6 +36,19 @@ function Leadership() {
           title="Lab Safety Lead/Web Maintain"
           email="njijun24@vt.edu"
           />
+           <LeadershipBox
+          name="Alek Salvetti"
+          src={Alek}
+          title="Soldering Trainer"
+          email="aleks@vt.edu"
+          />
+          <LeadershipBox
+          name="Shane Wyman"
+          src={Shane_Wyman}
+          title="Soldering Trainer"
+          email="shanew05@vt.edu"
+          />
+
 
       </Grid>
 
