@@ -269,14 +269,16 @@ FFT Wall Display:
   participants:
     - "Phil Bozzay"
 
-FM Receiver:
-  url: "https://github.com/Hunter-Drake/FM_AM_Transistor_Radio_with_Amplifier"
-  branch: "main"
-  mentor: "Bozzay"
-  status: "active"
-  mission: "Build an FM/AM transistor radio receiver with a custom amplifier stage."
-  participants:
-    - "Hunter Drake"
+
+#FM Receiver:
+#  url: "https://github.com/Hunter-Drake/FM_AM_Transistor_Radio_with_Amplifier"
+#  branch: "main"
+#  mentor: "Bozzay"
+#  status: "active"
+#  mission: "Build an FM/AM transistor radio receiver with a custom amplifier stage."
+#  participants:
+#    - "Hunter Drake"
+
 Magnetic levitation system:
   url: "https://github.com/phil-bozzay/magnetic_levitator-"
   branch: "main"
