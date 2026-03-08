@@ -306,7 +306,14 @@ Smart Fridge:
   participants:
     - "Nate Janney"
 
-
+SRAM Teaching Tool:
+  url: "https://github.com/PaladinBIGDan2077/SRAM-CG-Teaching-Tool"
+  branch: "main"
+  mentor: "Phillip Bozzay"
+  status: "active"
+  mission: "This project will demonstrate to the end-user how SRAM is used to store data within a computer, how changing BITs will have an effect on the output of the visualized character. (The development of a PAL will be likely be needed to output ASCII-based character map, possible future implementation), but for now will used" 
+  participants:
+    - "Daniel J. Lomis"
 # -----------------------------------------------------------------------
 # To add a new project, copy this template and fill it in:
 #
