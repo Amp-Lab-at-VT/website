@@ -1,120 +1,322 @@
 Pacheck's BLDC Driver:
-  url : "https://github.com/Amp-Lab-at-VT/Pacheck_BLDC_Driver"
-  branch : "main"
-  mentor_last_name : "Pritchard"
+  url: "https://github.com/Amp-Lab-at-VT/Pacheck_BLDC_Driver"
+  branch: "main"
+  mentor: "Pritchard"
+  status: "completed"
+  mission: "Design and build a brushless DC motor driver with inline current sensing and switch node voltage monitoring."
+  participants:
+    - "Pacheck"
+
 Digital Audio Workstation:
-  url : "https://github.com/epritchard13/FPGA-DAW"
+  url: "https://github.com/epritchard13/FPGA-DAW"
   branch: "main"
-  mentor_last_name: "Pritchard"
+  mentor: "Pritchard"
+  status: "completed"
+  mission: "Build a fully functional digital audio workstation on an FPGA platform for real-time audio processing."
+  participants:
+    - "Ethan Pritchard"
+
 Smart Water Bottle:
-  url : "https://github.com/KGouttumukkala/SmartWaterBottle"
+  url: "https://github.com/KGouttumukkala/SmartWaterBottle"
   branch: "main"
-  mentor_last_name: "Forsyth" 
+  mentor: "Forsyth"
+  status: "completed"
+  mission: "Create a smart water bottle with hydration tracking and IoT connectivity."
+  participants:
+    - "Karthik Gouttumukkala"
+
 DIY Kick Drum:
-  url : "https://github.com/epritchard13/kick_drum"
+  url: "https://github.com/epritchard13/kick_drum"
   branch: "main"
-  mentor_last_name: "Hood"
+  mentor: "Hood"
+  status: "completed"
+  mission: "Design and build a DIY electronic kick drum from scratch."
+  participants:
+    - "Ethan Pritchard"
+
 FPV Car:
-  url : "https://github.com/Amp-Lab-at-VT/FPV-Car"
+  url: "https://github.com/Amp-Lab-at-VT/FPV-Car"
   branch: "main"
-  mentor_last_name: "Forsyth" 
+  mentor: "Forsyth"
+  status: "completed"
+  mission: "Build a first-person-view RC car with live video streaming and remote control."
+  participants:
+    - "Henry Forsyth"
+
 8-Bit Computer:
-  url: https://github.com/Rohit-Rangaraj/8-bit-computer-rangaraj-smith
+  url: "https://github.com/Rohit-Rangaraj/8-bit-computer-rangaraj-smith"
   branch: "main"
-  mentor_last_name: "James"  
+  mentor: "James"
+  status: "completed"
+  mission: "Build an 8-bit computer from discrete logic components on breadboards."
+  participants:
+    - "Rohit Rangaraj"
+    - "Smith"
+
 Instrument Looper Pedal:
-  url: https://github.com/ethanjamesauto/auto-looper
+  url: "https://github.com/ethanjamesauto/auto-looper"
   branch: "main"
-  mentor_last_name: "Pritchard"
+  mentor: "Pritchard"
+  status: "completed"
+  mission: "Design an instrument looper pedal for live music performance with multi-track layering."
+  participants:
+    - "Ethan James"
+
 Vector Graphics Generator:
-  url: https://github.com/ethanjamesauto/vector_pico
+  url: "https://github.com/ethanjamesauto/vector_pico"
   branch: "main"
-  mentor_last_name: "Pritchard"
+  mentor: "Pritchard"
+  status: "completed"
+  mission: "Generate vector graphics output using a Raspberry Pi Pico microcontroller."
+  participants:
+    - "Ethan James"
+
 PCB Engraver:
-  url : https://github.com/Amp-Lab-at-VT/PCB_Engraver
+  url: "https://github.com/Amp-Lab-at-VT/PCB_Engraver"
   branch: "main"
-  mentor_last_name: "Gibbons" 
+  mentor: "Gibbons"
+  status: "completed"
+  mission: "Build a CNC engraver capable of milling custom PCBs in-house."
+  participants:
+    - "Rich Gibbons"
+
 InspireFly Cubesat Power Supply:
   url: "https://github.com/joeesser1842/eps"
   branch: "master"
-  mentor_last_name: "Gibbons" 
+  mentor: "Gibbons"
+  status: "completed"
+  mission: "Design the electrical power system for the InspireFly CubeSat mission."
+  participants:
+    - "Joe Esser"
+
 InspireFly Cubesat On Board Computer:
   url: "https://github.com/joeesser1842/obdh"
   branch: "master"
-  mentor_last_name: "Gibbons" 
+  mentor: "Gibbons"
+  status: "completed"
+  mission: "Develop the on-board data handling computer for the InspireFly CubeSat."
+  participants:
+    - "Joe Esser"
+
 InspireFly Cubesat Telemetry Tracking and Control:
   url: "https://github.com/joeesser1842/ttc"
   branch: "master"
-  mentor_last_name: "Gibbons" 
+  mentor: "Gibbons"
+  status: "completed"
+  mission: "Build the telemetry, tracking, and control subsystem for the InspireFly CubeSat."
+  participants:
+    - "Joe Esser"
+
 Stepper Motor Symphony:
   url: "https://github.com/Amp-Lab-at-VT/Stepper_Motor_Symphony"
   branch: "main"
-  mentor_last_name: "Unknown" 
+  mentor: "Unknown"
+  status: "completed"
+  mission: "Create a music box that uses stepper motors to play songs by stepping at precise frequencies."
+  participants:
+    - "Dylan Green"
+
 IOT Arm:
   url: "https://github.com/Forsyth-Creations/IOT_Arm"
   branch: "main"
-  mentor_last_name: "Forsyth" 
+  mentor: "Forsyth"
+  status: "completed"
+  mission: "Build an internet-connected robotic arm controllable via a web interface."
+  participants:
+    - "Henry Forsyth"
+
 8 Bit Computer:
   url: "https://github.com/Amp-Lab-at-VT/8-bit-Computer"
   branch: "main"
-  mentor_last_name: "Gibbons" 
+  mentor: "Gibbons"
+  status: "completed"
+  mission: "Construct a breadboard-based 8-bit computer following Ben Eater's design."
+  participants:
+    - "Rich Gibbons"
+
 Stylophone:
   url: "https://github.com/Amp-Lab-at-VT/Stylophone"
   branch: "master"
-  mentor_last_name: "Gibbons" 
+  mentor: "Gibbons"
+  status: "completed"
+  mission: "Reverse-engineer a stylophone using modern ICs with USB-C power and rechargeable battery."
+  participants:
+    - "Jivitesh Kukreja"
+
 3-Phase-AC-generator:
-  url : "https://github.com/Jack4891/3-Phase-AC-generator"
+  url: "https://github.com/Jack4891/3-Phase-AC-generator"
   branch: "main"
-  mentor_last_name: "Gibbons" 
+  mentor: "Gibbons"
+  status: "completed"
+  mission: "Design and build a three-phase AC generator for power electronics education."
+  participants:
+    - "Jack"
+
 Split-Rail-DC-Power-Supply:
-  url : "https://github.com/tylermwells/Split-Rail-DC-Power-Supply"
+  url: "https://github.com/tylermwells/Split-Rail-DC-Power-Supply"
   branch: "main"
-  mentor_last_name: "Gibbons" 
+  mentor: "Gibbons"
+  status: "completed"
+  mission: "Build a split-rail DC power supply for analog circuit prototyping."
+  participants:
+    - "Tyler Wells"
+
 Cockcroft-Walton Circuit:
-  url : "https://github.com/pbroome4VT/CockcroftWaltonCircuit"
+  url: "https://github.com/pbroome4VT/CockcroftWaltonCircuit"
   branch: "main"
-  mentor_last_name: "Forsyth"
+  mentor: "Forsyth"
+  status: "completed"
+  mission: "Construct a Cockcroft-Walton voltage multiplier circuit for high-voltage experiments."
+  participants:
+    - "Patrick Broome"
+
 Protoglove:
   url: "https://github.com/Amp-Lab-at-VT/Protoglove"
   branch: "main"
-  mentor_last_name: "Wells"
+  mentor: "Wells"
+  status: "completed"
+  mission: "Develop a wearable glove with embedded sensors for gesture recognition and control."
+  participants:
+    - "Tyler Wells"
+
 Modular Amateur Rocket Computer:
-  url : "https://github.com/devincress/marc"
+  url: "https://github.com/devincress/marc"
   branch: "main"
-  mentor_last_name: "Forsyth"
+  mentor: "Forsyth"
+  status: "completed"
+  mission: "Design a modular avionics computer for amateur rocketry with telemetry and data logging."
+  participants:
+    - "Devin Cress"
+
 Temperature Controlled Fan:
-  url : "https://github.com/tylermwells/Temperature_Controlled_Fan"
+  url: "https://github.com/tylermwells/Temperature_Controlled_Fan"
   branch: "main"
-  mentor_last_name: "Gibbons"
+  mentor: "Gibbons"
+  status: "completed"
+  mission: "Build a temperature-sensing fan controller using analog and digital components."
+  participants:
+    - "Tyler Wells"
+
 Electronic Drum Set:
-  url : "https://github.com/Amp-Lab-at-VT/drums"
+  url: "https://github.com/Amp-Lab-at-VT/drums"
   branch: "main"
-  mentor_last_name: "Pritchard"
+  mentor: "Pritchard"
+  status: "completed"
+  mission: "Build a custom electronic drum set with piezo sensors and MIDI output."
+  participants:
+    - "Ethan Pritchard"
+
 Airbus A320 Simulator Cockpit:
-  url : "https://github.com/Amp-Lab-at-VT/airbus-cockpit"
+  url: "https://github.com/Amp-Lab-at-VT/airbus-cockpit"
   branch: "main"
-  mentor_last_name: "Pritchard"
+  mentor: "Pritchard"
+  status: "completed"
+  mission: "Build simulator hardware for the overhead panel of an Airbus A320 aircraft."
+  participants:
+    - "Ethan James"
+
 Breadboard Graphics Card:
-    url: "https://github.com/ethanjamesauto/gpu"
-    branch: "main"
-    mentor_last_name: "James"
+  url: "https://github.com/ethanjamesauto/gpu"
+  branch: "main"
+  mentor: "James"
+  status: "completed"
+  mission: "Build a software GPU on a 16-core Parallella board from breadboard components."
+  participants:
+    - "Ethan James"
+
 Modular 8-Bit Computer:
   url: "https://github.com/ethanjamesauto/modular_8bit_computer"
   branch: "main"
-  mentor_last_name: "James"
+  mentor: "James"
+  status: "completed"
+  mission: "Design a modular 8-bit computer architecture with swappable subsystem boards."
+  participants:
+    - "Ethan James"
+
 Blues Jam SRV Guitar Pedal:
   url: "https://github.com/Amp-Lab-at-VT/guitar-pedal"
   branch: "main"
-  mentor_last_name: "James"
+  mentor: "James"
+  status: "completed"
+  mission: "Design and build a custom guitar effects pedal inspired by Stevie Ray Vaughan's tone."
+  participants:
+    - "Ethan James"
+
 Home-Built STM:
   url: "https://github.com/philipturner/home-built-stm"
   branch: "main"
-  mentor_last_name: "Pritchard"
+  mentor: "Pritchard"
+  status: "completed"
+  mission: "Construct a scanning tunneling microscope from scratch capable of atomic-resolution imaging."
+  participants:
+    - "Philip Turner"
+
 FPV Drone:
   url: "https://github.com/daveencar03/Frankenstein_FPV_Drone"
   branch: "main"
-  mentor_last_name: "James"
-# Sample:
-#   url : "https://github.com/Amp-Lab-at-VT/SampleProject"
-#   branch: "master"
-#   mentor_last_name: "Forsyth"
+  mentor: "James"
+  status: "completed"
+  mission: "Build a first-person-view drone from salvaged and off-the-shelf components."
+  participants:
+    - "Dave Encar"
+
+FFT Wall Display:
+  url: "https://github.com/phil-bozzay/FFT_WALL_DISPLAY"
+  branch: "main"
+  mentor: "Youssef Chebil"
+  status: "active"
+  mission: "Create a large LED wall display that visualizes audio in real-time using FFT analysis."
+  participants:
+    - "Phil Bozzay"
+
+FM Receiver:
+  url: "https://github.com/Hunter-Drake/FM_AM_Transistor_Radio_with_Amplifier"
+  branch: "main"
+  mentor: "Bozzay"
+  status: "active"
+  mission: "Build an FM/AM transistor radio receiver with a custom amplifier stage."
+  participants:
+    - "Hunter Drake"
+Magnetic levitation system:
+  url: "https://github.com/phil-bozzay/magnetic_levitator-"
+  branch: "main"
+  mentor: "Dr. Dan Sable"
+  status: "active"
+  mission: "Build a closed loop magnetic levitation system in both the continous and discrete time domain. Aiming to apply control theory to modulate a PWM signal and to respond to environmental disturbances." 
+  participants:
+    - "Phillip Bozzay"
+  
+GestroCar:
+  url: "https://github.com/niujijun143/GestroCar"
+  branch: "main"
+  mentor: "Tyler Wells, Phillip Bozzay"
+  status: "active"
+  mission: "This project focuses on building a car that can be remotely controlled using hand gestures." 
+  participants:
+    - "Jijun Niu"
+
+Smart Fridge:
+  url: "https://github.com/nated95/NateJanneyProject"
+  branch: "main"
+  mentor: "Matthew Scala"
+  status: "active"
+  mission: "A custom smart fridge with a touch-screen display which will showcase daily overviews along with live sports information with a swing-out screen." 
+  participants:
+    - "Nate Janney"
+
+
+# -----------------------------------------------------------------------
+# To add a new project, copy this template and fill it in:
+#
+# Project Name:
+#   url: "https://github.com/owner/repo"
+#   branch: "main"
+#   mentor: "LastName"
+#   status: "completed"
+#   mission: "One-sentence description of what the project does."
+#   participants:
+#     - "First Last"
+#     - "First Last"
+#
+# When a project wraps up, change status from "completed" to "completed".
+# -----------------------------------------------------------------------
