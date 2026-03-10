@@ -314,6 +314,35 @@ SRAM Teaching Tool:
   mission: "This project will demonstrate to the end-user how SRAM is used to store data within a computer, how changing BITs will have an effect on the output of the visualized character. (The development of a PAL will be likely be needed to output ASCII-based character map, possible future implementation), but for now will used" 
   participants:
     - "Daniel J. Lomis"
+
+Valentines Day LED Board:
+   url: https://github.com/Matt-Scala/Valentines-Day-LED-Board
+   branch: "main"
+   mentor: "Phillip Bozzay"
+   status: "completed"
+   mission: "Custom PCB and adjustable frame. Drives LEDs with constant current source."
+   participants:
+   - "Matthew Scala"
+
+Battery Management System:
+  url: "https://github.com/Matt-Scala/Battery-Management-System"
+  branch: "main"
+  mentor: "Shane Wyman"
+  status: "active"
+  mission: "Monitors cell capacitity, temperature, voltage, current, and fault conditions. Implements fast acting cell rebalancing. Uses the L9963 chip."
+  participants:
+    - "Matthew Scala"
+
+BeamTracker:
+  url: "https://github.com/phil-bozzay/beamtracker/tree/main"
+  branch: "main"
+  mentor: "Shane Wyman"
+  status: "active"
+  mission: "Design and build a four-element digital phased array receiver at 915 MHz capable of real-time software-defined beam steering. This system demonstrates the core technology behind satellite communication terminals, radar, and electronic warfare platforms"
+  participants:
+    - "Phillip Bozzay"
+
+
 # -----------------------------------------------------------------------
 # To add a new project, copy this template and fill it in:
 #
