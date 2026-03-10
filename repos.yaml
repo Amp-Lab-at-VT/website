@@ -334,7 +334,7 @@ Battery Management System:
     - "Matthew Scala"
 
 BeamTracker:
-  url: "https://github.com/phil-bozzay/beamtracker/tree/main"
+  url: "https://github.com/phil-bozzay/beamtracker"
   branch: "main"
   mentor: "Shane Wyman"
   status: "active"
