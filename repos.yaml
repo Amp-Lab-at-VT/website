@@ -341,7 +341,14 @@ BeamTracker:
   mission: "Design and build a four-element digital phased array receiver at 915 MHz capable of real-time software-defined beam steering. This system demonstrates the core technology behind satellite communication terminals, radar, and electronic warfare platforms"
   participants:
     - "Phillip Bozzay"
-
+RoboticArm:
+  url: "https://github.com/Kiank47/Robotic-Arm"
+  branch: "main"
+  mentor: "N/A"
+  status: "active"
+  mission: "To design, build, and program a 6 axis robotic arm with a goal of achieving a 25 to 50 micron end effector repeatability with a 3kg payload. This is a robotic arm designed to achieve a high level of precision at a fraction of the overall cost associated with a traditional robotic arm. This robotic arm is designed to be highly safe around human operators through a decentralized CAN FD control architecture and advanced additive manufacturing techniques."
+  participants:
+      - "Kian Kabir"
 
 # -----------------------------------------------------------------------
 # To add a new project, copy this template and fill it in:
