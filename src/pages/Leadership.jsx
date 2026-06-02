@@ -10,6 +10,8 @@ import Ethan from "../../public/Headshots/Ethan.jpg";
 import PB from "../../public/Headshots/pb.jpeg";
 import Yassin from "../../public/Headshots/yassin.jpg";
 import phillip from "../../public/Headshots/phillip.jpg";
+import millburn from "../../public/Headshots/millburn.png";
+import cherkassiky from "../../public/Headshots/cherkassiky.jpg";
 import Jijun from "../../public/Headshots/Jijun.jpg";
 import Alek from "../../public/Headshots/Alek.jpg";
 import Shane_Wyman from "../../public/Headshots/Shane_Wyman.png";
@@ -25,10 +27,10 @@ function Leadership() {
       <Divider />
       <Grid container spacing={3} sx={{ marginTop: 2 }}>
       <LeadershipBox
-          name="Phillip Bozzay"
-          src={phillip}
+          name="Daniel Cherkassiky"
+          src={cherkassiky}
           title="Lab Lead"
-          email="phillipb23@vt.edu"
+          email="cherkasskiyd@vt.edu"
           />
           <LeadershipBox
           name="Jijun Niu"
@@ -45,7 +47,7 @@ function Leadership() {
           <LeadershipBox
           name="Shane Wyman"
           src={Shane_Wyman}
-          title="Soldering Trainer"
+          title="Lead Soldering Trainer"
           email="shanew05@vt.edu"
           />
 
@@ -61,13 +63,19 @@ function Leadership() {
 <LeadershipBox
     name="Tyler Wells"
     src={Wells}
-    title="Lab Lead"
+    title="Former Lab Lead"
     email="tylermwells@vt.edu"
     />
     <LeadershipBox
+          name="Phillip Bozzay"
+          src={phillip}
+          title="Former Lab Lead"
+          email="phillipb23@vt.edu"
+      />
+    <LeadershipBox
       name="Henry Forsyth"
       src={Forsyth}
-      title="Lab Lead/Webdev"
+      title="Former Lab Lead/Webdev"
       email="rhforsythjr@vt.edu"
     ></LeadershipBox>
     <LeadershipBox
@@ -109,6 +117,12 @@ function Leadership() {
           title="Professor"
           email="toby88@vt.edu"
         />
+        <LeadershipBox
+        name="Tyler Millburn"
+          src={millburn}
+          title="Professor"
+          email="tylermilburn@vt.edu"
+          />
       </Grid>
     </Box>
   );

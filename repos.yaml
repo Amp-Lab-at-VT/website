@@ -341,6 +341,7 @@ BeamTracker:
   mission: "Design and build a four-element digital phased array receiver at 915 MHz capable of real-time software-defined beam steering. This system demonstrates the core technology behind satellite communication terminals, radar, and electronic warfare platforms"
   participants:
     - "Phillip Bozzay"
+
 RoboticArm:
   url: "https://github.com/Kiank47/Robotic-Arm"
   branch: "main"
