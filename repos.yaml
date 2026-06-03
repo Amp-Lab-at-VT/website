@@ -342,7 +342,7 @@ BeamTracker:
   participants:
     - "Phillip Bozzay"
 Telecaster:
-  url: "https://github.com/phil-bozzay/beamtracker"
+  url: "https://github.com/Shame5800/CRT-Telecaster"
   branch: "main"
   mentor: "Arthur Ball"
   status: "active"
