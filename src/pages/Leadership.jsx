@@ -11,7 +11,7 @@ import PB from "../../public/Headshots/pb.jpeg";
 import Yassin from "../../public/Headshots/yassin.jpg";
 import phillip from "../../public/Headshots/phillip.jpg";
 import millburn from "../../public/Headshots/millburn.png";
-import cherkassiky from "../../public/Headshots/cherkassiky.jpg";
+import cherkassiky from "../../public/Headshots/cherkassiky.JPG";
 import Jijun from "../../public/Headshots/Jijun.jpg";
 import Alek from "../../public/Headshots/Alek.jpg";
 import Shane_Wyman from "../../public/Headshots/Shane_Wyman.png";
