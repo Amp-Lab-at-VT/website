@@ -341,6 +341,14 @@ BeamTracker:
   mission: "Design and build a four-element digital phased array receiver at 915 MHz capable of real-time software-defined beam steering. This system demonstrates the core technology behind satellite communication terminals, radar, and electronic warfare platforms"
   participants:
     - "Phillip Bozzay"
+Telecaster:
+  url: "https://github.com/phil-bozzay/beamtracker"
+  branch: "main"
+  mentor: "Arthur Ball"
+  status: "active"
+  mission: "Convert a CRT television into an instrument by designing, constructing, and programming a digital synthesizer board that feeds audio waves to the TV’s video input. Plays the note by picking up the charge from the screen and sending it to an amplifier."
+  participants:
+    - "Shane Pomajambo"
 # -----------------------------------------------------------------------
 # To add a new project, copy this template and fill it in:
 #
