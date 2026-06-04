@@ -27,7 +27,7 @@ function Leadership() {
       <Divider />
       <Grid container spacing={3} sx={{ marginTop: 2 }}>
       <LeadershipBox
-          name="Daniel Cherkassiky"
+          name="Daniel Cherkasskiy"
           src={cherkassiky}
           title="Lab Lead"
           email="cherkasskiyd@vt.edu"
@@ -87,7 +87,7 @@ function Leadership() {
     <LeadershipBox
       name="Purv Bavishi"
       src={PB}
-      title="Souldering Trainer/Mentor"
+      title="Soldering Trainer/Mentor"
       email="purvbavishi@vt.edu"
     ></LeadershipBox>
     <LeadershipBox
