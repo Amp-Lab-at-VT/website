@@ -14,10 +14,10 @@ export default function Navigation() {
   };
 
   return (
-    <AppBar 
-      position="static" 
+    <AppBar
+      position="static"
       elevation={0}
-      sx={{ 
+      sx={{
         borderBottom: '1px solid',
         borderColor: 'divider',
       }}
@@ -25,12 +25,12 @@ export default function Navigation() {
       <Toolbar sx={{ justifyContent: 'space-between' }}>
         <Box display="flex" alignItems="center">
           <Hamburger />
-          <Typography 
-            variant="h6" 
-            sx={{ 
-              ml: 1, 
+          <Typography
+            variant="h6"
+            sx={{
+              ml: 1,
               fontWeight: 600,
-              background: 'linear-gradient(45deg, #204d71, #7BC78C)',
+              background: "#ffffff",
               backgroundClip: 'text',
               WebkitBackgroundClip: 'text',
               color: 'transparent',
@@ -40,9 +40,9 @@ export default function Navigation() {
             AMP Lab
           </Typography>
         </Box>
-        
-        <IconButton 
-          color="inherit" 
+
+        <IconButton
+          color="inherit"
           onClick={handleToggleDarkMode}
           sx={{
             borderRadius: 2,

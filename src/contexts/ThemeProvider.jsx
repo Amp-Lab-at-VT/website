@@ -120,285 +120,138 @@ const commonText = {
   },
 };
 
+
+//puruple  dark mode
 const darkTheme = createTheme({
   palette: {
     mode: "dark",
+
     primary: {
-      main: "#3b6fa0",
-      light: "#6d9bcc",
-      dark: "#204d71",
+      main: "#a78bfa",   // light purple (main accent)
+      light: "#c4b5fd",
+      dark: "#7c3aed",
       contrastText: "#ffffff",
     },
+
     secondary: {
-      main: "#7BC78C",
-      light: "#a1d7b7",
-      dark: "#4a8d62",
+      main: "#f472b6",   // soft pink accent (optional contrast)
+      light: "#f9a8d4",
+      dark: "#db2777",
       contrastText: "#000000",
     },
+
     error: {
       main: "#f87171",
-      light: "#fca5a5",
-      dark: "#dc2626",
     },
+
     warning: {
       main: "#fbbf24",
-      light: "#fde047",
-      dark: "#d97706",
     },
+
     info: {
       main: "#60a5fa",
-      light: "#93c5fd",
-      dark: "#2563eb",
     },
+
     success: {
       main: "#34d399",
-      light: "#6ee7b7",
-      dark: "#059669",
     },
+
     background: {
-      default: "#0f172a",
-      paper: "#1e293b",
-      modal: "#334155",
+      default: "#0b0b10",   // deeper, cleaner dark
+      paper: "#151522",     // slightly purple-tinted surface
+      modal: "#1c1c2a",
     },
+
     text: {
       primary: "#f8fafc",
       secondary: "#cbd5e1",
       disabled: "#64748b",
     },
-    divider: "#334155",
+
+    divider: "#2a2a3a",
+
     action: {
-      active: "#3b6fa0",
-      hover: "rgba(59, 111, 160, 0.08)",
-      selected: "rgba(59, 111, 160, 0.12)",
-      disabled: "rgba(255, 255, 255, 0.26)",
-      disabledBackground: "rgba(255, 255, 255, 0.12)",
+      hover: "rgba(167, 139, 250, 0.08)",
+      selected: "rgba(167, 139, 250, 0.12)",
+      disabled: "rgba(255,255,255,0.26)",
     },
   },
-  components: {
-    MuiCssBaseline: {
-      styleOverrides: {
-        body: {
-          scrollbarColor: "#64748b #1e293b",
-          "&::-webkit-scrollbar, & *::-webkit-scrollbar": {
-            backgroundColor: "#1e293b",
-            width: 8,
-          },
-          "&::-webkit-scrollbar-thumb, & *::-webkit-scrollbar-thumb": {
-            borderRadius: 8,
-            backgroundColor: "#64748b",
-            minHeight: 24,
-          },
-        },
-      },
-    },
-    MuiButton: {
-      styleOverrides: {
-        root: {
-          textTransform: "none",
-          borderRadius: 8,
-          fontWeight: 500,
-          padding: "10px 20px",
-          transition: "all 0.2s ease-in-out",
-          "&:hover": {
-            transform: "translateY(-1px)",
-            boxShadow: "0 4px 12px rgba(0, 0, 0, 0.3)",
-          },
-        },
-        contained: {
-          boxShadow: "0 2px 8px rgba(59, 111, 160, 0.3)",
-        },
-      },
-    },
-    MuiCard: {
-      styleOverrides: {
-        root: {
-          borderRadius: 12,
-          boxShadow: "0 2px 8px rgba(0, 0, 0, 0.2)",
-          transition: "all 0.2s ease-in-out",
-          "&:hover": {
-            boxShadow: "0 8px 24px rgba(0, 0, 0, 0.3)",
-            transform: "translateY(-2px)",
-          },
-        },
-      },
-    },
-    MuiAppBar: {
-      styleOverrides: {
-        root: {
-          backgroundColor: "#1e293b",
-          color: "#f8fafc",
-          boxShadow: "0 1px 3px rgba(0, 0, 0, 0.3)",
-          backdropFilter: "blur(10px)",
-        },
-      },
-    },
-    MuiTableCell: {
-      styleOverrides: {
-        root: {
-          backgroundColor: "transparent",
-        },
-      },
-    },
-    MuiBox: {
-      defaultProps: {
-        style: {
-          backgroundColor: "transparent",
-        },
-      },
-    },
-  },
+
   typography: {
     ...commonText,
-    h1: { ...commonText.h1, color: "#f8fafc" },
-    h2: { ...commonText.h2, color: "#3b6fa0" },
-    h3: { ...commonText.h3, color: "#f8fafc" },
-    h4: { ...commonText.h4, color: "#3b6fa0" },
-    h5: { ...commonText.h5, color: "#cbd5e1" },
-    h6: { ...commonText.h6, color: "#cbd5e1" },
-    body1: { ...commonText.body1, color: "#e2e8f0" },
-    body2: { ...commonText.body2, color: "#cbd5e1" },
-    subtitle1: { ...commonText.subtitle1, color: "#cbd5e1" },
-    subtitle2: { ...commonText.subtitle2, color: "#94a3b8" },
+    h2: { ...commonText.h2, color: "#c4b5fd" }, // purple heading highlight
+    h4: { ...commonText.h4, color: "#a78bfa" },
   },
+
   spacing: 8,
+
   shape: {
     borderRadius: 8,
   },
 });
 
+
+//  red white light mode
 const lightTheme = createTheme({
   palette: {
     mode: "light",
+
     primary: {
-      main: "#204d71",
-      light: "#3b6fa0",
-      dark: "#173953",
+      main: "#b91c1c",   // deep red
+      light: "#ef4444",
+      dark: "#7f1d1d",
       contrastText: "#ffffff",
     },
+
     secondary: {
-      main: "#7BC78C",
-      light: "#a1d7b7",
-      dark: "#4a8d62",
-      contrastText: "#ffffff",
-    },
-    error: {
-      main: "#dc2626",
+      main: "#dc2626",   // brighter red accent
       light: "#f87171",
       dark: "#991b1b",
+      contrastText: "#ffffff",
     },
-    warning: {
-      main: "#d97706",
-      light: "#fbbf24",
-      dark: "#92400e",
-    },
-    info: {
-      main: "#2563eb",
-      light: "#60a5fa",
-      dark: "#1d4ed8",
-    },
-    success: {
-      main: "#059669",
-      light: "#34d399",
-      dark: "#047857",
-    },
+
     background: {
-      default: "#fafafa",
+      default: "#ffffff",
       paper: "#ffffff",
-      modal: "#f3f4f6",
+      modal: "#f9fafb",
     },
+
     text: {
       primary: "#111827",
       secondary: "#6b7280",
       disabled: "#9ca3af",
     },
+
     divider: "#e5e7eb",
-    action: {
-      active: "#204d71",
-      hover: "rgba(32, 77, 113, 0.04)",
-      selected: "rgba(32, 77, 113, 0.08)",
-      disabled: "rgba(0, 0, 0, 0.26)",
-      disabledBackground: "rgba(0, 0, 0, 0.12)",
+
+    error: {
+      main: "#dc2626",
+    },
+
+    success: {
+      main: "#16a34a",
+    },
+
+    info: {
+      main: "#2563eb",
+    },
+
+    warning: {
+      main: "#d97706",
     },
   },
-  components: {
-    MuiCssBaseline: {
-      styleOverrides: {
-        body: {
-          scrollbarColor: "#6b7280 #f3f4f6",
-          "&::-webkit-scrollbar, & *::-webkit-scrollbar": {
-            backgroundColor: "#f3f4f6",
-            width: 8,
-          },
-          "&::-webkit-scrollbar-thumb, & *::-webkit-scrollbar-thumb": {
-            borderRadius: 8,
-            backgroundColor: "#6b7280",
-            minHeight: 24,
-          },
-        },
-      },
-    },
-    MuiButton: {
-      styleOverrides: {
-        root: {
-          textTransform: "none",
-          borderRadius: 8,
-          fontWeight: 500,
-          padding: "10px 20px",
-          transition: "all 0.2s ease-in-out",
-          "&:hover": {
-            transform: "translateY(-1px)",
-            boxShadow: "0 4px 12px rgba(0, 0, 0, 0.15)",
-          },
-        },
-        contained: {
-          boxShadow: "0 2px 8px rgba(32, 77, 113, 0.2)",
-        },
-      },
-    },
-    MuiCard: {
-      styleOverrides: {
-        root: {
-          borderRadius: 12,
-          boxShadow: "0 2px 8px rgba(0, 0, 0, 0.08)",
-          transition: "all 0.2s ease-in-out",
-          "&:hover": {
-            boxShadow: "0 8px 24px rgba(0, 0, 0, 0.12)",
-            transform: "translateY(-2px)",
-          },
-        },
-      },
-    },
-    MuiAppBar: {
-      styleOverrides: {
-        root: {
-          backgroundColor: "#ffffff",
-          color: "#111827",
-          boxShadow: "0 1px 3px rgba(0, 0, 0, 0.1)",
-          backdropFilter: "blur(10px)",
-        },
-      },
-    },
-    MuiTableCell: {
-      styleOverrides: {
-        root: {
-          backgroundColor: "transparent",
-        },
-      },
-    },
-    MuiBox: {
-      defaultProps: {
-        style: {
-          backgroundColor: "transparent",
-        },
-      },
-    },
-  },
+
   typography: commonText,
+
   spacing: 8,
+
   shape: {
     borderRadius: 8,
   },
 });
+
+
+
 
 // Create a context for dark mode or light mode
 export const DarkmodeContext = React.createContext(null);
