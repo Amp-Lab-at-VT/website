@@ -264,7 +264,7 @@ FFT Wall Display:
   url: "https://github.com/phil-bozzay/FFT_WALL_DISPLAY"
   branch: "main"
   mentor: "Youssef Chebil"
-  status: "active"
+  status: "completed"
   mission: "Create a large LED wall display that visualizes audio in real-time using FFT analysis."
   participants:
     - "Phil Bozzay"
@@ -283,7 +283,7 @@ Magnetic levitation system:
   url: "https://github.com/phil-bozzay/magnetic_levitator-"
   branch: "main"
   mentor: "Dr. Dan Sable"
-  status: "active"
+  status: "completed"
   mission: "Build a closed loop magnetic levitation system in both the continous and discrete time domain. Aiming to apply control theory to modulate a PWM signal and to respond to environmental disturbances." 
   participants:
     - "Phillip Bozzay"
@@ -337,10 +337,11 @@ BeamTracker:
   url: "https://github.com/phil-bozzay/beamtracker"
   branch: "main"
   mentor: "Shane Wyman"
-  status: "active"
+  status: "completed"
   mission: "Design and build a four-element digital phased array receiver at 915 MHz capable of real-time software-defined beam steering. This system demonstrates the core technology behind satellite communication terminals, radar, and electronic warfare platforms"
   participants:
     - "Phillip Bozzay"
+
 Telecaster:
   url: "https://github.com/Shame5800/CRT-Telecaster"
   branch: "main"
@@ -349,6 +350,17 @@ Telecaster:
   mission: "Convert a CRT television into an instrument by designing, constructing, and programming a digital synthesizer board that feeds audio waves to the TV’s video input. Plays the note by picking up the charge from the screen and sending it to an amplifier."
   participants:
     - "Shane Pomajambo"
+
+Project Name:
+  url: "https://github.com/niujijun143/ECHOGLOW"
+  branch: "main"
+  mentor: "N/A"
+  status: "active"
+  mission: "Music reactive LED with bluetooth Speaker."
+  participants:
+    - "Jijun Niu"
+
+
 # -----------------------------------------------------------------------
 # To add a new project, copy this template and fill it in:
 #

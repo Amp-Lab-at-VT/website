@@ -1,5 +1,3 @@
-# Useful Links
-
 ## For Mentees:
 
 [High-Level Checksheet](/mentee_checksheet)

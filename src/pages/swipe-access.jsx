@@ -38,8 +38,8 @@ function Page() {
           <SingleDoc
             title="Welcome to the AMP LAB. You are probably here to request access to the AMP LAB. "
             description="Follow the Lab Training and Swipe Access Guide below"
-            link={`https://github.com/Amp-Lab-at-VT/website/raw/${branchName}/docs/mde_docs/Lab%20Training%20Guide%20Rev%202.docx`}
-            last_updated="1/16/2024"
+            link={`https://github.com/Amp-Lab-at-VT/website/raw/niujijun143-patch-1/docs/mde_docs/Request%20Swipe%20Access.docx`}
+            last_updated="6/14/2026"
           />
           <SingleDoc
             title="ECE Lab Policy"
