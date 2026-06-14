@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP STX-3000
+D Phone Connectors 3.5mm PCB STEREO BLK PLASTIC NON THREADED
+K
+F http://www.kycon.com/Pub_Eng_Draw/STX-3000.pdf
+$ENDCMP
+#
+#End Doc Library
