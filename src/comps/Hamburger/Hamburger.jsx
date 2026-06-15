@@ -1,19 +1,19 @@
 import React, { useState } from "react";
 import Link from "next/link";
-import { 
-  IconButton, 
-  Drawer, 
-  List, 
-  ListItem, 
-  ListItemButton, 
-  ListItemText, 
+import {
+  IconButton,
+  Drawer,
+  List,
+  ListItem,
+  ListItemButton,
+  ListItemText,
   ListItemIcon,
   Typography,
   Box,
   Divider,
   useTheme
 } from "@mui/material";
-import { 
+import {
   Menu as MenuIcon,
   Home as HomeIcon,
   PlayArrow as GetStartedIcon,
@@ -21,17 +21,22 @@ import {
   Info as AboutIcon,
   Book as ResourcesIcon,
   Description as DocsIcon,
-  GitHub as GitHubIcon
+  GitHub as GitHubIcon,
 } from "@mui/icons-material";
+
+import HandshakeIcon from "@mui/icons-material/Handshake";
+import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome";
 
 const navigationItems = [
   { title: "Home", href: "/", icon: <HomeIcon /> },
   { title: "Getting Started", href: "/getting_started", icon: <GetStartedIcon /> },
   { title: "Projects", href: "/projects", icon: <ProjectsIcon /> },
   { title: "About", href: "/about", icon: <AboutIcon /> },
+  { title: "Lab Hygiene", href: "/clean", icon: <AutoAwesomeIcon /> },
   { title: "Resources", href: "/resources", icon: <ResourcesIcon /> },
   { title: "Documentation", href: "/documentation", icon: <DocsIcon /> },
   { title: "GitHub", href: "https://github.com/Amp-Lab-at-VT/website", icon: <GitHubIcon />, external: true },
+  { title: "Sponsorship", href: "/sponsorship_packet", icon: <HandshakeIcon /> },
 ];
 
 export default function Hamburger() {
@@ -52,7 +57,7 @@ export default function Hamburger() {
         color="inherit"
         aria-label="menu"
         onClick={toggleDrawer(true)}
-        sx={{ 
+        sx={{
           mr: 2,
           color: theme.palette.mode === 'light' ? '#111827' : '#f8fafc',
         }}
@@ -67,7 +72,7 @@ export default function Hamburger() {
         PaperProps={{
           sx: {
             width: 280,
-            background: theme.palette.mode === 'light' 
+            background: theme.palette.mode === 'light'
               ? 'linear-gradient(135deg, #ffffff 0%, #f8fafc 100%)'
               : 'linear-gradient(135deg, #1e293b 0%, #0f172a 100%)',
           }
@@ -81,9 +86,9 @@ export default function Hamburger() {
             Virginia Tech
           </Typography>
         </Box>
-        
+
         <Divider />
-        
+
         <List>
           {navigationItems.map((item) => (
             <ListItem key={item.title} disablePadding>
@@ -107,7 +112,7 @@ export default function Hamburger() {
                 <ListItemIcon sx={{ color: theme.palette.primary.main, minWidth: 40 }}>
                   {item.icon}
                 </ListItemIcon>
-                <ListItemText 
+                <ListItemText
                   primary={item.title}
                   primaryTypographyProps={{
                     fontWeight: 500,

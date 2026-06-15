@@ -157,6 +157,9 @@ const Footer = () => {
               Virginia Tech
             </Typography>
             <Typography sx={{ color: isDark ? "#d1d5db" : "#ffffff", mb: 1 }}>
+              Whittemore Hall
+            </Typography>
+            <Typography sx={{ color: isDark ? "#d1d5db" : "#ffffff", mb: 1 }}>
               1185 Perry St, Room 236
             </Typography>
             <Typography sx={{ color: isDark ? "#d1d5db" : "#ffffff" }}>

@@ -1,7 +1,8 @@
 import React from "react";
-import { Box, Typography, Avatar, Grid } from "@mui/material";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import { Box, Typography, Avatar, Grid, IconButton } from "@mui/material";
 
-const LeadershipBox = ({ name, title, email, src }) => {
+const LeadershipBox = ({ name, title, email, src, linkedin }) => {
   return (
     <Grid item xs={12} sm={6} md={4}>
       <Box sx={{ textAlign: "center" }}>
@@ -22,6 +23,7 @@ const LeadershipBox = ({ name, title, email, src }) => {
             margin: "0 auto"
           }}
         />
+
         <Typography variant="h6" sx={{ marginTop: 2 }}>
           {name}
         </Typography>
@@ -45,6 +47,26 @@ const LeadershipBox = ({ name, title, email, src }) => {
             {email}
           </Box>
         </Typography>
+        {linkedin && (
+          <IconButton
+            component="a"
+            href={linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            sx={{
+              mt: 1,
+              color: "text.secondary",
+              "&:hover": {
+                color: "primary.main",
+                transform: "translateY(-2px)",
+              },
+              transition: "all 0.2s ease-in-out",
+            }}
+          >
+            <LinkedInIcon />
+          </IconButton>
+        )}
+
       </Box>
     </Grid>
   );
