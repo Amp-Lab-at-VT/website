@@ -1,5 +1,3 @@
-# Useful Links
-
 ## For Mentees:
 
 [High-Level Checksheet](/mentee_checksheet)
@@ -11,9 +9,9 @@
 
 ## For Solder Trainers:
 
-[General Solder Training Checksheet](/soldering/general)
-
 [Basic Solder Training Checksheet](/soldering/basic)
+
+[Intermediate Solder Training Checksheet](/soldering/intermediate)
 
 [Advanced Solder Training Checksheet](/soldering/advanced)
 

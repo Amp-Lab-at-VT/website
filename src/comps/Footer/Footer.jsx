@@ -1,39 +1,43 @@
 import Link from "next/link";
-import { 
-  Box, 
-  Typography, 
-  Grid, 
-  IconButton, 
+import {
+  Box,
+  Typography,
+  Grid,
+  IconButton,
   Container,
   Divider,
   useTheme,
-  alpha
 } from "@mui/material";
-import { 
-  GitHub, 
-  LocationOn, 
-  School, 
-  Build 
+
+import {
+  GitHub,
+  LocationOn,
+  School,
+  Build
 } from "@mui/icons-material";
 
 const Footer = () => {
   const theme = useTheme();
+  const isDark = theme.palette.mode === "dark";
 
   return (
     <Box
       component="footer"
       sx={{
-        background: theme.palette.mode === 'light' 
-          ? `linear-gradient(135deg, ${theme.palette.primary.main} 0%, ${theme.palette.primary.dark} 100%)`
-          : `linear-gradient(135deg, ${theme.palette.background.paper} 0%, ${theme.palette.background.default} 100%)`,
-        color: theme.palette.mode === 'light' ? '#ffffff' : theme.palette.text.primary,
         mt: "auto",
         py: 6,
+
+        // ✅ YOUR REQUESTED COLORS
+        backgroundColor: isDark ? "#000000" : "#b91c1c",
+
+        // IMPORTANT: force text color globally
+        color: isDark ? "#d1d5db" : "#ffffff",
       }}
     >
       <Container maxWidth="lg">
         <Grid container spacing={4}>
-          {/* About Section */}
+
+          {/* About */}
           <Grid item xs={12} md={4}>
             <Typography
               variant="h6"
@@ -43,36 +47,33 @@ const Footer = () => {
                 display: "flex",
                 alignItems: "center",
                 gap: 1,
+                color: "#ffffff", // force white title
               }}
             >
               <Build />
               About AMP Lab
             </Typography>
-            <Typography 
-              variant="body2" 
-              sx={{ 
-                mb: 3, 
+
+            <Typography
+              variant="body2"
+              sx={{
+                mb: 3,
                 lineHeight: 1.6,
-                opacity: 0.9
+                color: isDark ? "#d1d5db" : "#ffffff",
+                opacity: 1, // ❌ remove fading
               }}
             >
-              We are a student-run lab committed to getting students active in design, 
+              We are a student-run lab committed to getting students active in design,
               innovation, and hands-on learning within the ECE department at Virginia Tech.
             </Typography>
+
             <Box sx={{ display: "flex", gap: 1 }}>
               <IconButton
                 component="a"
                 href="https://github.com/Amp-Lab-at-VT/website"
                 target="_blank"
-                rel="noopener noreferrer"
                 sx={{
-                  color: "inherit",
-                  backgroundColor: alpha('#ffffff', 0.1),
-                  '&:hover': {
-                    backgroundColor: alpha('#ffffff', 0.2),
-                    transform: 'translateY(-2px)',
-                  },
-                  transition: 'all 0.2s ease-in-out',
+                  color: "#ffffff",
                 }}
               >
                 <GitHub />
@@ -90,11 +91,13 @@ const Footer = () => {
                 display: "flex",
                 alignItems: "center",
                 gap: 1,
+                color: "#ffffff",
               }}
             >
               <School />
               Quick Links
             </Typography>
+
             <Box sx={{ display: "flex", flexDirection: "column", gap: 1 }}>
               {[
                 { label: "Getting Started", href: "/getting_started" },
@@ -106,21 +109,21 @@ const Footer = () => {
                 <Link
                   key={link.label}
                   href={link.href}
-                  style={{ 
+                  style={{
                     textDecoration: "none",
                     color: "inherit",
-                    transition: 'all 0.2s ease-in-out',
                   }}
                 >
-                  <Typography 
-                    variant="body2" 
-                    sx={{ 
-                      opacity: 0.8,
-                      '&:hover': { 
-                        opacity: 1,
-                        transform: 'translateX(4px)',
+                  <Typography
+                    variant="body2"
+                    sx={{
+                      color: isDark ? "#d1d5db" : "#ffffff",
+                      opacity: 1,
+                      "&:hover": {
+                        opacity: 0.8,
+                        transform: "translateX(4px)",
                       },
-                      transition: 'all 0.2s ease-in-out',
+                      transition: "all 0.2s ease-in-out",
                     }}
                   >
                     {link.label}
@@ -140,41 +143,53 @@ const Footer = () => {
                 display: "flex",
                 alignItems: "center",
                 gap: 1,
+                color: "#ffffff",
               }}
             >
               <LocationOn />
               Visit Us
             </Typography>
-            <Typography variant="body2" sx={{ mb: 1, opacity: 0.9 }}>
+
+            <Typography sx={{ color: isDark ? "#d1d5db" : "#ffffff", mb: 1 }}>
               Electrical & Computer Engineering
             </Typography>
-            <Typography variant="body2" sx={{ mb: 1, opacity: 0.9 }}>
+            <Typography sx={{ color: isDark ? "#d1d5db" : "#ffffff", mb: 1 }}>
               Virginia Tech
             </Typography>
-            <Typography variant="body2" sx={{ mb: 1, opacity: 0.9 }}>
+            <Typography sx={{ color: isDark ? "#d1d5db" : "#ffffff", mb: 1 }}>
+              Whittemore Hall
+            </Typography>
+            <Typography sx={{ color: isDark ? "#d1d5db" : "#ffffff", mb: 1 }}>
               1185 Perry St, Room 236
             </Typography>
-            <Typography variant="body2" sx={{ mb: 2, opacity: 0.9 }}>
+            <Typography sx={{ color: isDark ? "#d1d5db" : "#ffffff" }}>
               Blacksburg, VA 24060
             </Typography>
           </Grid>
         </Grid>
 
-        <Divider sx={{ my: 4, borderColor: alpha('#ffffff', 0.2) }} />
+        {/* Divider */}
+        <Divider
+          sx={{
+            my: 4,
+            borderColor: isDark ? "#374151" : "rgba(255,255,255,0.3)"
+          }}
+        />
 
+        {/* Bottom row */}
         <Box
           sx={{
             display: "flex",
             flexDirection: { xs: "column", sm: "row" },
             justifyContent: "space-between",
-            alignItems: "center",
             gap: 2,
+            color: isDark ? "#9ca3af" : "#ffffff",
           }}
         >
-          <Typography variant="body2" sx={{ opacity: 0.8 }}>
-            © {new Date().getFullYear()} AMP Lab at Virginia Tech. All rights reserved.
+          <Typography variant="body2">
+            © {new Date().getFullYear()} AMP Lab at Virginia Tech
           </Typography>
-          <Typography variant="body2" sx={{ opacity: 0.8 }}>
+          <Typography variant="body2">
             Built with ❤️ by AMP Lab students
           </Typography>
         </Box>
