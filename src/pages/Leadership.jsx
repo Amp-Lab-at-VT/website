@@ -19,7 +19,7 @@ import Shane_Wyman from "../../public/Headshots/Shane_Wyman.png";
 import Layout from "@/comps/layout.jsx";
 
 function Leadership() {
-  
+
   return (
     <Box sx={{ padding: 3 }}>
       <Typography variant="h4" gutterBottom>
@@ -46,6 +46,7 @@ function Leadership() {
           src={Alek}
           title="Soldering Trainer"
           email="aleks@vt.edu"
+          linkedin="https://www.linkedin.com/in/alessandro-s-5795502bb/"
         />
         <LeadershipBox
           name="Shane Wyman"
