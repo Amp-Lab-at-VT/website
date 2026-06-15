@@ -1,4 +1,5 @@
 import React from "react";
+import { useTheme } from "@mui/material";
 import {
   Typography,
   Box,
@@ -14,13 +15,27 @@ import Layout from "@/comps/layout.jsx";
 
 function Page() {
   const branchName = "master";
+  const theme = useTheme();
 
   return (
     <Container>
       <div class="App-pageHelper">
-        <Typography variant="h4">
-          Documents for Students using the ECE Design Studio
-        </Typography>
+
+        {/* HERO SECTION */}
+        <Box sx={{ textAlign: "center", mb: 6 }}>
+          <Typography
+            variant="h2"
+            sx={{
+              fontWeight: 700,
+              background: `linear-gradient(45deg, ${theme.palette.primary.main}, ${theme.palette.secondary.main})`,
+              WebkitBackgroundClip: "text",
+              color: "transparent",
+              mb: 2,
+            }}
+          >
+            Swipe Access Docs
+          </Typography>
+        </Box>
         <Alert sx={{ marginBottom: "10px" }} severity="info">
           This page contains documents required to obtain swipe access
           to the AMP Lab (Whittemore 264), MDE Lab (Whittemore 264),

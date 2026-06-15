@@ -19,6 +19,7 @@ import Shane_Wyman from "../../public/Headshots/Shane_Wyman.png";
 import Layout from "@/comps/layout.jsx";
 
 function Leadership() {
+  
   return (
     <Box sx={{ padding: 3 }}>
       <Typography variant="h4" gutterBottom>

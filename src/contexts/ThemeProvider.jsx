@@ -182,7 +182,8 @@ const darkTheme = createTheme({
     h2: { ...commonText.h2, color: "#c4b5fd" }, // purple heading highlight
     h4: { ...commonText.h4, color: "#a78bfa" },
     h6: { ...commonText.h6, color: "#a78bfa" },
-    body2: { ...commonText.body2, color: "#a78bfa" },
+    body1: { ...commonText.body1, color: "#FFFFFF" },
+    body2: { ...commonText.body2, color: "#f8fafc" },
   },
 
   spacing: 8,
@@ -249,6 +250,7 @@ const lightTheme = createTheme({
     h2: { ...commonText.h2, color: "#dc2626" },
     h4: { ...commonText.h4, color: "#dc2626" },
     h6: { ...commonText.h6, color: "#dc2626" },
+    body1: { ...commonText.body1, color: "#000000" },
     body2: { ...commonText.body2, color: "#f87171" },
   },
 

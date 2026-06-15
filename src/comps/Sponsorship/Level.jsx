@@ -41,7 +41,7 @@ export default function SponsorshipLevel(props) {
         </Typography>
       </Stack>
       <Divider sx={{ m: "10px" }} />
-      <Typography variant="h6" sx={{ ml: "20px" }}>
+      <Typography component="div" variant="body1" sx={{ ml: "20px" }}>
         <ul>
           {perks.map((perk) => (
             <li key={perk}> {perk} </li>
