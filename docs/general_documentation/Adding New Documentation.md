@@ -1,8 +1,11 @@
 # Creating Documentation
 
-Creating documentation is easy! There is a folder called "docs/general_documentation" in the repository. Inside this folder, you can create a new markdown file with the name of the documentation you want to create. For example, if you want to create a documentation called "Adding New Documentation", you can create a file called "Adding New Documentation.md". The file will be automatically pulled into the documentation page of the website, and you can access it by going to the "Documentation" page on the website.
 
-It's as easy as that! Subfolders are currently not supported, so please keep all documentation in the "docs/general_documentation" folder.
+1. Add a Markdown (.md) or PDF (.pdf) file to the "docs/general_documentation folder"
+2. Name the file after your documentation (e.g., Adding New Documentation.md).
+3. The website will automatically display it on the Documentation page.
+
+Note: Subfolders are not supported—all files must be placed directly inside "docs/general_documentation"
 
 # How to write in Markdown format
 

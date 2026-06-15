@@ -5,103 +5,166 @@ import { useRouter } from "next/router";
 import Layout from "@/comps/layout.jsx";
 
 import ArticleIcon from "@mui/icons-material/Article";
-import {
-  Paper,
-  Typography,
-  Button,
-  Box,
-  Stack,
-  Container,
-} from "@mui/material";
+import { useTheme, alpha } from "@mui/material/styles";
+import { motion } from "framer-motion";
 
-// Custom component for document card
-function IconAndName({ icon, title, buttonTitle, color, onClick }) {
-  return (
-    <Paper
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
-        padding: "20px", // Reduced padding
-        margin: "5px", // Reduced margin
-        width: "250px", // Adjusted width
-        height: "250px", // Adjusted height
-        backgroundColor: color,
-        borderRadius: "8px",
-        cursor: "pointer",
-        textAlign: "center", // Center the text
-      }}
-      onClick={onClick}
-    >
-      {icon}
-      <Typography variant="h6" gutterBottom>
-        {title}
-      </Typography>{" "}
-      {/* Adjusted typography */}
-      <Button size="small" color="primary">
-        {buttonTitle}
-      </Button>{" "}
-      {/* Smaller button */}
-    </Paper>
-  );
-}
+import {
+  Box,
+  Container,
+  Typography,
+  Grid,
+  Card,
+  CardContent,
+  Button,
+} from "@mui/material";
 
 function Documentation({ files }) {
   const router = useRouter();
+  const theme = useTheme();
+
 
   return (
-    <Container className="min-h-screen">
-      <div className="min-h-screen">
-        <div>
-          <h1 className="m-5">Documentation:</h1>
-          <p className="text-left m-5">
-            Below is a list of documentation for the lab. Select one to get
-            started!
-          </p>
-        </div>
-
-        {/* Container that uses Box for wrapping */}
-        <Box
-          sx={{
-            display: "flex",
-            flexWrap: "wrap",
-            justifyContent: "flex-start", // Aligns items to the left
-          }}
+    <Box sx={{ minHeight: "100vh", py: 6 }}>
+      <Container maxWidth="lg">
+        {/* Hero Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
         >
-          <Stack
-            direction="row"
-            spacing={2}
-            useFlexGap
-            sx={{
-              flexWrap: "wrap", // Allows items to wrap
-            }}
-          >
-            {files.map((file, index) => (
-              <IconAndName
-                key={index}
-                icon={<ArticleIcon />}
-                title={file}
-                buttonTitle="View Document"
-                color="#f9f9f9"
-                onClick={() => router.push(`/docs/${file.replace(".md", "")}`)} // Redirect on click
-              />
+          <Box sx={{ textAlign: "center", mb: 6 }}>
+            <Typography
+              variant="h2"
+              sx={{
+                fontWeight: 700,
+                background: `linear-gradient(45deg, ${theme.palette.primary.main}, ${theme.palette.secondary.main})`,
+                WebkitBackgroundClip: "text",
+                color: "transparent",
+                mb: 2,
+              }}
+            >
+              Documentation
+            </Typography>
+
+            <Typography
+              variant="h6"
+              sx={{
+                color: theme.palette.text.secondary,
+                maxWidth: 700,
+                mx: "auto",
+              }}
+            >
+              Browse technical documentation, guides, and references for the AMP Lab.
+            </Typography>
+          </Box>
+
+          {/* Document Cards */}
+          <Grid container spacing={3}>
+            {files.map((file) => (
+              <Grid item xs={12} sm={6} md={4} key={file}>
+                <Card
+                  onClick={() => {
+                    if (file.endsWith(".md")) {
+                      router.push(`/docs/${file.replace(".md", "")}`);
+                    } else if (file.endsWith(".pdf")) {
+                      window.open(`/general_documentation/${file}`, "_blank");
+                    }
+                  }}
+                  sx={{
+                    cursor: "pointer",
+                    borderRadius: 3,
+                    height: "100%",
+                    transition: "0.25s",
+                    "&:hover": {
+                      transform: "translateY(-6px)",
+                      boxShadow: 6,
+                    },
+                  }}
+                >
+                  <CardContent
+                    sx={{
+                      p: 4,
+                      display: "flex",
+                      flexDirection: "column",
+                      alignItems: "center",
+                      textAlign: "center",
+                    }}
+                  >
+                    <Box
+                      sx={{
+                        width: 72,
+                        height: 72,
+                        borderRadius: "50%",
+                        backgroundColor: alpha(
+                          theme.palette.primary.main,
+                          0.1
+                        ),
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        mb: 2,
+                      }}
+                    >
+                      <ArticleIcon
+                        sx={{
+                          fontSize: 40,
+                          color: theme.palette.primary.main,
+                        }}
+                      />
+                    </Box>
+
+                    <Typography
+                      variant="h6"
+                      sx={{
+                        fontWeight: 600,
+                        mb: 2,
+                        wordBreak: "break-word",
+                      }}
+                    >
+                      {file.replace(".md", "")}
+                    </Typography>
+
+                    <Button
+                      variant="contained"
+                      size="small"
+                      sx={{ borderRadius: 2 }}
+                    >
+                      View Document
+                    </Button>
+                  </CardContent>
+                </Card>
+              </Grid>
             ))}
-          </Stack>
-        </Box>
-      </div>
-    </Container>
+          </Grid>
+        </motion.div>
+      </Container>
+    </Box>
   );
 }
 
-// Fetch the list of files in the directory
 export async function getStaticProps() {
   const docsDirectory = path.join(process.cwd(), "docs/general_documentation");
 
-  // Get a list of all the files in the docs directory
-  const files = await fs.promises.readdir(docsDirectory);
+  const allFiles = (await fs.promises.readdir(docsDirectory)).filter(
+    (file) => file.endsWith(".md") || file.endsWith(".pdf")
+  );
 
-  return { props: { files } };
+  const order = [
+    "Adding New Documentation.md",
+    "laser_cutter.md",
+    "Safety Datasheet 2026.pdf",
+  ];
+
+  const files = [
+    ...order.filter((file) => allFiles.includes(file)),
+    ...allFiles.filter((file) => !order.includes(file)).sort(),
+  ];
+
+  return {
+    props: {
+      files,
+    },
+  };
 }
 
 export default Layout(Documentation);
