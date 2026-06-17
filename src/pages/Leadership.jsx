@@ -3,7 +3,7 @@ import { Box, Grid, Typography, Divider } from "@mui/material";
 import LeadershipBox from "@/comps/LeadershipBox/LeadershipBox.jsx";
 import Baumann from "../../public/Headshots/Baumann.jpg";
 import Wells from "../../public/Headshots/Wells.jpg";
-import Forsyth from "../../public/Headshots/Forsyth2.jpg";
+import Forsyth from "../../public/Headshots/Forsyth3.jpg";
 import Meadows from "../../public/Headshots/Meadows.jpg";
 import Pritchard from "../../public/Headshots/Pritchard.jpeg";
 import Ethan from "../../public/Headshots/Ethan.jpg";

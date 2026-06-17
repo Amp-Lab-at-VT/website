@@ -26,12 +26,14 @@ import {
 
 import HandshakeIcon from "@mui/icons-material/Handshake";
 import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome";
+import GroupsIcon from "@mui/icons-material/Groups";
 
 const navigationItems = [
   { title: "Home", href: "/", icon: <HomeIcon /> },
   { title: "Getting Started", href: "/getting_started", icon: <GetStartedIcon /> },
   { title: "Projects", href: "/projects", icon: <ProjectsIcon /> },
   { title: "About", href: "/about", icon: <AboutIcon /> },
+  { title: "Leadership", href: "/Leadership", icon: <GroupsIcon /> },
   { title: "Lab Hygiene", href: "/clean", icon: <AutoAwesomeIcon /> },
   { title: "Resources", href: "/resources", icon: <ResourcesIcon /> },
   { title: "Documentation", href: "/documentation", icon: <DocsIcon /> },
