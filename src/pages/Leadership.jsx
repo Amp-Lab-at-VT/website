@@ -16,6 +16,7 @@ import Jijun from "../../public/Headshots/Jijun.jpg";
 import Alek from "../../public/Headshots/Alek.jpg";
 import Shane_Wyman from "../../public/Headshots/Shane_Wyman.png";
 import Kelley_Andrews from "../../public/Headshots/Kelley_Andrews.jpg";
+import Matthew_Scala from "../../public/Headshots/Matthew_Scala.png";
 
 import Layout from "@/comps/layout.jsx";
 
@@ -55,6 +56,13 @@ function Leadership() {
           title="Lead Soldering Trainer"
           email="shanew05@vt.edu"
           linkedin="https://www.linkedin.com/in/shane-wyman-7792a8216/"
+        />
+        <LeadershipBox
+          name="Matthew Scala"
+          src={Matthew_Scala}
+          title="Tech Lead"
+          email="matthewscala3820@vt.edu"
+          linkedin="https://www.linkedin.com/in/matthew-scala-926607261/"
         />
 
 
