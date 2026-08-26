@@ -32,30 +32,9 @@ function Leadership() {
         <LeadershipBox
           name="Daniel Cherkasskiy"
           src={cherkassiky}
-          title="Lab Lead"
+          title="Operations/Admin Lead"
           email="cherkasskiyd@vt.edu"
           linkedin="https://www.linkedin.com/in/daniel-cherkasskiy/"
-        />
-        <LeadershipBox
-          name="Jijun Niu"
-          src={Jijun}
-          title="Lab Safety Lead/Web Maintain"
-          email="njijun24@vt.edu"
-          linkedin="https://www.linkedin.com/in/jijunniu/"
-        />
-        <LeadershipBox
-          name="Alek Salvetti"
-          src={Alek}
-          title="Soldering Trainer"
-          email="aleks@vt.edu"
-          linkedin="https://www.linkedin.com/in/alessandro-s-5795502bb/"
-        />
-        <LeadershipBox
-          name="Shane Wyman"
-          src={Shane_Wyman}
-          title="Lead Soldering Trainer"
-          email="shanew05@vt.edu"
-          linkedin="https://www.linkedin.com/in/shane-wyman-7792a8216/"
         />
         <LeadershipBox
           name="Matthew Scala"
@@ -64,6 +43,27 @@ function Leadership() {
           email="matthewscala3820@vt.edu"
           linkedin="https://www.linkedin.com/in/matthew-scala-926607261/"
         />
+        <LeadershipBox
+          name="Shane Wyman"
+          src={Shane_Wyman}
+          title="Soldering Lead"
+          email="shanew05@vt.edu"
+          linkedin="https://www.linkedin.com/in/shane-wyman-7792a8216/"
+        />
+        <LeadershipBox
+          name="Alek Salvetti"
+          src={Alek}
+          title="Co-Soldering Lead"
+          email="aleks@vt.edu"
+          linkedin="https://www.linkedin.com/in/alessandro-s-5795502bb/"
+        />
+        <LeadershipBox
+          name="Jijun (Eva) Niu"
+          src={Jijun}
+          title="Lab Safety Lead"
+          email="njijun24@vt.edu"
+          linkedin="https://www.linkedin.com/in/jijunniu/"
+        />      
 
 
       </Grid>
@@ -91,7 +91,7 @@ function Leadership() {
         <LeadershipBox
           name="Henry Forsyth"
           src={Forsyth}
-          title="2023 Lab Lead/Webdev"
+          title="2023 Lab Lead"
           email="rhforsythjr@vt.edu"
           linkedin="https://www.linkedin.com/in/henry-forsyth-jr/"
         ></LeadershipBox>
@@ -105,7 +105,7 @@ function Leadership() {
         <LeadershipBox
           name="Purv Bavishi"
           src={PB}
-          title="Soldering Trainer/Mentor"
+          title="Mentor"
           email="purvbavishi@vt.edu"
           linkedin="https://www.linkedin.com/in/purv-bavishi/"
         ></LeadershipBox>
