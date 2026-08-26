@@ -15,6 +15,7 @@ import cherkassiky from "../../public/Headshots/cherkassiky.JPG";
 import Jijun from "../../public/Headshots/Jijun.jpg";
 import Alek from "../../public/Headshots/Alek.jpg";
 import Shane_Wyman from "../../public/Headshots/Shane_Wyman.png";
+import Kelley_Andrews from "../../public/Headshots/Kelley_Andrews.jpg";
 
 import Layout from "@/comps/layout.jsx";
 
@@ -112,21 +113,15 @@ function Leadership() {
 
 
       <Typography variant="h4" gutterBottom sx={{ marginTop: 4 }}>
-        Meet Our Team: Professors
+        Meet Our Team: Faculty
       </Typography>
       <Divider />
       <Grid container spacing={3} sx={{ marginTop: 2 }}>
         <LeadershipBox
-          name="William Baumann"
-          src={Baumann}
-          title="Professor"
-          email="baumann@vt.edu"
-        />
-        <LeadershipBox
-          name="Toby Meadows"
-          src={Meadows}
-          title="Professor"
-          email="toby88@vt.edu"
+          name="Kelley Andrews"
+          src={Kelley_Andrews}
+          title="Lab Supervisor"
+          email="kellmeister@vt.edu"
         />
         <LeadershipBox
           name="Tyler Millburn"
