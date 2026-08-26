@@ -17,6 +17,7 @@ import Alek from "../../public/Headshots/Alek.jpg";
 import Shane_Wyman from "../../public/Headshots/Shane_Wyman.png";
 import Kelley_Andrews from "../../public/Headshots/Kelley_Andrews.jpg";
 import Matthew_Scala from "../../public/Headshots/Matthew_Scala.png";
+import Matthew_Scala_Mog from "../../public/Headshots/Matthew_Scala_Mog.jpg";
 
 import Layout from "@/comps/layout.jsx";
 
@@ -38,7 +39,7 @@ function Leadership() {
         />
         <LeadershipBox
           name="Matthew Scala"
-          src={Matthew_Scala}
+          src={Matthew_Scala_Mog}
           title="Tech Lead"
           email="matthewscala3820@vt.edu"
           linkedin="https://www.linkedin.com/in/matthew-scala-926607261/"
