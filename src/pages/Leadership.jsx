@@ -39,7 +39,7 @@ function Leadership() {
         />
         <LeadershipBox
           name="Matthew Scala"
-          src={Matthew_Scala_Mog}
+          src={Matthew_Scala}
           title="Tech Lead"
           email="matthewscala3820@vt.edu"
           linkedin="https://www.linkedin.com/in/matthew-scala-926607261/"
