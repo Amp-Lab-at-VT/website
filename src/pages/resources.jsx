@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 import Layout from "@/comps/layout.jsx";
 
 import {
@@ -9,11 +8,9 @@ import {
   Card,
   CardContent,
   Button,
-  Chip,
   Grid,
   useTheme,
   alpha,
-  Stack,
 } from "@mui/material";
 
 import { motion } from "framer-motion";
@@ -120,253 +117,203 @@ function Resources() {
             </Typography>
           </Box>
 
-          {/* MAIN CONTENT */}
-          <Grid container spacing={4}>
-            {/* MAIN RESOURCE LIST */}
-            <Grid item xs={12} md={8}>
-              {/* AMP LAB TECHNICAL SUPPORT */}
-              <Card
-                sx={{
-                  p: 3,
-                  mb: 4,
-                  borderRadius: 3,
-                  background: alpha(theme.palette.background.paper, 0.9),
-                }}
-              >
-                <CardContent>
+          {/* CENTERED CONTENT */}
+          <Box
+            sx={{
+              maxWidth: 950,
+              mx: "auto",
+            }}
+          >
+            {/* AMP LAB TECHNICAL SUPPORT */}
+            <Card
+              sx={{
+                p: { xs: 2, sm: 3 },
+                mb: 4,
+                borderRadius: 3,
+                background: alpha(theme.palette.background.paper, 0.9),
+              }}
+            >
+              <CardContent>
+                <Typography
+                  variant="h4"
+                  sx={{
+                    color: theme.palette.primary.main,
+                    mb: 1,
+                  }}
+                >
+                  AMP Lab Technical Support
+                </Typography>
+
+                <Typography
+                  sx={{
+                    color: theme.palette.text.secondary,
+                    mb: 3,
+                    lineHeight: 1.7,
+                  }}
+                >
+                  For general technical questions or help troubleshooting your
+                  AMP Lab project, Matthew is the primary technical contact.
+                </Typography>
+
+                <Box
+                  sx={{
+                    p: 3,
+                    borderRadius: 2,
+                    border: `1px solid ${alpha(
+                      theme.palette.primary.main,
+                      0.3
+                    )}`,
+                  }}
+                >
                   <Typography
-                    variant="h4"
+                    variant="h5"
                     sx={{
                       color: theme.palette.primary.main,
-                      mb: 1,
+                      fontWeight: 600,
+                      mb: 1.5,
                     }}
                   >
-                    AMP Lab Technical Support
+                    Matthew Scala
                   </Typography>
 
                   <Typography
+                    variant="body1"
                     sx={{
-                      color: theme.palette.text.secondary,
-                      mb: 3,
+                      color: theme.palette.text.primary,
+                      mb: 2,
+                      lineHeight: 1.6,
                     }}
                   >
-                    For general technical questions about your AMP project,
-                    start with the AMP Lab Tech Lead.
+                    General Electronics, Circuit Design, Troubleshooting
                   </Typography>
 
-                  <Box
+                  <Button
+                    component="a"
+                    href="mailto:matthewscala3820@vt.edu"
+                    variant="outlined"
+                    size="small"
                     sx={{
-                      p: 3,
-                      borderRadius: 2,
-                      border: `1px solid ${alpha(
-                        theme.palette.primary.main,
-                        0.25
-                      )}`,
+                      textTransform: "none",
                     }}
                   >
-                    <Typography
-                      variant="h5"
-                      sx={{
-                        color: theme.palette.primary.main,
-                        fontWeight: 600,
-                      }}
-                    >
-                      Matthew Scala
-                    </Typography>
+                    matthewscala3820@vt.edu
+                  </Button>
+                </Box>
+              </CardContent>
+            </Card>
 
-                    <Typography
-                      variant="subtitle1"
-                      sx={{
-                        fontWeight: 600,
-                        mt: 0.5,
-                      }}
-                    >
-                      AMP Lab Tech Lead
-                    </Typography>
+            {/* FACULTY TECHNICAL CONTACTS */}
+            <Card
+              sx={{
+                p: { xs: 2, sm: 3 },
+                borderRadius: 3,
+                background: alpha(theme.palette.background.paper, 0.9),
+              }}
+            >
+              <CardContent>
+                <Typography
+                  variant="h4"
+                  sx={{
+                    color: theme.palette.primary.main,
+                    mb: 1,
+                  }}
+                >
+                  Faculty Technical Contacts
+                </Typography>
 
-                    <Typography
-                      sx={{
-                        color: theme.palette.text.secondary,
-                        mt: 1.5,
-                        mb: 2,
-                      }}
-                    >
-                      General Electronics, Circuit Design, Troubleshooting
-                    </Typography>
+                <Typography
+                  sx={{
+                    color: theme.palette.text.secondary,
+                    mb: 4,
+                    lineHeight: 1.7,
+                  }}
+                >
+                  Working on something that requires more specialized
+                  knowledge? These Virginia Tech ECE faculty members represent
+                  different technical areas that may be relevant to your
+                  project. When reaching out, please be respectful of their
+                  time and briefly explain your project and what you need help
+                  with.
+                </Typography>
 
-                    <Button
-                      component="a"
-                      href="mailto:matthewscala3820@vt.edu"
-                      variant="outlined"
-                      size="small"
-                    >
-                      matthewscala3820@vt.edu
-                    </Button>
-                  </Box>
-                </CardContent>
-              </Card>
-
-              {/* FACULTY CONTACTS */}
-              <Card
-                sx={{
-                  p: 3,
-                  borderRadius: 3,
-                  background: alpha(theme.palette.background.paper, 0.9),
-                }}
-              >
-                <CardContent>
-                  <Typography
-                    variant="h4"
-                    sx={{
-                      color: theme.palette.primary.main,
-                      mb: 1,
-                    }}
-                  >
-                    Faculty Technical Contacts
-                  </Typography>
-
-                  <Typography
-                    sx={{
-                      color: theme.palette.text.secondary,
-                      mb: 4,
-                      lineHeight: 1.7,
-                    }}
-                  >
-                    Working on something that requires more specialized
-                    knowledge? These Virginia Tech ECE faculty members
-                    represent different technical areas that may be relevant to
-                    your project.
-                  </Typography>
-
-                  <Grid container spacing={2}>
-                    {facultyContacts.map((faculty) => (
-                      <Grid item xs={12} sm={6} key={faculty.area}>
-                        <Card
-                          variant="outlined"
+                <Grid container spacing={2}>
+                  {facultyContacts.map((faculty) => (
+                    <Grid item xs={12} sm={6} key={faculty.area}>
+                      <Card
+                        variant="outlined"
+                        sx={{
+                          height: "100%",
+                          borderRadius: 2,
+                          transition: "transform 0.2s, box-shadow 0.2s",
+                          "&:hover": {
+                            transform: "translateY(-2px)",
+                            boxShadow: 3,
+                          },
+                        }}
+                      >
+                        <CardContent
                           sx={{
                             height: "100%",
-                            borderRadius: 2,
-                            transition: "0.2s",
-                            "&:hover": {
-                              transform: "translateY(-2px)",
-                              boxShadow: 3,
-                            },
+                            display: "flex",
+                            flexDirection: "column",
                           }}
                         >
-                          <CardContent>
-                            <Typography
-                              variant="overline"
-                              sx={{
-                                color: theme.palette.primary.main,
-                                fontWeight: 700,
-                              }}
-                            >
-                              {faculty.area}
-                            </Typography>
+                          <Typography
+                            variant="overline"
+                            sx={{
+                              color: theme.palette.text.secondary,
+                              fontWeight: 700,
+                              lineHeight: 1.5,
+                              mb: 1,
+                            }}
+                          >
+                            {faculty.area}
+                          </Typography>
 
-                            <Typography
-                              variant="h6"
-                              sx={{
-                                fontWeight: 600,
-                                mt: 0.5,
-                              }}
-                            >
-                              {faculty.name}
-                            </Typography>
+                          <Typography
+                            variant="h6"
+                            sx={{
+                              color: theme.palette.primary.main,
+                              fontWeight: 600,
+                              mb: 1,
+                            }}
+                          >
+                            {faculty.name}
+                          </Typography>
 
-                            <Typography
-                              variant="body2"
-                              sx={{
-                                color: theme.palette.text.secondary,
-                                mt: 1,
-                                mb: 2,
-                                lineHeight: 1.6,
-                              }}
-                            >
-                              {faculty.focus}
-                            </Typography>
+                          <Typography
+                            variant="body2"
+                            sx={{
+                              color: theme.palette.text.primary,
+                              lineHeight: 1.6,
+                              mb: 2,
+                            }}
+                          >
+                            {faculty.focus}
+                          </Typography>
 
+                          <Box sx={{ mt: "auto" }}>
                             <Button
                               component="a"
                               href={`mailto:${faculty.email}`}
                               variant="outlined"
                               size="small"
                               fullWidth
+                              sx={{
+                                textTransform: "none",
+                              }}
                             >
                               {faculty.email}
                             </Button>
-                          </CardContent>
-                        </Card>
-                      </Grid>
-                    ))}
-                  </Grid>
-                </CardContent>
-              </Card>
-            </Grid>
-
-            {/* SIDE PANEL */}
-            <Grid item xs={12} md={4}>
-              <Stack spacing={3}>
-                <Card sx={{ p: 3, borderRadius: 3 }}>
-                  <Typography variant="h6" color="primary" gutterBottom>
-                    Quick Access
-                  </Typography>
-
-                  <Box
-                    sx={{
-                      display: "flex",
-                      flexWrap: "wrap",
-                      gap: 1,
-                    }}
-                  >
-                    {[
-                      "Swipe Access",
-                      "Lab Rules",
-                      "Training",
-                      "Safety",
-                      "EHS",
-                      "Equipment",
-                    ].map((item) => (
-                      <Chip
-                        key={item}
-                        label={item}
-                        color="primary"
-                        variant="outlined"
-                        size="small"
-                      />
-                    ))}
-                  </Box>
-                </Card>
-
-                <Card sx={{ p: 3, borderRadius: 3 }}>
-                  <Typography variant="h6" color="primary" gutterBottom>
-                    Need Help?
-                  </Typography>
-
-                  <Typography
-                    variant="body2"
-                    sx={{
-                      mb: 2,
-                      lineHeight: 1.6,
-                    }}
-                  >
-                    For general project questions, start with the AMP Lab Tech
-                    Lead. For specialized technical questions, reach out to the
-                    faculty contact whose area best matches your project.
-                  </Typography>
-
-                  <Button
-                    variant="contained"
-                    fullWidth
-                    component={Link}
-                    href="/getting_started"
-                  >
-                    Getting Started
-                  </Button>
-                </Card>
-              </Stack>
-            </Grid>
-          </Grid>
+                          </Box>
+                        </CardContent>
+                      </Card>
+                    </Grid>
+                  ))}
+                </Grid>
+              </CardContent>
+            </Card>
+          </Box>
         </motion.div>
       </Container>
     </Box>
