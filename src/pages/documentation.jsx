@@ -22,7 +22,6 @@ function Documentation({ files }) {
   const router = useRouter();
   const theme = useTheme();
 
-
   return (
     <Box sx={{ minHeight: "100vh", py: 6 }}>
       <Container maxWidth="lg">
@@ -143,22 +142,23 @@ function Documentation({ files }) {
 }
 
 export async function getStaticProps() {
-  const docsDirectory = path.join(process.cwd(), "docs/general_documentation");
-
-  const allFiles = (await fs.promises.readdir(docsDirectory)).filter(
-    (file) => file.endsWith(".md") || file.endsWith(".pdf")
+  const docsDirectory = path.join(
+    process.cwd(),
+    "docs/general_documentation"
   );
 
-  const order = [
+  const hiddenFiles = [
     "Adding New Documentation.md",
     "laser_cutter.md",
-    "Safety Datasheet 2026.pdf",
   ];
 
-  const files = [
-    ...order.filter((file) => allFiles.includes(file)),
-    ...allFiles.filter((file) => !order.includes(file)).sort(),
-  ];
+  const allFiles = (await fs.promises.readdir(docsDirectory)).filter(
+    (file) =>
+      (file.endsWith(".md") || file.endsWith(".pdf")) &&
+      !hiddenFiles.includes(file)
+  );
+
+  const files = allFiles.sort();
 
   return {
     props: {
