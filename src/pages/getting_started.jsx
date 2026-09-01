@@ -16,12 +16,12 @@ import {
 import { motion } from "framer-motion";
 
 import { MdOutlineWavingHand } from "react-icons/md";
-import { GiReturnArrow, GiSolderingIron, GiSwipeCard } from "react-icons/gi";
+import { GiSolderingIron, GiSwipeCard } from "react-icons/gi";
 import { BsPrinterFill } from "react-icons/bs";
 import { RxDiscordLogo } from "react-icons/rx";
 import { BiPurchaseTagAlt } from "react-icons/bi";
 
-function GettingStarted({ new_members, returning_members }) {
+function GettingStarted({ new_members }) {
   const theme = useTheme();
 
   return (
@@ -78,20 +78,6 @@ function GettingStarted({ new_members, returning_members }) {
 
                 <ReactMarkdown rehypePlugins={[rehypeRaw]}>
                   {new_members}
-                </ReactMarkdown>
-              </IconAndName>
-            </Grid>
-
-            {/* RETURNING MEMBERS */}
-            <Grid item xs={12} md={4}>
-              <IconAndName
-                icon={<GiReturnArrow />}
-                title="Returning Members"
-                buttonTitle="Continue"
-                color="#f9f9f9"
-              >
-                <ReactMarkdown rehypePlugins={[rehypeRaw]}>
-                  {returning_members}
                 </ReactMarkdown>
               </IconAndName>
             </Grid>
@@ -176,12 +162,7 @@ export async function getStaticProps() {
     "utf8"
   );
 
-  const returning_members = await fs.readFile(
-    process.cwd() + "/docs/returning_members.md",
-    "utf8"
-  );
-
-  return { props: { new_members, returning_members } };
+  return { props: { new_members } };
 }
 
 export default Layout(GettingStarted);
