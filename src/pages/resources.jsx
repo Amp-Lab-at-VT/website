@@ -124,7 +124,7 @@ function Resources() {
               mx: "auto",
             }}
           >
-            {/* AMP LAB TECHNICAL SUPPORT */}
+            {/* AMP LAB TECH LEAD */}
             <Card
               sx={{
                 p: { xs: 2, sm: 3 },
@@ -141,7 +141,7 @@ function Resources() {
                     mb: 1,
                   }}
                 >
-                  AMP Lab Technical Support
+                  AMP Lab Tech Lead
                 </Typography>
 
                 <Typography
@@ -151,8 +151,8 @@ function Resources() {
                     lineHeight: 1.7,
                   }}
                 >
-                  For general technical questions or help troubleshooting your
-                  AMP Lab project, Matthew is the primary technical contact.
+                  For general technical questions about your AMP project, the
+                  AMP Lab Tech Lead is available as a resource.
                 </Typography>
 
                 <Box
@@ -231,9 +231,7 @@ function Resources() {
                   Working on something that requires more specialized
                   knowledge? These Virginia Tech ECE faculty members represent
                   different technical areas that may be relevant to your
-                  project. When reaching out, please be respectful of their
-                  time and briefly explain your project and what you need help
-                  with.
+                  project.
                 </Typography>
 
                 <Grid container spacing={2}>
