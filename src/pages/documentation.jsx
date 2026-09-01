@@ -53,12 +53,16 @@ function Documentation({ files }) {
                 mx: "auto",
               }}
             >
-              Browse technical documentation, guides, and references for the AMP Lab.
+              Browse AMP Lab documentation, guides, and reference materials.
             </Typography>
           </Box>
 
           {/* Document Cards */}
-          <Grid container spacing={3}>
+          <Grid
+            container
+            spacing={3}
+            justifyContent="center"
+          >
             {files.map((file) => (
               <Grid item xs={12} sm={6} md={4} key={file}>
                 <Card
@@ -66,7 +70,10 @@ function Documentation({ files }) {
                     if (file.endsWith(".md")) {
                       router.push(`/docs/${file.replace(".md", "")}`);
                     } else if (file.endsWith(".pdf")) {
-                      window.open(`/general_documentation/${file}`, "_blank");
+                      window.open(
+                        `/general_documentation/${file}`,
+                        "_blank"
+                      );
                     }
                   }}
                   sx={{
