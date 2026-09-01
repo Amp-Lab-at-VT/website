@@ -5,7 +5,6 @@ import {
   Box,
   Container,
   Stack,
-  Paper,
   Fade,
   Card,
   Button,
@@ -19,7 +18,7 @@ function Page() {
 
   return (
     <Container>
-      <div class="App-pageHelper">
+      <div className="App-pageHelper">
 
         {/* HERO SECTION */}
         <Box sx={{ textAlign: "center", mb: 6 }}>
@@ -36,48 +35,61 @@ function Page() {
             Swipe Access Docs
           </Typography>
         </Box>
+
+        {/* AMP LAB ACCESS INFORMATION */}
         <Alert sx={{ marginBottom: "10px" }} severity="info">
-          This page contains documents required to obtain swipe access
-          to the AMP Lab (Whittemore 264), MDE Lab (Whittemore 264),
-          and/or Robotics Lab (Durham 373). To gain access, download and
-          complete the requirements in the Lab Training Guide. The ECE
-          Lab Policy and ECE Lab Waiver are supporting documents referenced in the guide.
+          This page contains the documents required to obtain swipe access to
+          the AMP Lab in Whittemore 234. To request access, download and
+          complete the requirements in the Lab Training and Swipe Access Guide.
+          The ECE Lab Policy and ECE Lab Waiver are supporting documents
+          referenced in the guide.
         </Alert>
+
         <Stack>
+          {/* SWIPE ACCESS GUIDE */}
           <SingleDoc
-            title="Welcome to the AMP LAB~  You are probably here to request access to the AMP LAB ٩(｡・ω・｡)و "
-            description="Follow the Lab Training and Swipe Access Guide below"
-            link={`https://github.com/Amp-Lab-at-VT/website/raw/niujijun143-patch-1/docs/mde_docs/Request%20Swipe%20Access.docx`}
-            last_updated="6/14/2026"
+            title="AMP Lab Swipe Access"
+            description="Follow the Lab Training and Swipe Access Guide below to complete the requirements for AMP Lab access."
+            link="https://github.com/Amp-Lab-at-VT/website/raw/niujijun143-patch-1/docs/mde_docs/Request%20Swipe%20Access.docx"
+            last_updated="9/1/2026"
           />
+
+          {/* ECE LAB POLICY */}
           <SingleDoc
             title="ECE Lab Policy"
-            description="This contains the policy for the ECE Lab Policy."
+            description="This document contains the ECE Lab Policy referenced in the Lab Training and Swipe Access Guide."
             link={`https://github.com/Amp-Lab-at-VT/website/raw/${branchName}/docs/mde_docs/ECE%20Design%20Studio%20Policy.docx`}
-            last_updated="6/14/2026"
+            last_updated="9/1/2026"
           />
+
+          {/* ECE LAB WAIVER */}
           <SingleDoc
             title="ECE Lab Waiver"
             description={
               <Box>
-                <Alert severity="warning">
-                  This is the document you will submit for swipe access
+                <Alert severity="warning" sx={{ mb: 1 }}>
+                  This is the document you will submit when requesting swipe
+                  access.
                 </Alert>
                 <Typography>
-                  This contains the waiver for the ECE Lab
+                  This document contains the ECE Lab Waiver required for AMP Lab
+                  access.
                 </Typography>
               </Box>
             }
             link={`https://github.com/Amp-Lab-at-VT/website/raw/${branchName}/docs/mde_docs/ECE%20Integrated%20Design%20Studio%20Waiver.docx`}
-            last_updated="6/14/2026"
+            last_updated="9/1/2026"
           />
         </Stack>
 
+        {/* MDE ACCESS INFORMATION */}
         <Alert sx={{ marginBottom: "10px" }} severity="info">
-          Note: These documents are universal to both the MDE and AMP lab sides
-          of the lab, but they do NOT grant you access to both sides of the lab.
-          You will need to be apart of the AMP lab to use their side
+          This page is only for AMP Lab swipe access. For MDE Lab swipe access,
+          please contact Joe Adams at{" "}
+          <a href="mailto:wjadams@vt.edu">wjadams@vt.edu</a> or Daniel Connors at{" "}
+          <a href="mailto:dpconnors@vt.edu">dpconnors@vt.edu</a>.
         </Alert>
+
       </div>
     </Container>
   );
@@ -94,14 +106,18 @@ function SingleDoc(props) {
             display: "flex",
             flexDirection: "row",
             justifyContent: "space-between",
+            gap: 2,
           }}
         >
           <Typography variant="h6">{title}</Typography>
+
           <Typography variant="caption">
             Last Updated: {last_updated}
           </Typography>
         </Box>
+
         <Box>{description}</Box>
+
         <Button href={link}>Download Document</Button>
       </Card>
     </Fade>
