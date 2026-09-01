@@ -6,8 +6,6 @@ The AMP Lab provides three levels of soldering training for students:
 
 Completion of basic or higher soldering training allows the use of soldering equipment, unsupervised, in the AMP Lab. Anyone caught using soldering equipment without the basic or higher training will be denied access to the AMP Lab for at least one semester.
 
-Note: If you have completed general training in the past then you are basic certified and can directly move on to the intermediate training. If you have completed basic training before Fall 2023 you are intermediate certified and can move on to advance soldering training.
-
 ### Soldering Training Signup
 Use the following link or banner on top of this page to signup for solder training session. (Please note that basic training must be completed before starting intermediate soldering training):
 
@@ -25,4 +23,9 @@ Email the following address to schedule advance soldering training (Please note 
 </a>
 
 Note: 
-Instructors are student volunteers. If you haven't received a reply, please send a follow-up email. 
+Note: 
+Instructors are student volunteers. If you haven't received a reply, please send a follow-up email.
+
+If no soldering training sessions are shown on the booking website, this means that all currently available sessions are full. Additional sessions will be added as instructor availability permits.
+
+If you urgently need soldering training and cannot wait for another session to become available, please email shanew05@vt.edu and aleks@vt.edu. Urgent training requests will be evaluated on a case-by-case basis and are not guaranteed.
