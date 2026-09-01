@@ -30,8 +30,8 @@ Please email the Soldering Training Team to schedule an Advanced Soldering Train
 
 ## Important Notes
 
-**Note: Instructors are student volunteers. If you haven't received a reply, please send a follow-up email.**
+Instructors are student volunteers. If you haven't received a reply, please send a follow-up email.
 
-**If no soldering training sessions are shown on the booking website, this means that all currently available sessions are full. Additional sessions will be added as instructor availability permits.**
+If no soldering training sessions are shown on the booking website, this means that all currently available sessions are full. Additional sessions will be added as instructor availability permits, so please check the booking website regularly for newly available sessions.
 
-**If you urgently need soldering training and cannot wait for another session to become available, please email shanew05@vt.edu and aleks@vt.edu. Urgent training requests will be evaluated on a case-by-case basis and are not guaranteed.**
+If you urgently need soldering training and cannot wait for another session to become available, please email shanew05@vt.edu and aleks@vt.edu. Urgent training requests will be evaluated on a case-by-case basis and are not guaranteed.
