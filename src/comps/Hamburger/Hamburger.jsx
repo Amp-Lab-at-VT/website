@@ -38,7 +38,6 @@ const navigationItems = [
   { title: "Resources", href: "/resources", icon: <ResourcesIcon /> },
   { title: "Documentation", href: "/documentation", icon: <DocsIcon /> },
   { title: "GitHub", href: "https://github.com/Amp-Lab-at-VT/website", icon: <GitHubIcon />, external: true },
-  { title: "Sponsorship", href: "/sponsorship_packet", icon: <HandshakeIcon /> },
 ];
 
 export default function Hamburger() {
