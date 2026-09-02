@@ -16,4 +16,4 @@ For information about joining AMP Lab, project proposals, required training, and
 
 ## Leadership Team
 
-Want to hear more about our leadership team? Click below to learn more!
+Want to meet the students and faculty who help lead the AMP Lab? Click below to learn more!
