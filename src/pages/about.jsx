@@ -117,7 +117,7 @@ function About({ fileContents }) {
 
             <Grid item xs={12} md={4}>
               {/* What We Offer */}
-              <Card sx={{ p: 3, mb: 3 }}>
+              <Card sx={{ p: 3 }}>
                 <Typography variant="h6" gutterBottom color="primary">
                   What We Offer
                 </Typography>
@@ -141,58 +141,14 @@ function About({ fileContents }) {
                       key={feature}
                       label={feature}
                       variant="outlined"
-                      color="primary"
                       size="small"
+                      sx={{
+                        color: theme.palette.text.primary,
+                        borderColor: theme.palette.primary.main,
+                      }}
                     />
                   ))}
                 </Box>
-              </Card>
-
-              {/* Visit Us */}
-              <Card sx={{ p: 3 }}>
-                <Typography variant="h6" gutterBottom color="primary">
-                  Visit Us
-                </Typography>
-
-                <Typography
-                  variant="body2"
-                  sx={{
-                    mb: 1,
-                    color: theme.palette.text.primary,
-                  }}
-                >
-                  <strong>Location:</strong> Whittemore 234
-                </Typography>
-
-                <Typography
-                  variant="body2"
-                  sx={{
-                    mb: 1,
-                    color: theme.palette.text.primary,
-                  }}
-                >
-                  1185 Perry St
-                </Typography>
-
-                <Typography
-                  variant="body2"
-                  sx={{
-                    mb: 2,
-                    color: theme.palette.text.primary,
-                  }}
-                >
-                  Blacksburg, VA 24060
-                </Typography>
-
-                <Button
-                  variant="outlined"
-                  size="small"
-                  component={Link}
-                  href="/getting_started"
-                  fullWidth
-                >
-                  Get Started Today
-                </Button>
               </Card>
             </Grid>
           </Grid>
