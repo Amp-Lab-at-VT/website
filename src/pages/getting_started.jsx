@@ -117,16 +117,6 @@ function GettingStarted({ new_members }) {
 
             <Grid item xs={12} md={3}>
               <IconAndName
-                href="/soldering/booking"
-                icon={<GiSolderingIron />}
-                title="Project Proposal"
-                buttonTitle="Sign Up"
-                color="#f9f9f9"
-              />
-            </Grid>
-
-            <Grid item xs={12} md={3}>
-              <IconAndName
                 href="https://github.com/Amp-Lab-at-VT/print-queue/issues/new?assignees=octocat&labels=3d-print&template=3d_print.yml&title=%5B3d-print%5D%3A+"
                 icon={<BsPrinterFill />}
                 title="3D Printing"
