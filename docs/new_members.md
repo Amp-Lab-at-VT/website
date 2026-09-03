@@ -28,14 +28,10 @@ This process is simple! Follow the steps below in order to get started:
 
     <a class="btn" href="https://github.com/Amp-Lab-at-VT/SampleProject/fork">Sample Project</a>
 
-    Rename the repository for your project, update the `README.md`, and continue updating your repository throughout the semester to document your progress.
-
-    **Too confusing?** Check <a href="/beginners_guide">this tutorial</a> for help getting started with GitHub.
+    Rename the repository for your project, update the README.md, and continue updating your repository throughout the semester to document your progress.
 
     <a class="btn" href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=hGiVYK0Q-kCGPU8yweOjetPU8gzw-YxNiRraZg_xsI1UNjJHTkZQUEdBVDJZUkZRUjZMQjVWRVU3Ti4u">AMP Lab New Member Onboarding Form</a>
 
 4. Once your onboarding information has been reviewed and verified, AMP Lab leadership will submit your information for swipe access.
-
-    **You do not need to submit a separate AMP Lab swipe access request.**
 
 <hr>
