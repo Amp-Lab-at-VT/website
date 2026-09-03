@@ -72,9 +72,6 @@ function GettingStarted({ new_members }) {
                 buttonTitle="Start Here"
                 color="#f9f9f9"
               >
-                <Typography variant="body2">
-                  If you need help, visit the lab or ask on Discord.
-                </Typography>
 
                 <ReactMarkdown rehypePlugins={[rehypeRaw]}>
                   {new_members}
