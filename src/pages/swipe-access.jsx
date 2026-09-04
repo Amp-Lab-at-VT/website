@@ -24,6 +24,7 @@ function Page() {
             fontWeight: 700,
             mt: 2,
             mb: 6,
+            color: "error.main",
           }}
         >
           Swipe Access Documents
