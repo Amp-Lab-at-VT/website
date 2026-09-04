@@ -24,22 +24,22 @@ This process is simple! Follow the steps below in order to get started:
 
     **Do not continue until your Project Proposal has been reviewed and approved.**
 
-3. Once your Project Proposal is approved, create your project GitHub repository using the AMP Lab Sample Project.
+3. Once your Project Proposal has been approved, set up your project GitHub repository.
 
-    First, fork the Sample Project repository:
+    Fork the AMP Lab Sample Project repository:
 
     <a class="btn" href="https://github.com/Amp-Lab-at-VT/SampleProject/fork">Sample Project</a>
 
-    Rename the repository for your project, update the README.md, and continue updating your repository throughout the semester to document your progress.
+    Rename the forked repository for your project and update the README.md.
 
-    Once your repository is created, submit the link to your forked project repository here:
+    Submit the link to your forked repository:
 
     <a class="btn" href="https://github.com/Amp-Lab-at-VT/website/issues/new/choose">Submit Your Project Repository</a>
 
-    After submitting your GitHub repository, complete the AMP Lab New Member Onboarding Form:
+    Complete the AMP Lab New Member Onboarding Form:
 
     <a class="btn" href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=hGiVYK0Q-kCGPU8yweOjetPU8gzw-YxNiRraZg_xsI1UNjJHTkZQUEdBVDJZUkZRUjZMQjVWRVU3Ti4u">AMP Lab New Member Onboarding Form</a>
 
-4. Once your onboarding information has been reviewed and verified, AMP Lab leadership will submit your information for swipe access.
+4. After your onboarding information has been reviewed and verified, AMP Lab leadership will submit your information for swipe access.
 
 <hr>
