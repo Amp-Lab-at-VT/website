@@ -31,9 +31,9 @@ function Page() {
 
         <Alert sx={{ marginBottom: "10px" }} severity="info">
           This page contains the documents required for AMP Lab swipe access to
-          the ECE Design Studio in Whittemore 234. To request access, download
-          and complete the requirements outlined in the AMP Lab Swipe Access
-          Guide. The Lab Policy and Lab Waiver are supporting documents
+          the ECE Integrated Design Studio in Whittemore 234. To request access,
+          download and complete the requirements outlined in the AMP Lab Swipe
+          Access Guide. The Lab Policy and Lab Waiver are supporting documents
           referenced in the guide.
         </Alert>
 
@@ -47,8 +47,8 @@ function Page() {
 
           <SingleDoc
             title="Lab Policy"
-            description="This document contains the ECE Design Studio policies referenced in the AMP Lab Swipe Access Guide."
-            link={`https://github.com/Amp-Lab-at-VT/website/raw/${branchName}/docs/mde_docs/ECE%20Design%20Studio%20Policy.docx`}
+            description="This document contains the ECE Integrated Design Studio policies referenced in the AMP Lab Swipe Access Guide."
+            link={`https://github.com/Amp-Lab-at-VT/website/raw/${branchName}/docs/mde_docs/ECE%20Integrated%20Design%20Studio%20Policy.docx`}
             last_updated="9/3/2026"
           />
 
