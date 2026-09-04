@@ -8,6 +8,7 @@ import {
   Card,
   Button,
   Alert,
+  Link,
 } from "@mui/material";
 import Layout from "@/comps/layout.jsx";
 
@@ -17,7 +18,14 @@ function Page() {
   return (
     <Container>
       <div className="App-pageHelper">
-        <Typography variant="h4">
+        <Typography
+          variant="h3"
+          sx={{
+            fontWeight: 700,
+            mt: 2,
+            mb: 6,
+          }}
+        >
           Swipe Access Documents
         </Typography>
 
@@ -64,10 +72,18 @@ function Page() {
           />
         </Stack>
 
-        <Alert sx={{ marginTop: "10px", marginBottom: "10px" }} severity="info">
+        <Alert
+          sx={{
+            marginTop: "10px",
+            marginBottom: "10px",
+          }}
+          severity="info"
+        >
           This page is only for AMP Lab swipe access. For MDE swipe access,
-          please contact Joe Adams at wjadams@vt.edu or Daniel Connors at
-          dpconnors@vt.edu.
+          please contact Joe Adams at{" "}
+          <Link href="mailto:wjadams@vt.edu">wjadams@vt.edu</Link> or Daniel
+          Connors at{" "}
+          <Link href="mailto:dpconnors@vt.edu">dpconnors@vt.edu</Link>.
         </Alert>
       </div>
     </Container>
@@ -85,11 +101,18 @@ function SingleDoc(props) {
             display: "flex",
             flexDirection: "row",
             justifyContent: "space-between",
+            alignItems: "flex-start",
+            gap: 2,
           }}
         >
           <Typography variant="h6">{title}</Typography>
 
-          <Typography variant="caption">
+          <Typography
+            variant="caption"
+            sx={{
+              whiteSpace: "nowrap",
+            }}
+          >
             Last Updated: {last_updated}
           </Typography>
         </Box>
