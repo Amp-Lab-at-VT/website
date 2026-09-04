@@ -17,51 +17,45 @@ function Page() {
   return (
     <Container>
       <div className="App-pageHelper">
-        <Typography variant="h4" sx={{ mb: 2 }}>
-          ECE Design Studio Swipe Access
+        <Typography variant="h4">
+          Swipe Access Documents
         </Typography>
 
         <Alert sx={{ marginBottom: "10px" }} severity="info">
-          These documents are used by AMP members requesting swipe access to
-          the ECE Integrated Design Studio in Whittemore 234. Follow the AMP
-          Swipe Access Guide and complete all required training and
-          documentation before submitting your access request.
-        </Alert>
-
-        <Alert sx={{ marginBottom: "20px" }} severity="info">
-          The ECE Design Studio contains separate MDE and AMP sides. Swipe
-          access to Whittemore 234 does not automatically authorize use of both
-          sides of the lab. AMP resources are reserved for active AMP members
-          working on approved AMP projects.
+          This page contains the documents required for AMP Lab swipe access to
+          the ECE Design Studio in Whittemore 234. To request access, download
+          and complete the requirements outlined in the AMP Lab Swipe Access
+          Guide. The Lab Policy and Lab Waiver are supporting documents
+          referenced in the guide.
         </Alert>
 
         <Stack>
           <SingleDoc
-            title="AMP Swipe Access Guide"
-            description="Follow this guide to complete the requirements for AMP swipe access to Whittemore 234."
+            title="AMP Lab Swipe Access Guide"
+            description="Follow the AMP Lab Swipe Access Guide below to complete the requirements for AMP Lab access."
             link={`https://github.com/Amp-Lab-at-VT/website/raw/${branchName}/docs/mde_docs/Request%20Swipe%20Access.docx`}
             last_updated="9/3/2026"
           />
 
           <SingleDoc
-            title="ECE Design Studio Policy"
-            description="Read the ECE Design Studio policies, safety requirements, and rules for use of the MDE and AMP sides of the lab."
+            title="Lab Policy"
+            description="This document contains the ECE Design Studio policies referenced in the AMP Lab Swipe Access Guide."
             link={`https://github.com/Amp-Lab-at-VT/website/raw/${branchName}/docs/mde_docs/ECE%20Design%20Studio%20Policy.docx`}
             last_updated="9/3/2026"
           />
 
           <SingleDoc
-            title="ECE Integrated Design Studio Waiver"
+            title="Lab Waiver"
             description={
               <Box>
-                <Alert severity="warning" sx={{ mt: 1, mb: 1 }}>
-                  This waiver must be completed and submitted as part of the AMP
-                  onboarding process.
+                <Alert severity="warning" sx={{ mb: 1 }}>
+                  This is the document you will submit when requesting swipe
+                  access.
                 </Alert>
 
                 <Typography>
-                  Read, complete, and sign this waiver before requesting swipe
-                  access.
+                  This document contains the ECE Integrated Design Studio Waiver
+                  required for AMP Lab access.
                 </Typography>
               </Box>
             }
@@ -69,6 +63,12 @@ function Page() {
             last_updated="9/3/2026"
           />
         </Stack>
+
+        <Alert sx={{ marginTop: "10px", marginBottom: "10px" }} severity="info">
+          This page is only for AMP Lab swipe access. For MDE swipe access,
+          please contact Joe Adams at wjadams@vt.edu or Daniel Connors at
+          dpconnors@vt.edu.
+        </Alert>
       </div>
     </Container>
   );
@@ -85,18 +85,16 @@ function SingleDoc(props) {
             display: "flex",
             flexDirection: "row",
             justifyContent: "space-between",
-            alignItems: "flex-start",
-            gap: 2,
           }}
         >
           <Typography variant="h6">{title}</Typography>
 
-          <Typography variant="caption" sx={{ whiteSpace: "nowrap" }}>
+          <Typography variant="caption">
             Last Updated: {last_updated}
           </Typography>
         </Box>
 
-        <Box sx={{ mt: 1, mb: 1 }}>{description}</Box>
+        <Box>{description}</Box>
 
         <Button href={link}>Download Document</Button>
       </Card>
