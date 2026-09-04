@@ -62,33 +62,6 @@ Vector Graphics Generator:
   participants:
     - "Ethan James"
 
-InspireFly Cubesat Power Supply:
-  url: "https://github.com/joeesser1842/eps"
-  branch: "master"
-  mentor: "Gibbons"
-  status: "completed"
-  mission: "Design the electrical power system for the InspireFly CubeSat mission."
-  participants:
-    - "Joe Esser"
-
-InspireFly Cubesat On Board Computer:
-  url: "https://github.com/joeesser1842/obdh"
-  branch: "master"
-  mentor: "Gibbons"
-  status: "completed"
-  mission: "Develop the on-board data handling computer for the InspireFly CubeSat."
-  participants:
-    - "Joe Esser"
-
-InspireFly Cubesat Telemetry Tracking and Control:
-  url: "https://github.com/joeesser1842/ttc"
-  branch: "master"
-  mentor: "Gibbons"
-  status: "completed"
-  mission: "Build the telemetry, tracking, and control subsystem for the InspireFly CubeSat."
-  participants:
-    - "Joe Esser"
-
 Stepper Motor Symphony:
   url: "https://github.com/Amp-Lab-at-VT/Stepper_Motor_Symphony"
   branch: "main"
