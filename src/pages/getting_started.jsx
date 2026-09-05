@@ -136,37 +136,51 @@ function GettingStarted({ new_members }) {
                 buttonTitle="Submit"
                 color="#f9f9f9"
               >
-                <Typography sx={{ mb: 2 }}>
-                  Select the type of purchase request you would like to submit.
-                </Typography>
-
                 <Box
                   sx={{
-                    display: "flex",
-                    flexDirection: "column",
-                    gap: 2,
-                    maxWidth: 400,
+                    width: "100%",
+                    maxWidth: 600,
+                    mx: "auto",
+                    textAlign: "center",
+                    py: 2,
                   }}
                 >
-                  <Button
-                    variant="contained"
-                    color="primary"
-                    href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=hGiVYK0Q-kCGPU8yweOjetPU8gzw-YxNiRraZg_xsI1UNUNJRzdFSFZaRTZIQVpKQUJDMlBaMUMxMS4u"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    General Purchase Request
-                  </Button>
+                  <Typography sx={{ mb: 3 }}>
+                    Select the type of purchase request you would like to submit.
+                  </Typography>
 
-                  <Button
-                    variant="contained"
-                    color="primary"
-                    href="PUT_PCB_PURCHASE_REQUEST_LINK_HERE"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <Box
+                    sx={{
+                      display: "flex",
+                      flexDirection: "column",
+                      gap: 2,
+                      width: "100%",
+                    }}
                   >
-                    PCB Purchase Request
-                  </Button>
+                    <Button
+                      variant="contained"
+                      color="primary"
+                      href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=hGiVYK0Q-kCGPU8yweOjetPU8gzw-YxNiRraZg_xsI1UNUNJRzdFSFZaRTZIQVpKQUJDMlBaMUMxMS4u"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      fullWidth
+                      sx={{ py: 1.5 }}
+                    >
+                      General Purchase Request
+                    </Button>
+
+                    <Button
+                      variant="contained"
+                      color="primary"
+                      href="PUT_PCB_PURCHASE_REQUEST_LINK_HERE"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      fullWidth
+                      sx={{ py: 1.5 }}
+                    >
+                      PCB Purchase Request
+                    </Button>
+                  </Box>
                 </Box>
               </IconAndName>
             </Grid>
