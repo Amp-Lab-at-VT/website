@@ -73,7 +73,6 @@ function GettingStarted({ new_members }) {
                 buttonTitle="Start Here"
                 color="#f9f9f9"
               >
-
                 <ReactMarkdown rehypePlugins={[rehypeRaw]}>
                   {new_members}
                 </ReactMarkdown>
@@ -96,6 +95,7 @@ function GettingStarted({ new_members }) {
           {/* ROW 2 */}
           <Grid container spacing={3} justifyContent="center" sx={{ mt: 2 }}>
 
+            {/* DISCORD */}
             <Grid item xs={12} md={3}>
               <IconAndName
                 href="https://discord.gg/DjFCeQEMmE"
@@ -106,6 +106,7 @@ function GettingStarted({ new_members }) {
               />
             </Grid>
 
+            {/* SOLDER TRAINING */}
             <Grid item xs={12} md={3}>
               <IconAndName
                 href="/soldering"
@@ -116,6 +117,7 @@ function GettingStarted({ new_members }) {
               />
             </Grid>
 
+            {/* 3D PRINTING */}
             <Grid item xs={12} md={3}>
               <IconAndName
                 href="https://github.com/Amp-Lab-at-VT/print-queue/issues/new?assignees=octocat&labels=3d-print&template=3d_print.yml&title=%5B3d-print%5D%3A+"
@@ -126,13 +128,47 @@ function GettingStarted({ new_members }) {
               />
             </Grid>
 
+            {/* PURCHASE REQUEST */}
             <Grid item xs={12} md={3}>
               <IconAndName
                 icon={<BiPurchaseTagAlt />}
                 title="Purchase Request"
                 buttonTitle="Submit"
                 color="#f9f9f9"
-              />
+              >
+                <Typography sx={{ mb: 2 }}>
+                  Select the type of purchase request you would like to submit.
+                </Typography>
+
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: 2,
+                    maxWidth: 400,
+                  }}
+                >
+                  <Button
+                    variant="contained"
+                    color="primary"
+                    href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=hGiVYK0Q-kCGPU8yweOjetPU8gzw-YxNiRraZg_xsI1UNUNJRzdFSFZaRTZIQVpKQUJDMlBaMUMxMS4u"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    General Purchase Request
+                  </Button>
+
+                  <Button
+                    variant="contained"
+                    color="primary"
+                    href="PUT_PCB_PURCHASE_REQUEST_LINK_HERE"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    PCB Purchase Request
+                  </Button>
+                </Box>
+              </IconAndName>
             </Grid>
 
           </Grid>
@@ -150,7 +186,11 @@ export async function getStaticProps() {
     "utf8"
   );
 
-  return { props: { new_members } };
+  return {
+    props: {
+      new_members,
+    },
+  };
 }
 
 export default Layout(GettingStarted);
