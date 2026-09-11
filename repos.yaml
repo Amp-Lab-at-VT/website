@@ -277,7 +277,7 @@ Telecaster:
   participants:
     - "Shane Pomajambo"
 
-Reactive LED:
+EchoGlow:
   url: "https://github.com/niujijun143/ECHOGLOW"
   branch: "main"
 #   mentor: "N/A"
