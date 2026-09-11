@@ -294,14 +294,14 @@ Radio Frequency Single Sideband Transceiver:
   participants:
     - "Aydin Stewart"
 
-# Reedus The Mobile AI Assistant:
-#   url: "https://github.com/Danial-Sy/ReedusAIAssistant"
-#   branch: "main"
-#   mentor: "N/A"
-#   status: "active"
-#   mission: "Develop a mobile robotic assistant with forklift-style arms that uses a fine-tuned large language model and intent-driven object detection to understand commands and interact with objects."
-#   participants:
-#     - "Danial Syed"
+Reedus The Mobile AI Assistant:
+  url: "https://github.com/Danial-Sy/ReedusAIAssistant"
+  branch: "main"
+  mentor: "N/A"
+  status: "active"
+  mission: "Develop a mobile robotic assistant with forklift-style arms that uses a fine-tuned large language model and intent-driven object detection to understand commands and interact with objects."
+  participants:
+    - "Danial Syed"
 
 # Mini Tesla:
 #   url: "https://github.com/AdvanceUser2005/Mini_Tesla"
