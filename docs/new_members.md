@@ -32,7 +32,7 @@ This process is simple! Follow the steps below in order to get started:
 
     Name the repository for your project and update the README.md with your project information.
 
-    Replace the `hero.png` file with an image representing your project. Keep the filename as `hero.png`.
+    Replace the **hero.png** file with an image representing your project. Keep the filename as **hero.png** so it displays correctly on the AMP Lab website.
 
     Submit the link to your project repository:
 
