@@ -281,7 +281,7 @@ Reactive LED:
   url: "https://github.com/niujijun143/ECHOGLOW"
   branch: "main"
 #   mentor: "N/A"
-  status: "completed"
+  status: "active"
   mission: "Build a music-reactive LED system with a Bluetooth speaker."
   participants:
     - "Jijun Niu"
