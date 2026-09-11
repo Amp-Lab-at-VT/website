@@ -287,50 +287,50 @@ Reactive LED:
   participants:
     - "Jijun Niu"
 
-Radio Frequency Single Sideband Transceiver:
-  url: "https://github.com/AydinS06/Radio-Frequency-SSB-Transceiver"
-  branch: "main"
-  mentor: "Amer Zayegh"
-  status: "active"
-  mission: "The goal of this project is to build a fully functional radio frequency single-sideband (SSB) transceiver."
-  participants:
-    - "Aydin Stewart"
+# Radio Frequency Single Sideband Transceiver:
+#   url: "https://github.com/AydinS06/Radio-Frequency-SSB-Transceiver"
+#   branch: "main"
+#   mentor: "Amer Zayegh"
+#   status: "active"
+#   mission: "The goal of this project is to build a fully functional radio frequency single-sideband (SSB) transceiver."
+#   participants:
+#     - "Aydin Stewart"
 
-Reedus The Mobile AI Assistant:
-  url: "https://github.com/Danial-Sy/ReedusAIAssistant"
-  branch: "main"
-  mentor: "N/A"
-  status: "active"
-  mission: "Develop a mobile robotic assistant with forklift-style arms that uses a fine-tuned large language model and intent-driven object detection to understand commands and interact with objects."
-  participants:
-    - "Danial Syed"
+# Reedus The Mobile AI Assistant:
+#   url: "https://github.com/Danial-Sy/ReedusAIAssistant"
+#   branch: "main"
+#   mentor: "N/A"
+#   status: "active"
+#   mission: "Develop a mobile robotic assistant with forklift-style arms that uses a fine-tuned large language model and intent-driven object detection to understand commands and interact with objects."
+#   participants:
+#     - "Danial Syed"
 
-Mini - Tesla:
-  url: "https://github.com/AdvanceUser2005/Mini_Tesla"
-  branch: "main"
-  mentor: "N/A"
-  status: "active"
-  mission: "Build a small-scale Tesla-inspired vehicle in-house to demonstrate electric vehicle design, control, and autonomous driving concepts."
-  participants:
-    - "Daksh Gupta"
+# Mini - Tesla:
+#   url: "https://github.com/AdvanceUser2005/Mini_Tesla"
+#   branch: "main"
+#   mentor: "N/A"
+#   status: "active"
+#   mission: "Build a small-scale Tesla-inspired vehicle in-house to demonstrate electric vehicle design, control, and autonomous driving concepts."
+#   participants:
+#     - "Daksh Gupta"
 
-Mustang RestoMod:
-  url: "https://github.com/JoMe2004/MustangRestoMod"
-  branch: "main"
-  mentor: "N/A"
-  status: "active"
-  mission: "Rewire a 1967 Mustang and design a holographic display system for audio controls and navigation."
-  participants:
-    - "Jonathan Meeker"
+# Mustang RestoMod:
+#   url: "https://github.com/JoMe2004/MustangRestoMod"
+#   branch: "main"
+#   mentor: "N/A"
+#   status: "active"
+#   mission: "Rewire a 1967 Mustang and design a holographic display system for audio controls and navigation."
+#   participants:
+#     - "Jonathan Meeker"
 
-6 Axis Collaborative Robot:
-  url: "https://github.com/Kiank47/Robotic-Arm"
-  branch: "main"
-  mentor: "N/A"
-  status: "active"
-  mission: "Design, build, and program a 6 axis robotic arm with a goal of achieving a 25 to 50 micron end effector repeatability with a 3kg payload."
-  participants:
-    - "Kian Kabir"
+# 6 Axis Collaborative Robot:
+#   url: "https://github.com/Kiank47/Robotic-Arm"
+#   branch: "main"
+#   mentor: "N/A"
+#   status: "active"
+#   mission: "Design, build, and program a 6 axis robotic arm with a goal of achieving a 25 to 50 micron end effector repeatability with a 3kg payload."
+#   participants:
+#     - "Kian Kabir"
 
 # -----------------------------------------------------------------------
 # To add a new project, copy this template and fill it in:
