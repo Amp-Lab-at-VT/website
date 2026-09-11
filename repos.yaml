@@ -337,6 +337,14 @@ Audio DSP Board:
   participants:
     - "Ryan Jeronimus"
 
+GNSS Anti-Jammer & Signal Processing:
+  url: "https://github.com/Alsa2/GPS_Anti_Jamming"
+  branch: "main"
+  status: "active"
+  mission: "Develop and test a GNSS signal processing system using SystemVerilog, FPGA hardware, and SDR to acquire and track GPS signals, perform bit detection, and integrate anti-jamming capabilities."
+  participants:
+    - "Alek Salvetti"
+
 # -----------------------------------------------------------------------
 # To add a new project, copy this template and fill it in:
 #
