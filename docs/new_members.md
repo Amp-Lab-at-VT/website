@@ -2,7 +2,7 @@ This process is simple! Follow the steps below in order to get started:
 
 1. Review the AMP Lab Membership Guidelines before continuing.
 
-    <a class="btn" href="https://github.com/Amp-Lab-at-VT/website/raw/master/docs/general_documentation/AMP%20Lab%20Membership%20Guidelines.docx">AMP Lab Membership Guidelines</a>
+    <a class="btn" href="https://github.com/Amp-Lab-at-VT/website/raw/master/docs/general_documentation/AMP%20Lab%20Membership%20Guidelines.docx" target="_blank" rel="noopener noreferrer">AMP Lab Membership Guidelines</a>
 
 2. Create a brief Project Proposal presentation composed of:
     - **Project Overview**
@@ -20,7 +20,7 @@ This process is simple! Follow the steps below in order to get started:
 
     Once your presentation is ready, schedule a Project Proposal meeting:
 
-    <a class="btn" href="/soldering/booking">Schedule a Project Proposal</a>
+    <a class="btn" href="/soldering/booking" target="_blank" rel="noopener noreferrer">Schedule a Project Proposal</a>
 
     **Do not continue until your Project Proposal has been reviewed and approved.**
 
@@ -28,7 +28,7 @@ This process is simple! Follow the steps below in order to get started:
 
     Create your project repository using the AMP Lab Sample Project template:
 
-    <a class="btn" href="https://github.com/Amp-Lab-at-VT/SampleProject/generate">Sample Project</a>
+    <a class="btn" href="https://github.com/Amp-Lab-at-VT/SampleProject/generate" target="_blank" rel="noopener noreferrer">Sample Project</a>
 
     Name the repository for your project and update the README.md with your project information.
 
@@ -36,11 +36,11 @@ This process is simple! Follow the steps below in order to get started:
 
     Submit the link to your project repository:
 
-    <a class="btn" href="https://github.com/Amp-Lab-at-VT/website/issues/new/choose">Submit Your Project Repository</a>
+    <a class="btn" href="https://github.com/Amp-Lab-at-VT/website/issues/new/choose" target="_blank" rel="noopener noreferrer">Submit Your Project Repository</a>
 
     Complete the AMP Lab New Member Onboarding Form:
 
-    <a class="btn" href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=hGiVYK0Q-kCGPU8yweOjetPU8gzw-YxNiRraZg_xsI1UNjJHTkZQUEdBVDJZUkZRUjZMQjVWRVU3Ti4u">AMP Lab New Member Onboarding Form</a>
+    <a class="btn" href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=hGiVYK0Q-kCGPU8yweOjetPU8gzw-YxNiRraZg_xsI1UNjJHTkZQUEdBVDJZUkZRUjZMQjVWRVU3Ti4u" target="_blank" rel="noopener noreferrer">AMP Lab New Member Onboarding Form</a>
 
 4. After your onboarding information has been reviewed and verified, AMP Lab leadership will submit your information for swipe access.
 
