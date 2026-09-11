@@ -26,13 +26,15 @@ This process is simple! Follow the steps below in order to get started:
 
 3. Once your Project Proposal has been approved, set up your project GitHub repository.
 
-    Fork the AMP Lab Sample Project repository:
+    Create your project repository using the AMP Lab Sample Project template:
 
-    <a class="btn" href="https://github.com/Amp-Lab-at-VT/SampleProject/fork">Sample Project</a>
+    <a class="btn" href="https://github.com/Amp-Lab-at-VT/SampleProject/generate">Sample Project</a>
 
-    Rename the forked repository for your project and update the README.md.
+    Name the repository for your project and update the README.md with your project information.
 
-    Submit the link to your forked repository:
+    Replace the `hero.png` file with an image representing your project. Keep the filename as `hero.png`.
+
+    Submit the link to your project repository:
 
     <a class="btn" href="https://github.com/Amp-Lab-at-VT/website/issues/new/choose">Submit Your Project Repository</a>
 
