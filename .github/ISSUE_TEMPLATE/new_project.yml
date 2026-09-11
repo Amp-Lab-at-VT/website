@@ -1,61 +1,76 @@
-name: Start a New Project
-description: Start a New Project
+name: Submit a New Project
+description: Submit an approved AMP Lab project repository
 title: "[new-project]: "
-labels: ["new-project"]
+labels:
+  - new-project
 assignees:
-  - Forsyth-Creations
+  - daniel-cherkasskiy
+
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to fill out this print request!
+        Submit your approved AMP Lab project repository below.
+
+        Before submitting, make sure you have:
+        - Created your repository using the AMP Lab Sample Project template
+        - Updated the README.md with your project information
+        - Replaced the default hero.png with an image representing your project
+
   - type: input
-    id: name
+    id: project_name
     attributes:
-      label: Name
-      description: Please provide your name(s) below
-      placeholder: ex. John Snow, Daenerys Targaryen, etc.
+      label: Project Name
+      description: Enter the name of your AMP Lab project.
+      placeholder: ex. SRAM Teaching Tool
     validations:
       required: true
+
   - type: input
-    id: contact
+    id: owner
     attributes:
-      label: Contact Details
-      description: Please provide your email(s) below
-      placeholder: ex. email@example.com
+      label: Project Owner
+      description: Enter your full name.
+      placeholder: ex. Daniel Cherkasskiy
     validations:
       required: true
+
+  - type: input
+    id: email
+    attributes:
+      label: Virginia Tech Email
+      description: Enter your Virginia Tech email address.
+      placeholder: ex. yourpid@vt.edu
+    validations:
+      required: true
+
   - type: input
     id: project_url
     attributes:
       label: Project Link
-      description: Please provide the link to your Github project below. If you don't have one, please leave this blank or say "N/A"
-      placeholder: ex. https://github.com/epritchard13/FPGA-DAW
-    validations:
-      required: false
-  - type: dropdown
-    id: major
-    attributes:
-      label: What is your major?
-      description: What is your major?
-      options:
-        - GE (General Engineering)
-        - EE (Electrical Engineering)
-        - CPE (Computer Engineering)
-        - ECE (double major in both Electrical and Computer Engineering)
-        - Other (Note we will follow up with you to get more information)
+      description: Provide the link to your GitHub project repository.
+      placeholder: ex. https://github.com/username/project-name
     validations:
       required: true
-  - type: dropdown
-    id: howLong
+
+  - type: textarea
+    id: mission
     attributes:
-      label: How Long?
-      description: How long do you anticipate this project taking?
-      options:
-        - 1 Semester
-        - 2 Semesters
-        - 3 Semesters
-        - 4 Semesters
-        - Unknown
+      label: Project Description
+      description: Provide a short description of what your project does. This may be used on the AMP Lab website.
+      placeholder: Describe the goal of your project in one or two sentences.
     validations:
       required: true
+
+  - type: checkboxes
+    id: requirements
+    attributes:
+      label: Project Repository Requirements
+      description: Confirm that your repository is ready to be submitted.
+      options:
+        - label: I have updated the README.md with my project information.
+          required: true
+        - label: I have replaced the default hero.png with an image representing my project.
+          required: true
+        - label: This project has been reviewed and approved through the AMP Lab Project Proposal process.
+          required: true
