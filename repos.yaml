@@ -286,14 +286,14 @@ Reactive LED:
   participants:
     - "Jijun Niu"
 
-# Radio Frequency Single Sideband Transceiver:
-#   url: "https://github.com/AydinS06/Radio-Frequency-SSB-Transceiver"
-#   branch: "main"
-#   mentor: "Amer Zayegh"
-#   status: "active"
-#   mission: "Build a fully functional radio-frequency single-sideband (SSB) transceiver."
-#   participants:
-#     - "Aydin Stewart"
+Radio Frequency Single Sideband Transceiver:
+  url: "https://github.com/AydinS06/Radio-Frequency-SSB-Transceiver"
+  branch: "main"
+  # mentor: "Amer Zayegh"
+  status: "active"
+  mission: "Build a fully functional radio-frequency single-sideband (SSB) transceiver."
+  participants:
+    - "Aydin Stewart"
 
 # Reedus The Mobile AI Assistant:
 #   url: "https://github.com/Danial-Sy/ReedusAIAssistant"
