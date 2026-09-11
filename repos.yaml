@@ -361,6 +361,14 @@ Stenoqwit Mouseless Schematic Design:
   participants:
     - "Christian Galvez"
 
+Laser FPGA Hat:
+  url: "https://github.com/Alsa2/LaserCom"
+  branch: "main"
+  status: "active"
+  mission: "Design and build a custom Alchitry Au V2 hat board that controls a laser transmitter, processes high-speed optical detector signals through an analog front end, and outputs clean digital signals to the FPGA for further processing."
+  participants:
+    - "Alek Salvetti"
+
 # -----------------------------------------------------------------------
 # To add a new project, copy this template and fill it in:
 #
