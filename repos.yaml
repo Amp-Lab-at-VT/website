@@ -206,16 +206,6 @@ FFT Wall Display:
   participants:
     - "Phil Bozzay"
 
-
-#FM Receiver:
-#  url: "https://github.com/Hunter-Drake/FM_AM_Transistor_Radio_with_Amplifier"
-#  branch: "main"
-#  mentor: "Bozzay"
-#  status: "active"
-#  mission: "Build an FM/AM transistor radio receiver with a custom amplifier stage."
-#  participants:
-#    - "Hunter Drake"
-
 Magnetic levitation system:
   url: "https://github.com/phil-bozzay/magnetic_levitator-"
   branch: "main"
@@ -229,7 +219,7 @@ GestroCar:
   url: "https://github.com/niujijun143/GestroCar"
   branch: "main"
   mentor: "Tyler Wells, Phillip Bozzay"
-  status: "active"
+  status: "completed"
   mission: "This project focuses on building a car that can be remotely controlled using hand gestures." 
   participants:
     - "Jijun Niu"
@@ -238,7 +228,7 @@ Smart Fridge:
   url: "https://github.com/nated95/NateJanneyProject"
   branch: "main"
   mentor: "Matthew Scala"
-  status: "active"
+  status: "completed"
   mission: "A custom smart fridge with a touch-screen display which will showcase daily overviews along with live sports information with a swing-out screen." 
   participants:
     - "Nate Janney"
@@ -246,7 +236,7 @@ Smart Fridge:
 SRAM Teaching Tool:
   url: "https://github.com/PaladinBIGDan2077/SRAM-CG-Teaching-Tool"
   branch: "main"
-  mentor: "Phillip Bozzay"
+  mentor: "Jason Thweatt"
   status: "active"
   mission: "This project will demonstrate to the end-user how SRAM is used to store data within a computer, how changing BITs will have an effect on the output of the visualized character. (The development of a PAL will be likely be needed to output ASCII-based character map, possible future implementation), but for now will used" 
   participants:
@@ -265,7 +255,7 @@ Battery Management System:
   url: "https://github.com/Matt-Scala/Battery-Management-System"
   branch: "main"
   mentor: "Shane Wyman"
-  status: "active"
+  status: "completed"
   mission: "Monitors cell capacitity, temperature, voltage, current, and fault conditions. Implements fast acting cell rebalancing. Uses the L9963 chip."
   participants:
     - "Matthew Scala"
@@ -288,15 +278,14 @@ Telecaster:
   participants:
     - "Shane Pomajambo"
 
-Project Name:
+Reactive LED:
   url: "https://github.com/niujijun143/ECHOGLOW"
   branch: "main"
   mentor: "N/A"
-  status: "active"
+  status: "completed"
   mission: "Music reactive LED with bluetooth Speaker."
   participants:
     - "Jijun Niu"
-
 
 # -----------------------------------------------------------------------
 # To add a new project, copy this template and fill it in:
