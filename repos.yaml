@@ -353,6 +353,14 @@ Conveyor Belt PLC Simulator:
   participants:
     - "Nate Janney"
 
+Stenoqwit Mouseless Schematic Design:
+  url: "https://github.com/Fraexex/Stenoqwit"
+  branch: "main"
+  status: "active"
+  mission: "Develop a stenograph-style keyboard system that enables complete circuit design, including component placement, routing, custom symbols, and KiCad export, without requiring a mouse or coding."
+  participants:
+    - "Christian Galvez"
+
 # -----------------------------------------------------------------------
 # To add a new project, copy this template and fill it in:
 #
