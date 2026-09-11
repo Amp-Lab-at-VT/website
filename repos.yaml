@@ -42,7 +42,6 @@ Breadboard 8-Bit Computer:
   mission: "Build an 8-bit computer from discrete logic components on breadboards."
   participants:
     - "Rohit Rangaraj"
-    - "Smith"
 
 Instrument Looper Pedal:
   url: "https://github.com/ethanjamesauto/auto-looper"
@@ -96,7 +95,7 @@ Stylophone:
   status: "completed"
   mission: "Design and build a three-phase AC generator for power electronics education."
   participants:
-    - "Jack"
+    - "Jackson Andrews"
 
 Split-Rail DC Power Supply:
   url: "https://github.com/tylermwells/Split-Rail-DC-Power-Supply"
@@ -204,7 +203,7 @@ FFT Wall Display:
   status: "completed"
   mission: "Create a large LED wall display that visualizes audio in real time using FFT analysis."
   participants:
-    - "Phil Bozzay"
+    - "Phillip Bozzay"
 
 Magnetic Levitation System:
   url: "https://github.com/phil-bozzay/magnetic_levitator-"
