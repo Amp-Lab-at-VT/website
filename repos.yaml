@@ -1,16 +1,16 @@
 Pacheck's BLDC Driver:
   url: "https://github.com/Amp-Lab-at-VT/Pacheck_BLDC_Driver"
   branch: "main"
-  mentor: "Pritchard"
+#   mentor: "Pritchard"
   status: "completed"
-  mission: "Design and build a brushless DC motor driver with inline current sensing and switch node voltage monitoring."
+  mission: "Design and build a brushless DC motor driver with inline current sensing and switch-node voltage monitoring."
   participants:
     - "Pacheck"
 
 Digital Audio Workstation:
   url: "https://github.com/epritchard13/FPGA-DAW"
   branch: "main"
-  mentor: "Pritchard"
+#   mentor: "Pritchard"
   status: "completed"
   mission: "Build a fully functional digital audio workstation on an FPGA platform for real-time audio processing."
   participants:
@@ -19,7 +19,7 @@ Digital Audio Workstation:
 Smart Water Bottle:
   url: "https://github.com/KGouttumukkala/SmartWaterBottle"
   branch: "main"
-  mentor: "Forsyth"
+#   mentor: "Forsyth"
   status: "completed"
   mission: "Create a smart water bottle with hydration tracking and IoT connectivity."
   participants:
@@ -28,16 +28,16 @@ Smart Water Bottle:
 FPV Car:
   url: "https://github.com/Amp-Lab-at-VT/FPV-Car"
   branch: "main"
-  mentor: "Forsyth"
+#   mentor: "Forsyth"
   status: "completed"
   mission: "Build a first-person-view RC car with live video streaming and remote control."
   participants:
     - "Henry Forsyth"
 
-8-Bit Computer:
+Breadboard 8-Bit Computer:
   url: "https://github.com/Rohit-Rangaraj/8-bit-computer-rangaraj-smith"
   branch: "main"
-  mentor: "James"
+#   mentor: "James"
   status: "completed"
   mission: "Build an 8-bit computer from discrete logic components on breadboards."
   participants:
@@ -47,7 +47,7 @@ FPV Car:
 Instrument Looper Pedal:
   url: "https://github.com/ethanjamesauto/auto-looper"
   branch: "main"
-  mentor: "Pritchard"
+#   mentor: "Pritchard"
   status: "completed"
   mission: "Design an instrument looper pedal for live music performance with multi-track layering."
   participants:
@@ -56,25 +56,25 @@ Instrument Looper Pedal:
 Vector Graphics Generator:
   url: "https://github.com/ethanjamesauto/vector_pico"
   branch: "main"
-  mentor: "Pritchard"
+#   mentor: "Pritchard"
   status: "completed"
-  mission: "Generate vector graphics output using a Raspberry Pi Pico microcontroller."
+  mission: "Generate vector graphics using a Raspberry Pi Pico microcontroller."
   participants:
     - "Ethan James"
 
 Stepper Motor Symphony:
   url: "https://github.com/Amp-Lab-at-VT/Stepper_Motor_Symphony"
   branch: "main"
-  mentor: "Unknown"
+#   mentor: "Unknown"
   status: "completed"
   mission: "Create a music box that uses stepper motors to play songs by stepping at precise frequencies."
   participants:
     - "Dylan Green"
 
-8 Bit Computer:
+Ben Eater 8-Bit Computer:
   url: "https://github.com/Amp-Lab-at-VT/8-bit-Computer"
   branch: "main"
-  mentor: "Gibbons"
+#   mentor: "Gibbons"
   status: "completed"
   mission: "Construct a breadboard-based 8-bit computer following Ben Eater's design."
   participants:
@@ -83,25 +83,25 @@ Stepper Motor Symphony:
 Stylophone:
   url: "https://github.com/Amp-Lab-at-VT/Stylophone"
   branch: "master"
-  mentor: "Gibbons"
+#   mentor: "Gibbons"
   status: "completed"
-  mission: "Reverse-engineer a stylophone using modern ICs with USB-C power and rechargeable battery."
+  mission: "Reverse-engineer a Stylophone using modern ICs with USB-C power and a rechargeable battery."
   participants:
     - "Jivitesh Kukreja"
 
-3-Phase-AC-generator:
+3-Phase AC Generator:
   url: "https://github.com/Jack4891/3-Phase-AC-generator"
   branch: "main"
-  mentor: "Gibbons"
+#   mentor: "Gibbons"
   status: "completed"
   mission: "Design and build a three-phase AC generator for power electronics education."
   participants:
     - "Jack"
 
-Split-Rail-DC-Power-Supply:
+Split-Rail DC Power Supply:
   url: "https://github.com/tylermwells/Split-Rail-DC-Power-Supply"
   branch: "main"
-  mentor: "Gibbons"
+#   mentor: "Gibbons"
   status: "completed"
   mission: "Build a split-rail DC power supply for analog circuit prototyping."
   participants:
@@ -110,7 +110,7 @@ Split-Rail-DC-Power-Supply:
 Cockcroft-Walton Circuit:
   url: "https://github.com/pbroome4VT/CockcroftWaltonCircuit"
   branch: "main"
-  mentor: "Forsyth"
+#   mentor: "Forsyth"
   status: "completed"
   mission: "Construct a Cockcroft-Walton voltage multiplier circuit for high-voltage experiments."
   participants:
@@ -119,7 +119,7 @@ Cockcroft-Walton Circuit:
 Modular Amateur Rocket Computer:
   url: "https://github.com/devincress/marc"
   branch: "main"
-  mentor: "Forsyth"
+#   mentor: "Forsyth"
   status: "completed"
   mission: "Design a modular avionics computer for amateur rocketry with telemetry and data logging."
   participants:
@@ -128,7 +128,7 @@ Modular Amateur Rocket Computer:
 Temperature Controlled Fan:
   url: "https://github.com/tylermwells/Temperature_Controlled_Fan"
   branch: "main"
-  mentor: "Gibbons"
+#   mentor: "Gibbons"
   status: "completed"
   mission: "Build a temperature-sensing fan controller using analog and digital components."
   participants:
@@ -137,7 +137,7 @@ Temperature Controlled Fan:
 Electronic Drum Set:
   url: "https://github.com/Amp-Lab-at-VT/drums"
   branch: "main"
-  mentor: "Pritchard"
+#   mentor: "Pritchard"
   status: "completed"
   mission: "Build a custom electronic drum set with piezo sensors and MIDI output."
   participants:
@@ -146,7 +146,7 @@ Electronic Drum Set:
 Airbus A320 Simulator Cockpit:
   url: "https://github.com/Amp-Lab-at-VT/airbus-cockpit"
   branch: "main"
-  mentor: "Pritchard"
+#   mentor: "Pritchard"
   status: "completed"
   mission: "Build simulator hardware for the overhead panel of an Airbus A320 aircraft."
   participants:
@@ -155,16 +155,16 @@ Airbus A320 Simulator Cockpit:
 Breadboard Graphics Card:
   url: "https://github.com/ethanjamesauto/gpu"
   branch: "main"
-  mentor: "James"
+#   mentor: "James"
   status: "completed"
-  mission: "Build a software GPU on a 16-core Parallella board from breadboard components."
+  mission: "Build a software GPU on a 16-core Parallella board using breadboard components."
   participants:
     - "Ethan James"
 
 Modular 8-Bit Computer:
   url: "https://github.com/ethanjamesauto/modular_8bit_computer"
   branch: "main"
-  mentor: "James"
+#   mentor: "James"
   status: "completed"
   mission: "Design a modular 8-bit computer architecture with swappable subsystem boards."
   participants:
@@ -173,7 +173,7 @@ Modular 8-Bit Computer:
 Blues Jam SRV Guitar Pedal:
   url: "https://github.com/Amp-Lab-at-VT/guitar-pedal"
   branch: "main"
-  mentor: "James"
+#   mentor: "James"
   status: "completed"
   mission: "Design and build a custom guitar effects pedal inspired by Stevie Ray Vaughan's tone."
   participants:
@@ -182,7 +182,7 @@ Blues Jam SRV Guitar Pedal:
 Home-Built STM:
   url: "https://github.com/philipturner/home-built-stm"
   branch: "main"
-  mentor: "Pritchard"
+#   mentor: "Pritchard"
   status: "completed"
   mission: "Construct a scanning tunneling microscope from scratch capable of atomic-resolution imaging."
   participants:
@@ -191,7 +191,7 @@ Home-Built STM:
 FPV Drone:
   url: "https://github.com/daveencar03/Frankenstein_FPV_Drone"
   branch: "main"
-  mentor: "James"
+#   mentor: "James"
   status: "completed"
   mission: "Build a first-person-view drone from salvaged and off-the-shelf components."
   participants:
@@ -200,90 +200,90 @@ FPV Drone:
 FFT Wall Display:
   url: "https://github.com/phil-bozzay/FFT_WALL_DISPLAY"
   branch: "main"
-  mentor: "Youssef Chebil"
+#   mentor: "Youssef Chebil"
   status: "completed"
-  mission: "Create a large LED wall display that visualizes audio in real-time using FFT analysis."
+  mission: "Create a large LED wall display that visualizes audio in real time using FFT analysis."
   participants:
     - "Phil Bozzay"
 
-Magnetic levitation system:
+Magnetic Levitation System:
   url: "https://github.com/phil-bozzay/magnetic_levitator-"
   branch: "main"
-  mentor: "Dr. Dan Sable"
+#   mentor: "Dr. Dan Sable"
   status: "completed"
-  mission: "Build a closed loop magnetic levitation system in both the continous and discrete time domain. Aiming to apply control theory to modulate a PWM signal and to respond to environmental disturbances." 
+  mission: "Build a closed-loop magnetic levitation system in both the continuous- and discrete-time domains using control theory to modulate a PWM signal and respond to environmental disturbances."
   participants:
     - "Phillip Bozzay"
-  
+
 GestroCar:
   url: "https://github.com/niujijun143/GestroCar"
   branch: "main"
-  mentor: "Tyler Wells, Phillip Bozzay"
+#   mentor: "Tyler Wells, Phillip Bozzay"
   status: "completed"
-  mission: "This project focuses on building a car that can be remotely controlled using hand gestures." 
+  mission: "Build a car that can be remotely controlled using hand gestures."
   participants:
     - "Jijun Niu"
 
 Smart Fridge:
   url: "https://github.com/nated95/NateJanneyProject"
   branch: "main"
-  mentor: "Matthew Scala"
+#   mentor: "Matthew Scala"
   status: "completed"
-  mission: "A custom smart fridge with a touch-screen display which will showcase daily overviews along with live sports information with a swing-out screen." 
+  mission: "Build a custom smart fridge with a swing-out touchscreen display for daily information and live sports updates."
   participants:
     - "Nate Janney"
 
 SRAM Teaching Tool:
   url: "https://github.com/PaladinBIGDan2077/SRAM-CG-Teaching-Tool"
   branch: "main"
-  mentor: "Jason Thweatt"
+#   mentor: "Jason Thweatt"
   status: "active"
-  mission: "This project will demonstrate to the end-user how SRAM is used to store data within a computer, how changing BITs will have an effect on the output of the visualized character. (The development of a PAL will be likely be needed to output ASCII-based character map, possible future implementation), but for now will used" 
+  mission: "Develop a teaching tool that demonstrates how SRAM stores data and how changing individual bits affects the displayed output."
   participants:
     - "Daniel J. Lomis"
 
-Valentines Day LED Board:
-   url: https://github.com/Matt-Scala/Valentines-Day-LED-Board
-   branch: "main"
-   mentor: "Phillip Bozzay"
-   status: "completed"
-   mission: "Custom PCB and adjustable frame. Drives LEDs with constant current source."
-   participants:
-   - "Matthew Scala"
+Valentine's Day LED Board:
+  url: "https://github.com/Matt-Scala/Valentines-Day-LED-Board"
+  branch: "main"
+#   mentor: "Phillip Bozzay"
+  status: "completed"
+  mission: "Design a custom PCB and adjustable frame that drives LEDs using a constant-current source."
+  participants:
+    - "Matthew Scala"
 
 Battery Management System:
   url: "https://github.com/Matt-Scala/Battery-Management-System"
   branch: "main"
-  mentor: "Shane Wyman"
+#   mentor: "Shane Wyman"
   status: "completed"
-  mission: "Monitors cell capacitity, temperature, voltage, current, and fault conditions. Implements fast acting cell rebalancing. Uses the L9963 chip."
+  mission: "Monitor cell capacity, temperature, voltage, current, and fault conditions while implementing fast-acting cell rebalancing using the L9963."
   participants:
     - "Matthew Scala"
 
 BeamTracker:
   url: "https://github.com/phil-bozzay/beamtracker"
   branch: "main"
-  mentor: "Shane Wyman"
+#   mentor: "Shane Wyman"
   status: "completed"
-  mission: "Design and build a four-element digital phased array receiver at 915 MHz capable of real-time software-defined beam steering. This system demonstrates the core technology behind satellite communication terminals, radar, and electronic warfare platforms"
+  mission: "Design and build a four-element digital phased-array receiver at 915 MHz capable of real-time software-defined beam steering."
   participants:
     - "Phillip Bozzay"
 
 Telecaster:
   url: "https://github.com/Shame5800/CRT-Telecaster"
   branch: "main"
-  mentor: "Arthur Ball"
+#   mentor: "Arthur Ball"
   status: "active"
-  mission: "Convert a CRT television into an instrument by designing, constructing, and programming a digital synthesizer board that feeds audio waves to the TV’s video input. Plays the note by picking up the charge from the screen and sending it to an amplifier."
+  mission: "Convert a CRT television into an instrument by designing, constructing, and programming a digital synthesizer board that feeds audio waveforms to the TV's video input and produces notes by detecting charge from the screen and sending the signal to an amplifier."
   participants:
     - "Shane Pomajambo"
 
 Reactive LED:
   url: "https://github.com/niujijun143/ECHOGLOW"
   branch: "main"
-  mentor: "N/A"
+#   mentor: "N/A"
   status: "completed"
-  mission: "Music reactive LED with bluetooth Speaker."
+  mission: "Build a music-reactive LED system with a Bluetooth speaker."
   participants:
     - "Jijun Niu"
 
@@ -292,7 +292,7 @@ Reactive LED:
 #   branch: "main"
 #   mentor: "Amer Zayegh"
 #   status: "active"
-#   mission: "The goal of this project is to build a fully functional radio frequency single-sideband (SSB) transceiver."
+#   mission: "Build a fully functional radio-frequency single-sideband (SSB) transceiver."
 #   participants:
 #     - "Aydin Stewart"
 
@@ -305,7 +305,7 @@ Reactive LED:
 #   participants:
 #     - "Danial Syed"
 
-# Mini - Tesla:
+# Mini Tesla:
 #   url: "https://github.com/AdvanceUser2005/Mini_Tesla"
 #   branch: "main"
 #   mentor: "N/A"
@@ -323,12 +323,12 @@ Reactive LED:
 #   participants:
 #     - "Jonathan Meeker"
 
-# 6 Axis Collaborative Robot:
+# 6-Axis Collaborative Robot:
 #   url: "https://github.com/Kiank47/Robotic-Arm"
 #   branch: "main"
 #   mentor: "N/A"
 #   status: "active"
-#   mission: "Design, build, and program a 6 axis robotic arm with a goal of achieving a 25 to 50 micron end effector repeatability with a 3kg payload."
+#   mission: "Design, build, and program a 6-axis robotic arm capable of 25 to 50 microns of end-effector repeatability with a 3 kg payload."
 #   participants:
 #     - "Kian Kabir"
 
@@ -338,11 +338,9 @@ Reactive LED:
 # Project Name:
 #   url: "https://github.com/owner/repo"
 #   branch: "main"
-#   mentor: "LastName"
-#   status: "completed"
+#   status: "active"
 #   mission: "One-sentence description of what the project does."
 #   participants:
-#     - "First Last"
 #     - "First Last"
 #
 # When a project wraps up, change status from "active" to "completed".
