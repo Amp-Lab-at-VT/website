@@ -345,6 +345,14 @@ GNSS Anti-Jammer & Signal Processing:
   participants:
     - "Alek Salvetti"
 
+Conveyor Belt PLC Simulator:
+  url: "https://github.com/nated95247/ConveyorSimulator"
+  branch: "main"
+  status: "active"
+  mission: "Design and build a PLC-controlled conveyor belt system that detects defective objects, sorts them into accept or reject bins, and logs system data for communication with an Arduino."
+  participants:
+    - "Nate Janney"
+
 # -----------------------------------------------------------------------
 # To add a new project, copy this template and fill it in:
 #
