@@ -303,14 +303,14 @@ Reedus The Mobile AI Assistant:
   participants:
     - "Danial Syed"
 
-# Mini Tesla:
-#   url: "https://github.com/AdvanceUser2005/Mini_Tesla"
-#   branch: "main"
-#   mentor: "N/A"
-#   status: "active"
-#   mission: "Build a small-scale Tesla-inspired vehicle in-house to demonstrate electric vehicle design, control, and autonomous driving concepts."
-#   participants:
-#     - "Daksh Gupta"
+Mini Tesla:
+  url: "https://github.com/AdvanceUser2005/Mini_Tesla"
+  branch: "main"
+  mentor: "N/A"
+  status: "active"
+  mission: "Build a small-scale Tesla-inspired vehicle in-house to demonstrate electric vehicle design, control, and autonomous driving concepts."
+  participants:
+    - "Daksh Gupta"
 
 # Mustang RestoMod:
 #   url: "https://github.com/JoMe2004/MustangRestoMod"
@@ -368,6 +368,14 @@ Laser FPGA Hat:
   mission: "Design and build a custom Alchitry Au V2 hat board that controls a laser transmitter, processes high-speed optical detector signals through an analog front end, and outputs clean digital signals to the FPGA for further processing."
   participants:
     - "Alek Salvetti"
+
+Pocket Power Supply:
+  url: "https://github.com/Futurec1/PocketPowerSupply"
+  branch: "main"
+  status: "active"
+  mission: "Design and build a portable multi-rail DC power supply that supports multiple input sources, fixed and adjustable voltage outputs, battery operation, and low-power UPS functionality for prototyping and electronics projects."
+  participants:
+    - "Matthew Smith"
 
 # -----------------------------------------------------------------------
 # To add a new project, copy this template and fill it in:
