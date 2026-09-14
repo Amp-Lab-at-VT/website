@@ -312,14 +312,14 @@ Mini Tesla:
   participants:
     - "Daksh Gupta"
 
-# Mustang RestoMod:
-#   url: "https://github.com/JoMe2004/MustangRestoMod"
-#   branch: "main"
-#   mentor: "N/A"
-#   status: "active"
-#   mission: "Rewire a 1967 Mustang and design a holographic display system for audio controls and navigation."
-#   participants:
-#     - "Jonathan Meeker"
+Mustang RestoMod:
+  url: "https://github.com/JoMe2004/MustangRestoMod"
+  branch: "main"
+  mentor: "N/A"
+  status: "active"
+  mission: "Rewire a 1967 Mustang and design a holographic display system for audio controls and navigation."
+  participants:
+    - "Jonathan Meeker"
 
 6-Axis Collaborative Robot:
   url: "https://github.com/Kiank47/Robotic-Arm"
