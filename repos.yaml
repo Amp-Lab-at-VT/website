@@ -377,6 +377,14 @@ Pocket Power Supply:
   participants:
     - "Matthew Smith"
 
+Wireless Gamepad:
+  url: "https://github.com/advaitguje7/Wireless-Gamepad"
+  branch: "main"
+  status: "active"
+  mission: "Build a modular wireless gamepad using an ESP32 and Bluetooth for customizable game controls."
+  participants:
+    - "Advait Guje"
+
 # -----------------------------------------------------------------------
 # To add a new project, copy this template and fill it in:
 #
