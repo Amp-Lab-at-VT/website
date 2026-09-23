@@ -385,6 +385,14 @@ Wireless Gamepad:
   participants:
     - "Advait Guje"
 
+Copper Plated Horn:
+  url: "https://github.com/levithank/CopperPlatedHorn"
+  branch: "main"
+  status: "active"
+  mission: "Design and test a copper-plated 3D-printed horn antenna for circular polarization and RF performance."
+  participants:
+    - "Leroy Kang"
+
 # -----------------------------------------------------------------------
 # To add a new project, copy this template and fill it in:
 #
