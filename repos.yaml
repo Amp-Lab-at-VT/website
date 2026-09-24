@@ -393,6 +393,14 @@ Copper Plated Horn:
   participants:
     - "Leroy Kang"
 
+RC-Car:
+  url: "https://github.com/EDavVT/RC-Car"
+  branch: "main"
+  status: "active"
+  mission: "Designing a custom 3D printed RC car with Raspberry Pi control, independent rear motors, suspension, and autonomous driving capabilities."
+  participants:
+    - "Ethan Davidson"
+
 # -----------------------------------------------------------------------
 # To add a new project, copy this template and fill it in:
 #
