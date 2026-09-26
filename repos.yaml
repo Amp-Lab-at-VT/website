@@ -402,7 +402,7 @@ RC-Car:
     - "Ethan Davidson"
 
 Espurr:
-  url: "https://github.com/yutong-ji356/Espurr---the-neuroadaptive-companion/tree/main"
+  url: "https://github.com/yutong-ji356/Espurr---the-neuroadaptive-companion"
   branch: "main"
   status: "active"
   mission: "Build a neuroadaptive wearable companion that combines EEG signal processing, FPGA hardware, and AI to capture and revisit meaningful moments through a consent-aware memory system."
