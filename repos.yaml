@@ -401,13 +401,13 @@ RC-Car:
   participants:
     - "Ethan Davidson"
 
-# Espurr:
-#   url: "https://github.com/yutong-ji356/Espurr---the-neuroadaptive-companion/tree/main"
-#   branch: "main"
-#   status: "active"
-#   mission: "Build a neuroadaptive wearable companion that combines EEG signal processing, FPGA hardware, and AI to capture and revisit meaningful moments through a consent-aware memory system."
-#   participants:
-#     - "Vicky Ji"
+Espurr:
+  url: "https://github.com/yutong-ji356/Espurr---the-neuroadaptive-companion/tree/main"
+  branch: "main"
+  status: "active"
+  mission: "Build a neuroadaptive wearable companion that combines EEG signal processing, FPGA hardware, and AI to capture and revisit meaningful moments through a consent-aware memory system."
+  participants:
+    - "Vicky Ji"
 
 # -----------------------------------------------------------------------
 # To add a new project, copy this template and fill it in:
