@@ -409,6 +409,14 @@ Espurr:
   participants:
     - "Vicky Ji"
 
+Class-D Amplifier:
+  url: "https://github.com/eshelton20/Class_D_Amp"
+  branch: "main"
+  status: "completed"
+  mission: "Design and build a permanent Class D audio amplifier by converting a breadboard prototype into a custom PCB and 3D printed enclosure with integrated controls and display."
+  participants:
+    - "Evan Shelton"
+
 # -----------------------------------------------------------------------
 # To add a new project, copy this template and fill it in:
 #
