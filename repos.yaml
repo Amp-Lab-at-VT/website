@@ -417,6 +417,14 @@ Class-D Amplifier:
   participants:
     - "Evan Shelton"
 
+Singing Bass:
+  url: "https://github.com/norahixson25/Nora_Hixson_Singing_Bass"
+  branch: "main"
+  status: "active"
+  mission: "Modernize a classic singing bass with Bluetooth audio, a custom Class AB amplifier, Arduino control, and a redesigned enclosure."
+  participants:
+    - "Nora Hixson"
+
 # -----------------------------------------------------------------------
 # To add a new project, copy this template and fill it in:
 #
