@@ -425,6 +425,14 @@ Singing Bass:
   participants:
     - "Nora Hixson"
 
+Two Way Bluetooth Speakers:
+  url: "https://github.com/choubeyrishi/Speakers"
+  branch: "main"
+  status: "active"
+  mission: "Design and build compact two way speakers with custom crossover networks and Bluetooth and TV connectivity."
+  participants:
+    - "Rishi Choubey"
+
 # -----------------------------------------------------------------------
 # To add a new project, copy this template and fill it in:
 #
