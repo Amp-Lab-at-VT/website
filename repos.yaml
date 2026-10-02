@@ -433,6 +433,14 @@ Two Way Bluetooth Speakers:
   participants:
     - "Rishi Choubey"
 
+Three-Host USB Keyboard Switch:
+  url: "https://github.com/wichey66/Three-Host-USB-Keyboard-Switch"
+  branch: "main"
+  status: "active"
+  mission: "Design and build a custom USB switch that lets one keyboard connect to three computers while displaying system telemetry on an integrated screen."
+  participants:
+    - "Ruiheng Wu"
+
 # -----------------------------------------------------------------------
 # To add a new project, copy this template and fill it in:
 #
