@@ -441,6 +441,14 @@ Three-Host USB Keyboard Switch:
   participants:
     - "Ruiheng Wu"
 
+Smart Haptic Sleeve:
+  url: "https://github.com/Rafay-316/Smart-Haptic-Sleeve-for-Active-Apple-Pencil-Stabilization"
+  branch: "main"
+  status: "active"
+  mission: "Develop an active stabilization sleeve for the Apple Pencil that detects hand tremors and unintended movement, then provides real time haptic feedback to improve drawing and writing stability."
+  participants:
+    - "Mohammad Abdul Rafay Chaudry"
+
 # -----------------------------------------------------------------------
 # To add a new project, copy this template and fill it in:
 #
