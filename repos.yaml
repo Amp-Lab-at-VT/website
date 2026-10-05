@@ -449,6 +449,14 @@ Smart Haptic Sleeve:
   participants:
     - "Mohammad Abdul Rafay Chaudry"
 
+Tiny Gamer:
+  url: "https://github.com/krish0728vt/TinyGamer"
+  branch: "main"
+  status: "active"
+  mission: "Build a compact handheld gaming device using a custom PCB, ATtiny85 microcontroller, and OLED display to run simple arcade-style games."
+  participants:
+    - "Krish Shah"
+
 # -----------------------------------------------------------------------
 # To add a new project, copy this template and fill it in:
 #
