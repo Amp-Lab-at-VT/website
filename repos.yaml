@@ -457,6 +457,14 @@ Tiny Gamer:
   participants:
     - "Krish Shah"
 
+RGB LED Magic Cube:
+  url: "https://github.com/krish0728vt/Led-Matrix"
+  branch: "main"
+  status: "completed"
+  mission: "Design and build a Bluetooth-controlled RGB LED cube using custom PCB faces and an ESP32-C3, with individually addressable LEDs and browser-based lighting control."
+  participants:
+    - "Krish Shah"
+
 # -----------------------------------------------------------------------
 # To add a new project, copy this template and fill it in:
 #
