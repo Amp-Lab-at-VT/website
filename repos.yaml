@@ -218,7 +218,7 @@ GestroCar:
   url: "https://github.com/niujijun143/GestroCar"
   branch: "main"
 #   mentor: "Tyler Wells, Phillip Bozzay"
-  status: "completed"
+  status: "active"
   mission: "Build a car that can be remotely controlled using hand gestures."
   participants:
     - "Jijun Niu"
