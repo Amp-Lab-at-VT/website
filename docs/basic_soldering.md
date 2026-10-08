@@ -16,7 +16,7 @@ After completing basic soldering training, one can:
 None
 
 **Estimated Time:** \
-1 Session 
+1 Session (around 3 hours)
 
 **Practice Board:** \
 Do Nothing Board 1
