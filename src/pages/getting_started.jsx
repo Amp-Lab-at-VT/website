@@ -172,7 +172,7 @@ function GettingStarted({ new_members }) {
                     <Button
                       variant="contained"
                       color="primary"
-                      href="PUT_PCB_PURCHASE_REQUEST_LINK_HERE"
+                      href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=hGiVYK0Q-kCGPU8yweOjetPU8gzw-YxNiRraZg_xsI1UN1FOMkZCQkpONktUUkZETUlUQ081VUxIUi4u"
                       target="_blank"
                       rel="noopener noreferrer"
                       fullWidth
