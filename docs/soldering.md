@@ -35,3 +35,5 @@ Instructors are student volunteers. If you haven't received a reply, please send
 If no soldering training sessions are shown on the booking website, this means that all currently available sessions are full. Additional sessions will be added as instructor availability permits, so please check the booking website regularly for newly available sessions.
 
 If you urgently need soldering training and cannot wait for another session to become available, please email shanew05@vt.edu and aleks@vt.edu. Urgent training requests will be evaluated on a case-by-case basis and are not guaranteed.
+
+Students who sign up for a soldering training session are expected to attend. Failure to attend a scheduled session without prior notice will result in being prohibited from signing up for any additional soldering training sessions for the remainder of the semester. If you are unable to attend, please cancel your booking in advance so another student can take your spot.
