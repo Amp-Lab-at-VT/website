@@ -22,8 +22,8 @@ None
 **Practice Board:** \
 Do Nothing Board 1
 
-**Certification Board Available:** 
-- LED Color Organ
+**Certification Board Available:** \
+LED Color Organ
 
 **Procedure:** \
     ->The instructor will go over the safety and lab rules. \
