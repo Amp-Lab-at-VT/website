@@ -23,8 +23,8 @@ Basic Soldering Training at AMP Lab
 **Practice Board:** \
 Do Nothing Board 1
 
-**Certification Board Available:**
-- B-BOP: Bipolar Breadboard Power Supply
+**Certification Board Available:** \
+B-BOP: Bipolar Breadboard Power Supply
 
 **Procedure:** \
     ->The instructor will go over the safety and lab rules. \
