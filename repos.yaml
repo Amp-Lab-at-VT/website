@@ -441,14 +441,6 @@ Three-Host USB Keyboard Switch:
   participants:
     - "Ruiheng Wu"
 
-Smart Haptic Sleeve:
-  url: "https://github.com/Rafay-316/Smart-Haptic-Sleeve-for-Active-Apple-Pencil-Stabilization"
-  branch: "main"
-  status: "active"
-  mission: "Develop an active stabilization sleeve for the Apple Pencil that detects hand tremors and unintended movement, then provides real time haptic feedback to improve drawing and writing stability."
-  participants:
-    - "Mohammad Abdul Rafay Chaudry"
-
 Tiny Gamer:
   url: "https://github.com/krish0728vt/TinyGamer"
   branch: "main"
@@ -464,6 +456,22 @@ RGB LED Magic Cube:
   mission: "Design and build a Bluetooth-controlled RGB LED cube using custom PCB faces and an ESP32-C3, with individually addressable LEDs and browser-based lighting control."
   participants:
     - "Krish Shah"
+
+Custom NeoPixel Lightsaber:
+  url: "https://github.com/eshelton20/Amp-Lab-Saber-Project"
+  branch: "main"
+  status: "active"
+  mission: "Design and build a custom NeoPixel lightsaber using a Proffieboard V3.9, a 3D printed chassis, and programmable lighting and sound effects that respond to motion."
+  participants:
+    - "Evan Shelton"
+
+LoRa Mesh Network:
+  url: "https://github.com/bennrvt/LoRa_Mesh_Network_Hardware"
+  branch: "main"
+  status: "active"
+  mission: "Design and build a portable, power-efficient LoRa mesh network that connects to an Android device via Bluetooth or Wi-Fi to transmit text messages between wireless nodes."
+  participants:
+    - "Ben Roberson"
 
 # -----------------------------------------------------------------------
 # To add a new project, copy this template and fill it in:
