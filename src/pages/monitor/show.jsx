@@ -1,7 +1,7 @@
 import { promises as fs } from "fs";
 import YAML from "yaml";
 
-import React, { useState, useEffect, useMemo } from "react";
+import React, { useState, useEffect, useMemo, useRef } from "react";
 import { useRouter } from "next/router";
 import { Box, Typography } from "@mui/material";
 import { motion, AnimatePresence } from "framer-motion";
@@ -11,8 +11,15 @@ import { resolveProjectImage } from "@/lib/projectImage";
 // How long each project stays in focus. Override with ?seconds=N in the URL.
 const DEFAULT_SECONDS = 60;
 
-const MAROON = "#861F41";
-const ORANGE = "#E5751F";
+// Same palette and type as the main site's light theme
+const RED = "#b91c1c";
+const RED_DARK = "#7f1d1d";
+const TEXT = "#111827";
+const TEXT_MUTED = "#6b7280";
+const DIVIDER = "#e5e7eb";
+const FONT = ["Inter", "system-ui", "-apple-system", "sans-serif"].join(",");
+
+const ease = [0.22, 1, 0.36, 1];
 
 const initialsOf = (name) =>
   name
@@ -31,6 +38,13 @@ const repoPathOf = (url) =>
 
 const ProjectImage = ({ project }) => {
   const [failed, setFailed] = useState(false);
+  const imgRef = useRef(null);
+
+  // onError can fire before hydration, so also check an already-broken image
+  useEffect(() => {
+    const img = imgRef.current;
+    if (img && img.complete && img.naturalWidth === 0) setFailed(true);
+  }, []);
 
   if (!project.image || failed) {
     return (
@@ -41,14 +55,15 @@ const ProjectImage = ({ project }) => {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          background: `linear-gradient(135deg, ${MAROON}, ${ORANGE})`,
+          backgroundColor: RED,
         }}
       >
         <Typography
           sx={{
+            fontFamily: FONT,
             fontSize: "18vh",
             fontWeight: 800,
-            color: "rgba(255,255,255,0.9)",
+            color: "#fff",
             letterSpacing: "-0.04em",
           }}
         >
@@ -59,74 +74,39 @@ const ProjectImage = ({ project }) => {
   }
 
   return (
-    <Box sx={{ position: "relative", width: "100%", height: "100%" }}>
-      {/* Blurred copy fills the letterbox around odd aspect ratios */}
-      <Box
-        aria-hidden
-        sx={{
-          position: "absolute",
-          inset: "-5%",
-          backgroundImage: `url(${project.image})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          filter: "blur(30px) brightness(0.6)",
-        }}
-      />
-      <motion.img
-        src={project.image}
-        alt={project.name}
-        onError={() => setFailed(true)}
-        // Slow Ken Burns drift so the screen never feels frozen
-        initial={{ scale: 1.0 }}
-        animate={{ scale: 1.08 }}
-        transition={{ duration: 70, ease: "linear" }}
-        style={{
-          position: "relative",
-          width: "100%",
-          height: "100%",
-          objectFit: "contain",
-          display: "block",
-        }}
-      />
-    </Box>
+    <motion.img
+      src={project.image}
+      alt={project.name}
+      ref={imgRef}
+      onError={() => setFailed(true)}
+      // Slow drift so the screen never feels frozen
+      initial={{ scale: 1.0 }}
+      animate={{ scale: 1.06 }}
+      transition={{ duration: 70, ease: "linear" }}
+      style={{
+        width: "100%",
+        height: "100%",
+        objectFit: "contain",
+        display: "block",
+      }}
+    />
   );
 };
 
-const Person = ({ name }) => (
-  <Box
-    sx={{
-      display: "flex",
-      alignItems: "center",
-      gap: "1.2vh",
-      pr: "2vh",
-      pl: "0.6vh",
-      py: "0.6vh",
-      borderRadius: "999px",
-      backgroundColor: "rgba(255,255,255,0.08)",
-      border: "1px solid rgba(255,255,255,0.12)",
-    }}
-  >
-    <Box
-      sx={{
-        width: "5vh",
-        height: "5vh",
-        borderRadius: "50%",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        background: `linear-gradient(135deg, ${MAROON}, ${ORANGE})`,
-        fontWeight: 700,
-        fontSize: "1.9vh",
-        color: "#fff",
-      }}
-    >
-      {initialsOf(name)}
-    </Box>
-    <Typography sx={{ fontSize: "2.4vh", color: "#fff", fontWeight: 500 }}>
-      {name}
-    </Typography>
-  </Box>
-);
+const fadeUp = {
+  hidden: { opacity: 0, y: 30 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.7, ease } },
+};
+
+const labelSx = {
+  fontFamily: FONT,
+  fontSize: "1.7vh",
+  fontWeight: 700,
+  letterSpacing: "0.18em",
+  textTransform: "uppercase",
+  color: TEXT_MUTED,
+  mb: "1.2vh",
+};
 
 const Spotlight = ({ project }) => (
   <Box
@@ -145,17 +125,15 @@ const Spotlight = ({ project }) => (
       initial={{ opacity: 0, x: -60 }}
       animate={{ opacity: 1, x: 0 }}
       exit={{ opacity: 0, x: 60, transition: { duration: 0.5 } }}
-      transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-      style={{ height: "68vh" }}
+      transition={{ duration: 0.9, ease }}
+      style={{ height: "100%" }}
     >
       <Box
         sx={{
           height: "100%",
-          borderRadius: "3vh",
           overflow: "hidden",
-          backgroundColor: "rgba(0,0,0,0.35)",
-          boxShadow: "0 4vh 10vh rgba(0,0,0,0.55)",
-          border: "1px solid rgba(255,255,255,0.1)",
+          backgroundColor: "#f3f4f6",
+          border: `1px solid ${DIVIDER}`,
         }}
       >
         <ProjectImage project={project} />
@@ -174,65 +152,49 @@ const Spotlight = ({ project }) => (
       }}
     >
       <motion.div variants={fadeUp}>
-        <Box
+        <Typography
           sx={{
-            display: "inline-flex",
-            alignItems: "center",
-            gap: "1vh",
-            px: "1.8vh",
-            py: "0.7vh",
-            borderRadius: "999px",
-            backgroundColor: "rgba(229,117,31,0.15)",
-            border: `1px solid ${ORANGE}`,
-            mb: "3vh",
+            ...labelSx,
+            color: project.active ? RED : TEXT_MUTED,
+            mb: "2vh",
           }}
         >
-          <Box
-            component={motion.span}
-            animate={{ opacity: [1, 0.3, 1] }}
-            transition={{ duration: 1.8, repeat: Infinity }}
-            sx={{
-              width: "1.2vh",
-              height: "1.2vh",
-              borderRadius: "50%",
-              backgroundColor: ORANGE,
-            }}
-          />
-          <Typography
-            sx={{
-              fontSize: "1.8vh",
-              fontWeight: 700,
-              letterSpacing: "0.2em",
-              color: ORANGE,
-            }}
-          >
-            ACTIVE PROJECT
-          </Typography>
-        </Box>
+          {project.active ? "Active project" : "Completed project"}
+        </Typography>
       </motion.div>
 
       <motion.div variants={fadeUp}>
         <Typography
           sx={{
-            fontSize: "8vh",
-            fontWeight: 800,
-            lineHeight: 1.05,
-            letterSpacing: "-0.02em",
-            color: "#fff",
-            mb: "3vh",
+            fontFamily: FONT,
+            fontSize: "7.5vh",
+            fontWeight: 700,
+            lineHeight: 1.1,
+            letterSpacing: "-0.025em",
+            color: TEXT,
+            mb: "2.5vh",
           }}
         >
           {project.name}
         </Typography>
+        <Box
+          sx={{
+            width: "10vh",
+            height: "0.6vh",
+            backgroundColor: RED,
+            mb: "3.5vh",
+          }}
+        />
       </motion.div>
 
       {project.mission && (
         <motion.div variants={fadeUp}>
           <Typography
             sx={{
-              fontSize: "3.2vh",
-              lineHeight: 1.45,
-              color: "rgba(255,255,255,0.8)",
+              fontFamily: FONT,
+              fontSize: "3vh",
+              lineHeight: 1.6,
+              color: "#374151",
               mb: "5vh",
               maxWidth: "80vh",
             }}
@@ -245,21 +207,16 @@ const Spotlight = ({ project }) => (
       {project.participants?.length > 0 && (
         <motion.div variants={fadeUp}>
           <Typography sx={labelSx}>Built by</Typography>
-          <Box
-            sx={{ display: "flex", flexWrap: "wrap", gap: "1.5vh", mb: "4vh" }}
+          <Typography
+            sx={{
+              fontFamily: FONT,
+              fontSize: "2.8vh",
+              fontWeight: 600,
+              color: TEXT,
+              mb: "4vh",
+            }}
           >
-            {project.participants.map((name) => (
-              <Person key={name} name={name} />
-            ))}
-          </Box>
-        </motion.div>
-      )}
-
-      {project.mentor && (
-        <motion.div variants={fadeUp}>
-          <Typography sx={labelSx}>Mentor</Typography>
-          <Typography sx={{ fontSize: "2.6vh", color: "#fff", mb: "4vh" }}>
-            {project.mentor}
+            {project.participants.join(", ")}
           </Typography>
         </motion.div>
       )}
@@ -268,9 +225,9 @@ const Spotlight = ({ project }) => (
         <motion.div variants={fadeUp}>
           <Typography
             sx={{
-              fontSize: "2.2vh",
               fontFamily: "monospace",
-              color: "rgba(255,255,255,0.5)",
+              fontSize: "2.1vh",
+              color: TEXT_MUTED,
             }}
           >
             {repoPathOf(project.url)}
@@ -280,24 +237,6 @@ const Spotlight = ({ project }) => (
     </motion.div>
   </Box>
 );
-
-const fadeUp = {
-  hidden: { opacity: 0, y: 30 },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] },
-  },
-};
-
-const labelSx = {
-  fontSize: "1.7vh",
-  fontWeight: 700,
-  letterSpacing: "0.2em",
-  textTransform: "uppercase",
-  color: "rgba(255,255,255,0.45)",
-  mb: "1.5vh",
-};
 
 // ---------------------------------------------------------------------------
 // Page
@@ -341,206 +280,161 @@ const Page = ({ projects }) => {
         inset: 0,
         zIndex: 10,
         overflow: "hidden",
-        backgroundColor: "#0e0a0c",
-        fontFamily: "inherit",
+        backgroundColor: "#ffffff",
+        fontFamily: FONT,
+        display: "flex",
+        flexDirection: "column",
       }}
     >
-      {/* Blurred, tinted backdrop from the current image */}
-      <AnimatePresence>
-        <motion.div
-          key={`bg-${index}`}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 1.5 }}
-          style={{
-            position: "absolute",
-            inset: "-10%",
-            backgroundImage: project?.image ? `url(${project.image})` : "none",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            filter: "blur(60px) saturate(1.3)",
-            opacity: 0.35,
-          }}
-        />
-      </AnimatePresence>
+      {/* Header, like the site's nav bar */}
       <Box
         sx={{
-          position: "absolute",
-          inset: 0,
-          background: `radial-gradient(ellipse at top left, rgba(134,31,65,0.55), transparent 60%),
-                       linear-gradient(180deg, rgba(14,10,12,0.4), rgba(14,10,12,0.85))`,
-        }}
-      />
-
-      {/* Header */}
-      <Box
-        sx={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          right: 0,
           display: "flex",
-          justifyContent: "space-between",
           alignItems: "center",
+          gap: "2vh",
           px: "7vh",
-          pt: "4vh",
-          zIndex: 2,
+          py: "2.5vh",
+          borderBottom: `1px solid ${DIVIDER}`,
         }}
       >
+        <Box
+          component="img"
+          src="/favicon.ico"
+          alt="AMP Lab logo"
+          sx={{ height: "7vh", width: "7vh" }}
+        />
         <Box>
           <Typography
             sx={{
-              fontSize: "3.4vh",
-              fontWeight: 800,
-              color: "#fff",
+              fontFamily: FONT,
+              fontSize: "3.6vh",
+              fontWeight: 700,
+              color: TEXT,
               lineHeight: 1.1,
+              letterSpacing: "-0.02em",
             }}
           >
-            The Amp Lab{" "}
-            <Box component="span" sx={{ color: ORANGE }}>
-              at Virginia Tech
+            The AMP Lab{" "}
+            <Box component="span" sx={{ color: RED }}>
+              @ Virginia Tech
             </Box>
           </Typography>
-          <Typography sx={{ fontSize: "2vh", color: "rgba(255,255,255,0.6)" }}>
-            Come in and start a project today!
+          <Typography
+            sx={{ fontFamily: FONT, fontSize: "2vh", color: TEXT_MUTED }}
+          >
+            Autonomous Mastery Prototyping Laboratory
           </Typography>
         </Box>
-        {count > 0 && (
-          <Typography
-            sx={{
-              fontSize: "2.2vh",
-              fontWeight: 600,
-              color: "rgba(255,255,255,0.6)",
-              fontVariantNumeric: "tabular-nums",
-            }}
-          >
-            <Box component="span" sx={{ color: "#fff" }}>
-              {String(index + 1).padStart(2, "0")}
-            </Box>{" "}
-            / {String(count).padStart(2, "0")}
-          </Typography>
-        )}
       </Box>
 
       {/* Spotlight */}
-      <Box
-        sx={{
-          position: "absolute",
-          top: "12vh",
-          bottom: "12vh",
-          left: 0,
-          right: 0,
-          zIndex: 1,
-        }}
-      >
+      <Box sx={{ position: "relative", flex: 1, my: "5vh" }}>
         <AnimatePresence mode="wait">
           {project ? (
             <Spotlight key={index} project={project} />
           ) : (
             <Typography
               sx={{
-                color: "#fff",
+                fontFamily: FONT,
+                color: TEXT,
                 fontSize: "5vh",
                 textAlign: "center",
-                mt: "30vh",
+                mt: "25vh",
               }}
             >
-              No active projects right now. Start one today!
+              Come in and start a project today!
             </Typography>
           )}
         </AnimatePresence>
       </Box>
 
-      {/* Footer: up next, site link, progress */}
+      {/* Progress */}
+      <Box sx={{ height: "0.8vh", backgroundColor: RED_DARK }}>
+        {count > 1 && (
+          <motion.div
+            key={`progress-${index}`}
+            initial={{ width: "0%" }}
+            animate={{ width: "100%" }}
+            transition={{ duration: seconds, ease: "linear" }}
+            style={{
+              height: "100%",
+              backgroundColor: "#ffffff",
+              opacity: 0.85,
+            }}
+          />
+        )}
+      </Box>
+
+      {/* Footer, like the site's red footer */}
       <Box
         sx={{
-          position: "absolute",
-          bottom: 0,
-          left: 0,
-          right: 0,
+          backgroundColor: RED,
+          color: "#fff",
           px: "7vh",
-          pb: "4vh",
-          zIndex: 2,
+          py: "2.5vh",
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
         }}
       >
-        <Box
+        <Typography
           sx={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "flex-end",
-            mb: "2vh",
+            fontFamily: FONT,
+            fontSize: "3vh",
+            fontWeight: 600,
+            color: "#fff",
           }}
         >
+          Come in and start a project today!
+        </Typography>
+        <Box sx={{ display: "flex", alignItems: "center", gap: "2.5vh" }}>
           <Typography
-            sx={{ fontSize: "2.2vh", color: "rgba(255,255,255,0.55)" }}
-          >
-            {count > 1 && (
-              <>
-                Up next ·{" "}
-                <Box component="span" sx={{ color: "#fff", fontWeight: 600 }}>
-                  {next.name}
-                </Box>
-              </>
-            )}
-          </Typography>
-          <Typography
-            sx={{ fontSize: "2.6vh", fontWeight: 700, color: ORANGE }}
+            sx={{
+              fontFamily: FONT,
+              fontSize: "3.4vh",
+              fontWeight: 700,
+              color: "#fff",
+            }}
           >
             amp-lab.org
           </Typography>
-        </Box>
-
-        <Box
-          sx={{
-            height: "0.7vh",
-            borderRadius: "999px",
-            backgroundColor: "rgba(255,255,255,0.12)",
-            overflow: "hidden",
-          }}
-        >
-          {count > 1 && (
-            <motion.div
-              key={`progress-${index}`}
-              initial={{ width: "0%" }}
-              animate={{ width: "100%" }}
-              transition={{ duration: seconds, ease: "linear" }}
-              style={{
-                height: "100%",
-                borderRadius: "999px",
-                background: `linear-gradient(90deg, ${MAROON}, ${ORANGE})`,
-              }}
-            />
-          )}
+          <Box
+            component="img"
+            src="/amp-lab-qr.svg"
+            alt="QR code for amp-lab.org"
+            sx={{
+              height: "9vh",
+              width: "9vh",
+              backgroundColor: "#fff",
+              p: "0.8vh",
+            }}
+          />
         </Box>
       </Box>
     </Box>
   );
 };
 
-// Load active projects (with their cover images) from repos.yaml at build time
+// Load every project (active first) with its cover image from repos.yaml at build time
 export async function getStaticProps() {
   const fileContents = await fs.readFile(process.cwd() + "/repos.yaml", "utf8");
   const all = YAML.parse(fileContents) || {};
 
-  const active = Object.entries(all)
-    .filter(([, p]) => (p.status || "completed").toLowerCase() === "active")
-    .map(([name, p]) => ({
-      name,
-      url: p.url || null,
-      mission: p.mission || null,
-      participants: p.participants || [],
-      mentor: p.mentor || null,
-    }));
+  const list = Object.entries(all).map(([name, p]) => ({
+    name,
+    url: p.url || null,
+    branch: p.branch || "main",
+    mission: p.mission || null,
+    participants: p.participants || [],
+    active: (p.status || "completed").toLowerCase() === "active",
+  }));
+  list.sort((a, b) => Number(b.active) - Number(a.active));
 
   const images = await Promise.allSettled(
-    active.map((p) => {
-      const branch = all[p.name].branch || "main";
-      return p.url ? resolveProjectImage(p.url, branch) : null;
-    }),
+    list.map((p) => (p.url ? resolveProjectImage(p.url, p.branch) : null)),
   );
 
-  const projects = active.map((p, i) => ({
+  const projects = list.map(({ branch, ...p }, i) => ({
     ...p,
     image: images[i].status === "fulfilled" ? images[i].value : null,
   }));
