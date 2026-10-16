@@ -21,6 +21,9 @@ const FONT = ["Inter", "system-ui", "-apple-system", "sans-serif"].join(",");
 
 const ease = [0.22, 1, 0.36, 1];
 
+// Size things by the screen's short side so 16:10 or 4:3 monitors don't overflow
+const u = (n) => `min(${n}vh, ${(n * 9) / 16}vw)`;
+
 const initialsOf = (name) =>
   name
     .split(/\s+/)
@@ -28,9 +31,6 @@ const initialsOf = (name) =>
     .slice(0, 2)
     .map((part) => part[0].toUpperCase())
     .join("");
-
-const repoPathOf = (url) =>
-  url.replace(/^https?:\/\/(www\.)?/, "").replace(/\.git$/, "");
 
 // ---------------------------------------------------------------------------
 // Pieces
@@ -61,7 +61,7 @@ const ProjectImage = ({ project }) => {
         <Typography
           sx={{
             fontFamily: FONT,
-            fontSize: "18vh",
+            fontSize: u(18),
             fontWeight: 800,
             color: "#fff",
             letterSpacing: "-0.04em",
@@ -100,12 +100,12 @@ const fadeUp = {
 
 const labelSx = {
   fontFamily: FONT,
-  fontSize: "1.7vh",
+  fontSize: u(1.7),
   fontWeight: 700,
   letterSpacing: "0.18em",
   textTransform: "uppercase",
   color: TEXT_MUTED,
-  mb: "1.2vh",
+  mb: u(1.2),
 };
 
 const Spotlight = ({ project }) => (
@@ -115,9 +115,10 @@ const Spotlight = ({ project }) => (
       inset: 0,
       display: "grid",
       gridTemplateColumns: "1.15fr 1fr",
-      gap: "6vh",
+      gridTemplateRows: "minmax(0, 1fr)",
+      gap: u(6),
       alignItems: "center",
-      px: "7vh",
+      px: u(7),
     }}
   >
     {/* Image */}
@@ -126,11 +127,12 @@ const Spotlight = ({ project }) => (
       animate={{ opacity: 1, x: 0 }}
       exit={{ opacity: 0, x: 60, transition: { duration: 0.5 } }}
       transition={{ duration: 0.9, ease }}
-      style={{ height: "100%" }}
+      style={{ height: "100%", minHeight: 0 }}
     >
       <Box
         sx={{
           height: "100%",
+          width: "100%",
           overflow: "hidden",
           backgroundColor: "#f3f4f6",
           border: `1px solid ${DIVIDER}`,
@@ -150,13 +152,14 @@ const Spotlight = ({ project }) => (
         show: { transition: { staggerChildren: 0.12, delayChildren: 0.25 } },
         exit: { opacity: 0, transition: { duration: 0.4 } },
       }}
+      style={{ maxHeight: "100%", minHeight: 0, overflow: "hidden" }}
     >
       <motion.div variants={fadeUp}>
         <Typography
           sx={{
             ...labelSx,
             color: project.active ? RED : TEXT_MUTED,
-            mb: "2vh",
+            mb: u(2),
           }}
         >
           {project.active ? "Active project" : "Completed project"}
@@ -167,22 +170,22 @@ const Spotlight = ({ project }) => (
         <Typography
           sx={{
             fontFamily: FONT,
-            fontSize: "7.5vh",
+            fontSize: u(7.5),
             fontWeight: 700,
             lineHeight: 1.1,
             letterSpacing: "-0.025em",
             color: TEXT,
-            mb: "2.5vh",
+            mb: u(2.5),
           }}
         >
           {project.name}
         </Typography>
         <Box
           sx={{
-            width: "10vh",
-            height: "0.6vh",
+            width: u(10),
+            height: u(0.6),
             backgroundColor: RED,
-            mb: "3.5vh",
+            mb: u(3.5),
           }}
         />
       </motion.div>
@@ -192,11 +195,15 @@ const Spotlight = ({ project }) => (
           <Typography
             sx={{
               fontFamily: FONT,
-              fontSize: "3vh",
+              fontSize: u(3),
               lineHeight: 1.6,
               color: "#374151",
-              mb: "5vh",
-              maxWidth: "80vh",
+              mb: u(5),
+              maxWidth: u(80),
+              display: "-webkit-box",
+              WebkitLineClamp: 6,
+              WebkitBoxOrient: "vertical",
+              overflow: "hidden",
             }}
           >
             {project.mission}
@@ -210,27 +217,13 @@ const Spotlight = ({ project }) => (
           <Typography
             sx={{
               fontFamily: FONT,
-              fontSize: "2.8vh",
+              fontSize: u(2.8),
               fontWeight: 600,
               color: TEXT,
-              mb: "4vh",
+              mb: u(4),
             }}
           >
             {project.participants.join(", ")}
-          </Typography>
-        </motion.div>
-      )}
-
-      {project.url && (
-        <motion.div variants={fadeUp}>
-          <Typography
-            sx={{
-              fontFamily: "monospace",
-              fontSize: "2.1vh",
-              color: TEXT_MUTED,
-            }}
-          >
-            {repoPathOf(project.url)}
           </Typography>
         </motion.div>
       )}
@@ -242,28 +235,53 @@ const Spotlight = ({ project }) => (
 // Page
 // ---------------------------------------------------------------------------
 
+// Fisher-Yates shuffle; avoid repeating the last project at the start of a new round
+const shuffled = (items, avoidFirst) => {
+  const out = [...items];
+  for (let i = out.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [out[i], out[j]] = [out[j], out[i]];
+  }
+  if (out.length > 1 && out[0] === avoidFirst) {
+    [out[0], out[1]] = [out[1], out[0]];
+  }
+  return out;
+};
+
 const Page = ({ projects }) => {
   const router = useRouter();
+  // Shuffle on the client only, so the server render and hydration agree
+  const [order, setOrder] = useState(null);
   const [index, setIndex] = useState(0);
+  const [round, setRound] = useState(0);
 
   const seconds = useMemo(() => {
     const fromQuery = Number(router.query.seconds);
     return fromQuery > 0 ? fromQuery : DEFAULT_SECONDS;
   }, [router.query.seconds]);
 
-  const count = projects.length;
-  const project = projects[index % Math.max(count, 1)];
-  const next = projects[(index + 1) % Math.max(count, 1)];
+  useEffect(() => {
+    setOrder(shuffled(projects));
+  }, [projects]);
 
-  // Advance to the next project on a fixed cadence
+  const count = order?.length ?? 0;
+  const project = order?.[index];
+  const next = order?.[index + 1];
+
+  // Advance on a fixed cadence; reshuffle after every full pass
   useEffect(() => {
     if (count < 2) return;
-    const timer = setTimeout(
-      () => setIndex((i) => (i + 1) % count),
-      seconds * 1000,
-    );
+    const timer = setTimeout(() => {
+      if (index + 1 < count) {
+        setIndex(index + 1);
+      } else {
+        setOrder(shuffled(projects, order[index]));
+        setIndex(0);
+        setRound((r) => r + 1);
+      }
+    }, seconds * 1000);
     return () => clearTimeout(timer);
-  }, [index, count, seconds]);
+  }, [index, count, seconds, order, projects]);
 
   // Warm the cache for the next image so the transition is seamless
   useEffect(() => {
@@ -291,9 +309,9 @@ const Page = ({ projects }) => {
         sx={{
           display: "flex",
           alignItems: "center",
-          gap: "2vh",
-          px: "7vh",
-          py: "2.5vh",
+          gap: u(2),
+          px: u(7),
+          py: u(2.5),
           borderBottom: `1px solid ${DIVIDER}`,
         }}
       >
@@ -301,13 +319,13 @@ const Page = ({ projects }) => {
           component="img"
           src="/favicon.ico"
           alt="AMP Lab logo"
-          sx={{ height: "7vh", width: "7vh" }}
+          sx={{ height: u(7), width: u(7) }}
         />
         <Box>
           <Typography
             sx={{
               fontFamily: FONT,
-              fontSize: "3.6vh",
+              fontSize: u(3.6),
               fontWeight: 700,
               color: TEXT,
               lineHeight: 1.1,
@@ -320,7 +338,7 @@ const Page = ({ projects }) => {
             </Box>
           </Typography>
           <Typography
-            sx={{ fontFamily: FONT, fontSize: "2vh", color: TEXT_MUTED }}
+            sx={{ fontFamily: FONT, fontSize: u(2), color: TEXT_MUTED }}
           >
             Autonomous Mastery Prototyping Laboratory
           </Typography>
@@ -328,31 +346,31 @@ const Page = ({ projects }) => {
       </Box>
 
       {/* Spotlight */}
-      <Box sx={{ position: "relative", flex: 1, my: "5vh" }}>
+      <Box sx={{ position: "relative", flex: 1, minHeight: 0, my: u(5) }}>
         <AnimatePresence mode="wait">
-          {project ? (
-            <Spotlight key={index} project={project} />
+          {!order ? null : project ? (
+            <Spotlight key={`${round}-${index}`} project={project} />
           ) : (
             <Typography
               sx={{
                 fontFamily: FONT,
                 color: TEXT,
-                fontSize: "5vh",
+                fontSize: u(5),
                 textAlign: "center",
-                mt: "25vh",
+                mt: u(25),
               }}
             >
-              Come in and start a project today!
+              Projects coming soon.
             </Typography>
           )}
         </AnimatePresence>
       </Box>
 
       {/* Progress */}
-      <Box sx={{ height: "0.8vh", backgroundColor: RED_DARK }}>
+      <Box sx={{ height: u(0.8), backgroundColor: RED_DARK }}>
         {count > 1 && (
           <motion.div
-            key={`progress-${index}`}
+            key={`progress-${round}-${index}`}
             initial={{ width: "0%" }}
             animate={{ width: "100%" }}
             transition={{ duration: seconds, ease: "linear" }}
@@ -370,8 +388,8 @@ const Page = ({ projects }) => {
         sx={{
           backgroundColor: RED,
           color: "#fff",
-          px: "7vh",
-          py: "2.5vh",
+          px: u(7),
+          py: u(2.5),
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
@@ -380,18 +398,18 @@ const Page = ({ projects }) => {
         <Typography
           sx={{
             fontFamily: FONT,
-            fontSize: "3vh",
+            fontSize: u(3),
             fontWeight: 600,
             color: "#fff",
           }}
         >
-          Come in and start a project today!
+          Got a project idea? Learn how to get started.
         </Typography>
-        <Box sx={{ display: "flex", alignItems: "center", gap: "2.5vh" }}>
+        <Box sx={{ display: "flex", alignItems: "center", gap: u(2.5) }}>
           <Typography
             sx={{
               fontFamily: FONT,
-              fontSize: "3.4vh",
+              fontSize: u(3.4),
               fontWeight: 700,
               color: "#fff",
             }}
@@ -403,10 +421,10 @@ const Page = ({ projects }) => {
             src="/amp-lab-qr.svg"
             alt="QR code for amp-lab.org"
             sx={{
-              height: "9vh",
-              width: "9vh",
+              height: u(9),
+              width: u(9),
               backgroundColor: "#fff",
-              p: "0.8vh",
+              p: u(0.8),
             }}
           />
         </Box>
@@ -415,7 +433,7 @@ const Page = ({ projects }) => {
   );
 };
 
-// Load every project (active first) with its cover image from repos.yaml at build time
+// Load every project with its cover image from repos.yaml at build time
 export async function getStaticProps() {
   const fileContents = await fs.readFile(process.cwd() + "/repos.yaml", "utf8");
   const all = YAML.parse(fileContents) || {};
@@ -428,7 +446,6 @@ export async function getStaticProps() {
     participants: p.participants || [],
     active: (p.status || "completed").toLowerCase() === "active",
   }));
-  list.sort((a, b) => Number(b.active) - Number(a.active));
 
   const images = await Promise.allSettled(
     list.map((p) => (p.url ? resolveProjectImage(p.url, p.branch) : null)),
