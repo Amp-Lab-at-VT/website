@@ -473,6 +473,22 @@ LoRa Mesh Network:
   participants:
     - "Ben Roberson"
 
+LM5117 Synchronous Buck Converter:
+  url: "https://github.com/zimo-debug/Power-electronics--Projects"
+  branch: "main"
+  status: "active"
+  mission: "Design and build a synchronous buck converter using the LM5117 controller, including circuit simulation, custom PCB design, hardware assembly, and performance testing."
+  participants:
+    - "Zimo Zhu"
+
+CAN Bus Vehicle Data Logger:
+  url: "https://github.com/atulluitelvt/CAN-Bus-Data-Logger"
+  branch: "main"
+  status: "active"
+  mission: "Design and build a CAN bus vehicle data logger using an Arduino Uno and a custom PCB to read vehicle parameters through the OBD-II port, display real-time data on an LCD, and save timestamped measurements to a microSD card."
+  participants:
+    - "Atul Luitel"
+
 # -----------------------------------------------------------------------
 # To add a new project, copy this template and fill it in:
 #
