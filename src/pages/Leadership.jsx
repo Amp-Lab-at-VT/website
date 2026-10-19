@@ -45,18 +45,18 @@ function Leadership() {
           linkedin="https://www.linkedin.com/in/matthew-scala-926607261/"
         />
         <LeadershipBox
-          name="Shane Wyman"
-          src={Shane_Wyman}
-          title="Soldering Lead"
-          email="shanew05@vt.edu"
-          linkedin="https://www.linkedin.com/in/shane-wyman-7792a8216/"
-        />
-        <LeadershipBox
           name="Alek Salvetti"
           src={Alek}
-          title="Co-Soldering Lead"
+          title="Soldering Lead"
           email="aleks@vt.edu"
           linkedin="https://www.linkedin.com/in/alessandro-s-5795502bb/"
+        />
+        <LeadershipBox
+          name="Shane Wyman"
+          src={Shane_Wyman}
+          title="Co-Soldering Lead"
+          email="shanew05@vt.edu"
+          linkedin="https://www.linkedin.com/in/shane-wyman-7792a8216/"
         />
         <LeadershipBox
           name="Jijun (Eva) Niu"
