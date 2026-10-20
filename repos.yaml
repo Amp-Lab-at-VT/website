@@ -232,12 +232,12 @@ Smart Fridge:
   participants:
     - "Nate Janney"
 
-SRAM Teaching Tool:
+BlinkenBits:
   url: "https://github.com/PaladinBIGDan2077/SRAM-CG-Teaching-Tool"
   branch: "main"
 #   mentor: "Jason Thweatt"
   status: "active"
-  mission: "Develop a teaching tool that demonstrates how SRAM stores data and how changing individual bits affects the displayed output."
+  mission: "Develop an educational circuit that demonstrates how computers store binary data in memory and convert it into characters displayed on an LED matrix."
   participants:
     - "Daniel J. Lomis"
 
