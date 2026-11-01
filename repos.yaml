@@ -498,7 +498,7 @@ CAN Bus Vehicle Data Logger:
     - "Atul Luitel"
 
 Custom Electronic Speed Controller (ESC):
-  url: "https://github.com/Resoron/Custom-ESC/tree/main"
+  url: "https://github.com/Resoron/Custom-ESC"
   branch: "main"
   status: "active"
   mission: "Design and build a custom electronic speed controller to efficiently regulate motor speed for a fixed wing UAV using commands from a flight controller."
