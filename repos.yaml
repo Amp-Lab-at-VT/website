@@ -497,6 +497,22 @@ CAN Bus Vehicle Data Logger:
   participants:
     - "Atul Luitel"
 
+Custom Electronic Speed Controller (ESC):
+  url: "https://github.com/Resoron/Custom-ESC/tree/main"
+  branch: "main"
+  status: "active"
+  mission: "Design and build a custom electronic speed controller to efficiently regulate motor speed for a fixed wing UAV using commands from a flight controller."
+  participants:
+    - "Owen Burden"
+
+FatFish AI Desktop Companion Robot:
+  url: "https://github.com/jiushipanta/Fatfish-AI-Desktop-Robot"
+  branch: "main"
+  status: "active"
+  mission: "Design and build an AI powered desktop companion robot that uses voice recognition and computer vision to interact with users through speech and physical movements."
+  participants:
+    - "Rui Ma"
+
 # -----------------------------------------------------------------------
 # To add a new project, copy this template and fill it in:
 #
