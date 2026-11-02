@@ -513,6 +513,14 @@ FatFish AI Desktop Companion Robot:
   participants:
     - "Rui Ma"
 
+Environmental & Motion Sensor Node:
+  url: "https://github.com/piyushgos21/esp32-sensor-node"
+  branch: "main"
+  status: "active"
+  mission: "Design and build a portable ESP32 sensor node on a custom PCB to measure environmental conditions and motion, display live readings, and transmit sensor data wirelessly for future analysis."
+  participants:
+    - "Piyush Goswami"
+
 # -----------------------------------------------------------------------
 # To add a new project, copy this template and fill it in:
 #
