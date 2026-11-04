@@ -71,7 +71,7 @@ function Leadership() {
           src={Krish_Shah}
           title="Soldering Trainer"
           email="krish0728@vt.edu"
-          linkedin="https://www.linkedin.com/in/krish-ankur-shah-284105237/"
+          linkedin="https://www.linkedin.com/in/krish-shah-4622771a9/"
         />
 
 
