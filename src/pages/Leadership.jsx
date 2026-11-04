@@ -18,6 +18,7 @@ import Shane_Wyman from "../../public/Headshots/Shane_Wyman.png";
 import Kelley_Andrews from "../../public/Headshots/Kelley_Andrews.jpg";
 import Matthew_Scala from "../../public/Headshots/Matthew_Scala.png";
 import Matthew_Scala_Mog from "../../public/Headshots/Matthew_Scala_Mog.jpg";
+import Krish_Shah from "../../public/Headshots/Krish_Shah.jpg";
 
 import Layout from "@/comps/layout.jsx";
 
@@ -65,6 +66,13 @@ function Leadership() {
           email="njijun24@vt.edu"
           linkedin="https://www.linkedin.com/in/jijunniu/"
         />      
+        <LeadershipBox
+          name="Krish Shah"
+          src={Krish_Shah}
+          title="Soldering Trainer"
+          email="krish0728@vt.edu"
+          linkedin="https://www.linkedin.com/in/krish-ankur-shah-284105237/"
+        />
 
 
       </Grid>
