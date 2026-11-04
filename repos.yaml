@@ -521,6 +521,14 @@ Environmental & Motion Sensor Node:
   participants:
     - "Piyush Goswami"
 
+Polyphonic Analog Synthesizer:
+  url: "https://github.com/fleurgatch06/Polyphonic-Analog-Synthesizer"
+  branch: "main"
+  status: "active"
+  mission: "Design and build a four voice analog synthesizer capable of playing multiple notes simultaneously, using independent analog circuits for sound generation and a microcontroller for voice allocation and automatic tuning."
+  participants:
+    - "Fleur Gatchalian"
+
 # -----------------------------------------------------------------------
 # To add a new project, copy this template and fill it in:
 #
