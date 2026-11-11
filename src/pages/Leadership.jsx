@@ -34,7 +34,7 @@ function Leadership() {
         <LeadershipBox
           name="Daniel Cherkasskiy"
           src={cherkassiky}
-          title="Operations/Admin Lead"
+          title="Head Lead"
           email="cherkasskiyd@vt.edu"
           linkedin="https://www.linkedin.com/in/daniel-cherkasskiy/"
         />
