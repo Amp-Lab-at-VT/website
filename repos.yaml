@@ -529,6 +529,14 @@ Polyphonic Analog Synthesizer:
   participants:
     - "Fleur Gatchalian"
 
+Dynamic Distortion Guitar Pedal:
+  url: "https://github.com/tamaracoaa/Dynamic-Distortion-Guitar-Pedal"
+  branch: "main"
+  status: "active"
+  mission: "Design and build a guitar pedal that automatically adjusts distortion based on picking strength, using analog audio circuitry and a microcontroller to control the distortion level. The pedal will also feature an OLED display and a custom 3D-printed enclosure."
+  participants:
+    - "Tamara Corvera-Andia"
+
 # -----------------------------------------------------------------------
 # To add a new project, copy this template and fill it in:
 #
