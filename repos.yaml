@@ -537,6 +537,22 @@ Dynamic Distortion Guitar Pedal:
   participants:
     - "Tamara Corvera-Andia"
 
+Acrylic Nightstand Clock:
+  url: "https://github.com/TyLStein/AcrylicClock"
+  branch: "main"
+  status: "active"
+  mission: "Design and build an acrylic nightstand clock that displays the date, time, and temperature using an e-paper display and RGB LEDs."
+  participants:
+    - "Tyler Stein"
+
+Analog 8-Bit Computer:
+  url: "https://github.com/lefikavt/Analog-8-Bit-Computer"
+  branch: "main"
+  status: "active"
+  mission: "Design and build a functional 8-bit computer using digital logic components to perform basic arithmetic and execute instructions."
+  participants:
+    - "Lefika Tlhabano"
+
 # -----------------------------------------------------------------------
 # To add a new project, copy this template and fill it in:
 #
